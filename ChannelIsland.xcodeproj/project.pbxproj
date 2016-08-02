@@ -52,7 +52,7 @@
 		B03151E91D4E69B60038FBA5 /* ChannelIslandUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChannelIslandUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03151ED1D4E69B60038FBA5 /* ChannelIslandUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelIslandUITests.swift; sourceTree = "<group>"; };
 		B03151EF1D4E69B60038FBA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B03151FB1D4E86840038FBA5 /* Main_Navigation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Main_Navigation.png; path = ../../Downloads/Main_Navigation.png; sourceTree = "<group>"; };
+		B03151FB1D4E86840038FBA5 /* Main_Navigation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Main_Navigation.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -498,6 +498,7 @@
 				B03151F41D4E69B60038FBA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B03151F51D4E69B60038FBA5 /* Build configuration list for PBXNativeTarget "ChannelIslandTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +507,7 @@
 				B03151F71D4E69B60038FBA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B03151F81D4E69B60038FBA5 /* Build configuration list for PBXNativeTarget "ChannelIslandUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +516,7 @@
 				B03151FA1D4E69B60038FBA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
