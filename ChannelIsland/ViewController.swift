@@ -25,12 +25,16 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     override func viewDidAppear(animated: Bool) {
-        UIView.animateWithDuration(0.7, delay: 1.0, options: .CurveEaseOut, animations: {
-            self.imageView1.alpha = 1;
+        UIView.animateWithDuration(2.0, delay: 4.0, options: .CurveEaseOut, animations: {
+            self.imageView1.alpha = 0;
             }, completion: { finished in
                 print("Finished!")
         })
-    }
+        UIView.animateWithDuration(2.0, delay: 4.0, options: .CurveEaseOut, animations: {
+            self.ImageView2.alpha = 1;
+            }, completion: { finished in
+                print("Finished!")
+        })    }
         /*
          
     // MARK: - Navigation
