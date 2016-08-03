@@ -43,6 +43,11 @@
                             <imageView alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-2" translatesAutoresizingMaskIntoConstraints="NO" id="rvR-S3-bXe">
                                 <rect key="frame" x="6" y="20" width="1013" height="740"/>
                             </imageView>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovS-PZ-yVZ">
+                                <rect key="frame" x="428" y="313" width="168" height="73"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <state key="normal" title="Click Here"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -50,6 +55,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="ImageView2" destination="rvR-S3-bXe" id="R6Q-GH-Vra"/>
+                        <outlet property="entryButton" destination="ovS-PZ-yVZ" id="kEW-hX-HBg"/>
                         <outlet property="imageView1" destination="NSM-be-cvw" id="BAq-z5-gfL"/>
                     </connections>
                 </viewController>
