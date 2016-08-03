@@ -17,6 +17,7 @@
 		B03151E31D4E69B60038FBA5 /* ChannelIslandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03151E21D4E69B60038FBA5 /* ChannelIslandTests.swift */; };
 		B03151EE1D4E69B60038FBA5 /* ChannelIslandUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03151ED1D4E69B60038FBA5 /* ChannelIslandUITests.swift */; };
 		B03151FC1D4E86840038FBA5 /* Main_Navigation.png in Resources */ = {isa = PBXBuildFile; fileRef = B03151FB1D4E86840038FBA5 /* Main_Navigation.png */; };
+		B0BB43C11D51719F0042CF5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB43C01D51719F0042CF5E /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		B03151ED1D4E69B60038FBA5 /* ChannelIslandUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelIslandUITests.swift; sourceTree = "<group>"; };
 		B03151EF1D4E69B60038FBA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B03151FB1D4E86840038FBA5 /* Main_Navigation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Main_Navigation.png; sourceTree = "<group>"; };
+		B0BB43C01D51719F0042CF5E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				B03151D41D4E69B60038FBA5 /* Assets.xcassets */,
 				B03151D61D4E69B60038FBA5 /* LaunchScreen.storyboard */,
 				B03151D91D4E69B60038FBA5 /* Info.plist */,
+				B0BB43C01D51719F0042CF5E /* ViewController.swift */,
 			);
 			path = ChannelIsland;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0BB43C11D51719F0042CF5E /* ViewController.swift in Sources */,
 				B03151CC1D4E69B60038FBA5 /* RootViewController.swift in Sources */,
 				B03151D01D4E69B60038FBA5 /* ModelController.swift in Sources */,
 				B03151CE1D4E69B60038FBA5 /* DataViewController.swift in Sources */,
