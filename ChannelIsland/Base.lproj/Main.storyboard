@@ -48,7 +48,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <state key="normal" title="Click Here"/>
                                 <connections>
-                                    <segue destination="S4R-Ja-viH" kind="show" id="6ML-Qh-KpR"/>
+                                    <segue destination="S4R-Ja-viH" kind="presentation" id="WfP-4T-9yc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -104,7 +104,7 @@
     </scenes>
     <resources>
         <image name="Image" width="2048" height="1536"/>
-        <image name="Image-1" width="4500" height="3000"/>
-        <image name="Image-2" width="1920" height="1024"/>
+        <image name="Image-1" width="4200" height="2106"/>
+        <image name="Image-2" width="4200" height="2800"/>
     </resources>
 </document>

@@ -47,11 +47,11 @@ class ViewController: UIViewController {
                                         self.ImageView2.alpha = 0;
                                         }, completion: { finished in
                                             if (finished){
-                                                UIView.animateWithDuration(0.0, delay: 4.0, options: .CurveEaseOut, animations: {
+                                                UIView.animateWithDuration(0.0, delay: 0.0, options: .CurveEaseOut, animations: {
                                                     self.ImageView2.image = UIImage(named:"Image-4");
                                                     }, completion: { finished in
                                                         if (finished){
-                                                            UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
+                                                            UIView.animateWithDuration(2.0, delay: 4.0, options: .CurveEaseOut, animations: {
                                                                 self.ImageView2.alpha = 1;
                                                                 self.imageView1.alpha = 0;
                                                                 }, completion: { (value: Bool) in ini4 = true
@@ -72,6 +72,7 @@ class ViewController: UIViewController {
             }, completion: { finished in
                 print("Finished!")
         })*/
+        /*
         if ini2{
             UIView.animateWithDuration(0.0, delay: 12.0, options: .CurveEaseOut, animations: {
                 self.imageView1.image = UIImage(named:"Image-3");
@@ -85,7 +86,7 @@ class ViewController: UIViewController {
                 }, completion: { (value: Bool) in ini3 = true
             })
             ini2 = false;
-        }
+        }*/
         /*
         UIView.animateWithDuration(2.0, delay: 8.0, options: .CurveEaseOut, animations: {
             self.ImageView2.alpha = 0;
@@ -93,6 +94,7 @@ class ViewController: UIViewController {
                 print("Finished4!")
         })
         */
+        /*
         if ini3{
             UIView.animateWithDuration(0.0, delay: 16.0, options: .CurveEaseOut, animations: {
                 self.ImageView2.image = UIImage(named:"Image-4");
@@ -105,7 +107,7 @@ class ViewController: UIViewController {
                 }, completion: { (value: Bool) in ini4 = true
             })
             ini3 = false;
-        }
+        }*/
         
         /*
         UIView.animateWithDuration(2.0, delay: 12.0, options: .CurveEaseOut, animations: {
