@@ -14,17 +14,34 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView1: UIImageView!
     @IBOutlet weak var ImageView2: UIImageView!
 
+    @IBOutlet weak var ClickHere: UIImageView!
     @IBOutlet weak var entryButton: UIButton!
+    
+    var imageArray: [UIImage] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        var imageArr : [UIImage] = []
+        for i in 0...58{
+            let str : String = "TAP_HERE_V01_LOOP_"+String(format: "%05d", i)+".png"
+            print(str)
+            imageArr.append(UIImage(named:str)!)
+        }
+        /*
+         ClickHere.animationImages = [
+         UIImage(named:"TAP_HERE_V01_LOOP_00000.png")!
+         ]
+         */
+        ClickHere.animationImages = imageArr
+        ClickHere.animationDuration = 2.0
+        ClickHere.startAnimating()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+
     override func viewDidAppear(animated: Bool) {
         
         var ini = true;
@@ -116,12 +133,14 @@ class ViewController: UIViewController {
                 print("Finished!")
         })
         */
-        UIView.animateWithDuration(2.0, delay: 12.0, options: .CurveEaseOut, animations: {
-            self.entryButton.alpha = 1;
+        
+        UIView.animateWithDuration(2.0, delay: 19.0, options: .CurveEaseOut, animations: {
+            self.ClickHere.alpha = 1;
             }, completion: { finished in
                 print("Finished7!")
         })
-
+        
+        
     
         /*
          
@@ -133,6 +152,7 @@ class ViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
     }
 
 }
