@@ -3,61 +3,59 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
-        <scene sceneID="clB-vc-fyl">
-            <objects>
-                <viewController id="703-4V-yAM" customClass="RootViewController" customModule="ChannelIsland" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="I7W-xW-C47"/>
-                        <viewControllerLayoutGuide type="bottom" id="IfR-02-kHw"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleAspectFill" id="502-Ir-ELC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Q3h-pU-vEd" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-7" y="-208"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="Yum-Z2-eYq">
             <objects>
                 <viewController id="wMw-6r-BdI" customClass="ViewController" customModule="ChannelIsland" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QKo-8W-3EW"/>
-                        <viewControllerLayoutGuide type="bottom" id="0K6-Pi-gGZ"/>
+                        <viewControllerLayoutGuide type="top" id="yRg-Cs-l5y"/>
+                        <viewControllerLayoutGuide type="bottom" id="vCL-Hb-Stu"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="KE6-oJ-iqK">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="KE6-oJ-iqK">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="NSM-be-cvw">
-                                <rect key="frame" x="6" y="20" width="1013" height="740"/>
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="NSM-be-cvw">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </imageView>
-                            <imageView alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-2" translatesAutoresizingMaskIntoConstraints="NO" id="rvR-S3-bXe">
-                                <rect key="frame" x="6" y="20" width="1013" height="740"/>
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-2" translatesAutoresizingMaskIntoConstraints="NO" id="rvR-S3-bXe">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NNb-CA-XmC">
-                                <rect key="frame" x="387" y="259" width="250" height="250"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NNb-CA-XmC">
+                                <rect key="frame" x="450" y="321" width="125" height="125"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yon-QB-BtV">
-                                <rect key="frame" x="387" y="259" width="250" height="250"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yon-QB-BtV">
+                                <rect key="frame" x="450" y="321" width="125" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="L5s-I6-k2T"/>
+                                </constraints>
                                 <connections>
-                                    <segue destination="S4R-Ja-viH" kind="show" id="0j0-Vz-LUs"/>
+                                    <segue destination="S4R-Ja-viH" kind="presentation" id="0j0-Vz-LUs"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NSM-be-cvw" secondAttribute="trailing" id="1iL-NT-Es2"/>
+                            <constraint firstItem="NSM-be-cvw" firstAttribute="centerY" secondItem="yon-QB-BtV" secondAttribute="centerY" id="3Rz-lp-k8P"/>
+                            <constraint firstItem="yon-QB-BtV" firstAttribute="top" secondItem="yRg-Cs-l5y" secondAttribute="bottom" constant="301" id="FbA-7m-lGU"/>
+                            <constraint firstItem="yon-QB-BtV" firstAttribute="trailing" secondItem="NNb-CA-XmC" secondAttribute="trailing" id="GOb-C6-LQi"/>
+                            <constraint firstItem="NSM-be-cvw" firstAttribute="top" secondItem="KE6-oJ-iqK" secondAttribute="top" id="MYT-fo-HGC"/>
+                            <constraint firstItem="NSM-be-cvw" firstAttribute="bottom" secondItem="vCL-Hb-Stu" secondAttribute="top" id="O2t-UZ-MJr"/>
+                            <constraint firstItem="NSM-be-cvw" firstAttribute="centerX" secondItem="NNb-CA-XmC" secondAttribute="centerX" id="ebZ-eR-nBU"/>
+                            <constraint firstItem="NNb-CA-XmC" firstAttribute="top" secondItem="yon-QB-BtV" secondAttribute="top" id="rMi-Gp-3h7"/>
+                            <constraint firstItem="yon-QB-BtV" firstAttribute="bottom" secondItem="NNb-CA-XmC" secondAttribute="bottom" id="rlj-Yb-Uz7"/>
+                            <constraint firstItem="yon-QB-BtV" firstAttribute="leading" secondItem="NNb-CA-XmC" secondAttribute="leading" id="w1v-k3-pfN"/>
+                            <constraint firstItem="NSM-be-cvw" firstAttribute="leading" secondItem="KE6-oJ-iqK" secondAttribute="leading" id="zr3-ye-8D5"/>
+                        </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="ClickHere" destination="NNb-CA-XmC" id="U6p-Kw-0D9"/>
                         <outlet property="ImageView2" destination="rvR-S3-bXe" id="R6Q-GH-Vra"/>
@@ -66,42 +64,51 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmf-jI-tAZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1209" y="-200"/>
+            <point key="canvasLocation" x="1206" y="-200"/>
         </scene>
         <!--Data View Controller-->
         <scene sceneID="snT-py-3hH">
             <objects>
                 <viewController storyboardIdentifier="DataViewController" id="S4R-Ja-viH" customClass="DataViewController" customModule="ChannelIsland" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fXf-Jd-eTc"/>
-                        <viewControllerLayoutGuide type="bottom" id="EPS-s9-h4K"/>
+                        <viewControllerLayoutGuide type="top" id="qjH-T1-MoF"/>
+                        <viewControllerLayoutGuide type="bottom" id="9M8-LP-Xax"/>
                     </layoutGuides>
-                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" id="ZwX-cT-FIQ">
+                    <view key="view" autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ZwX-cT-FIQ">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s1b-V9-EN7">
-                                <rect key="frame" x="43" y="37" width="945" height="703"/>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="s1b-V9-EN7">
+                                <rect key="frame" x="8" y="20" width="2032" height="1516"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="qbs-s3-jRb">
-                                        <rect key="frame" x="0.0" y="-429" width="945" height="1537"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="qbs-s3-jRb">
+                                        <rect key="frame" x="8" y="-7" width="1006" height="742"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="742" id="0CW-27-tel"/>
+                                            <constraint firstAttribute="width" constant="1006" id="7Hn-pg-jaw"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="qbs-s3-jRb" firstAttribute="leading" secondItem="s1b-V9-EN7" secondAttribute="leadingMargin" id="n6F-YK-EdC"/>
+                                    <constraint firstItem="qbs-s3-jRb" firstAttribute="top" secondItem="s1b-V9-EN7" secondAttribute="top" constant="-7" id="oD9-mn-RaP"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="s1b-V9-EN7" secondAttribute="trailing" constant="36" id="333-Jl-G0r"/>
-                            <constraint firstItem="s1b-V9-EN7" firstAttribute="leading" secondItem="ZwX-cT-FIQ" secondAttribute="leading" constant="43" id="CIC-qa-9gW"/>
-                            <constraint firstAttribute="bottom" secondItem="s1b-V9-EN7" secondAttribute="bottom" constant="12" id="Xg4-Xc-7kb"/>
+                            <constraint firstItem="s1b-V9-EN7" firstAttribute="leading" secondItem="ZwX-cT-FIQ" secondAttribute="leadingMargin" constant="-12" id="FVg-dh-IWW"/>
+                            <constraint firstAttribute="trailing" secondItem="s1b-V9-EN7" secondAttribute="trailing" constant="-1016" id="GLT-qD-fEB"/>
+                            <constraint firstItem="s1b-V9-EN7" firstAttribute="top" secondItem="qjH-T1-MoF" secondAttribute="bottom" id="IkM-ze-FWM"/>
+                            <constraint firstAttribute="bottom" secondItem="s1b-V9-EN7" secondAttribute="bottom" constant="-768" id="QPE-q5-DnV"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GmD-Rr-ZGN" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2377" y="-208"/>
+            <point key="canvasLocation" x="3326.5625" y="-199.21875"/>
         </scene>
     </scenes>
     <resources>
