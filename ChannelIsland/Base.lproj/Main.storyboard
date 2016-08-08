@@ -18,16 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="NSM-be-cvw">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7O1-cr-ctv">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                            </imageView>
-                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-2" translatesAutoresizingMaskIntoConstraints="NO" id="rvR-S3-bXe">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NNb-CA-XmC">
+                                <subviews>
+                                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="NSM-be-cvw">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                    </imageView>
+                                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-2" translatesAutoresizingMaskIntoConstraints="NO" id="rvR-S3-bXe">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                    </imageView>
+                                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-3" translatesAutoresizingMaskIntoConstraints="NO" id="zZk-p4-mkh">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                    </imageView>
+                                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-4" translatesAutoresizingMaskIntoConstraints="NO" id="aNz-qX-02W">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NNb-CA-XmC">
                                 <rect key="frame" x="450" y="321" width="125" height="125"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yon-QB-BtV">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yon-QB-BtV">
                                 <rect key="frame" x="450" y="321" width="125" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="L5s-I6-k2T"/>
@@ -36,28 +48,57 @@
                                     <segue destination="S4R-Ja-viH" kind="presentation" id="0j0-Vz-LUs"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Channel Islands" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qws-4k-PI3">
+                                <rect key="frame" x="314" y="215" width="396" height="47"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.73999999999999999" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Welcome to" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u5F-aZ-Ypv">
+                                <rect key="frame" x="444" y="127" width="151" height="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.74290780141843971" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="49"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="National Marine Sanctuary &amp; National Park" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uoL-mX-Tpr">
+                                <rect key="frame" x="156" y="266" width="727" height="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.73999999999999999" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="Come and enjoy!  Fishing, hiking, camping and lots of exciting activities!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iwB-dq-FvW">
+                                <rect key="frame" x="251" y="450" width="519" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.73999999999999999" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22.200000762939453"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="NSM-be-cvw" secondAttribute="trailing" id="1iL-NT-Es2"/>
-                            <constraint firstItem="NSM-be-cvw" firstAttribute="centerY" secondItem="yon-QB-BtV" secondAttribute="centerY" id="3Rz-lp-k8P"/>
-                            <constraint firstItem="yon-QB-BtV" firstAttribute="top" secondItem="yRg-Cs-l5y" secondAttribute="bottom" constant="301" id="FbA-7m-lGU"/>
+                            <constraint firstItem="7O1-cr-ctv" firstAttribute="top" secondItem="KE6-oJ-iqK" secondAttribute="topMargin" id="Bgs-RF-C1h"/>
+                            <constraint firstItem="vCL-Hb-Stu" firstAttribute="top" secondItem="7O1-cr-ctv" secondAttribute="bottom" id="FcG-15-iou"/>
                             <constraint firstItem="yon-QB-BtV" firstAttribute="trailing" secondItem="NNb-CA-XmC" secondAttribute="trailing" id="GOb-C6-LQi"/>
-                            <constraint firstItem="NSM-be-cvw" firstAttribute="top" secondItem="KE6-oJ-iqK" secondAttribute="top" id="MYT-fo-HGC"/>
-                            <constraint firstItem="NSM-be-cvw" firstAttribute="bottom" secondItem="vCL-Hb-Stu" secondAttribute="top" id="O2t-UZ-MJr"/>
-                            <constraint firstItem="NSM-be-cvw" firstAttribute="centerX" secondItem="NNb-CA-XmC" secondAttribute="centerX" id="ebZ-eR-nBU"/>
+                            <constraint firstItem="7O1-cr-ctv" firstAttribute="leading" secondItem="KE6-oJ-iqK" secondAttribute="leadingMargin" constant="-20" id="HJ0-jN-yAM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7O1-cr-ctv" secondAttribute="trailing" constant="-20" id="KC2-g3-VG1"/>
+                            <constraint firstItem="yon-QB-BtV" firstAttribute="top" secondItem="yRg-Cs-l5y" secondAttribute="bottom" constant="301" id="PaU-Hi-gW1"/>
                             <constraint firstItem="NNb-CA-XmC" firstAttribute="top" secondItem="yon-QB-BtV" secondAttribute="top" id="rMi-Gp-3h7"/>
                             <constraint firstItem="yon-QB-BtV" firstAttribute="bottom" secondItem="NNb-CA-XmC" secondAttribute="bottom" id="rlj-Yb-Uz7"/>
                             <constraint firstItem="yon-QB-BtV" firstAttribute="leading" secondItem="NNb-CA-XmC" secondAttribute="leading" id="w1v-k3-pfN"/>
-                            <constraint firstItem="NSM-be-cvw" firstAttribute="leading" secondItem="KE6-oJ-iqK" secondAttribute="leading" id="zr3-ye-8D5"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="ClickHere" destination="NNb-CA-XmC" id="U6p-Kw-0D9"/>
                         <outlet property="ImageView2" destination="rvR-S3-bXe" id="R6Q-GH-Vra"/>
+                        <outlet property="ImageView3" destination="zZk-p4-mkh" id="PhR-Zm-9L0"/>
+                        <outlet property="ImageView4" destination="aNz-qX-02W" id="62f-Eh-jbP"/>
+                        <outlet property="OText1" destination="qws-4k-PI3" id="Qpj-vP-KuC"/>
+                        <outlet property="OText2" destination="uoL-mX-Tpr" id="pH6-ef-6sq"/>
+                        <outlet property="T1" destination="u5F-aZ-Ypv" id="UOa-no-EXr"/>
+                        <outlet property="T2" destination="iwB-dq-FvW" id="V8H-5N-MxA"/>
                         <outlet property="imageView1" destination="NSM-be-cvw" id="BAq-z5-gfL"/>
                     </connections>
                 </viewController>
@@ -103,7 +144,7 @@
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GmD-Rr-ZGN" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,7 +153,9 @@
     </scenes>
     <resources>
         <image name="Image" width="2048" height="1536"/>
-        <image name="Image-1" width="4200" height="2106"/>
-        <image name="Image-2" width="4200" height="2800"/>
+        <image name="Image-1" width="2048" height="1536"/>
+        <image name="Image-2" width="2048" height="1536"/>
+        <image name="Image-3" width="2048" height="1536"/>
+        <image name="Image-4" width="2048" height="1536"/>
     </resources>
 </document>

@@ -28,7 +28,8 @@ class DataViewController: UIViewController {
         super.viewWillAppear(animated)
         //self.dataLabel!.text = dataObject
     }
-
-
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 }
 

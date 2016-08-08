@@ -14,12 +14,27 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView1: UIImageView!
     @IBOutlet weak var ImageView2: UIImageView!
 
+    @IBOutlet weak var ImageView3: UIImageView!
+    @IBOutlet weak var ImageView4: UIImageView!
     @IBOutlet weak var ClickHere: UIImageView!
     @IBOutlet weak var entryButton: UIButton!
     
+    @IBOutlet weak var T2: UITextView!
+    @IBOutlet weak var T1: UITextField!
+    @IBOutlet weak var OText2: UITextField!
+    @IBOutlet weak var OText1: UITextField!
     var imageArray: [UIImage] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        for family: String in UIFont.familyNames()
+        {
+            print("\(family)")
+            for names: String in UIFont.fontNamesForFamilyName(family)
+            {
+                print("== \(names)")
+            }
+        }
         var imageArr : [UIImage] = []
         for i in 0...58{
             let str : String = "TAP_HERE_V01_LOOP_"+String(format: "%05d", i)+".png"
@@ -34,6 +49,8 @@ class ViewController: UIViewController {
         ClickHere.animationImages = imageArr
         ClickHere.animationDuration = 2.0
         ClickHere.startAnimating()
+        OText1.font = UIFont(name:"TrajanPro-Regular", size: 81)
+        OText1.font = UIFont(name:"TrajanPro-Regular", size: 55)
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,7 +58,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     override func viewDidAppear(animated: Bool) {
         
         var ini = true;
@@ -49,8 +69,55 @@ class ViewController: UIViewController {
         var ini3 = false;
         var ini4 = true;
         //while !ini4{
-        
-            UIView.animateWithDuration(2.0, delay: 4.0, options: .CurveEaseOut, animations: {
+        //UIView.animateWithDuration()
+        UIView.animateKeyframesWithDuration(24, delay: 0, options: .Repeat, animations:{
+            /*
+            UIView.addKeyframeWithRelativeStartTime(0.08333333333333, relativeDuration: 0.01, animations: {
+                self.ImageView2.image = UIImage(named:"Image-2");
+            }) */
+            UIView.addKeyframeWithRelativeStartTime(0.16666666666666, relativeDuration: 0.08333333333333, animations: {
+                self.imageView1.alpha = 0;
+                self.ImageView2.alpha = 1;
+                self.T1.alpha = 1
+                self.T2.alpha = 1
+                
+                
+            })
+            /*
+            UIView.addKeyframeWithRelativeStartTime(0.20833333333333, relativeDuration: 0.01, animations: {
+                self.imageView1.image = UIImage(named:"Image-3");
+            })*/
+            UIView.addKeyframeWithRelativeStartTime(0.41666666666667, relativeDuration: 0.08333333333333, animations: {
+                self.ImageView3.alpha = 1;
+                self.ImageView2.alpha = 0;
+                self.T1.alpha = 1
+                self.T2.alpha = 1
+                
+            })
+            /*
+            UIView.addKeyframeWithRelativeStartTime(0.625, relativeDuration: 0.01, animations: {
+                self.ImageView2.image = UIImage(named:"Image-4");
+            })*/
+            UIView.addKeyframeWithRelativeStartTime(0.66666666666667, relativeDuration: 0.08333333333333, animations: {
+                self.ImageView3.alpha = 0;
+                self.ImageView4.alpha = 1;
+                self.T1.alpha = 1
+                self.T2.alpha = 1
+                
+            })
+            /*
+            UIView.addKeyframeWithRelativeStartTime(0.70833333333333, relativeDuration: 0.01, animations: {
+                self.imageView1.image = UIImage(named:"Image-1");}) */
+            UIView.addKeyframeWithRelativeStartTime(0.91666666666667, relativeDuration: 0.08333333333333, animations: {
+                    self.imageView1.alpha = 1;
+                    self.ImageView4.alpha = 0;
+                self.T1.alpha = 1
+                self.T2.alpha = 1
+                
+                })
+            }, completion:{finished in print("finished!")})
+            /*
+            UIView.animateWithDuration(2.0, delay: 4.0, options: [.Repeat,.CurveEaseOut], animations: {
                 self.imageView1.alpha = 0;
                 self.ImageView2.alpha = 1;},
                 completion: { finished in
@@ -81,6 +148,7 @@ class ViewController: UIViewController {
                         })
                     }
                 })
+         */
             
         
         /*
@@ -140,6 +208,19 @@ class ViewController: UIViewController {
                 print("Finished7!")
         })
         
+        UIView.animateKeyframesWithDuration(1.0, delay: 0, options: .Repeat, animations:{
+            UIView.addKeyframeWithRelativeStartTime(0.25, relativeDuration: 0.25, animations: {
+            
+               self.T2.alpha = 0;
+            })
+            UIView.addKeyframeWithRelativeStartTime(0.5, relativeDuration: 0.25, animations: {
+                
+                self.T2.alpha = 1;
+            })
+            
+            }, completion: { finished in
+                print("Finished7!")}
+            )
         
     
         /*
