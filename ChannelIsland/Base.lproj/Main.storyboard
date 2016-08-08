@@ -18,10 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7O1-cr-ctv">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7O1-cr-ctv">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <subviews>
-                                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="NSM-be-cvw">
+                                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-4" translatesAutoresizingMaskIntoConstraints="NO" id="NSM-be-cvw">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                     </imageView>
                                     <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-2" translatesAutoresizingMaskIntoConstraints="NO" id="rvR-S3-bXe">
@@ -33,12 +33,60 @@
                                     <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-4" translatesAutoresizingMaskIntoConstraints="NO" id="aNz-qX-02W">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                     </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Channel Islands" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qws-4k-PI3">
+                                        <rect key="frame" x="314" y="215" width="396" height="47"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.73999999999999999" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Welcome to" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u5F-aZ-Ypv">
+                                        <rect key="frame" x="437" y="127" width="151" height="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.74290780141843971" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="49"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="National Marine Sanctuary &amp; National Park" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uoL-mX-Tpr">
+                                        <rect key="frame" x="149" y="264" width="727" height="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.73999999999999999" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NNb-CA-XmC">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NNb-CA-XmC">
                                 <rect key="frame" x="450" y="321" width="125" height="125"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="Come and enjoy!  Fishing, hiking, camping and lots of exciting activities!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iwB-dq-FvW">
+                                <rect key="frame" x="253" y="450" width="519" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.73999999999999999" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22.200000762939453"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="Explore and discover unique land, air and underwater wildlife.!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="udL-I4-RUG">
+                                <rect key="frame" x="253" y="450" width="519" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.73999999999999999" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22.200000762939453"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VH0-HM-1eF">
+                                <rect key="frame" x="253" y="450" width="519" height="102"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Ancestral home of the Chumash Tribe, inhabited
+by people for at least 13,000 years.</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.73999999999999999" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22.200000762939453"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="Visit and enjoy 5 beautiful rough islands!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r90-63-QLY">
+                                <rect key="frame" x="253" y="450" width="519" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.73999999999999999" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22.200000762939453"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yon-QB-BtV">
                                 <rect key="frame" x="450" y="321" width="125" height="125"/>
                                 <constraints>
@@ -48,68 +96,9 @@
                                     <segue destination="S4R-Ja-viH" kind="presentation" id="0j0-Vz-LUs"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Channel Islands" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qws-4k-PI3">
-                                <rect key="frame" x="314" y="215" width="396" height="47"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="0.73999999999999999" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Welcome to" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u5F-aZ-Ypv">
-                                <rect key="frame" x="444" y="127" width="151" height="30"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="0.74290780141843971" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="49"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="National Marine Sanctuary &amp; National Park" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uoL-mX-Tpr">
-                                <rect key="frame" x="156" y="266" width="727" height="30"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="0.73999999999999999" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="Come and enjoy!  Fishing, hiking, camping and lots of exciting activities!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iwB-dq-FvW">
-                                <rect key="frame" x="251" y="450" width="519" height="70"/>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="0.73999999999999999" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22.200000762939453"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="Explore and discover unique land, air and underwater wildlife.!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="udL-I4-RUG">
-                                <rect key="frame" x="251" y="450" width="519" height="70"/>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="0.73999999999999999" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22.200000762939453"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VH0-HM-1eF">
-                                <rect key="frame" x="251" y="450" width="519" height="102"/>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">Ancestral home of the Chumash Tribe, inhabited
-by people for at least 13,000 years.</string>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="0.73999999999999999" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22.200000762939453"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="Visit and enjoy 5 beautiful rough islands!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r90-63-QLY">
-                                <rect key="frame" x="251" y="450" width="519" height="102"/>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="0.73999999999999999" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22.200000762939453"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="7O1-cr-ctv" firstAttribute="top" secondItem="KE6-oJ-iqK" secondAttribute="topMargin" id="Bgs-RF-C1h"/>
-                            <constraint firstItem="vCL-Hb-Stu" firstAttribute="top" secondItem="7O1-cr-ctv" secondAttribute="bottom" id="FcG-15-iou"/>
-                            <constraint firstItem="yon-QB-BtV" firstAttribute="trailing" secondItem="NNb-CA-XmC" secondAttribute="trailing" id="GOb-C6-LQi"/>
-                            <constraint firstItem="7O1-cr-ctv" firstAttribute="leading" secondItem="KE6-oJ-iqK" secondAttribute="leadingMargin" constant="-20" id="HJ0-jN-yAM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7O1-cr-ctv" secondAttribute="trailing" constant="-20" id="KC2-g3-VG1"/>
-                            <constraint firstItem="yon-QB-BtV" firstAttribute="top" secondItem="yRg-Cs-l5y" secondAttribute="bottom" constant="301" id="PaU-Hi-gW1"/>
-                            <constraint firstItem="NNb-CA-XmC" firstAttribute="top" secondItem="yon-QB-BtV" secondAttribute="top" id="rMi-Gp-3h7"/>
-                            <constraint firstItem="yon-QB-BtV" firstAttribute="bottom" secondItem="NNb-CA-XmC" secondAttribute="bottom" id="rlj-Yb-Uz7"/>
-                            <constraint firstItem="yon-QB-BtV" firstAttribute="leading" secondItem="NNb-CA-XmC" secondAttribute="leading" id="w1v-k3-pfN"/>
-                        </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -179,7 +168,6 @@ by people for at least 13,000 years.</string>
     </scenes>
     <resources>
         <image name="Image" width="2048" height="1536"/>
-        <image name="Image-1" width="2048" height="1536"/>
         <image name="Image-2" width="2048" height="1536"/>
         <image name="Image-3" width="2048" height="1536"/>
         <image name="Image-4" width="2048" height="1536"/>

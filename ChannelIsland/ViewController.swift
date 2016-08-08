@@ -66,7 +66,7 @@ class ViewController: UIViewController {
         ClickHere.animationDuration = 2.0
         ClickHere.startAnimating()
         OText1.font = UIFont(name:"TrajanPro-Regular", size: 81)
-        OText1.font = UIFont(name:"TrajanPro-Regular", size: 55)
+        OText2.font = UIFont(name:"TrajanPro-Regular", size: 55)
     }
 
     override func didReceiveMemoryWarning() {
@@ -236,7 +236,7 @@ class ViewController: UIViewController {
             
             }, completion: { finished in
                 print("Finished7!")}
-            )
+        )
         UIView.animateKeyframesWithDuration(32.0, delay: 0, options: .Repeat, animations:{
             UIView.addKeyframeWithRelativeStartTime(0.15625, relativeDuration: 0.03125, animations: {
                 
@@ -268,6 +268,11 @@ class ViewController: UIViewController {
             UIView.addKeyframeWithRelativeStartTime(0.8125, relativeDuration: 0.03125, animations: {
                 
                 self.T5.alpha = 0
+                
+            })
+            UIView.addKeyframeWithRelativeStartTime(0.875, relativeDuration: 0.03125, animations: {
+                
+                self.T2.alpha = 1
                 
             })
             }, completion: { finished in
