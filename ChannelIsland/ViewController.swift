@@ -8,6 +8,18 @@
 
 import UIKit
 
+extension UIView {
+    func pushTransition(duration:CFTimeInterval) {
+        let animation:CATransition = CATransition()
+        animation.timingFunction = CAMediaTimingFunction(name:
+            kCAMediaTimingFunctionEaseInEaseOut)
+        animation.type = kCATransitionPush
+        animation.subtype = kCATransitionFromTop
+        animation.duration = duration
+        self.layer.addAnimation(animation, forKey: kCATransitionPush)
+    }
+}
+
 class ViewController: UIViewController {
     //MARK: Properties
     
@@ -19,11 +31,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var ClickHere: UIImageView!
     @IBOutlet weak var entryButton: UIButton!
     
+    @IBOutlet weak var T5: UITextView!
+    @IBOutlet weak var T4: UITextView!
+    @IBOutlet weak var T3: UITextView!
     @IBOutlet weak var T2: UITextView!
     @IBOutlet weak var T1: UITextField!
     @IBOutlet weak var OText2: UITextField!
     @IBOutlet weak var OText1: UITextField!
     var imageArray: [UIImage] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -221,7 +237,43 @@ class ViewController: UIViewController {
             }, completion: { finished in
                 print("Finished7!")}
             )
-        
+        UIView.animateKeyframesWithDuration(32.0, delay: 0, options: .Repeat, animations:{
+            UIView.addKeyframeWithRelativeStartTime(0.15625, relativeDuration: 0.03125, animations: {
+                
+                self.T2.alpha = 0
+                
+            })
+            UIView.addKeyframeWithRelativeStartTime(0.21875, relativeDuration: 0.03125, animations: {
+                
+                self.T3.alpha = 1
+                
+            })
+            UIView.addKeyframeWithRelativeStartTime(0.375, relativeDuration: 0.03125, animations: {
+                
+                self.T3.alpha = 0
+            })
+            UIView.addKeyframeWithRelativeStartTime(0.4375, relativeDuration: 0.03125, animations: {
+                
+                self.T4.alpha = 1
+            })
+            UIView.addKeyframeWithRelativeStartTime(0.59375, relativeDuration: 0.03125, animations: {
+                
+                self.T4.alpha = 0
+            })
+            UIView.addKeyframeWithRelativeStartTime(0.65625, relativeDuration: 0.03125, animations: {
+                
+                self.T5.alpha = 1
+                
+            })
+            UIView.addKeyframeWithRelativeStartTime(0.8125, relativeDuration: 0.03125, animations: {
+                
+                self.T5.alpha = 0
+                
+            })
+            }, completion: { finished in
+                print("Finished7!")}
+        )
+
     
         /*
          

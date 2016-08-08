@@ -73,6 +73,29 @@
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22.200000762939453"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="Explore and discover unique land, air and underwater wildlife.!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="udL-I4-RUG">
+                                <rect key="frame" x="251" y="450" width="519" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.73999999999999999" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22.200000762939453"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VH0-HM-1eF">
+                                <rect key="frame" x="251" y="450" width="519" height="102"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Ancestral home of the Chumash Tribe, inhabited
+by people for at least 13,000 years.</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.73999999999999999" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22.200000762939453"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="Visit and enjoy 5 beautiful rough islands!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r90-63-QLY">
+                                <rect key="frame" x="251" y="450" width="519" height="102"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.73999999999999999" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22.200000762939453"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -99,6 +122,9 @@
                         <outlet property="OText2" destination="uoL-mX-Tpr" id="pH6-ef-6sq"/>
                         <outlet property="T1" destination="u5F-aZ-Ypv" id="UOa-no-EXr"/>
                         <outlet property="T2" destination="iwB-dq-FvW" id="V8H-5N-MxA"/>
+                        <outlet property="T3" destination="udL-I4-RUG" id="pmu-B8-faD"/>
+                        <outlet property="T4" destination="VH0-HM-1eF" id="Al1-4n-uzI"/>
+                        <outlet property="T5" destination="r90-63-QLY" id="OYf-ks-N1G"/>
                         <outlet property="imageView1" destination="NSM-be-cvw" id="BAq-z5-gfL"/>
                     </connections>
                 </viewController>
