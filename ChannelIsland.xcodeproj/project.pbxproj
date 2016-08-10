@@ -24,6 +24,9 @@
 		B03151E31D4E69B60038FBA5 /* ChannelIslandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03151E21D4E69B60038FBA5 /* ChannelIslandTests.swift */; };
 		B03151EE1D4E69B60038FBA5 /* ChannelIslandUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03151ED1D4E69B60038FBA5 /* ChannelIslandUITests.swift */; };
 		B0BB43C11D51719F0042CF5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB43C01D51719F0042CF5E /* ViewController.swift */; };
+		B0EFD54D1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EFD54C1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift */; };
+		B0EFD54E1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EFD54C1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift */; };
+		B0EFD54F1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EFD54C1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,7 @@
 		B03151ED1D4E69B60038FBA5 /* ChannelIslandUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelIslandUITests.swift; sourceTree = "<group>"; };
 		B03151EF1D4E69B60038FBA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0BB43C01D51719F0042CF5E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B0EFD54C1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 		B03151C81D4E69B60038FBA5 /* ChannelIsland */ = {
 			isa = PBXGroup;
 			children = (
+				B0EFD54C1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift */,
 				B03151C91D4E69B60038FBA5 /* AppDelegate.swift */,
 				B03151CB1D4E69B60038FBA5 /* RootViewController.swift */,
 				B03151CD1D4E69B60038FBA5 /* DataViewController.swift */,
@@ -290,6 +295,7 @@
 				B0BB43C11D51719F0042CF5E /* ViewController.swift in Sources */,
 				B03151CC1D4E69B60038FBA5 /* RootViewController.swift in Sources */,
 				B03151D01D4E69B60038FBA5 /* ModelController.swift in Sources */,
+				B0EFD54D1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */,
 				B03151CE1D4E69B60038FBA5 /* DataViewController.swift in Sources */,
 				B03151CA1D4E69B60038FBA5 /* AppDelegate.swift in Sources */,
 			);
@@ -299,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0EFD54E1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */,
 				B00364EF1D57D950001895D3 /* ViewController.swift in Sources */,
 				B03151E31D4E69B60038FBA5 /* ChannelIslandTests.swift in Sources */,
 			);
@@ -308,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0EFD54F1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */,
 				B00364F01D57D951001895D3 /* ViewController.swift in Sources */,
 				B03151EE1D4E69B60038FBA5 /* ChannelIslandUITests.swift in Sources */,
 			);
