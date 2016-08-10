@@ -93,7 +93,7 @@ by people for at least 13,000 years.</string>
                                     <constraint firstAttribute="width" constant="125" id="L5s-I6-k2T"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="S4R-Ja-viH" kind="presentation" id="0j0-Vz-LUs"/>
+                                    <segue destination="S4R-Ja-viH" kind="presentation" identifier="revealSegue" id="0j0-Vz-LUs"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -103,6 +103,7 @@ by people for at least 13,000 years.</string>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="CardView" destination="KE6-oJ-iqK" id="gUY-N0-LJO"/>
                         <outlet property="ClickHere" destination="NNb-CA-XmC" id="U6p-Kw-0D9"/>
                         <outlet property="ImageView2" destination="rvR-S3-bXe" id="R6Q-GH-Vra"/>
                         <outlet property="ImageView3" destination="zZk-p4-mkh" id="PhR-Zm-9L0"/>

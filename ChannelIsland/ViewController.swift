@@ -19,18 +19,20 @@ extension UIView {
         self.layer.addAnimation(animation, forKey: kCATransitionPush)
     }
 }
-
+private let revealSequeId = "revealSegue"
 class ViewController: UIViewController {
     //MARK: Properties
     
     @IBOutlet weak var imageView1: UIImageView!
     @IBOutlet weak var ImageView2: UIImageView!
 
+    
+    @IBOutlet var CardView: UIView!
     @IBOutlet weak var ImageView3: UIImageView!
     @IBOutlet weak var ImageView4: UIImageView!
     @IBOutlet weak var ClickHere: UIImageView!
     @IBOutlet weak var entryButton: UIButton!
-    
+    private let flipPresentAnimationController = FlipPresentAnimationController()
     @IBOutlet weak var T5: UITextView!
     @IBOutlet weak var T4: UITextView!
     @IBOutlet weak var T3: UITextView!
@@ -39,7 +41,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var OText2: UITextField!
     @IBOutlet weak var OText1: UITextField!
     var imageArray: [UIImage] = []
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == revealSequeId, let destinationViewController = segue.destinationViewController as? DataViewController {
+            
+            destinationViewController.transitioningDelegate = self
 
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -293,4 +303,12 @@ class ViewController: UIViewController {
 
     }
 
+}
+
+extension ViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        flipPresentAnimationController.originFrame = CardView.frame
+        return flipPresentAnimationController
+    }
 }
