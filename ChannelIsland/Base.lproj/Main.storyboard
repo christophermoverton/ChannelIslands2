@@ -64,6 +64,9 @@
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22.200000762939453"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_LOGOS_FOR_DISSOLVE_LOOP" translatesAutoresizingMaskIntoConstraints="NO" id="GbJ-qM-4Fa">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="Explore and discover unique land, air and underwater wildlife.!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="udL-I4-RUG">
                                 <rect key="frame" x="253" y="450" width="519" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -168,6 +171,7 @@ by people for at least 13,000 years.</string>
         </scene>
     </scenes>
     <resources>
+        <image name="CI_LOGOS_FOR_DISSOLVE_LOOP" width="2048" height="1536"/>
         <image name="Image" width="2048" height="1536"/>
         <image name="Image-2" width="2048" height="1536"/>
         <image name="Image-3" width="2048" height="1536"/>
