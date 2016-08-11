@@ -228,7 +228,7 @@ class ViewController: UIViewController {
         })
         */
         
-        UIView.animateWithDuration(2.0, delay: 19.0, options: .CurveEaseOut, animations: {
+        UIView.animateWithDuration(2.0, delay: 2.0, options: .CurveEaseOut, animations: {
             self.ClickHere.alpha = 1;
             }, completion: { finished in
                 print("Finished7!")

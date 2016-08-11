@@ -10,7 +10,7 @@
     {
       "orientation" : "landscape",
       "idiom" : "ipad",
-      "filename" : "Loading_Screen-1.png",
+      "filename" : "LOADING_V02.png",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
       "scale" : "1x"
@@ -25,7 +25,7 @@
     {
       "orientation" : "landscape",
       "idiom" : "ipad",
-      "filename" : "Loading_Screen.png",
+      "filename" : "LOADING_V02-1.png",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
       "scale" : "2x"
