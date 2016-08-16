@@ -14,6 +14,9 @@
 		B00364EA1D57D6DB001895D3 /* TrajanPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B00364E71D57D6DB001895D3 /* TrajanPro-Regular.otf */; };
 		B00364EF1D57D950001895D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB43C01D51719F0042CF5E /* ViewController.swift */; };
 		B00364F01D57D951001895D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB43C01D51719F0042CF5E /* ViewController.swift */; };
+		B0211E211D630742008208CC /* MapCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0211E201D630742008208CC /* MapCard.swift */; };
+		B0211E221D630742008208CC /* MapCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0211E201D630742008208CC /* MapCard.swift */; };
+		B0211E231D630742008208CC /* MapCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0211E201D630742008208CC /* MapCard.swift */; };
 		B03151CA1D4E69B60038FBA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03151C91D4E69B60038FBA5 /* AppDelegate.swift */; };
 		B03151CC1D4E69B60038FBA5 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03151CB1D4E69B60038FBA5 /* RootViewController.swift */; };
 		B03151CE1D4E69B60038FBA5 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03151CD1D4E69B60038FBA5 /* DataViewController.swift */; };
@@ -48,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		B00364E71D57D6DB001895D3 /* TrajanPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TrajanPro-Regular.otf"; sourceTree = "<group>"; };
+		B0211E201D630742008208CC /* MapCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCard.swift; sourceTree = "<group>"; };
 		B03151C61D4E69B60038FBA5 /* ChannelIsland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChannelIsland.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03151C91D4E69B60038FBA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B03151CB1D4E69B60038FBA5 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				B00364E71D57D6DB001895D3 /* TrajanPro-Regular.otf */,
+				B0211E201D630742008208CC /* MapCard.swift */,
 			);
 			name = " Resource";
 			sourceTree = "<group>";
@@ -297,6 +302,7 @@
 				B03151D01D4E69B60038FBA5 /* ModelController.swift in Sources */,
 				B0EFD54D1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */,
 				B03151CE1D4E69B60038FBA5 /* DataViewController.swift in Sources */,
+				B0211E211D630742008208CC /* MapCard.swift in Sources */,
 				B03151CA1D4E69B60038FBA5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0211E221D630742008208CC /* MapCard.swift in Sources */,
 				B0EFD54E1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */,
 				B00364EF1D57D950001895D3 /* ViewController.swift in Sources */,
 				B03151E31D4E69B60038FBA5 /* ChannelIslandTests.swift in Sources */,
@@ -315,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0211E231D630742008208CC /* MapCard.swift in Sources */,
 				B0EFD54F1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */,
 				B00364F01D57D951001895D3 /* ViewController.swift in Sources */,
 				B03151EE1D4E69B60038FBA5 /* ChannelIslandUITests.swift in Sources */,

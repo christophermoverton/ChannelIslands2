@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -133,41 +132,271 @@ by people for at least 13,000 years.</string>
                         <viewControllerLayoutGuide type="top" id="qjH-T1-MoF"/>
                         <viewControllerLayoutGuide type="bottom" id="9M8-LP-Xax"/>
                     </layoutGuides>
-                    <view key="view" autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ZwX-cT-FIQ">
+                    <view key="view" autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFit" id="ZwX-cT-FIQ">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="s1b-V9-EN7">
-                                <rect key="frame" x="8" y="20" width="2032" height="1516"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="qbs-s3-jRb">
-                                        <rect key="frame" x="8" y="-7" width="1006" height="742"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="742" id="0CW-27-tel"/>
-                                            <constraint firstAttribute="width" constant="1006" id="7Hn-pg-jaw"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="qbs-s3-jRb" firstAttribute="leading" secondItem="s1b-V9-EN7" secondAttribute="leadingMargin" id="n6F-YK-EdC"/>
-                                    <constraint firstItem="qbs-s3-jRb" firstAttribute="top" secondItem="s1b-V9-EN7" secondAttribute="top" constant="-7" id="oD9-mn-RaP"/>
-                                </constraints>
-                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="kLn-xz-Lbj">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTS-av-rkH">
+                                <rect key="frame" x="34" y="364" width="151" height="74"/>
+                                <connections>
+                                    <segue destination="pyQ-KH-GOQ" kind="presentation" modalTransitionStyle="crossDissolve" id="Pis-kE-B5l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cI-d4-SBt">
+                                <rect key="frame" x="193" y="383" width="259" height="79"/>
+                                <connections>
+                                    <segue destination="2YF-RJ-H4w" kind="presentation" modalTransitionStyle="crossDissolve" id="jew-Ho-UNx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4IY-UA-9rl">
+                                <rect key="frame" x="460" y="374" width="363" height="74"/>
+                                <connections>
+                                    <segue destination="xOZ-75-fK5" kind="presentation" modalTransitionStyle="crossDissolve" id="jZ1-9F-Fml"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gR9-rN-X64">
+                                <rect key="frame" x="861" y="374" width="106" height="58"/>
+                                <connections>
+                                    <segue destination="gfQ-kY-mDd" kind="presentation" modalTransitionStyle="crossDissolve" id="iB9-rI-Hfy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oov-SV-MRp">
+                                <rect key="frame" x="783" y="543" width="189" height="55"/>
+                                <connections>
+                                    <segue destination="jD5-Az-AEW" kind="presentation" modalTransitionStyle="crossDissolve" id="95q-E2-Vbw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="s1b-V9-EN7" firstAttribute="leading" secondItem="ZwX-cT-FIQ" secondAttribute="leadingMargin" constant="-12" id="FVg-dh-IWW"/>
-                            <constraint firstAttribute="trailing" secondItem="s1b-V9-EN7" secondAttribute="trailing" constant="-1016" id="GLT-qD-fEB"/>
-                            <constraint firstItem="s1b-V9-EN7" firstAttribute="top" secondItem="qjH-T1-MoF" secondAttribute="bottom" id="IkM-ze-FWM"/>
-                            <constraint firstAttribute="bottom" secondItem="s1b-V9-EN7" secondAttribute="bottom" constant="-768" id="QPE-q5-DnV"/>
-                        </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GmD-Rr-ZGN" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3326.5625" y="-199.21875"/>
+            <point key="canvasLocation" x="3326" y="-200"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Bcf-TB-ttE">
+            <objects>
+                <viewController id="2YF-RJ-H4w" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7WZ-5V-Uuj"/>
+                        <viewControllerLayoutGuide type="bottom" id="mvs-z1-uQM"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="vZR-Sd-lGk">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image201608151733332" translatesAutoresizingMaskIntoConstraints="NO" id="sfP-Ng-UYO">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="0Xm-bA-Ers" appends="YES" id="nLn-5b-ogt"/>
+                                    <outletCollection property="gestureRecognizers" destination="PxO-Lw-iBA" appends="YES" id="hZG-9i-o1d"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpL-dG-SwA">
+                                <rect key="frame" x="736" y="699" width="46" height="61"/>
+                                <connections>
+                                    <segue destination="S4R-Ja-viH" kind="presentation" modalTransitionStyle="crossDissolve" id="1fy-7I-gvp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ec-0s-b7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="0Xm-bA-Ers">
+                    <connections>
+                        <segue destination="pyQ-KH-GOQ" kind="presentation" modalTransitionStyle="crossDissolve" id="yqe-Mp-YZ1"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="PxO-Lw-iBA">
+                    <connections>
+                        <segue destination="xOZ-75-fK5" kind="presentation" modalTransitionStyle="crossDissolve" id="36E-6T-gB9"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="4442" y="-1841"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aHe-yp-SED">
+            <objects>
+                <viewController id="pyQ-KH-GOQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jo2-tc-2Rh"/>
+                        <viewControllerLayoutGuide type="bottom" id="qD8-w9-oef"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleAspectFit" id="Gka-0h-Yhz">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image201608151733331" translatesAutoresizingMaskIntoConstraints="NO" id="E9h-pX-N4e">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gmw-y1-xHg" appends="YES" id="JhE-gO-haC"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daP-Ge-kpc">
+                                <rect key="frame" x="737" y="701" width="46" height="59"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="S4R-Ja-viH" kind="presentation" modalTransitionStyle="crossDissolve" id="Xfw-Zj-LSi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uda-Yq-m73" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="gmw-y1-xHg">
+                    <connections>
+                        <segue destination="2YF-RJ-H4w" kind="presentation" modalTransitionStyle="crossDissolve" id="nva-S2-vam"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="4426" y="-2802"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="D1S-wc-LGx">
+            <objects>
+                <viewController id="xOZ-75-fK5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pf4-Jg-uSc"/>
+                        <viewControllerLayoutGuide type="bottom" id="zV0-IK-Yn6"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="wKN-Ev-zjR">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image201608151733333" translatesAutoresizingMaskIntoConstraints="NO" id="rlw-Of-cjs">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="XUP-uB-cU0" appends="YES" id="ogw-9G-eVV"/>
+                                    <outletCollection property="gestureRecognizers" destination="yja-QI-yVT" appends="YES" id="Peh-KQ-WKH"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tw1-Cb-IMe">
+                                <rect key="frame" x="741" y="703" width="46" height="57"/>
+                                <connections>
+                                    <segue destination="S4R-Ja-viH" kind="presentation" modalTransitionStyle="crossDissolve" id="zES-DJ-Qvu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ass-9b-Ej7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="XUP-uB-cU0">
+                    <connections>
+                        <segue destination="2YF-RJ-H4w" kind="presentation" modalTransitionStyle="crossDissolve" id="drT-VG-ogL"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="yja-QI-yVT">
+                    <connections>
+                        <segue destination="gfQ-kY-mDd" kind="presentation" modalTransitionStyle="crossDissolve" id="ELr-bK-b7y"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="4442" y="-912"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6Yh-BU-H15">
+            <objects>
+                <viewController id="gfQ-kY-mDd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hvv-hz-jpA"/>
+                        <viewControllerLayoutGuide type="bottom" id="s0Q-Af-qy0"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="GSi-kc-UHp">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image201608151733334" translatesAutoresizingMaskIntoConstraints="NO" id="6Na-Uf-alT">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wjH-w9-h0o" appends="YES" id="wDq-Mk-mcK"/>
+                                    <outletCollection property="gestureRecognizers" destination="ALx-vQ-XaG" appends="YES" id="JO4-vb-BOY"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsl-sf-XRF">
+                                <rect key="frame" x="737" y="699" width="46" height="61"/>
+                                <connections>
+                                    <segue destination="S4R-Ja-viH" kind="presentation" modalTransitionStyle="crossDissolve" id="UxM-fJ-qBO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ufb-Wk-5i9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="wjH-w9-h0o">
+                    <connections>
+                        <segue destination="xOZ-75-fK5" kind="presentation" modalTransitionStyle="crossDissolve" id="9Ks-Mh-gHR"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="ALx-vQ-XaG">
+                    <connections>
+                        <segue destination="jD5-Az-AEW" kind="presentation" modalTransitionStyle="crossDissolve" id="4jn-Lx-VjZ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="4472" y="36"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tiQ-i8-3nb">
+            <objects>
+                <viewController id="jD5-Az-AEW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h1r-95-O0e"/>
+                        <viewControllerLayoutGuide type="bottom" id="3We-WX-4r5"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="srG-VG-iiY">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image201608151733335" translatesAutoresizingMaskIntoConstraints="NO" id="zfZ-BX-C9B">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="DTp-x3-sfa" appends="YES" id="6p0-Nq-fMP"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXB-sw-z6j">
+                                <rect key="frame" x="738" y="701" width="46" height="59"/>
+                                <connections>
+                                    <segue destination="S4R-Ja-viH" kind="presentation" modalTransitionStyle="crossDissolve" id="b7l-3o-hqg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Th-Kw-Ic0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="DTp-x3-sfa">
+                    <connections>
+                        <segue destination="gfQ-kY-mDd" kind="presentation" modalTransitionStyle="crossDissolve" id="ud3-wU-oGD"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="4480" y="972"/>
         </scene>
     </scenes>
     <resources>
@@ -176,5 +405,18 @@ by people for at least 13,000 years.</string>
         <image name="Image-2" width="2048" height="1536"/>
         <image name="Image-3" width="2048" height="1536"/>
         <image name="Image-4" width="2048" height="1536"/>
+        <image name="image201608151733331" width="2048" height="1536"/>
+        <image name="image201608151733332" width="2048" height="1536"/>
+        <image name="image201608151733333" width="2048" height="1536"/>
+        <image name="image201608151733334" width="2048" height="1536"/>
+        <image name="image201608151733335" width="2048" height="1536"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Xfw-Zj-LSi"/>
+        <segue reference="yqe-Mp-YZ1"/>
+        <segue reference="drT-VG-ogL"/>
+        <segue reference="36E-6T-gB9"/>
+        <segue reference="95q-E2-Vbw"/>
+        <segue reference="ELr-bK-b7y"/>
+    </inferredMetricsTieBreakers>
 </document>
