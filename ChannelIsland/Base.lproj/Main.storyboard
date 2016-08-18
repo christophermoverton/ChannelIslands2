@@ -132,11 +132,14 @@ by people for at least 13,000 years.</string>
                         <viewControllerLayoutGuide type="top" id="qjH-T1-MoF"/>
                         <viewControllerLayoutGuide type="bottom" id="9M8-LP-Xax"/>
                     </layoutGuides>
-                    <view key="view" autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFit" id="ZwX-cT-FIQ">
+                    <view key="view" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFit" id="ZwX-cT-FIQ">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="kLn-xz-Lbj">
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="kLn-xz-Lbj">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <imageView opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Main_Navigationblur" translatesAutoresizingMaskIntoConstraints="NO" id="cMd-Z5-khC">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTS-av-rkH">
@@ -169,11 +172,42 @@ by people for at least 13,000 years.</string>
                                     <segue destination="jD5-Az-AEW" kind="presentation" modalTransitionStyle="crossDissolve" id="95q-E2-Vbw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SjV-01-Ua8">
+                                <rect key="frame" x="439" y="694" width="46" height="60"/>
+                                <connections>
+                                    <action selector="infoClick:" destination="S4R-Ja-viH" eventType="touchUpInside" id="w2y-hS-JIW"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vwb-27-UOI">
+                                <rect key="frame" x="0.0" y="74" width="1024" height="443"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsm-U1-aMQ">
+                                        <rect key="frame" x="418" y="44" width="570" height="526"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <gestureRecognizers/>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="AnacapaButton" destination="gR9-rN-X64" id="eAw-S5-a6Q"/>
+                        <outlet property="IView" destination="kLn-xz-Lbj" id="6xd-My-NOF"/>
+                        <outlet property="IView2" destination="cMd-Z5-khC" id="Ru9-Iv-qQx"/>
+                        <outlet property="InfoButton" destination="SjV-01-Ua8" id="D1F-ZH-ddb"/>
+                        <outlet property="MView" destination="ZwX-cT-FIQ" id="SuP-s1-7NA"/>
+                        <outlet property="SanMigButton" destination="MTS-av-rkH" id="p1u-V4-RTf"/>
+                        <outlet property="SantaBarbaraButton" destination="Oov-SV-MRp" id="YTB-Bl-2Gn"/>
+                        <outlet property="SantaCruzButton" destination="4IY-UA-9rl" id="yC3-8s-cri"/>
+                        <outlet property="SantaRosaButton" destination="6cI-d4-SBt" id="NuT-0A-fuX"/>
+                        <outlet property="ScrollView" destination="vwb-27-UOI" id="5j6-OL-9ii"/>
+                        <outlet property="TextView" destination="lsm-U1-aMQ" id="Ffv-Tm-gui"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GmD-Rr-ZGN" sceneMemberID="firstResponder"/>
             </objects>
@@ -405,6 +439,7 @@ by people for at least 13,000 years.</string>
         <image name="Image-2" width="2048" height="1536"/>
         <image name="Image-3" width="2048" height="1536"/>
         <image name="Image-4" width="2048" height="1536"/>
+        <image name="Main_Navigationblur" width="2048" height="1536"/>
         <image name="image201608151733331" width="2048" height="1536"/>
         <image name="image201608151733332" width="2048" height="1536"/>
         <image name="image201608151733333" width="2048" height="1536"/>
@@ -412,11 +447,11 @@ by people for at least 13,000 years.</string>
         <image name="image201608151733335" width="2048" height="1536"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Xfw-Zj-LSi"/>
-        <segue reference="yqe-Mp-YZ1"/>
-        <segue reference="drT-VG-ogL"/>
-        <segue reference="36E-6T-gB9"/>
+        <segue reference="jZ1-9F-Fml"/>
+        <segue reference="1fy-7I-gvp"/>
+        <segue reference="jew-Ho-UNx"/>
         <segue reference="95q-E2-Vbw"/>
-        <segue reference="ELr-bK-b7y"/>
+        <segue reference="Pis-kE-B5l"/>
+        <segue reference="iB9-rI-Hfy"/>
     </inferredMetricsTieBreakers>
 </document>
