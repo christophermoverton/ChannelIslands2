@@ -178,8 +178,14 @@ by people for at least 13,000 years.</string>
                                     <action selector="infoClick:" destination="S4R-Ja-viH" eventType="touchUpInside" id="w2y-hS-JIW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmQ-vy-JnW">
+                                <rect key="frame" x="0.0" y="684" width="1024" height="84"/>
+                                <connections>
+                                    <action selector="DismissInfoClick:" destination="S4R-Ja-viH" eventType="touchUpInside" id="aTt-Mp-t4l"/>
+                                </connections>
+                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vwb-27-UOI">
-                                <rect key="frame" x="0.0" y="74" width="1024" height="443"/>
+                                <rect key="frame" x="0.0" y="74" width="1024" height="612"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsm-U1-aMQ">
                                         <rect key="frame" x="418" y="44" width="570" height="526"/>
@@ -197,6 +203,7 @@ by people for at least 13,000 years.</string>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="AnacapaButton" destination="gR9-rN-X64" id="eAw-S5-a6Q"/>
+                        <outlet property="DismissInfo" destination="CmQ-vy-JnW" id="jE0-bG-2LA"/>
                         <outlet property="IView" destination="kLn-xz-Lbj" id="6xd-My-NOF"/>
                         <outlet property="IView2" destination="cMd-Z5-khC" id="Ru9-Iv-qQx"/>
                         <outlet property="InfoButton" destination="SjV-01-Ua8" id="D1F-ZH-ddb"/>

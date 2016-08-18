@@ -10,6 +10,7 @@ import UIKit
 
 class DataViewController: UIViewController, UITextViewDelegate {
 
+    @IBOutlet weak var DismissInfo: UIButton!
     @IBOutlet weak var TextView: UITextView!
     @IBOutlet weak var IView2: UIImageView!
     @IBOutlet weak var InfoButton: UIButton!
@@ -31,6 +32,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         self.ScrollView.contentSize.height = 1000
         self.ScrollView.hidden = true
+        self.DismissInfo.hidden = true
 
     }
 
@@ -46,6 +48,21 @@ class DataViewController: UIViewController, UITextViewDelegate {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+    @IBAction func DismissInfoClick(sender: AnyObject) {
+        self.IView.hidden = false
+        UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.IView.alpha = 1
+            self.ScrollView.alpha = 0
+            self.IView2.alpha = 0
+            }, completion: { finished in
+                if (finished){
+                    
+                    self.ScrollView.hidden = true
+                }
+        })
+        self.DismissInfo.hidden = true
+        print("Dismiss Button Pressed")
+    }
     @IBAction func infoClick(sender: AnyObject) {
         self.ScrollView.hidden = false
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
@@ -57,6 +74,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
                     self.IView.hidden = true
                 }
         })
+        self.DismissInfo.hidden = false
         print("Info Button Pressed")
     }
 }
