@@ -27,6 +27,9 @@
 		B03151E31D4E69B60038FBA5 /* ChannelIslandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03151E21D4E69B60038FBA5 /* ChannelIslandTests.swift */; };
 		B03151EE1D4E69B60038FBA5 /* ChannelIslandUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03151ED1D4E69B60038FBA5 /* ChannelIslandUITests.swift */; };
 		B0BB43C11D51719F0042CF5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB43C01D51719F0042CF5E /* ViewController.swift */; };
+		B0EE853B1D6697AA0047EAB6 /* SampleText.txt in Resources */ = {isa = PBXBuildFile; fileRef = B0EE853A1D6697AA0047EAB6 /* SampleText.txt */; };
+		B0EE853C1D6697AA0047EAB6 /* SampleText.txt in Resources */ = {isa = PBXBuildFile; fileRef = B0EE853A1D6697AA0047EAB6 /* SampleText.txt */; };
+		B0EE853D1D6697AA0047EAB6 /* SampleText.txt in Resources */ = {isa = PBXBuildFile; fileRef = B0EE853A1D6697AA0047EAB6 /* SampleText.txt */; };
 		B0EFD54D1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EFD54C1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift */; };
 		B0EFD54E1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EFD54C1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift */; };
 		B0EFD54F1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EFD54C1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift */; };
@@ -68,6 +71,7 @@
 		B03151ED1D4E69B60038FBA5 /* ChannelIslandUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelIslandUITests.swift; sourceTree = "<group>"; };
 		B03151EF1D4E69B60038FBA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0BB43C01D51719F0042CF5E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B0EE853A1D6697AA0047EAB6 /* SampleText.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SampleText.txt; sourceTree = "<group>"; };
 		B0EFD54C1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				B00364E71D57D6DB001895D3 /* TrajanPro-Regular.otf */,
+				B0EE853A1D6697AA0047EAB6 /* SampleText.txt */,
 				B0211E201D630742008208CC /* MapCard.swift */,
 			);
 			name = " Resource";
@@ -268,6 +273,7 @@
 				B00364E81D57D6DB001895D3 /* TrajanPro-Regular.otf in Resources */,
 				B03151D81D4E69B60038FBA5 /* LaunchScreen.storyboard in Resources */,
 				B03151D51D4E69B60038FBA5 /* Assets.xcassets in Resources */,
+				B0EE853B1D6697AA0047EAB6 /* SampleText.txt in Resources */,
 				B03151D31D4E69B60038FBA5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +284,7 @@
 			files = (
 				B00364E91D57D6DB001895D3 /* TrajanPro-Regular.otf in Resources */,
 				B00364E41D57D35D001895D3 /* Assets.xcassets in Resources */,
+				B0EE853C1D6697AA0047EAB6 /* SampleText.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +294,7 @@
 			files = (
 				B00364EA1D57D6DB001895D3 /* TrajanPro-Regular.otf in Resources */,
 				B00364E51D57D35E001895D3 /* Assets.xcassets in Resources */,
+				B0EE853D1D6697AA0047EAB6 /* SampleText.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@
 import UIKit
 
 class DataViewController: UIViewController, UITextViewDelegate {
-
+    
     @IBOutlet weak var DismissInfo: UIButton!
     @IBOutlet weak var TextView: UITextView!
     @IBOutlet weak var IView2: UIImageView!
@@ -33,6 +33,16 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.ScrollView.contentSize.height = 1000
         self.ScrollView.hidden = true
         self.DismissInfo.hidden = true
+        let path = NSBundle.mainBundle().pathForResource("SampleText", ofType: "txt")
+        let fm = NSFileManager()
+        let exists = fm.fileExistsAtPath(path!);
+        var cString: String = "";
+        if(exists){
+            let c = fm.contentsAtPath(path!)
+            let nString = NSString(data: c!, encoding: NSUTF8StringEncoding)
+            cString = nString as! String
+        }
+        TextView.attributedText = getLargeText(cString)
 
     }
 
@@ -77,5 +87,27 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.DismissInfo.hidden = false
         print("Info Button Pressed")
     }
+    func getLargeText(text: String) -> NSMutableAttributedString {
+        let string:NSMutableAttributedString = NSMutableAttributedString(string: text, attributes: [NSForegroundColorAttributeName: UIColor.whiteColor(),NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 14.0)!])
+        let words:[String] = text.componentsSeparatedByString(" ")
+        var w = ""
+        
+        for word in words {
+            let t1: Bool = word.rangeOfString("{|") != nil
+            let t2: Bool = word.rangeOfString("|}") != nil
+            //if (word.hasPrefix("{|") && word.hasSuffix("|}")) {
+            if (t1 && t2){
+                let range:NSRange = (string.string as NSString).rangeOfString(word)
+                string.addAttribute(NSFontAttributeName, value: UIFont(name: "Helvetica-Light", size: 30)!, range:range)
+                //string.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: range)
+                w = word.stringByReplacingOccurrencesOfString("{|", withString: "")
+                w = w.stringByReplacingOccurrencesOfString("|}", withString: "")
+                string.replaceCharactersInRange(range, withString: w)
+            }
+        }
+        return string
+    }
+    
+    //getColoredText("i {|love|} this!")
 }
 
