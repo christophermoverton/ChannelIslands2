@@ -11,7 +11,13 @@ import UIKit
 class DataViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var DismissInfo: UIButton!
-    @IBOutlet weak var TextView: UITextView!
+    
+   
+    
+    
+    
+    
+    @IBOutlet weak var TextView2: UITextView!
     @IBOutlet weak var IView2: UIImageView!
     @IBOutlet weak var InfoButton: UIButton!
     @IBOutlet weak var SantaBarbaraButton: UIButton!
@@ -33,6 +39,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.ScrollView.contentSize.height = 1000
         self.ScrollView.hidden = true
         self.DismissInfo.hidden = true
+        /*
         let path = NSBundle.mainBundle().pathForResource("SampleText", ofType: "txt")
         let fm = NSFileManager()
         let exists = fm.fileExistsAtPath(path!);
@@ -42,8 +49,8 @@ class DataViewController: UIViewController, UITextViewDelegate {
             let nString = NSString(data: c!, encoding: NSUTF8StringEncoding)
             cString = nString as! String
         }
-        TextView.attributedText = getLargeText(cString)
-
+        TextView2.attributedText = getLargeText(cString)
+        */
     }
 
     override func didReceiveMemoryWarning() {

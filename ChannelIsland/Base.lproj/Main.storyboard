@@ -185,15 +185,55 @@ by people for at least 13,000 years.</string>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vwb-27-UOI">
-                                <rect key="frame" x="0.0" y="74" width="1024" height="612"/>
+                                <rect key="frame" x="0.0" y="118" width="1024" height="568"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsm-U1-aMQ">
-                                        <rect key="frame" x="418" y="44" width="570" height="526"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </string>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="14"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CE0-uh-29B">
+                                        <rect key="frame" x="378" y="155" width="646" height="165"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="The Channel Islands National Marine Sanctuary">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="18" name="Helvetica-Light"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">
+
+Established in 1980, the sanctuary in the Santa Barbara Channel is an area of of national significance because of its exceptional natural beauty and resources.  It encompasses approximately 1,470 square miles (3800 km^2) of water surrounding Anacapa, Santa Cruz, Santa Rosa, San Miguel and Santa Barbara Islands, extending from mean high tide to 6 nautical miles (11 km) offshore around each of the five islands.  The sanctuary is home to an extremely rich and diverse array of marine species , making it one of th best places in the world for viewing whales and other wildlife.  It also provides protection to more than 150 </string>
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="14" name="Helvetica-Light"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ek8-oy-gHH">
+                                        <rect key="frame" x="378" y="19" width="646" height="128"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Channel Islands National Park">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="18" name="Helvetica-Light"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">
+
+Channel Islands National Park encompasses five of the eight remarkable islands and their ocean environment, preserving and protecting the wealth of natural and cultural resources.  Isolation over thousands of years has created unique animals, plant,  and archeological resources found nowhere else on Earth and helped preserve a place where visitors can experience coastal southern California as it once was. </string>
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="14" name="Helvetica-Light"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-3" translatesAutoresizingMaskIntoConstraints="NO" id="16C-GO-kjY">
+                                        <rect key="frame" x="8" y="164" width="362" height="240"/>
+                                    </imageView>
                                 </subviews>
                                 <gestureRecognizers/>
                             </scrollView>
@@ -213,7 +253,7 @@ by people for at least 13,000 years.</string>
                         <outlet property="SantaCruzButton" destination="4IY-UA-9rl" id="yC3-8s-cri"/>
                         <outlet property="SantaRosaButton" destination="6cI-d4-SBt" id="NuT-0A-fuX"/>
                         <outlet property="ScrollView" destination="vwb-27-UOI" id="5j6-OL-9ii"/>
-                        <outlet property="TextView" destination="lsm-U1-aMQ" id="Ffv-Tm-gui"/>
+                        <outlet property="TextView2" destination="CE0-uh-29B" id="yJx-fK-PrQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GmD-Rr-ZGN" sceneMemberID="firstResponder"/>
