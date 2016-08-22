@@ -66,7 +66,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_LOGOS_FOR_DISSOLVE_LOOP" translatesAutoresizingMaskIntoConstraints="NO" id="GbJ-qM-4Fa">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="Explore and discover unique land, air and underwater wildlife.!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="udL-I4-RUG">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="Explore and discover unique land, air and underwater wildlife." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="udL-I4-RUG">
                                 <rect key="frame" x="253" y="450" width="519" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.73999999999999999" colorSpace="calibratedRGB"/>
@@ -494,10 +494,10 @@ Channel Islands National Park encompasses five of the eight remarkable islands a
         <image name="image201608151733335" width="2048" height="1536"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jZ1-9F-Fml"/>
-        <segue reference="1fy-7I-gvp"/>
-        <segue reference="jew-Ho-UNx"/>
+        <segue reference="0j0-Vz-LUs"/>
         <segue reference="95q-E2-Vbw"/>
+        <segue reference="jew-Ho-UNx"/>
+        <segue reference="jZ1-9F-Fml"/>
         <segue reference="Pis-kE-B5l"/>
         <segue reference="iB9-rI-Hfy"/>
     </inferredMetricsTieBreakers>
