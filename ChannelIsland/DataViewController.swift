@@ -36,7 +36,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.ScrollView.contentSize.height = 1000
+        self.ScrollView.contentSize.height = 650
         self.ScrollView.hidden = true
         self.DismissInfo.hidden = true
         /*
