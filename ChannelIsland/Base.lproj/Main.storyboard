@@ -178,13 +178,105 @@ by people for at least 13,000 years.</string>
                                     <action selector="infoClick:" destination="S4R-Ja-viH" eventType="touchUpInside" id="w2y-hS-JIW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9p8-uz-5dT">
+                                <rect key="frame" x="638" y="702" width="46" height="58"/>
+                                <connections>
+                                    <action selector="PlanningClick:" destination="S4R-Ja-viH" eventType="touchUpInside" id="C1U-7Z-lNB"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmQ-vy-JnW">
                                 <rect key="frame" x="0.0" y="684" width="1024" height="84"/>
                                 <connections>
                                     <action selector="DismissInfoClick:" destination="S4R-Ja-viH" eventType="touchUpInside" id="aTt-Mp-t4l"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vwb-27-UOI">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcY-De-ee1">
+                                <rect key="frame" x="0.0" y="684" width="1024" height="84"/>
+                                <connections>
+                                    <action selector="DismissPlanningClick:" destination="S4R-Ja-viH" eventType="touchUpInside" id="WRd-MC-z0v"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8d2-KK-2ym">
+                                <rect key="frame" x="0.0" y="118" width="1024" height="568"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g83-Cu-zcL">
+                                        <rect key="frame" x="74" y="0.0" width="873" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <string key="text">A visit to the Channel Islands is an exercise in preparation and self-reliance.  Since there are no services on the islands, there are no remedies for poor planning once you have arrived.  Please pay attention to the directives to visit each island. </string>
+                                        <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2WR-t5-oBo">
+                                        <rect key="frame" x="209" y="100" width="750" height="250"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Visitor Centers ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="24" name="Helvetica"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="15" name="Helvetica"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">The Robert J. Lagomarsino Channel Islands National Park Visitor Center features a bookstore, a native plant garden, a display of aquatic life, and exhibits featuring the unique character of each park island.  Visitors also will enjoy the new, award-winning park film.  Open 8:30 am until 5:00 pm daily.  Closed Thanksgiving and December 25t.  Located at 1901 Spinnaker Dr., Ventura CA 93001, 805-658-5730.
+
+The Outdoors Santa Barbara Visitor Center not only has one of the best views of Santa Barbara, but also offers visitors exhibits an</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">d information about Channel Islands National Park, Channel Islands National Marine Sanctuary, Santa Barbara Maritime Museum, and the City of Santa Barbara.  Open 10 am until 4 pm daily.  
+Located at 113 Harbor Way, 4th Floor, Santa Barbara, CA 93109, 805-884-1475.</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <font key="NSOriginalFont" size="16" name="Helvetica"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rrT-VG-kgG">
+                                        <rect key="frame" x="209" y="375" width="750" height="149"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Interpretive Information ">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="25" name="Helvetica"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">
+
+Books and materials about the park are available for sale through Western National Parks Association either in the park visitor center or by mail order.
+
+This nonprofit organization supports the education and research programs of the park.  Western National Parks Association, 805-….</string>
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ETp-8K-W9g">
+                                        <rect key="frame" x="74" y="350" width="873" height="2"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vwb-27-UOI">
                                 <rect key="frame" x="0.0" y="118" width="1024" height="568"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CE0-uh-29B">
@@ -359,15 +451,18 @@ Administered by the National Park Service within the Department of the Interior,
                     <connections>
                         <outlet property="AnacapaButton" destination="gR9-rN-X64" id="eAw-S5-a6Q"/>
                         <outlet property="DismissInfo" destination="CmQ-vy-JnW" id="jE0-bG-2LA"/>
+                        <outlet property="DismissPlanning" destination="lcY-De-ee1" id="A75-8i-uvC"/>
                         <outlet property="IView" destination="kLn-xz-Lbj" id="6xd-My-NOF"/>
                         <outlet property="IView2" destination="cMd-Z5-khC" id="Ru9-Iv-qQx"/>
                         <outlet property="InfoButton" destination="SjV-01-Ua8" id="D1F-ZH-ddb"/>
                         <outlet property="MView" destination="ZwX-cT-FIQ" id="SuP-s1-7NA"/>
+                        <outlet property="PlanningButton" destination="9p8-uz-5dT" id="Ly3-ee-N2C"/>
                         <outlet property="SanMigButton" destination="MTS-av-rkH" id="p1u-V4-RTf"/>
                         <outlet property="SantaBarbaraButton" destination="Oov-SV-MRp" id="YTB-Bl-2Gn"/>
                         <outlet property="SantaCruzButton" destination="4IY-UA-9rl" id="yC3-8s-cri"/>
                         <outlet property="SantaRosaButton" destination="6cI-d4-SBt" id="NuT-0A-fuX"/>
                         <outlet property="ScrollView" destination="vwb-27-UOI" id="5j6-OL-9ii"/>
+                        <outlet property="ScrollView2" destination="8d2-KK-2ym" id="IyK-IA-1R1"/>
                         <outlet property="TextView2" destination="CE0-uh-29B" id="yJx-fK-PrQ"/>
                     </connections>
                 </viewController>

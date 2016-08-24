@@ -17,6 +17,9 @@ class DataViewController: UIViewController, UITextViewDelegate {
     
     
     
+    @IBOutlet weak var DismissPlanning: UIButton!
+    @IBOutlet weak var PlanningButton: UIButton!
+    @IBOutlet weak var ScrollView2: UIScrollView!
     @IBOutlet weak var TextView2: UITextView!
     @IBOutlet weak var IView2: UIImageView!
     @IBOutlet weak var InfoButton: UIButton!
@@ -39,6 +42,10 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.ScrollView.contentSize.height = 650
         self.ScrollView.hidden = true
         self.DismissInfo.hidden = true
+        self.DismissPlanning.hidden = true
+        self.ScrollView2.contentSize.height = 650
+        self.ScrollView2.hidden = true
+        
         /*
         let path = NSBundle.mainBundle().pathForResource("SampleText", ofType: "txt")
         let fm = NSFileManager()
@@ -93,6 +100,35 @@ class DataViewController: UIViewController, UITextViewDelegate {
         })
         self.DismissInfo.hidden = false
         print("Info Button Pressed")
+    }
+    @IBAction func DismissPlanningClick(sender: AnyObject) {
+        self.IView.hidden = false
+        UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.IView.alpha = 1
+            self.ScrollView2.alpha = 0
+            self.IView2.alpha = 0
+            }, completion: { finished in
+                if (finished){
+                    
+                    self.ScrollView2.hidden = true
+                }
+        })
+        self.DismissPlanning.hidden = true
+        print("Dismiss Planning Button Pressed")
+    }
+    @IBAction func PlanningClick(sender: AnyObject) {
+        self.ScrollView2.hidden = false
+        UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.IView.alpha = 0
+            self.ScrollView2.alpha = 1
+            self.IView2.alpha = 1
+            }, completion: { finished in
+                if (finished){
+                    self.IView.hidden = true
+                }
+        })
+        self.DismissPlanning.hidden = false
+        print("Planning Button Pressed")
     }
     func getLargeText(text: String) -> NSMutableAttributedString {
         let string:NSMutableAttributedString = NSMutableAttributedString(string: text, attributes: [NSForegroundColorAttributeName: UIColor.whiteColor(),NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 14.0)!])
