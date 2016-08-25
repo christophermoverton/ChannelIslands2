@@ -17,6 +17,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
     
     
     
+    @IBOutlet weak var CloseTV: UITextView!
     @IBOutlet weak var DismissPlanning: UIButton!
     @IBOutlet weak var PlanningButton: UIButton!
     @IBOutlet weak var ScrollView2: UIScrollView!
@@ -45,6 +46,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.DismissPlanning.hidden = true
         self.ScrollView2.contentSize.height = 650
         self.ScrollView2.hidden = true
+        self.CloseTV.hidden = true
         
         /*
         let path = NSBundle.mainBundle().pathForResource("SampleText", ofType: "txt")
@@ -78,10 +80,12 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.IView.alpha = 1
             self.ScrollView.alpha = 0
             self.IView2.alpha = 0
+            self.CloseTV.alpha = 0
             }, completion: { finished in
                 if (finished){
                     
                     self.ScrollView.hidden = true
+                    self.CloseTV.hidden = true
                 }
         })
         self.DismissInfo.hidden = true
@@ -89,10 +93,12 @@ class DataViewController: UIViewController, UITextViewDelegate {
     }
     @IBAction func infoClick(sender: AnyObject) {
         self.ScrollView.hidden = false
+        self.CloseTV.hidden = false
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView.alpha = 0
             self.ScrollView.alpha = 1
             self.IView2.alpha = 1
+            self.CloseTV.alpha = 1
             }, completion: { finished in
                 if (finished){
                     self.IView.hidden = true
@@ -107,10 +113,12 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.IView.alpha = 1
             self.ScrollView2.alpha = 0
             self.IView2.alpha = 0
+            self.CloseTV.alpha = 0
             }, completion: { finished in
                 if (finished){
                     
                     self.ScrollView2.hidden = true
+                    self.CloseTV.hidden = true
                 }
         })
         self.DismissPlanning.hidden = true
@@ -118,10 +126,12 @@ class DataViewController: UIViewController, UITextViewDelegate {
     }
     @IBAction func PlanningClick(sender: AnyObject) {
         self.ScrollView2.hidden = false
+        self.CloseTV.hidden = false
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView.alpha = 0
             self.ScrollView2.alpha = 1
             self.IView2.alpha = 1
+            self.CloseTV.alpha = 1
             }, completion: { finished in
                 if (finished){
                     self.IView.hidden = true
