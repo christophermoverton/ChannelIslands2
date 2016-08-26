@@ -142,14 +142,13 @@ by people for at least 13,000 years.</string>
                             <imageView opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Main_Navigationblur" translatesAutoresizingMaskIntoConstraints="NO" id="cMd-Z5-khC">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCN-16-zkn">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.84999999999999998" contentMode="scaleAspectFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCN-16-zkn">
                                 <rect key="frame" x="890" y="6" width="81" height="86"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="X">
+                                    <fragment content="x">
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="48" name="HelveticaNeue-UltraLight"/>
-                                            <font key="NSOriginalFont" size="48" name="HelveticaNeue-UltraLight"/>
+                                            <font key="NSFont" size="56" name="HelveticaNeue-UltraLight"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
