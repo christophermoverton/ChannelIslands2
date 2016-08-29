@@ -560,12 +560,12 @@ Administered by the National Park Service within the Department of the Interior,
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ec-0s-b7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="0Xm-bA-Ers">
                     <connections>
-                        <segue destination="pyQ-KH-GOQ" kind="presentation" modalTransitionStyle="crossDissolve" id="yqe-Mp-YZ1"/>
+                        <segue destination="pyQ-KH-GOQ" kind="presentation" modalTransitionStyle="flipHorizontal" id="yqe-Mp-YZ1"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="right" id="PxO-Lw-iBA">
                     <connections>
-                        <segue destination="xOZ-75-fK5" kind="presentation" modalTransitionStyle="crossDissolve" id="36E-6T-gB9"/>
+                        <segue destination="xOZ-75-fK5" kind="presentation" modalTransitionStyle="flipHorizontal" id="36E-6T-gB9"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -606,7 +606,7 @@ Administered by the National Park Service within the Department of the Interior,
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uda-Yq-m73" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="gmw-y1-xHg">
                     <connections>
-                        <segue destination="2YF-RJ-H4w" kind="presentation" modalTransitionStyle="crossDissolve" id="nva-S2-vam"/>
+                        <segue destination="2YF-RJ-H4w" kind="presentation" modalTransitionStyle="flipHorizontal" id="nva-S2-vam"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -647,12 +647,12 @@ Administered by the National Park Service within the Department of the Interior,
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ass-9b-Ej7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="XUP-uB-cU0">
                     <connections>
-                        <segue destination="2YF-RJ-H4w" kind="presentation" modalTransitionStyle="crossDissolve" id="drT-VG-ogL"/>
+                        <segue destination="2YF-RJ-H4w" kind="presentation" modalTransitionStyle="flipHorizontal" id="drT-VG-ogL"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="right" id="yja-QI-yVT">
                     <connections>
-                        <segue destination="gfQ-kY-mDd" kind="presentation" modalTransitionStyle="crossDissolve" id="ELr-bK-b7y"/>
+                        <segue destination="gfQ-kY-mDd" kind="presentation" modalTransitionStyle="flipHorizontal" id="ELr-bK-b7y"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -693,12 +693,12 @@ Administered by the National Park Service within the Department of the Interior,
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ufb-Wk-5i9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="wjH-w9-h0o">
                     <connections>
-                        <segue destination="xOZ-75-fK5" kind="presentation" modalTransitionStyle="crossDissolve" id="9Ks-Mh-gHR"/>
+                        <segue destination="xOZ-75-fK5" kind="presentation" modalTransitionStyle="flipHorizontal" id="9Ks-Mh-gHR"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="right" id="ALx-vQ-XaG">
                     <connections>
-                        <segue destination="jD5-Az-AEW" kind="presentation" modalTransitionStyle="crossDissolve" id="4jn-Lx-VjZ"/>
+                        <segue destination="jD5-Az-AEW" kind="presentation" modalTransitionStyle="flipHorizontal" id="4jn-Lx-VjZ"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -738,7 +738,7 @@ Administered by the National Park Service within the Department of the Interior,
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Th-Kw-Ic0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="DTp-x3-sfa">
                     <connections>
-                        <segue destination="gfQ-kY-mDd" kind="presentation" modalTransitionStyle="crossDissolve" id="ud3-wU-oGD"/>
+                        <segue destination="gfQ-kY-mDd" kind="presentation" modalTransitionStyle="flipHorizontal" id="ud3-wU-oGD"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -761,10 +761,10 @@ Administered by the National Park Service within the Department of the Interior,
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="0j0-Vz-LUs"/>
-        <segue reference="95q-E2-Vbw"/>
-        <segue reference="jew-Ho-UNx"/>
-        <segue reference="jZ1-9F-Fml"/>
-        <segue reference="Pis-kE-B5l"/>
-        <segue reference="iB9-rI-Hfy"/>
+        <segue reference="9Ks-Mh-gHR"/>
+        <segue reference="ud3-wU-oGD"/>
+        <segue reference="4jn-Lx-VjZ"/>
+        <segue reference="drT-VG-ogL"/>
+        <segue reference="yqe-Mp-YZ1"/>
     </inferredMetricsTieBreakers>
 </document>
