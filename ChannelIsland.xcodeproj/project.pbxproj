@@ -33,6 +33,18 @@
 		B0E7586D1D7576A200212694 /* SantaRosaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7586C1D7576A200212694 /* SantaRosaViewController.swift */; };
 		B0E7586E1D7576A200212694 /* SantaRosaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7586C1D7576A200212694 /* SantaRosaViewController.swift */; };
 		B0E7586F1D7576A200212694 /* SantaRosaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7586C1D7576A200212694 /* SantaRosaViewController.swift */; };
+		B0E758751D762AF600212694 /* SanMiguelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E758741D762AF300212694 /* SanMiguelViewController.swift */; };
+		B0E758761D762AF600212694 /* SanMiguelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E758741D762AF300212694 /* SanMiguelViewController.swift */; };
+		B0E758771D762AF600212694 /* SanMiguelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E758741D762AF300212694 /* SanMiguelViewController.swift */; };
+		B0E758791D762FAB00212694 /* SantaCruzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E758781D762FAA00212694 /* SantaCruzViewController.swift */; };
+		B0E7587A1D762FAB00212694 /* SantaCruzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E758781D762FAA00212694 /* SantaCruzViewController.swift */; };
+		B0E7587B1D762FAB00212694 /* SantaCruzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E758781D762FAA00212694 /* SantaCruzViewController.swift */; };
+		B0E7587D1D7630FF00212694 /* AnacapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7587C1D7630FF00212694 /* AnacapaViewController.swift */; };
+		B0E7587E1D7630FF00212694 /* AnacapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7587C1D7630FF00212694 /* AnacapaViewController.swift */; };
+		B0E7587F1D7630FF00212694 /* AnacapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7587C1D7630FF00212694 /* AnacapaViewController.swift */; };
+		B0E758811D76319300212694 /* SantaBarbaraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E758801D76319300212694 /* SantaBarbaraViewController.swift */; };
+		B0E758821D76319300212694 /* SantaBarbaraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E758801D76319300212694 /* SantaBarbaraViewController.swift */; };
+		B0E758831D76319300212694 /* SantaBarbaraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E758801D76319300212694 /* SantaBarbaraViewController.swift */; };
 		B0EE853B1D6697AA0047EAB6 /* SampleText.txt in Resources */ = {isa = PBXBuildFile; fileRef = B0EE853A1D6697AA0047EAB6 /* SampleText.txt */; };
 		B0EE853C1D6697AA0047EAB6 /* SampleText.txt in Resources */ = {isa = PBXBuildFile; fileRef = B0EE853A1D6697AA0047EAB6 /* SampleText.txt */; };
 		B0EE853D1D6697AA0047EAB6 /* SampleText.txt in Resources */ = {isa = PBXBuildFile; fileRef = B0EE853A1D6697AA0047EAB6 /* SampleText.txt */; };
@@ -79,6 +91,10 @@
 		B0BB43C01D51719F0042CF5E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B0E758681D75020600212694 /* HorizontalTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalTransitionController.swift; sourceTree = "<group>"; };
 		B0E7586C1D7576A200212694 /* SantaRosaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SantaRosaViewController.swift; sourceTree = "<group>"; };
+		B0E758741D762AF300212694 /* SanMiguelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SanMiguelViewController.swift; sourceTree = "<group>"; };
+		B0E758781D762FAA00212694 /* SantaCruzViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SantaCruzViewController.swift; sourceTree = "<group>"; };
+		B0E7587C1D7630FF00212694 /* AnacapaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnacapaViewController.swift; sourceTree = "<group>"; };
+		B0E758801D76319300212694 /* SantaBarbaraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SantaBarbaraViewController.swift; sourceTree = "<group>"; };
 		B0EE853A1D6697AA0047EAB6 /* SampleText.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SampleText.txt; sourceTree = "<group>"; };
 		B0EFD54C1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +165,10 @@
 				B03151CD1D4E69B60038FBA5 /* DataViewController.swift */,
 				B03151CF1D4E69B60038FBA5 /* ModelController.swift */,
 				B03151D11D4E69B60038FBA5 /* Main.storyboard */,
+				B0E758801D76319300212694 /* SantaBarbaraViewController.swift */,
+				B0E7587C1D7630FF00212694 /* AnacapaViewController.swift */,
+				B0E758781D762FAA00212694 /* SantaCruzViewController.swift */,
+				B0E758741D762AF300212694 /* SanMiguelViewController.swift */,
 				B0E7586C1D7576A200212694 /* SantaRosaViewController.swift */,
 				B03151D41D4E69B60038FBA5 /* Assets.xcassets */,
 				B03151D61D4E69B60038FBA5 /* LaunchScreen.storyboard */,
@@ -321,8 +341,12 @@
 				B03151D01D4E69B60038FBA5 /* ModelController.swift in Sources */,
 				B0EFD54D1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */,
 				B03151CE1D4E69B60038FBA5 /* DataViewController.swift in Sources */,
+				B0E758811D76319300212694 /* SantaBarbaraViewController.swift in Sources */,
+				B0E7587D1D7630FF00212694 /* AnacapaViewController.swift in Sources */,
 				B0E7586D1D7576A200212694 /* SantaRosaViewController.swift in Sources */,
+				B0E758791D762FAB00212694 /* SantaCruzViewController.swift in Sources */,
 				B0211E211D630742008208CC /* MapCard.swift in Sources */,
+				B0E758751D762AF600212694 /* SanMiguelViewController.swift in Sources */,
 				B03151CA1D4E69B60038FBA5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,9 +355,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0E7587E1D7630FF00212694 /* AnacapaViewController.swift in Sources */,
 				B0211E221D630742008208CC /* MapCard.swift in Sources */,
+				B0E758761D762AF600212694 /* SanMiguelViewController.swift in Sources */,
+				B0E7587A1D762FAB00212694 /* SantaCruzViewController.swift in Sources */,
 				B0EFD54E1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */,
 				B0E7586A1D75020700212694 /* HorizontalTransitionController.swift in Sources */,
+				B0E758821D76319300212694 /* SantaBarbaraViewController.swift in Sources */,
 				B0E7586E1D7576A200212694 /* SantaRosaViewController.swift in Sources */,
 				B00364EF1D57D950001895D3 /* ViewController.swift in Sources */,
 				B03151E31D4E69B60038FBA5 /* ChannelIslandTests.swift in Sources */,
@@ -344,9 +372,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0E7587F1D7630FF00212694 /* AnacapaViewController.swift in Sources */,
 				B0211E231D630742008208CC /* MapCard.swift in Sources */,
+				B0E758771D762AF600212694 /* SanMiguelViewController.swift in Sources */,
+				B0E7587B1D762FAB00212694 /* SantaCruzViewController.swift in Sources */,
 				B0EFD54F1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */,
 				B0E7586B1D75020700212694 /* HorizontalTransitionController.swift in Sources */,
+				B0E758831D76319300212694 /* SantaBarbaraViewController.swift in Sources */,
 				B0E7586F1D7576A200212694 /* SantaRosaViewController.swift in Sources */,
 				B00364F01D57D951001895D3 /* ViewController.swift in Sources */,
 				B03151EE1D4E69B60038FBA5 /* ChannelIslandUITests.swift in Sources */,

@@ -191,31 +191,31 @@ Cg
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTS-av-rkH">
                                 <rect key="frame" x="34" y="364" width="151" height="74"/>
                                 <connections>
-                                    <segue destination="pyQ-KH-GOQ" kind="presentation" identifier="revealSegue" id="Pis-kE-B5l"/>
+                                    <segue destination="pyQ-KH-GOQ" kind="presentation" identifier="ToIsland" modalTransitionStyle="crossDissolve" id="Pis-kE-B5l"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cI-d4-SBt">
                                 <rect key="frame" x="193" y="383" width="259" height="79"/>
                                 <connections>
-                                    <segue destination="2YF-RJ-H4w" kind="presentation" identifier="revealSegue" id="jew-Ho-UNx"/>
+                                    <segue destination="2YF-RJ-H4w" kind="presentation" identifier="ToIsland" modalTransitionStyle="crossDissolve" id="jew-Ho-UNx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4IY-UA-9rl">
                                 <rect key="frame" x="460" y="374" width="363" height="74"/>
                                 <connections>
-                                    <segue destination="xOZ-75-fK5" kind="presentation" identifier="revealSegue" id="jZ1-9F-Fml"/>
+                                    <segue destination="xOZ-75-fK5" kind="presentation" identifier="ToIsland" modalTransitionStyle="crossDissolve" id="jZ1-9F-Fml"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gR9-rN-X64">
                                 <rect key="frame" x="861" y="374" width="106" height="58"/>
                                 <connections>
-                                    <segue destination="gfQ-kY-mDd" kind="presentation" identifier="revealSegue" id="iB9-rI-Hfy"/>
+                                    <segue destination="gfQ-kY-mDd" kind="presentation" identifier="ToIsland" modalTransitionStyle="crossDissolve" id="iB9-rI-Hfy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oov-SV-MRp">
                                 <rect key="frame" x="783" y="543" width="189" height="55"/>
                                 <connections>
-                                    <segue destination="jD5-Az-AEW" kind="presentation" identifier="revealSegue" id="95q-E2-Vbw"/>
+                                    <segue destination="jD5-Az-AEW" kind="presentation" identifier="ToIsland" modalTransitionStyle="crossDissolve" id="95q-E2-Vbw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SjV-01-Ua8">
@@ -548,7 +548,7 @@ Administered by the National Park Service within the Department of the Interior,
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpL-dG-SwA">
                                 <rect key="frame" x="736" y="699" width="46" height="61"/>
                                 <connections>
-                                    <segue destination="S4R-Ja-viH" kind="presentation" modalTransitionStyle="crossDissolve" id="1fy-7I-gvp"/>
+                                    <segue destination="S4R-Ja-viH" kind="presentation" identifier="BackToMain" modalTransitionStyle="crossDissolve" id="1fy-7I-gvp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -577,10 +577,10 @@ Administered by the National Park Service within the Department of the Interior,
             </objects>
             <point key="canvasLocation" x="4442" y="-1841"/>
         </scene>
-        <!--View Controller-->
+        <!--San Miguel View Controller-->
         <scene sceneID="aHe-yp-SED">
             <objects>
-                <viewController id="pyQ-KH-GOQ" sceneMemberID="viewController">
+                <viewController id="pyQ-KH-GOQ" customClass="SanMiguelViewController" customModule="ChannelIsland" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jo2-tc-2Rh"/>
                         <viewControllerLayoutGuide type="bottom" id="qD8-w9-oef"/>
@@ -600,7 +600,7 @@ Administered by the National Park Service within the Department of the Interior,
                                 <rect key="frame" x="737" y="701" width="46" height="59"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="S4R-Ja-viH" kind="presentation" modalTransitionStyle="crossDissolve" id="Xfw-Zj-LSi"/>
+                                    <segue destination="S4R-Ja-viH" kind="presentation" identifier="BackToMain" modalTransitionStyle="crossDissolve" id="Xfw-Zj-LSi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -612,16 +612,16 @@ Administered by the National Park Service within the Department of the Interior,
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uda-Yq-m73" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="gmw-y1-xHg">
                     <connections>
-                        <segue destination="2YF-RJ-H4w" kind="presentation" modalTransitionStyle="flipHorizontal" id="nva-S2-vam"/>
+                        <segue destination="2YF-RJ-H4w" kind="presentation" identifier="revealSeque" modalTransitionStyle="flipHorizontal" id="nva-S2-vam"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4426" y="-2802"/>
         </scene>
-        <!--View Controller-->
+        <!--Santa Cruz View Controller-->
         <scene sceneID="D1S-wc-LGx">
             <objects>
-                <viewController id="xOZ-75-fK5" sceneMemberID="viewController">
+                <viewController id="xOZ-75-fK5" customClass="SantaCruzViewController" customModule="ChannelIsland" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pf4-Jg-uSc"/>
                         <viewControllerLayoutGuide type="bottom" id="zV0-IK-Yn6"/>
@@ -641,7 +641,7 @@ Administered by the National Park Service within the Department of the Interior,
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tw1-Cb-IMe">
                                 <rect key="frame" x="741" y="703" width="46" height="57"/>
                                 <connections>
-                                    <segue destination="S4R-Ja-viH" kind="presentation" modalTransitionStyle="crossDissolve" id="zES-DJ-Qvu"/>
+                                    <segue destination="S4R-Ja-viH" kind="presentation" identifier="BackToMain" modalTransitionStyle="crossDissolve" id="zES-DJ-Qvu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -653,21 +653,21 @@ Administered by the National Park Service within the Department of the Interior,
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ass-9b-Ej7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="XUP-uB-cU0">
                     <connections>
-                        <segue destination="2YF-RJ-H4w" kind="presentation" modalTransitionStyle="flipHorizontal" id="drT-VG-ogL"/>
+                        <segue destination="2YF-RJ-H4w" kind="presentation" identifier="revealSegue" modalTransitionStyle="flipHorizontal" id="drT-VG-ogL"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="right" id="yja-QI-yVT">
                     <connections>
-                        <segue destination="gfQ-kY-mDd" kind="presentation" modalTransitionStyle="flipHorizontal" id="ELr-bK-b7y"/>
+                        <segue destination="gfQ-kY-mDd" kind="presentation" identifier="revealSeque" modalTransitionStyle="flipHorizontal" id="ELr-bK-b7y"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4442" y="-912"/>
         </scene>
-        <!--View Controller-->
+        <!--Anacapa View Controller-->
         <scene sceneID="6Yh-BU-H15">
             <objects>
-                <viewController id="gfQ-kY-mDd" sceneMemberID="viewController">
+                <viewController id="gfQ-kY-mDd" customClass="AnacapaViewController" customModule="ChannelIsland" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hvv-hz-jpA"/>
                         <viewControllerLayoutGuide type="bottom" id="s0Q-Af-qy0"/>
@@ -687,7 +687,7 @@ Administered by the National Park Service within the Department of the Interior,
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsl-sf-XRF">
                                 <rect key="frame" x="737" y="699" width="46" height="61"/>
                                 <connections>
-                                    <segue destination="S4R-Ja-viH" kind="presentation" modalTransitionStyle="crossDissolve" id="UxM-fJ-qBO"/>
+                                    <segue destination="S4R-Ja-viH" kind="presentation" identifier="BackToMain" modalTransitionStyle="crossDissolve" id="UxM-fJ-qBO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -699,21 +699,21 @@ Administered by the National Park Service within the Department of the Interior,
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ufb-Wk-5i9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="wjH-w9-h0o">
                     <connections>
-                        <segue destination="xOZ-75-fK5" kind="presentation" modalTransitionStyle="flipHorizontal" id="9Ks-Mh-gHR"/>
+                        <segue destination="xOZ-75-fK5" kind="presentation" identifier="revealSegue" modalTransitionStyle="flipHorizontal" id="9Ks-Mh-gHR"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="right" id="ALx-vQ-XaG">
                     <connections>
-                        <segue destination="jD5-Az-AEW" kind="presentation" modalTransitionStyle="flipHorizontal" id="4jn-Lx-VjZ"/>
+                        <segue destination="jD5-Az-AEW" kind="presentation" identifier="revealSeque" modalTransitionStyle="flipHorizontal" id="4jn-Lx-VjZ"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4472" y="36"/>
         </scene>
-        <!--View Controller-->
+        <!--Santa Barbara View Controller-->
         <scene sceneID="tiQ-i8-3nb">
             <objects>
-                <viewController id="jD5-Az-AEW" sceneMemberID="viewController">
+                <viewController id="jD5-Az-AEW" customClass="SantaBarbaraViewController" customModule="ChannelIsland" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h1r-95-O0e"/>
                         <viewControllerLayoutGuide type="bottom" id="3We-WX-4r5"/>
@@ -732,7 +732,7 @@ Administered by the National Park Service within the Department of the Interior,
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXB-sw-z6j">
                                 <rect key="frame" x="738" y="701" width="46" height="59"/>
                                 <connections>
-                                    <segue destination="S4R-Ja-viH" kind="presentation" modalTransitionStyle="crossDissolve" id="b7l-3o-hqg"/>
+                                    <segue destination="S4R-Ja-viH" kind="presentation" identifier="BackToMain" modalTransitionStyle="crossDissolve" id="b7l-3o-hqg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -744,7 +744,7 @@ Administered by the National Park Service within the Department of the Interior,
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Th-Kw-Ic0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="DTp-x3-sfa">
                     <connections>
-                        <segue destination="gfQ-kY-mDd" kind="presentation" modalTransitionStyle="flipHorizontal" id="ud3-wU-oGD"/>
+                        <segue destination="gfQ-kY-mDd" kind="presentation" identifier="revealSegue" modalTransitionStyle="flipHorizontal" id="ud3-wU-oGD"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -766,11 +766,11 @@ Administered by the National Park Service within the Department of the Interior,
         <image name="image201608151733335" width="2048" height="1536"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1fy-7I-gvp"/>
-        <segue reference="nva-S2-vam"/>
-        <segue reference="yqe-Mp-YZ1"/>
-        <segue reference="iB9-rI-Hfy"/>
+        <segue reference="b7l-3o-hqg"/>
         <segue reference="95q-E2-Vbw"/>
-        <segue reference="36E-6T-gB9"/>
+        <segue reference="jew-Ho-UNx"/>
+        <segue reference="jZ1-9F-Fml"/>
+        <segue reference="Pis-kE-B5l"/>
+        <segue reference="iB9-rI-Hfy"/>
     </inferredMetricsTieBreakers>
 </document>
