@@ -13,7 +13,7 @@ import Foundation
 import UIKit
 
 class HorizontalTransitionController: NSObject, UIViewControllerAnimatedTransitioning {
-    
+    var swipeDirection: Bool = false  //left
     var originFrame = CGRectZero
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
@@ -49,8 +49,11 @@ class HorizontalTransitionController: NSObject, UIViewControllerAnimatedTransiti
         // meaning fromView is pushed off the screen and toView slides into view
         // we also use the block animation usingSpringWithDamping for a little bounce
         UIView.animateWithDuration(duration, delay: 0.0, options:[], animations: {
-            
             fromView.transform = offScreenLeft
+            if self.swipeDirection{
+                fromView.transform = offScreenRight
+            }
+            
             toView.transform = CGAffineTransformIdentity
             
             }, completion: { finished in

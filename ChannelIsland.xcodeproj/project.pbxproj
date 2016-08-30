@@ -30,6 +30,9 @@
 		B0E758691D75020700212694 /* HorizontalTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E758681D75020600212694 /* HorizontalTransitionController.swift */; };
 		B0E7586A1D75020700212694 /* HorizontalTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E758681D75020600212694 /* HorizontalTransitionController.swift */; };
 		B0E7586B1D75020700212694 /* HorizontalTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E758681D75020600212694 /* HorizontalTransitionController.swift */; };
+		B0E7586D1D7576A200212694 /* SantaRosaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7586C1D7576A200212694 /* SantaRosaViewController.swift */; };
+		B0E7586E1D7576A200212694 /* SantaRosaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7586C1D7576A200212694 /* SantaRosaViewController.swift */; };
+		B0E7586F1D7576A200212694 /* SantaRosaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7586C1D7576A200212694 /* SantaRosaViewController.swift */; };
 		B0EE853B1D6697AA0047EAB6 /* SampleText.txt in Resources */ = {isa = PBXBuildFile; fileRef = B0EE853A1D6697AA0047EAB6 /* SampleText.txt */; };
 		B0EE853C1D6697AA0047EAB6 /* SampleText.txt in Resources */ = {isa = PBXBuildFile; fileRef = B0EE853A1D6697AA0047EAB6 /* SampleText.txt */; };
 		B0EE853D1D6697AA0047EAB6 /* SampleText.txt in Resources */ = {isa = PBXBuildFile; fileRef = B0EE853A1D6697AA0047EAB6 /* SampleText.txt */; };
@@ -75,6 +78,7 @@
 		B03151EF1D4E69B60038FBA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0BB43C01D51719F0042CF5E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B0E758681D75020600212694 /* HorizontalTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalTransitionController.swift; sourceTree = "<group>"; };
+		B0E7586C1D7576A200212694 /* SantaRosaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SantaRosaViewController.swift; sourceTree = "<group>"; };
 		B0EE853A1D6697AA0047EAB6 /* SampleText.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SampleText.txt; sourceTree = "<group>"; };
 		B0EFD54C1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +149,7 @@
 				B03151CD1D4E69B60038FBA5 /* DataViewController.swift */,
 				B03151CF1D4E69B60038FBA5 /* ModelController.swift */,
 				B03151D11D4E69B60038FBA5 /* Main.storyboard */,
+				B0E7586C1D7576A200212694 /* SantaRosaViewController.swift */,
 				B03151D41D4E69B60038FBA5 /* Assets.xcassets */,
 				B03151D61D4E69B60038FBA5 /* LaunchScreen.storyboard */,
 				B03151D91D4E69B60038FBA5 /* Info.plist */,
@@ -316,6 +321,7 @@
 				B03151D01D4E69B60038FBA5 /* ModelController.swift in Sources */,
 				B0EFD54D1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */,
 				B03151CE1D4E69B60038FBA5 /* DataViewController.swift in Sources */,
+				B0E7586D1D7576A200212694 /* SantaRosaViewController.swift in Sources */,
 				B0211E211D630742008208CC /* MapCard.swift in Sources */,
 				B03151CA1D4E69B60038FBA5 /* AppDelegate.swift in Sources */,
 			);
@@ -328,6 +334,7 @@
 				B0211E221D630742008208CC /* MapCard.swift in Sources */,
 				B0EFD54E1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */,
 				B0E7586A1D75020700212694 /* HorizontalTransitionController.swift in Sources */,
+				B0E7586E1D7576A200212694 /* SantaRosaViewController.swift in Sources */,
 				B00364EF1D57D950001895D3 /* ViewController.swift in Sources */,
 				B03151E31D4E69B60038FBA5 /* ChannelIslandTests.swift in Sources */,
 			);
@@ -340,6 +347,7 @@
 				B0211E231D630742008208CC /* MapCard.swift in Sources */,
 				B0EFD54F1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */,
 				B0E7586B1D75020700212694 /* HorizontalTransitionController.swift in Sources */,
+				B0E7586F1D7576A200212694 /* SantaRosaViewController.swift in Sources */,
 				B00364F01D57D951001895D3 /* ViewController.swift in Sources */,
 				B03151EE1D4E69B60038FBA5 /* ChannelIslandUITests.swift in Sources */,
 			);
