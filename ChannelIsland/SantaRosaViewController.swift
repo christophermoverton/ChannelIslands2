@@ -19,7 +19,14 @@ class SantaRosaViewController: UIViewController, UITextViewDelegate {
         print(segue.identifier)
         var checkString: String = (segue.identifier)!
         print(checkString.rangeOfString(revealSequeId) != nil)
-        if checkString.rangeOfString(revealSequeId) != nil, let destinationViewController = segue.destinationViewController as? UIViewController {
+        if checkString.rangeOfString("Segue") != nil{
+            self.horizontalTransitionController.swipeDirection = false
+        }
+        else{
+            print("hit Seque")
+            self.horizontalTransitionController.swipeDirection = true
+        }
+        if checkString.rangeOfString("reveal") != nil, let destinationViewController = segue.destinationViewController as? UIViewController {
             print("Got this far again")
             destinationViewController.transitioningDelegate = self
             print("Segue2 used!")
@@ -31,10 +38,12 @@ class SantaRosaViewController: UIViewController, UITextViewDelegate {
         
     }
     @IBAction func RightSwipeAction(sender: AnyObject) {
-        self.swipeState = true
+        print("updating swipe direction")
+        self.horizontalTransitionController.swipeDirection = false
     }
     @IBAction func LeftSwipeAction(sender: AnyObject) {
-        self.swipeState = false
+        print("updating swipe direction")
+        self.horizontalTransitionController.swipeDirection = true
         
     }
     override func didReceiveMemoryWarning() {
@@ -55,7 +64,7 @@ extension SantaRosaViewController: UIViewControllerTransitioningDelegate {
     
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         //horizontalTransitionController.originFrame = CardView.frame
-        horizontalTransitionController.swipeDirection = self.swipeState
+        //horizontalTransitionController.swipeDirection = self.swipeState
         return horizontalTransitionController
     }
 }

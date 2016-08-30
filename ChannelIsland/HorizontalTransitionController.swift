@@ -31,10 +31,16 @@ class HorizontalTransitionController: NSObject, UIViewControllerAnimatedTransiti
         let offScreenRight = CGAffineTransformMakeTranslation(container!.frame.width, 0)
         let offScreenLeft = CGAffineTransformMakeTranslation(-container!.frame.width, 0)
         print("Implementing transition")
-        
+        print("swipeDirection:")
+        print(self.swipeDirection)
         // start the toView to the right of the screen
         toView.transform = offScreenRight
-        
+        if self.swipeDirection{
+            toView.transform = offScreenLeft
+        }
+        else{
+            toView.transform = offScreenRight
+        }
         // add the both views to our view controller
         container!.addSubview(toView)
         container!.addSubview(fromView)
@@ -49,9 +55,12 @@ class HorizontalTransitionController: NSObject, UIViewControllerAnimatedTransiti
         // meaning fromView is pushed off the screen and toView slides into view
         // we also use the block animation usingSpringWithDamping for a little bounce
         UIView.animateWithDuration(duration, delay: 0.0, options:[], animations: {
-            fromView.transform = offScreenLeft
+            //fromView.transform = offScreenLeft
             if self.swipeDirection{
                 fromView.transform = offScreenRight
+            }
+            else{
+                fromView.transform = offScreenLeft
             }
             
             toView.transform = CGAffineTransformIdentity

@@ -571,7 +571,7 @@ Administered by the National Park Service within the Department of the Interior,
                 <swipeGestureRecognizer direction="right" id="PxO-Lw-iBA">
                     <connections>
                         <action selector="RightSwipeAction:" destination="2YF-RJ-H4w" id="zuk-0c-qol"/>
-                        <segue destination="xOZ-75-fK5" kind="presentation" identifier="revealSegue" modalTransitionStyle="flipHorizontal" id="36E-6T-gB9"/>
+                        <segue destination="xOZ-75-fK5" kind="presentation" identifier="revealSeque" modalTransitionStyle="flipHorizontal" id="36E-6T-gB9"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
