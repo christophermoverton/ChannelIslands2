@@ -48,7 +48,7 @@ class FlipPresentAnimationController: NSObject, UIViewControllerAnimatedTransiti
                 UIView.addKeyframeWithRelativeStartTime(0.0, relativeDuration: 1/3, animations: {
                     //fromVC.view.layer.transform = AnimationHelper.yRotation(-M_PI_2)
                     fromVC.view.alpha = 0
-                    
+                    //fromVC.view.transform =  CATransform3DMakeTranslation(<#T##tx: CGFloat##CGFloat#>, <#T##ty: CGFloat##CGFloat#>, <#T##tz: CGFloat##CGFloat#>)
                     //snapshot = fromVC.view.snapshotViewAfterScreenUpdates(true)
                 })
                 

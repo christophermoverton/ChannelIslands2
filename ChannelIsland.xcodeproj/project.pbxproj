@@ -27,6 +27,9 @@
 		B03151E31D4E69B60038FBA5 /* ChannelIslandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03151E21D4E69B60038FBA5 /* ChannelIslandTests.swift */; };
 		B03151EE1D4E69B60038FBA5 /* ChannelIslandUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03151ED1D4E69B60038FBA5 /* ChannelIslandUITests.swift */; };
 		B0BB43C11D51719F0042CF5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB43C01D51719F0042CF5E /* ViewController.swift */; };
+		B0E758691D75020700212694 /* HorizontalTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E758681D75020600212694 /* HorizontalTransitionController.swift */; };
+		B0E7586A1D75020700212694 /* HorizontalTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E758681D75020600212694 /* HorizontalTransitionController.swift */; };
+		B0E7586B1D75020700212694 /* HorizontalTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E758681D75020600212694 /* HorizontalTransitionController.swift */; };
 		B0EE853B1D6697AA0047EAB6 /* SampleText.txt in Resources */ = {isa = PBXBuildFile; fileRef = B0EE853A1D6697AA0047EAB6 /* SampleText.txt */; };
 		B0EE853C1D6697AA0047EAB6 /* SampleText.txt in Resources */ = {isa = PBXBuildFile; fileRef = B0EE853A1D6697AA0047EAB6 /* SampleText.txt */; };
 		B0EE853D1D6697AA0047EAB6 /* SampleText.txt in Resources */ = {isa = PBXBuildFile; fileRef = B0EE853A1D6697AA0047EAB6 /* SampleText.txt */; };
@@ -71,6 +74,7 @@
 		B03151ED1D4E69B60038FBA5 /* ChannelIslandUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelIslandUITests.swift; sourceTree = "<group>"; };
 		B03151EF1D4E69B60038FBA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0BB43C01D51719F0042CF5E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B0E758681D75020600212694 /* HorizontalTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalTransitionController.swift; sourceTree = "<group>"; };
 		B0EE853A1D6697AA0047EAB6 /* SampleText.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SampleText.txt; sourceTree = "<group>"; };
 		B0EFD54C1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				B0EFD54C1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift */,
+				B0E758681D75020600212694 /* HorizontalTransitionController.swift */,
 				B03151C91D4E69B60038FBA5 /* AppDelegate.swift */,
 				B03151CB1D4E69B60038FBA5 /* RootViewController.swift */,
 				B03151CD1D4E69B60038FBA5 /* DataViewController.swift */,
@@ -305,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0E758691D75020700212694 /* HorizontalTransitionController.swift in Sources */,
 				B0BB43C11D51719F0042CF5E /* ViewController.swift in Sources */,
 				B03151CC1D4E69B60038FBA5 /* RootViewController.swift in Sources */,
 				B03151D01D4E69B60038FBA5 /* ModelController.swift in Sources */,
@@ -321,6 +327,7 @@
 			files = (
 				B0211E221D630742008208CC /* MapCard.swift in Sources */,
 				B0EFD54E1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */,
+				B0E7586A1D75020700212694 /* HorizontalTransitionController.swift in Sources */,
 				B00364EF1D57D950001895D3 /* ViewController.swift in Sources */,
 				B03151E31D4E69B60038FBA5 /* ChannelIslandTests.swift in Sources */,
 			);
@@ -332,6 +339,7 @@
 			files = (
 				B0211E231D630742008208CC /* MapCard.swift in Sources */,
 				B0EFD54F1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */,
+				B0E7586B1D75020700212694 /* HorizontalTransitionController.swift in Sources */,
 				B00364F01D57D951001895D3 /* ViewController.swift in Sources */,
 				B03151EE1D4E69B60038FBA5 /* ChannelIslandUITests.swift in Sources */,
 			);

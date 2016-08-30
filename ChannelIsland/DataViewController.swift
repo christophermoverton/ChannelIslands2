@@ -11,12 +11,6 @@ import UIKit
 class DataViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var DismissInfo: UIButton!
-    
-   
-    
-    
-    
-    
     @IBOutlet weak var CloseTV: UITextView!
     @IBOutlet weak var DismissPlanning: UIButton!
     @IBOutlet weak var PlanningButton: UIButton!
@@ -34,8 +28,23 @@ class DataViewController: UIViewController, UITextViewDelegate {
     @IBOutlet var MView: UIView!
     @IBOutlet weak var dataLabel: UILabel!
     var dataObject: String = ""
+    private let revealSequeId = "revealSegue"
+    private let horizontalTransitionController = HorizontalTransitionController()
     //var lightBlur: UIBlurEffect
     //var blurView: UIVisualEffectView
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("Got This Far!")
+        print(segue.identifier)
+        var checkString: String = (segue.identifier)!
+        print(checkString.rangeOfString(revealSequeId) != nil)
+        if checkString.rangeOfString(revealSequeId) != nil, let destinationViewController = segue.destinationViewController as? UIViewController {
+            print("Got this far again")
+            destinationViewController.transitioningDelegate = self
+            print("Segue2 used!")
+            
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -162,5 +171,13 @@ class DataViewController: UIViewController, UITextViewDelegate {
     }
     
     //getColoredText("i {|love|} this!")
+}
+
+extension DataViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+       //horizontalTransitionController.originFrame = CardView.frame
+        return horizontalTransitionController
+    }
 }
 
