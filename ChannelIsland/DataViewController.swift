@@ -101,6 +101,8 @@ class DataViewController: UIViewController, UITextViewDelegate {
                 }
         })
         self.DismissInfo.hidden = true
+        self.PlanningButton.hidden = false
+        self.InfoButton.hidden = false
         print("Dismiss Button Pressed")
     }
     @IBAction func infoClick(sender: AnyObject) {
@@ -119,6 +121,8 @@ class DataViewController: UIViewController, UITextViewDelegate {
                 }
         })
         self.DismissInfo.hidden = false
+        self.PlanningButton.hidden = true
+        self.InfoButton.hidden = true
         print("Info Button Pressed")
     }
     @IBAction func DismissPlanningClick(sender: AnyObject) {
@@ -138,6 +142,8 @@ class DataViewController: UIViewController, UITextViewDelegate {
                 }
         })
         self.DismissPlanning.hidden = true
+        self.PlanningButton.hidden = false
+        self.InfoButton.hidden = false
         print("Dismiss Planning Button Pressed")
     }
     @IBAction func PlanningClick(sender: AnyObject) {
@@ -156,6 +162,8 @@ class DataViewController: UIViewController, UITextViewDelegate {
                 }
         })
         self.DismissPlanning.hidden = false
+        self.PlanningButton.hidden = true
+        self.InfoButton.hidden = true
         print("Planning Button Pressed")
     }
     func getLargeText(text: String) -> NSMutableAttributedString {
