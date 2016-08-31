@@ -10,6 +10,7 @@ import UIKit
 
 class DataViewController: UIViewController, UITextViewDelegate {
     
+    @IBOutlet weak var HighlightsButton: UIButton!
     @IBOutlet weak var HighlightNumbersView: UIImageView!
     @IBOutlet weak var DismissInfo: UIButton!
     @IBOutlet weak var CloseTV: UITextView!
@@ -31,6 +32,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
     var dataObject: String = ""
     private let revealSequeId = "revealSegue"
     private let horizontalTransitionController = HorizontalTransitionController()
+    private var HightlightsActive: Bool = false
     //var lightBlur: UIBlurEffect
     //var blurView: UIVisualEffectView
     
@@ -86,10 +88,14 @@ class DataViewController: UIViewController, UITextViewDelegate {
     }
     @IBAction func DismissInfoClick(sender: AnyObject) {
         self.IView.hidden = false
-        self.HighlightNumbersView.hidden = false
+        if self.HightlightsActive {
+             self.HighlightNumbersView.hidden = false
+        }
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView.alpha = 1
-            self.HighlightNumbersView.alpha = 1
+            if self.HightlightsActive {
+                  self.HighlightNumbersView.alpha = 1
+            }
             self.ScrollView.alpha = 0
             self.IView2.alpha = 0
             self.CloseTV.alpha = 0
@@ -103,6 +109,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.DismissInfo.hidden = true
         self.PlanningButton.hidden = false
         self.InfoButton.hidden = false
+        self.HighlightsButton.hidden = false
         print("Dismiss Button Pressed")
     }
     @IBAction func infoClick(sender: AnyObject) {
@@ -112,28 +119,61 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.IView.alpha = 0
             self.ScrollView.alpha = 1
             self.IView2.alpha = 1
-            self.HighlightNumbersView.alpha = 0
+            if self.HightlightsActive {
+                 self.HighlightNumbersView.alpha = 0
+            }
             self.CloseTV.alpha = 1
             }, completion: { finished in
                 if (finished){
                     self.IView.hidden = true
-                    self.HighlightNumbersView.hidden = true
+                    if self.HightlightsActive{
+                         self.HighlightNumbersView.hidden = true
+                    }
                 }
         })
         self.DismissInfo.hidden = false
         self.PlanningButton.hidden = true
         self.InfoButton.hidden = true
+        self.HighlightsButton.hidden = true
         print("Info Button Pressed")
+    }
+    @IBAction func HighlightsClick(sender: AnyObject) {
+        if self.HightlightsActive {
+            UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
+                    self.HighlightNumbersView.alpha = 0
+                }, completion: { finished in
+                    if (finished){
+                        self.HighlightNumbersView.hidden = true
+                        self.HightlightsActive = false
+                    }
+            })
+        }
+        else{
+            self.HighlightNumbersView.hidden = false
+            UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
+                self.HighlightNumbersView.alpha = 1
+                }, completion: { finished in
+                    if (finished){
+                        self.HightlightsActive = true
+                        }
+            })
+        }
     }
     @IBAction func DismissPlanningClick(sender: AnyObject) {
         self.IView.hidden = false
-        self.HighlightNumbersView.hidden = false
+        if self.HightlightsActive {
+            self.HighlightNumbersView.hidden = false
+        }
+        
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView.alpha = 1
             self.ScrollView2.alpha = 0
             self.IView2.alpha = 0
             self.CloseTV.alpha = 0
-            self.HighlightNumbersView.alpha = 1
+            if self.HightlightsActive {
+               self.HighlightNumbersView.alpha = 1
+            }
+            //self.HighlightNumbersView.alpha = 1
             }, completion: { finished in
                 if (finished){
                     
@@ -144,6 +184,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.DismissPlanning.hidden = true
         self.PlanningButton.hidden = false
         self.InfoButton.hidden = false
+        self.HighlightsButton.hidden = false
         print("Dismiss Planning Button Pressed")
     }
     @IBAction func PlanningClick(sender: AnyObject) {
@@ -164,6 +205,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.DismissPlanning.hidden = false
         self.PlanningButton.hidden = true
         self.InfoButton.hidden = true
+        self.HighlightsButton.hidden = true
         print("Planning Button Pressed")
     }
     func getLargeText(text: String) -> NSMutableAttributedString {

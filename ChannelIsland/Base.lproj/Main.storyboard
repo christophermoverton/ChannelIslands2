@@ -142,7 +142,7 @@ by people for at least 13,000 years.</string>
                             <imageView opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Main_Navigationblur" translatesAutoresizingMaskIntoConstraints="NO" id="cMd-Z5-khC">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HIGHLIGHTS_NUMBERS" translatesAutoresizingMaskIntoConstraints="NO" id="156-Bi-vzA">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HIGHLIGHTS_NUMBERS" translatesAutoresizingMaskIntoConstraints="NO" id="156-Bi-vzA">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.84999999999999998" contentMode="scaleAspectFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCN-16-zkn">
@@ -231,6 +231,12 @@ Cg
                                 <rect key="frame" x="638" y="702" width="46" height="58"/>
                                 <connections>
                                     <action selector="PlanningClick:" destination="S4R-Ja-viH" eventType="touchUpInside" id="C1U-7Z-lNB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCo-rP-Udb">
+                                <rect key="frame" x="338" y="694" width="46" height="66"/>
+                                <connections>
+                                    <action selector="HighlightsClick:" destination="S4R-Ja-viH" eventType="touchUpInside" id="UgC-gL-dwI"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8d2-KK-2ym">
@@ -511,6 +517,7 @@ Administered by the National Park Service within the Department of the Interior,
                         <outlet property="DismissInfo" destination="CmQ-vy-JnW" id="jE0-bG-2LA"/>
                         <outlet property="DismissPlanning" destination="lcY-De-ee1" id="A75-8i-uvC"/>
                         <outlet property="HighlightNumbersView" destination="156-Bi-vzA" id="qjS-Mx-auz"/>
+                        <outlet property="HighlightsButton" destination="DCo-rP-Udb" id="kpF-kV-61X"/>
                         <outlet property="IView" destination="kLn-xz-Lbj" id="6xd-My-NOF"/>
                         <outlet property="IView2" destination="cMd-Z5-khC" id="Ru9-Iv-qQx"/>
                         <outlet property="InfoButton" destination="SjV-01-Ua8" id="D1F-ZH-ddb"/>
