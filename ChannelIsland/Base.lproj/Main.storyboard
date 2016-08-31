@@ -142,6 +142,9 @@ by people for at least 13,000 years.</string>
                             <imageView opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Main_Navigationblur" translatesAutoresizingMaskIntoConstraints="NO" id="cMd-Z5-khC">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HIGHLIGHTS_NUMBERS" translatesAutoresizingMaskIntoConstraints="NO" id="156-Bi-vzA">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.84999999999999998" contentMode="scaleAspectFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCN-16-zkn">
                                 <rect key="frame" x="890" y="6" width="81" height="86"/>
                                 <attributedString key="attributedText">
@@ -507,6 +510,7 @@ Administered by the National Park Service within the Department of the Interior,
                         <outlet property="CloseTV" destination="kCN-16-zkn" id="dPf-dh-RCT"/>
                         <outlet property="DismissInfo" destination="CmQ-vy-JnW" id="jE0-bG-2LA"/>
                         <outlet property="DismissPlanning" destination="lcY-De-ee1" id="A75-8i-uvC"/>
+                        <outlet property="HighlightNumbersView" destination="156-Bi-vzA" id="qjS-Mx-auz"/>
                         <outlet property="IView" destination="kLn-xz-Lbj" id="6xd-My-NOF"/>
                         <outlet property="IView2" destination="cMd-Z5-khC" id="Ru9-Iv-qQx"/>
                         <outlet property="InfoButton" destination="SjV-01-Ua8" id="D1F-ZH-ddb"/>
@@ -754,6 +758,7 @@ Administered by the National Park Service within the Department of the Interior,
     <resources>
         <image name="1_DISSOLVE_SUNSET" width="2048" height="1536"/>
         <image name="CI_LOGOS_FOR_DISSOLVE_LOOP" width="2048" height="1536"/>
+        <image name="HIGHLIGHTS_NUMBERS" width="2048" height="1536"/>
         <image name="Image" width="2048" height="1536"/>
         <image name="Image-2" width="2048" height="1536"/>
         <image name="Image-3" width="2048" height="1536"/>

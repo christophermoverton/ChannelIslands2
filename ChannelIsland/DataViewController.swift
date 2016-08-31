@@ -10,6 +10,7 @@ import UIKit
 
 class DataViewController: UIViewController, UITextViewDelegate {
     
+    @IBOutlet weak var HighlightNumbersView: UIImageView!
     @IBOutlet weak var DismissInfo: UIButton!
     @IBOutlet weak var CloseTV: UITextView!
     @IBOutlet weak var DismissPlanning: UIButton!
@@ -85,8 +86,10 @@ class DataViewController: UIViewController, UITextViewDelegate {
     }
     @IBAction func DismissInfoClick(sender: AnyObject) {
         self.IView.hidden = false
+        self.HighlightNumbersView.hidden = false
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView.alpha = 1
+            self.HighlightNumbersView.alpha = 1
             self.ScrollView.alpha = 0
             self.IView2.alpha = 0
             self.CloseTV.alpha = 0
@@ -107,10 +110,12 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.IView.alpha = 0
             self.ScrollView.alpha = 1
             self.IView2.alpha = 1
+            self.HighlightNumbersView.alpha = 0
             self.CloseTV.alpha = 1
             }, completion: { finished in
                 if (finished){
                     self.IView.hidden = true
+                    self.HighlightNumbersView.hidden = true
                 }
         })
         self.DismissInfo.hidden = false
@@ -118,11 +123,13 @@ class DataViewController: UIViewController, UITextViewDelegate {
     }
     @IBAction func DismissPlanningClick(sender: AnyObject) {
         self.IView.hidden = false
+        self.HighlightNumbersView.hidden = false
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView.alpha = 1
             self.ScrollView2.alpha = 0
             self.IView2.alpha = 0
             self.CloseTV.alpha = 0
+            self.HighlightNumbersView.alpha = 1
             }, completion: { finished in
                 if (finished){
                     
@@ -141,9 +148,11 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.ScrollView2.alpha = 1
             self.IView2.alpha = 1
             self.CloseTV.alpha = 1
+            self.HighlightNumbersView.alpha = 0
             }, completion: { finished in
                 if (finished){
                     self.IView.hidden = true
+                    self.HighlightNumbersView.hidden = true
                 }
         })
         self.DismissPlanning.hidden = false
