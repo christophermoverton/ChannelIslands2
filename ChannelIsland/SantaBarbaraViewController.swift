@@ -13,6 +13,9 @@ class SantaBarbaraViewController: UIViewController, UITextViewDelegate {
     private let revealSequeId = "revealSegue"
     private var swipeState: Bool = true  //right state
     private let horizontalTransitionController = HorizontalTransitionController()
+    private let iname1 = "bar5"
+    private let iname2 = "bar5"
+    private let iname3 = "bar4"
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("Got This Far!")
         print(segue.identifier)
@@ -20,10 +23,14 @@ class SantaBarbaraViewController: UIViewController, UITextViewDelegate {
         print(checkString.rangeOfString(revealSequeId) != nil)
         if checkString.rangeOfString("Segue") != nil{
             self.horizontalTransitionController.swipeDirection = false
+            self.horizontalTransitionController.iname1 = iname1
+            self.horizontalTransitionController.iname2 = iname3
         }
         else{
             print("hit Seque")
             self.horizontalTransitionController.swipeDirection = true
+            self.horizontalTransitionController.iname1 = iname1
+            self.horizontalTransitionController.iname2 = iname2
         }
         if checkString.rangeOfString("reveal") != nil, let destinationViewController = segue.destinationViewController as? UIViewController {
             print("Got this far again")

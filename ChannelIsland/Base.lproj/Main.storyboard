@@ -778,11 +778,11 @@ Administered by the National Park Service within the Department of the Interior,
         <image name="image201608151733335" width="2048" height="1536"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="b7l-3o-hqg"/>
-        <segue reference="95q-E2-Vbw"/>
-        <segue reference="jew-Ho-UNx"/>
-        <segue reference="jZ1-9F-Fml"/>
+        <segue reference="Xfw-Zj-LSi"/>
         <segue reference="Pis-kE-B5l"/>
+        <segue reference="jZ1-9F-Fml"/>
         <segue reference="iB9-rI-Hfy"/>
+        <segue reference="95q-E2-Vbw"/>
+        <segue reference="nva-S2-vam"/>
     </inferredMetricsTieBreakers>
 </document>

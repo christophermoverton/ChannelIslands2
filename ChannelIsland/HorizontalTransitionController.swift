@@ -15,7 +15,8 @@ import UIKit
 class HorizontalTransitionController: NSObject, UIViewControllerAnimatedTransitioning {
     var swipeDirection: Bool = false  //left
     var originFrame = CGRectZero
-    
+    var iname1: String = ""
+    var iname2: String = ""
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return 1.0
     }
@@ -26,7 +27,11 @@ class HorizontalTransitionController: NSObject, UIViewControllerAnimatedTransiti
         let container = transitionContext.containerView()
         let fromView = transitionContext.viewForKey(UITransitionContextFromViewKey)!
         let toView = transitionContext.viewForKey(UITransitionContextToViewKey)!
-        
+        var customView1 = MyCustomView(frame: CGRect(x: 0, y: 0, width: 1024, height: 768))
+        customView1.addImageV(iname1)
+        var customView2 = MyCustomView(frame: CGRect(x: 0, y: 0, width: 1024, height: 768))
+        customView2.addImageV(iname2)
+        customView2.alpha = 0
         // set up from 2D transforms that we'll use in the animation
         let offScreenRight = CGAffineTransformMakeTranslation(container!.frame.width, 0)
         let offScreenLeft = CGAffineTransformMakeTranslation(-container!.frame.width, 0)
@@ -42,8 +47,11 @@ class HorizontalTransitionController: NSObject, UIViewControllerAnimatedTransiti
             toView.transform = offScreenRight
         }
         // add the both views to our view controller
+
         container!.addSubview(toView)
         container!.addSubview(fromView)
+        container!.addSubview(customView1)
+        container!.addSubview(customView2)
         
         // get the duration of the animation
         // DON'T just type '0.5s' -- the reason why won't make sense until the next post
@@ -64,13 +72,17 @@ class HorizontalTransitionController: NSObject, UIViewControllerAnimatedTransiti
             }
             
             toView.transform = CGAffineTransformIdentity
-            
+            customView1.alpha = 0
+            customView2.alpha = 1
             }, completion: { finished in
                 
                 // tell our transitionContext object that we've finished animating
+                customView1.hidden = true
+                customView2.hidden = true
                 transitionContext.completeTransition(true)
                 
         })
+
         
     }
 }

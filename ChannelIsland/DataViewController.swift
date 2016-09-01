@@ -33,6 +33,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
     private let revealSequeId = "revealSegue"
     private let horizontalTransitionController = HorizontalTransitionController()
     private var HightlightsActive: Bool = false
+    
     //var lightBlur: UIBlurEffect
     //var blurView: UIVisualEffectView
     
@@ -44,6 +45,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
         if checkString.rangeOfString(revealSequeId) != nil, let destinationViewController = segue.destinationViewController as? UIViewController {
             print("Got this far again")
             destinationViewController.transitioningDelegate = self
+            
             print("Segue2 used!")
             
         }

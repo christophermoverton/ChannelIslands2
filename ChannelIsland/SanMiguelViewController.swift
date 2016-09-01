@@ -12,6 +12,8 @@ class SanMiguelViewController: UIViewController, UITextViewDelegate {
     private let revealSequeId = "revealSegue"
     private var swipeState: Bool = true  //right state
     private let horizontalTransitionController = HorizontalTransitionController()
+    private let iname1 = "bar1"
+    private let iname2 = "bar2"
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("Got This Far!")
         print(segue.identifier)
@@ -23,6 +25,8 @@ class SanMiguelViewController: UIViewController, UITextViewDelegate {
         else{
             print("hit Seque")
             self.horizontalTransitionController.swipeDirection = true
+            self.horizontalTransitionController.iname1 = iname1
+            self.horizontalTransitionController.iname2 = iname2
         }
         if checkString.rangeOfString("reveal") != nil, let destinationViewController = segue.destinationViewController as? UIViewController {
             print("Got this far again")
