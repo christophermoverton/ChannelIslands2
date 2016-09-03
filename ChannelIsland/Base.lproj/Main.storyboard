@@ -4,6 +4,15 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="TrajanPro-Regular.otf">
+            <string>TrajanPro-Regular</string>
+            <string>TrajanPro-Regular</string>
+            <string>TrajanPro-Regular</string>
+            <string>TrajanPro-Regular</string>
+            <string>TrajanPro-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="Yum-Z2-eYq">
@@ -548,7 +557,7 @@ Administered by the National Park Service within the Department of the Interior,
         <!--Santa Rosa View Controller-->
         <scene sceneID="Bcf-TB-ttE">
             <objects>
-                <viewController id="2YF-RJ-H4w" customClass="SantaRosaViewController" customModule="ChannelIsland" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SantaRosaViewC" id="2YF-RJ-H4w" customClass="SantaRosaViewController" customModule="ChannelIsland" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7WZ-5V-Uuj"/>
                         <viewControllerLayoutGuide type="bottom" id="mvs-z1-uQM"/>
@@ -557,7 +566,7 @@ Administered by the National Park Service within the Department of the Interior,
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image201608151733332" translatesAutoresizingMaskIntoConstraints="NO" id="sfP-Ng-UYO">
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SANTA_ROSA_CLEAN" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sfP-Ng-UYO">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -565,20 +574,32 @@ Administered by the National Park Service within the Department of the Interior,
                                     <outletCollection property="gestureRecognizers" destination="PxO-Lw-iBA" appends="YES" id="hZG-9i-o1d"/>
                                 </connections>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar2" translatesAutoresizingMaskIntoConstraints="NO" id="avS-tn-VzI">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpL-dG-SwA">
                                 <rect key="frame" x="736" y="699" width="46" height="61"/>
                                 <connections>
                                     <segue destination="S4R-Ja-viH" kind="presentation" identifier="BackToMain" modalTransitionStyle="crossDissolve" id="1fy-7I-gvp"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" editable="NO" text="Santa Rosa Island" translatesAutoresizingMaskIntoConstraints="NO" id="kpy-AR-QaS">
+                                <rect key="frame" x="46" y="23" width="333" height="43"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.99287670850753784" green="0.99700695276260376" blue="0.99637609720230103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="Barview" destination="avS-tn-VzI" id="mQ2-Ul-DZa"/>
                         <outlet property="LeftSwipe" destination="0Xm-bA-Ers" id="c1o-07-POx"/>
                         <outlet property="RightSwipe" destination="PxO-Lw-iBA" id="DiT-SL-DAw"/>
+                        <outlet property="TitleText" destination="kpy-AR-QaS" id="7Y3-U5-DUG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ec-0s-b7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -609,12 +630,15 @@ Administered by the National Park Service within the Department of the Interior,
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image201608151733331" translatesAutoresizingMaskIntoConstraints="NO" id="E9h-pX-N4e">
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SAN_MIGUEL_CLEAN" translatesAutoresizingMaskIntoConstraints="NO" id="E9h-pX-N4e">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="gmw-y1-xHg" appends="YES" id="JhE-gO-haC"/>
                                 </connections>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar1" translatesAutoresizingMaskIntoConstraints="NO" id="3fE-Cz-qgo">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daP-Ge-kpc">
                                 <rect key="frame" x="737" y="701" width="46" height="59"/>
@@ -623,11 +647,22 @@ Administered by the National Park Service within the Department of the Interior,
                                     <segue destination="S4R-Ja-viH" kind="presentation" identifier="BackToMain" modalTransitionStyle="crossDissolve" id="Xfw-Zj-LSi"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" editable="NO" text="San Miguel Island" translatesAutoresizingMaskIntoConstraints="NO" id="Bx0-Ds-P7S">
+                                <rect key="frame" x="46" y="23" width="333" height="43"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.99625974893569946" green="1" blue="0.99975699186325073" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="Barview" destination="3fE-Cz-qgo" id="q1J-nA-4os"/>
+                        <outlet property="TitleText" destination="Bx0-Ds-P7S" id="RX1-iq-kF7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uda-Yq-m73" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="gmw-y1-xHg">
@@ -650,7 +685,7 @@ Administered by the National Park Service within the Department of the Interior,
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image201608151733333" translatesAutoresizingMaskIntoConstraints="NO" id="rlw-Of-cjs">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SANTA_CRUZ_CLEAN" translatesAutoresizingMaskIntoConstraints="NO" id="rlw-Of-cjs">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -664,11 +699,25 @@ Administered by the National Park Service within the Department of the Interior,
                                     <segue destination="S4R-Ja-viH" kind="presentation" identifier="BackToMain" modalTransitionStyle="crossDissolve" id="zES-DJ-Qvu"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" editable="NO" text="Santa Cruz Island" translatesAutoresizingMaskIntoConstraints="NO" id="HL1-Zz-pgs">
+                                <rect key="frame" x="46" y="23" width="333" height="43"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar3" translatesAutoresizingMaskIntoConstraints="NO" id="zaR-pt-QQD">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="Barview" destination="zaR-pt-QQD" id="SdW-hT-Onm"/>
+                        <outlet property="TitleText" destination="HL1-Zz-pgs" id="emQ-G9-Ove"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ass-9b-Ej7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="XUP-uB-cU0">
@@ -696,7 +745,7 @@ Administered by the National Park Service within the Department of the Interior,
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image201608151733334" translatesAutoresizingMaskIntoConstraints="NO" id="6Na-Uf-alT">
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ANACAPA_CLEAN" translatesAutoresizingMaskIntoConstraints="NO" id="6Na-Uf-alT">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -704,6 +753,16 @@ Administered by the National Park Service within the Department of the Interior,
                                     <outletCollection property="gestureRecognizers" destination="ALx-vQ-XaG" appends="YES" id="JO4-vb-BOY"/>
                                 </connections>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar4" translatesAutoresizingMaskIntoConstraints="NO" id="D3S-nf-P11">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Anacapa Island" translatesAutoresizingMaskIntoConstraints="NO" id="voK-V2-BR2">
+                                <rect key="frame" x="46" y="23" width="333" height="43"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsl-sf-XRF">
                                 <rect key="frame" x="737" y="699" width="46" height="61"/>
                                 <connections>
@@ -715,6 +774,10 @@ Administered by the National Park Service within the Department of the Interior,
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="Barview" destination="D3S-nf-P11" id="xww-Nw-IaI"/>
+                        <outlet property="TitleText" destination="voK-V2-BR2" id="IC2-Tu-2hb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ufb-Wk-5i9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="wjH-w9-h0o">
@@ -742,12 +805,22 @@ Administered by the National Park Service within the Department of the Interior,
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image201608151733335" translatesAutoresizingMaskIntoConstraints="NO" id="zfZ-BX-C9B">
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SANTA_BARBARA_CLEAN" translatesAutoresizingMaskIntoConstraints="NO" id="zfZ-BX-C9B">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="DTp-x3-sfa" appends="YES" id="6p0-Nq-fMP"/>
                                 </connections>
+                            </imageView>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" editable="NO" text="Santa Barbara Island" translatesAutoresizingMaskIntoConstraints="NO" id="SS2-Y7-Udl">
+                                <rect key="frame" x="46" y="26" width="333" height="43"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar5" translatesAutoresizingMaskIntoConstraints="NO" id="YFE-FH-WB3">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXB-sw-z6j">
                                 <rect key="frame" x="738" y="701" width="46" height="59"/>
@@ -760,6 +833,10 @@ Administered by the National Park Service within the Department of the Interior,
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="Barview" destination="YFE-FH-WB3" id="njd-oX-9hI"/>
+                        <outlet property="TitleText" destination="SS2-Y7-Udl" id="yON-A0-oRE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Th-Kw-Ic0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="DTp-x3-sfa">
@@ -773,6 +850,7 @@ Administered by the National Park Service within the Department of the Interior,
     </scenes>
     <resources>
         <image name="1_DISSOLVE_SUNSET" width="2048" height="1536"/>
+        <image name="ANACAPA_CLEAN" width="2048" height="1536"/>
         <image name="CI_LOGOS_FOR_DISSOLVE_LOOP" width="2048" height="1536"/>
         <image name="CI_Main_Icon_Set_ALL_WHITE" width="2048" height="1536"/>
         <image name="HIGHLIGHTS_NUMBERS" width="2048" height="1536"/>
@@ -781,18 +859,22 @@ Administered by the National Park Service within the Department of the Interior,
         <image name="Image-4" width="2048" height="1536"/>
         <image name="Main_Navigation_CLEAN_UP_V01" width="2048" height="1536"/>
         <image name="Main_Navigationblur" width="2048" height="1536"/>
-        <image name="image201608151733331" width="2048" height="1536"/>
-        <image name="image201608151733332" width="2048" height="1536"/>
-        <image name="image201608151733333" width="2048" height="1536"/>
-        <image name="image201608151733334" width="2048" height="1536"/>
-        <image name="image201608151733335" width="2048" height="1536"/>
+        <image name="SANTA_BARBARA_CLEAN" width="2048" height="1536"/>
+        <image name="SANTA_CRUZ_CLEAN" width="2048" height="1536"/>
+        <image name="SANTA_ROSA_CLEAN" width="2048" height="1536"/>
+        <image name="SAN_MIGUEL_CLEAN" width="2048" height="1536"/>
+        <image name="bar1" width="2048" height="1536"/>
+        <image name="bar2" width="2048" height="1536"/>
+        <image name="bar3" width="2048" height="1536"/>
+        <image name="bar4" width="2048" height="1536"/>
+        <image name="bar5" width="2048" height="1536"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0j0-Vz-LUs"/>
-        <segue reference="jew-Ho-UNx"/>
-        <segue reference="jZ1-9F-Fml"/>
-        <segue reference="Pis-kE-B5l"/>
-        <segue reference="iB9-rI-Hfy"/>
-        <segue reference="95q-E2-Vbw"/>
+        <segue reference="UxM-fJ-qBO"/>
+        <segue reference="ud3-wU-oGD"/>
+        <segue reference="4jn-Lx-VjZ"/>
+        <segue reference="9Ks-Mh-gHR"/>
+        <segue reference="drT-VG-ogL"/>
+        <segue reference="yqe-Mp-YZ1"/>
     </inferredMetricsTieBreakers>
 </document>

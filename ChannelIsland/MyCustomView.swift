@@ -56,5 +56,17 @@ class MyCustomView: UIView {
         imageView.contentMode = UIViewContentMode.ScaleAspectFit;
         self.addSubview(imageView)
     }
+    func addTitleV(aframe: CGRect, title: String){
+        var bframe: CGRect = aframe
+        bframe.origin.x = bframe.origin.x+5
+        bframe.origin.y = bframe.origin.y-1
+        let myField: UITextField = UITextField (frame: bframe);
+        myField.font = UIFont(name:"TrajanPro-Regular", size: 25)
+        myField.textAlignment = NSTextAlignment.Left
+        myField.text = title
+        myField.textColor = UIColor.whiteColor()
+        myField.contentMode = UIViewContentMode.ScaleAspectFit;
+        self.addSubview(myField)
+    }
 
 }

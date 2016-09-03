@@ -16,11 +16,18 @@ class SantaBarbaraViewController: UIViewController, UITextViewDelegate {
     private let iname1 = "bar5"
     private let iname2 = "bar5"
     private let iname3 = "bar4"
+    let vname: String = "Santa Barbara Island"
+    @IBOutlet weak var TitleText: UITextView!
+    @IBOutlet weak var Barview: UIImageView!
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("Got This Far!")
         print(segue.identifier)
         var checkString: String = (segue.identifier)!
         print(checkString.rangeOfString(revealSequeId) != nil)
+        self.horizontalTransitionController.f1 = self.TitleText.frame
+        self.horizontalTransitionController.vname1 = "Santa Barbara Island"
+        self.horizontalTransitionController.tv1 = self.TitleText
+        self.horizontalTransitionController.iv1 = self.Barview
         if checkString.rangeOfString("Segue") != nil{
             self.horizontalTransitionController.swipeDirection = false
             self.horizontalTransitionController.iname1 = iname1
@@ -32,10 +39,16 @@ class SantaBarbaraViewController: UIViewController, UITextViewDelegate {
             self.horizontalTransitionController.iname1 = iname1
             self.horizontalTransitionController.iname2 = iname2
         }
-        if checkString.rangeOfString("reveal") != nil, let destinationViewController = segue.destinationViewController as? UIViewController {
+        if checkString.rangeOfString("reveal") != nil, let destinationViewController = segue.destinationViewController as? AnacapaViewController {
             print("Got this far again")
             destinationViewController.transitioningDelegate = self
             print("Segue2 used!")
+            print("Segue2 used!")
+            destinationViewController.loadView()
+            self.horizontalTransitionController.tv2 = destinationViewController.TitleText
+            self.horizontalTransitionController.iv2 = destinationViewController.Barview
+            self.horizontalTransitionController.f2 = destinationViewController.TitleText.frame
+            self.horizontalTransitionController.vname2 = destinationViewController.vname
             
         }
     }
