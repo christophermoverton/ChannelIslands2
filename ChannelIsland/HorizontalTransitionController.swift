@@ -54,7 +54,7 @@ class HorizontalTransitionController: NSObject, UIViewControllerAnimatedTransiti
         print(self.swipeDirection)
         // start the toView to the right of the screen
         toView.transform = offScreenRight
-        if self.swipeDirection{
+        if !self.swipeDirection{
             toView.transform = offScreenLeft
         }
         else{
@@ -78,7 +78,7 @@ class HorizontalTransitionController: NSObject, UIViewControllerAnimatedTransiti
         // we also use the block animation usingSpringWithDamping for a little bounce
         UIView.animateWithDuration(duration, delay: 0.0, options:[], animations: {
             //fromView.transform = offScreenLeft
-            if self.swipeDirection{
+            if !self.swipeDirection{
                 fromView.transform = offScreenRight
             }
             else{
