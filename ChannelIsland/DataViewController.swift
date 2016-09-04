@@ -112,7 +112,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
             
         }
         else{
-            self.NavBar.image = UIImage(named: "CI_Main_Icon_Set_ALL_WHITE")
+            self.NavBar.image = UIImage(named: "CI_Main_Icon_MAPS")
         }
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView.alpha = 1
@@ -169,7 +169,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
     }
     @IBAction func HighlightsClick(sender: AnyObject) {
         if self.HightlightsActive {
-            self.NavBar.image = UIImage(named: "CI_Main_Icon_Set_ALL_WHITE")
+            self.NavBar.image = UIImage(named: "CI_Main_Icon_MAPS")
             UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
                     self.HighlightNumbersView.alpha = 0
                 
@@ -204,7 +204,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
             
         }
         else{
-            self.NavBar.image = UIImage(named: "CI_Main_Icon_Set_ALL_WHITE")
+            self.NavBar.image = UIImage(named: "CI_Main_Icon_MAPS")
         }
         
         

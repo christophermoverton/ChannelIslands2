@@ -157,7 +157,7 @@ by people for at least 13,000 years.</string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WeN-WH-98B">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_Main_Icon_Set_ALL_WHITE" translatesAutoresizingMaskIntoConstraints="NO" id="8B8-Ep-wsj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_Main_Icon_MAPS" translatesAutoresizingMaskIntoConstraints="NO" id="8B8-Ep-wsj">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -892,7 +892,7 @@ Administered by the National Park Service within the Department of the Interior,
         <image name="1_DISSOLVE_SUNSET" width="2048" height="1536"/>
         <image name="ANACAPA_CLEAN" width="2048" height="1536"/>
         <image name="CI_LOGOS_FOR_DISSOLVE_LOOP" width="2048" height="1536"/>
-        <image name="CI_Main_Icon_Set_ALL_WHITE" width="2048" height="1536"/>
+        <image name="CI_Main_Icon_MAPS" width="2048" height="1536"/>
         <image name="HIGHLIGHTS_NUMBERS" width="2048" height="1536"/>
         <image name="Image-2" width="2048" height="1536"/>
         <image name="Image-3" width="2048" height="1536"/>
@@ -910,11 +910,11 @@ Administered by the National Park Service within the Department of the Interior,
         <image name="bar5" width="2048" height="1536"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nva-S2-vam"/>
-        <segue reference="yqe-Mp-YZ1"/>
+        <segue reference="jew-Ho-UNx"/>
         <segue reference="Xfw-Zj-LSi"/>
+        <segue reference="Pis-kE-B5l"/>
+        <segue reference="iB9-rI-Hfy"/>
         <segue reference="95q-E2-Vbw"/>
-        <segue reference="36E-6T-gB9"/>
-        <segue reference="ELr-bK-b7y"/>
+        <segue reference="jZ1-9F-Fml"/>
     </inferredMetricsTieBreakers>
 </document>
