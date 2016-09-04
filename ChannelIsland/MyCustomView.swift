@@ -13,7 +13,7 @@ class MyCustomView: UIView {
     //var myNames = ["dipen","laxu","anis","aakash","santosh","raaa","ggdds","house"]
     internal var imageName: String = ""
     internal var imageView: UIImageView!
-    
+     var imageArray: [UIImage] = []
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addCustomView()
@@ -54,6 +54,30 @@ class MyCustomView: UIView {
         imageView = UIImageView(image: image!)
         imageView.frame = CGRect(x: 0, y: 0, width: 1024, height: 768)
         imageView.contentMode = UIViewContentMode.ScaleAspectFit;
+        self.addSubview(imageView)
+    }
+    func addImageAnimV(imageName: String){
+        //let image = UIImage(named: imageName)
+        var imageArr : [UIImage] = []
+        for i in 0...58{
+            let str : String = imageName+String(format: "%05d", i)+".png"
+            //print(str)
+            imageArr.append(UIImage(named:str)!)
+        }
+        /*
+         ClickHere.animationImages = [
+         UIImage(named:"TAP_HERE_V01_LOOP_00000.png")!
+         ]
+         */
+        //Clickhere.animationImages = imageArr
+        //Clickhere.animationDuration = 2.0
+        //Clickhere.startAnimating()
+        imageView = UIImageView()
+        imageView.frame = CGRect(x: 450, y: 321, width: 125, height: 125)
+        imageView.contentMode = UIViewContentMode.ScaleAspectFit
+        imageView.animationImages = imageArr
+        imageView.animationDuration = 2.0
+        imageView.startAnimating()
         self.addSubview(imageView)
     }
     func addTitleV(aframe: CGRect, title: String){

@@ -14,10 +14,12 @@ class SanMiguelViewController: UIViewController, UITextViewDelegate {
     private let horizontalTransitionController = HorizontalTransitionController()
     private let iname1 = "bar1"
     private let iname2 = "bar2"
+    var imageArray: [UIImage] = []
     @IBOutlet weak var Barview: UIImageView!
     @IBOutlet weak var TitleText: UITextView!
     let vname: String = "San Miguel Island"
     @IBOutlet weak var Logoview: UIImageView!
+    @IBOutlet weak var Clickhere: UIImageView!
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("Got This Far!")
@@ -29,6 +31,7 @@ class SanMiguelViewController: UIViewController, UITextViewDelegate {
         self.horizontalTransitionController.tv1 = self.TitleText
         self.horizontalTransitionController.iv1 = self.Barview
         self.horizontalTransitionController.iv12 = self.Logoview
+        self.horizontalTransitionController.iv13 = self.Clickhere
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if checkString.rangeOfString("Segue") != nil{
             self.horizontalTransitionController.swipeDirection = false
@@ -55,12 +58,27 @@ class SanMiguelViewController: UIViewController, UITextViewDelegate {
             self.horizontalTransitionController.tv2 = destinationViewController.TitleText
             self.horizontalTransitionController.iv2 = destinationViewController.Barview
             self.horizontalTransitionController.iv22 = destinationViewController.Logoview
+            self.horizontalTransitionController.iv23 = destinationViewController.Clickhere
             self.horizontalTransitionController.f2 = destinationViewController.TitleText.frame
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        var imageArr : [UIImage] = []
+        for i in 0...58{
+            let str : String = "TAP_HERE_V01_LOOP_"+String(format: "%05d", i)+".png"
+            //print(str)
+            imageArr.append(UIImage(named:str)!)
+        }
+        print("Loaded SanMiguel animation")
+        /*
+         ClickHere.animationImages = [
+         UIImage(named:"TAP_HERE_V01_LOOP_00000.png")!
+         ]
+         */
+        Clickhere.animationImages = imageArr
+        Clickhere.animationDuration = 2.0
+        Clickhere.startAnimating()
     }
 
         
@@ -72,6 +90,22 @@ class SanMiguelViewController: UIViewController, UITextViewDelegate {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        var imageArr : [UIImage] = []
+        for i in 0...58{
+            let str : String = "TAP_HERE_V01_LOOP_"+String(format: "%05d", i)+".png"
+            //print(str)
+            imageArr.append(UIImage(named:str)!)
+        }
+        print("Loaded SanMiguel animation")
+        /*
+         ClickHere.animationImages = [
+         UIImage(named:"TAP_HERE_V01_LOOP_00000.png")!
+         ]
+         */
+        Clickhere.animationImages = imageArr
+        Clickhere.animationDuration = 2.0
+        Clickhere.startAnimating()
+    
         //self.dataLabel!.text = dataObject
     }
     override func prefersStatusBarHidden() -> Bool {

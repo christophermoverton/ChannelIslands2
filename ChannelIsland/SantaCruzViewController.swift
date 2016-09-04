@@ -16,10 +16,12 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate {
     private let iname1 = "bar3"
     private let iname2 = "bar4"
     private let iname3 = "bar2"
+    var imageArray: [UIImage] = []
     @IBOutlet weak var TitleText: UITextView!
     @IBOutlet weak var Barview: UIImageView!
     let vname: String = "Santa Cruz Island"
     @IBOutlet weak var Logoview: UIImageView!
+    @IBOutlet weak var Clickhere: UIImageView!
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("Got This Far!")
         print(segue.identifier)
@@ -30,6 +32,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate {
         self.horizontalTransitionController.tv1 = self.TitleText
         self.horizontalTransitionController.iv1 = self.Barview
         self.horizontalTransitionController.iv12 = self.Logoview
+        self.horizontalTransitionController.iv13 = self.Clickhere
         if checkString.rangeOfString("Segue") != nil{
             self.horizontalTransitionController.swipeDirection = false
             self.horizontalTransitionController.iname1 = iname1
@@ -49,6 +52,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate {
             self.horizontalTransitionController.tv2 = destinationViewController.TitleText
             self.horizontalTransitionController.iv2 = destinationViewController.Barview
             self.horizontalTransitionController.iv22 = destinationViewController.Logoview
+            self.horizontalTransitionController.iv23 = destinationViewController.Clickhere
             self.horizontalTransitionController.f2 = destinationViewController.TitleText.frame
             self.horizontalTransitionController.vname2 = destinationViewController.vname
         }
@@ -60,13 +64,28 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate {
             self.horizontalTransitionController.tv2 = destinationViewController.TitleText
             self.horizontalTransitionController.iv2 = destinationViewController.Barview
             self.horizontalTransitionController.iv22 = destinationViewController.Logoview
+            self.horizontalTransitionController.iv23 = destinationViewController.Clickhere
             self.horizontalTransitionController.f2 = destinationViewController.TitleText.frame
             self.horizontalTransitionController.vname2 = destinationViewController.vname
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        var imageArr : [UIImage] = []
+        for i in 0...58{
+            let str : String = "TAP_HERE_V01_LOOP_"+String(format: "%05d", i)+".png"
+            //print(str)
+            imageArr.append(UIImage(named:str)!)
+        }
+        print("Loaded SantaCruz animation")
+        /*
+         ClickHere.animationImages = [
+         UIImage(named:"TAP_HERE_V01_LOOP_00000.png")!
+         ]
+         */
+        Clickhere.animationImages = imageArr
+        Clickhere.animationDuration = 2.0
+        Clickhere.startAnimating()
     }
     
     
@@ -79,6 +98,22 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         //self.dataLabel!.text = dataObject
+        var imageArr : [UIImage] = []
+        for i in 0...58{
+            let str : String = "TAP_HERE_V01_LOOP_"+String(format: "%05d", i)+".png"
+            //print(str)
+            imageArr.append(UIImage(named:str)!)
+        }
+        print("Loaded SanMiguel animation")
+        /*
+         ClickHere.animationImages = [
+         UIImage(named:"TAP_HERE_V01_LOOP_00000.png")!
+         ]
+         */
+        Clickhere.animationImages = imageArr
+        Clickhere.animationDuration = 2.0
+        Clickhere.startAnimating()
+    
     }
     override func prefersStatusBarHidden() -> Bool {
         return true

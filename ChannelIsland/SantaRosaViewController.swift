@@ -19,9 +19,11 @@ class SantaRosaViewController: UIViewController, UITextViewDelegate {
     private let iname1 = "bar2"
     private let iname2 = "bar3"
     private let iname3 = "bar1"
+    var imageArray: [UIImage] = []
     internal let ttframe: CGRect = CGRect(x: 13, y: 23, width: 333, height: 84)
     internal let vname: String = "Santa Rosa Island"
     @IBOutlet weak var Logoview: UIImageView!
+    @IBOutlet weak var Clickhere: UIImageView!
     
     
     
@@ -35,6 +37,7 @@ class SantaRosaViewController: UIViewController, UITextViewDelegate {
         self.horizontalTransitionController.tv1 = self.TitleText
         self.horizontalTransitionController.iv1 = self.Barview
         self.horizontalTransitionController.iv12 = self.Logoview
+        self.horizontalTransitionController.iv13 = self.Clickhere
         if checkString.rangeOfString("Segue") != nil{
             self.horizontalTransitionController.swipeDirection = false
             self.horizontalTransitionController.iname1 = iname1
@@ -54,6 +57,7 @@ class SantaRosaViewController: UIViewController, UITextViewDelegate {
             self.horizontalTransitionController.tv2 = destinationViewController.TitleText
             self.horizontalTransitionController.iv2 = destinationViewController.Barview
             self.horizontalTransitionController.iv22 = destinationViewController.Logoview
+            self.horizontalTransitionController.iv23 = destinationViewController.Clickhere
             self.horizontalTransitionController.f2 = destinationViewController.TitleText.frame
             self.horizontalTransitionController.vname2 = destinationViewController.vname
         }
@@ -65,13 +69,28 @@ class SantaRosaViewController: UIViewController, UITextViewDelegate {
             self.horizontalTransitionController.tv2 = destinationViewController.TitleText
             self.horizontalTransitionController.iv2 = destinationViewController.Barview
             self.horizontalTransitionController.iv22 = destinationViewController.Logoview
+            self.horizontalTransitionController.iv23 = destinationViewController.Clickhere
             self.horizontalTransitionController.f2 = destinationViewController.TitleText.frame
             self.horizontalTransitionController.vname2 = destinationViewController.vname
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        var imageArr : [UIImage] = []
+        for i in 0...58{
+            let str : String = "TAP_HERE_V01_LOOP_"+String(format: "%05d", i)+".png"
+            //print(str)
+            imageArr.append(UIImage(named:str)!)
+        }
+        print("Loaded SantaRosa animation")
+        /*
+         ClickHere.animationImages = [
+         UIImage(named:"TAP_HERE_V01_LOOP_00000.png")!
+         ]
+         */
+        Clickhere.animationImages = imageArr
+        Clickhere.animationDuration = 2.0
+        Clickhere.startAnimating()
     }
     
     @IBAction func RightSwipeAction(sender: AnyObject) {
@@ -90,7 +109,21 @@ class SantaRosaViewController: UIViewController, UITextViewDelegate {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-
+        var imageArr : [UIImage] = []
+        for i in 0...58{
+            let str : String = "TAP_HERE_V01_LOOP_"+String(format: "%05d", i)+".png"
+            //print(str)
+            imageArr.append(UIImage(named:str)!)
+        }
+        print("Loaded SantaRosa animation")
+        /*
+         ClickHere.animationImages = [
+         UIImage(named:"TAP_HERE_V01_LOOP_00000.png")!
+         ]
+         */
+        Clickhere.animationImages = imageArr
+        Clickhere.animationDuration = 2.0
+        Clickhere.startAnimating()
         //self.dataLabel!.text = dataObject
     }
     

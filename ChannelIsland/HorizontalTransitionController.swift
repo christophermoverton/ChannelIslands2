@@ -27,6 +27,9 @@ class HorizontalTransitionController: NSObject, UIViewControllerAnimatedTransiti
     var iv2: UIImageView!
     var iv12: UIImageView!
     var iv22: UIImageView!
+    var iv13: UIImageView!
+    var iv23: UIImageView!
+    var imageArray: [UIImage] = []
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return 1.0
     }
@@ -46,6 +49,11 @@ class HorizontalTransitionController: NSObject, UIViewControllerAnimatedTransiti
         customView2.addTitleV(f2, title: vname2)
         var customView3 = MyCustomView(frame: CGRect(x: 0, y: 0, width: 1024, height: 768))
         customView3.addImageV("CI_LOGOS_FOR_DISSOLVE_LOOP")
+        var customView4 = MyCustomView(frame: CGRect(x: 0, y: 0, width: 1024, height: 768))
+        customView4.addImageAnimV("TAP_HERE_V01_LOOP_")
+        //self.iv23.animationImages = customView4.imageArray
+        //self.iv23.animationDuration = 2.0
+        //self.iv23.startAnimating()
         customView2.alpha = 0
         self.tv1.hidden = true
         self.iv1.hidden = true
@@ -53,6 +61,9 @@ class HorizontalTransitionController: NSObject, UIViewControllerAnimatedTransiti
         self.iv2.hidden = true
         self.iv12.hidden = true
         self.iv22.hidden = true
+        self.iv13.hidden = true
+        self.iv23.hidden = true
+        //self.iv23.alpha = 1
         // set up from 2D transforms that we'll use in the animation
         let offScreenRight = CGAffineTransformMakeTranslation(container!.frame.width, 0)
         let offScreenLeft = CGAffineTransformMakeTranslation(-container!.frame.width, 0)
@@ -74,6 +85,7 @@ class HorizontalTransitionController: NSObject, UIViewControllerAnimatedTransiti
         container!.addSubview(customView1)
         container!.addSubview(customView2)
         container!.addSubview(customView3)
+        container!.addSubview(customView4)
         
         // get the duration of the animation
         // DON'T just type '0.5s' -- the reason why won't make sense until the next post
@@ -95,18 +107,29 @@ class HorizontalTransitionController: NSObject, UIViewControllerAnimatedTransiti
             
             toView.transform = CGAffineTransformIdentity
             customView1.alpha = 0
+            //customView4.alpha = 0
             customView2.alpha = 1
+            
             }, completion: { finished in
                 
                 // tell our transitionContext object that we've finished animating
                 customView1.hidden = true
                 customView2.hidden = true
                 customView3.hidden = true
+                customView4.hidden = true
                 self.tv2.hidden = false
                 self.iv2.hidden = false
                 self.iv12.hidden = false
                 self.iv22.hidden = false
+                self.iv13.hidden = false
+                self.iv23.hidden = false
+                
                 transitionContext.completeTransition(true)
+                /*
+                UIView.animateWithDuration(2.0, delay: 0.0, options:[], animations: {
+                    self.iv23.alpha = 1
+                    }, completion: { finished in if (finished){transitionContext.completeTransition(true)}
+                })*/
                 
         })
 

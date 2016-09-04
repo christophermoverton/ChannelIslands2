@@ -580,12 +580,6 @@ Administered by the National Park Service within the Department of the Interior,
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_LOGOS_FOR_DISSOLVE_LOOP" translatesAutoresizingMaskIntoConstraints="NO" id="GUy-Eq-FQg">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpL-dG-SwA">
-                                <rect key="frame" x="736" y="699" width="46" height="61"/>
-                                <connections>
-                                    <segue destination="S4R-Ja-viH" kind="presentation" identifier="BackToMain" modalTransitionStyle="crossDissolve" id="1fy-7I-gvp"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" editable="NO" text="Santa Rosa Island" translatesAutoresizingMaskIntoConstraints="NO" id="kpy-AR-QaS">
                                 <rect key="frame" x="46" y="23" width="333" height="43"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -593,6 +587,15 @@ Administered by the National Park Service within the Department of the Interior,
                                 <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cW1-nq-pVr">
+                                <rect key="frame" x="450" y="321" width="125" height="125"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpL-dG-SwA">
+                                <rect key="frame" x="736" y="699" width="46" height="61"/>
+                                <connections>
+                                    <segue destination="S4R-Ja-viH" kind="presentation" identifier="BackToMain" modalTransitionStyle="crossDissolve" id="1fy-7I-gvp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -600,6 +603,7 @@ Administered by the National Park Service within the Department of the Interior,
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="Barview" destination="avS-tn-VzI" id="mQ2-Ul-DZa"/>
+                        <outlet property="Clickhere" destination="cW1-nq-pVr" id="3eB-NN-wP1"/>
                         <outlet property="LeftSwipe" destination="0Xm-bA-Ers" id="c1o-07-POx"/>
                         <outlet property="Logoview" destination="GUy-Eq-FQg" id="7QI-Cn-Djj"/>
                         <outlet property="RightSwipe" destination="PxO-Lw-iBA" id="DiT-SL-DAw"/>
@@ -647,13 +651,9 @@ Administered by the National Park Service within the Department of the Interior,
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_LOGOS_FOR_DISSOLVE_LOOP" translatesAutoresizingMaskIntoConstraints="NO" id="836-3y-bRg">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daP-Ge-kpc">
-                                <rect key="frame" x="737" y="701" width="46" height="59"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="S4R-Ja-viH" kind="presentation" identifier="BackToMain" modalTransitionStyle="crossDissolve" id="Xfw-Zj-LSi"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qbi-9Z-dh3">
+                                <rect key="frame" x="450" y="321" width="125" height="125"/>
+                            </imageView>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" editable="NO" text="San Miguel Island" translatesAutoresizingMaskIntoConstraints="NO" id="Bx0-Ds-P7S">
                                 <rect key="frame" x="46" y="23" width="333" height="43"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -661,6 +661,13 @@ Administered by the National Park Service within the Department of the Interior,
                                 <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daP-Ge-kpc">
+                                <rect key="frame" x="737" y="701" width="46" height="59"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="S4R-Ja-viH" kind="presentation" identifier="BackToMain" modalTransitionStyle="crossDissolve" id="Xfw-Zj-LSi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -668,6 +675,7 @@ Administered by the National Park Service within the Department of the Interior,
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="Barview" destination="3fE-Cz-qgo" id="q1J-nA-4os"/>
+                        <outlet property="Clickhere" destination="qbi-9Z-dh3" id="tJx-vJ-or4"/>
                         <outlet property="Logoview" destination="836-3y-bRg" id="W41-kW-sq7"/>
                         <outlet property="TitleText" destination="Bx0-Ds-P7S" id="RX1-iq-kF7"/>
                     </connections>
@@ -714,6 +722,9 @@ Administered by the National Park Service within the Department of the Interior,
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar3" translatesAutoresizingMaskIntoConstraints="NO" id="zaR-pt-QQD">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fqE-iy-knw">
+                                <rect key="frame" x="450" y="321" width="125" height="125"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tw1-Cb-IMe">
                                 <rect key="frame" x="741" y="703" width="46" height="57"/>
                                 <connections>
@@ -727,6 +738,7 @@ Administered by the National Park Service within the Department of the Interior,
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="Barview" destination="zaR-pt-QQD" id="SdW-hT-Onm"/>
+                        <outlet property="Clickhere" destination="fqE-iy-knw" id="C0h-bY-rNJ"/>
                         <outlet property="Logoview" destination="lB1-YX-ojR" id="bkq-Xt-xSi"/>
                         <outlet property="TitleText" destination="HL1-Zz-pgs" id="emQ-G9-Ove"/>
                     </connections>
@@ -778,6 +790,9 @@ Administered by the National Park Service within the Department of the Interior,
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_LOGOS_FOR_DISSOLVE_LOOP" translatesAutoresizingMaskIntoConstraints="NO" id="cQD-yi-M3g">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yfF-KO-E2J">
+                                <rect key="frame" x="450" y="321" width="125" height="125"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsl-sf-XRF">
                                 <rect key="frame" x="737" y="699" width="46" height="61"/>
                                 <connections>
@@ -791,6 +806,7 @@ Administered by the National Park Service within the Department of the Interior,
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="Barview" destination="D3S-nf-P11" id="xww-Nw-IaI"/>
+                        <outlet property="Clickhere" destination="yfF-KO-E2J" id="r8j-HP-6NY"/>
                         <outlet property="Logoview" destination="cQD-yi-M3g" id="TsI-kc-Po9"/>
                         <outlet property="TitleText" destination="voK-V2-BR2" id="IC2-Tu-2hb"/>
                     </connections>
@@ -838,14 +854,17 @@ Administered by the National Park Service within the Department of the Interior,
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar5" translatesAutoresizingMaskIntoConstraints="NO" id="YFE-FH-WB3">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_LOGOS_FOR_DISSOLVE_LOOP" translatesAutoresizingMaskIntoConstraints="NO" id="JNY-j6-LV3">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXB-sw-z6j">
                                 <rect key="frame" x="738" y="701" width="46" height="59"/>
                                 <connections>
                                     <segue destination="S4R-Ja-viH" kind="presentation" identifier="BackToMain" modalTransitionStyle="crossDissolve" id="b7l-3o-hqg"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_LOGOS_FOR_DISSOLVE_LOOP" translatesAutoresizingMaskIntoConstraints="NO" id="JNY-j6-LV3">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nBW-8k-3j1">
+                                <rect key="frame" x="450" y="321" width="125" height="125"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -854,6 +873,7 @@ Administered by the National Park Service within the Department of the Interior,
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="Barview" destination="YFE-FH-WB3" id="njd-oX-9hI"/>
+                        <outlet property="Clickhere" destination="nBW-8k-3j1" id="W5S-f6-udM"/>
                         <outlet property="Logoview" destination="JNY-j6-LV3" id="8yx-wn-TIJ"/>
                         <outlet property="TitleText" destination="SS2-Y7-Udl" id="yON-A0-oRE"/>
                     </connections>
@@ -890,11 +910,11 @@ Administered by the National Park Service within the Department of the Interior,
         <image name="bar5" width="2048" height="1536"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="drT-VG-ogL"/>
-        <segue reference="9Ks-Mh-gHR"/>
-        <segue reference="ud3-wU-oGD"/>
-        <segue reference="4jn-Lx-VjZ"/>
-        <segue reference="b7l-3o-hqg"/>
+        <segue reference="nva-S2-vam"/>
         <segue reference="yqe-Mp-YZ1"/>
+        <segue reference="Xfw-Zj-LSi"/>
+        <segue reference="95q-E2-Vbw"/>
+        <segue reference="36E-6T-gB9"/>
+        <segue reference="ELr-bK-b7y"/>
     </inferredMetricsTieBreakers>
 </document>
