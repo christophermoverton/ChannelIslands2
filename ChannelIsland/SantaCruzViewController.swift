@@ -19,6 +19,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var TitleText: UITextView!
     @IBOutlet weak var Barview: UIImageView!
     let vname: String = "Santa Cruz Island"
+    @IBOutlet weak var Logoview: UIImageView!
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("Got This Far!")
         print(segue.identifier)
@@ -28,6 +29,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate {
         self.horizontalTransitionController.vname1 = "Santa Cruz Island"
         self.horizontalTransitionController.tv1 = self.TitleText
         self.horizontalTransitionController.iv1 = self.Barview
+        self.horizontalTransitionController.iv12 = self.Logoview
         if checkString.rangeOfString("Segue") != nil{
             self.horizontalTransitionController.swipeDirection = false
             self.horizontalTransitionController.iname1 = iname1
@@ -46,6 +48,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate {
             destinationViewController.loadView()
             self.horizontalTransitionController.tv2 = destinationViewController.TitleText
             self.horizontalTransitionController.iv2 = destinationViewController.Barview
+            self.horizontalTransitionController.iv22 = destinationViewController.Logoview
             self.horizontalTransitionController.f2 = destinationViewController.TitleText.frame
             self.horizontalTransitionController.vname2 = destinationViewController.vname
         }
@@ -56,6 +59,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate {
             destinationViewController.loadView()
             self.horizontalTransitionController.tv2 = destinationViewController.TitleText
             self.horizontalTransitionController.iv2 = destinationViewController.Barview
+            self.horizontalTransitionController.iv22 = destinationViewController.Logoview
             self.horizontalTransitionController.f2 = destinationViewController.TitleText.frame
             self.horizontalTransitionController.vname2 = destinationViewController.vname
         }

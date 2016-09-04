@@ -21,6 +21,7 @@ class SantaRosaViewController: UIViewController, UITextViewDelegate {
     private let iname3 = "bar1"
     internal let ttframe: CGRect = CGRect(x: 13, y: 23, width: 333, height: 84)
     internal let vname: String = "Santa Rosa Island"
+    @IBOutlet weak var Logoview: UIImageView!
     
     
     
@@ -33,6 +34,7 @@ class SantaRosaViewController: UIViewController, UITextViewDelegate {
         self.horizontalTransitionController.vname1 = "Santa Rosa Island"
         self.horizontalTransitionController.tv1 = self.TitleText
         self.horizontalTransitionController.iv1 = self.Barview
+        self.horizontalTransitionController.iv12 = self.Logoview
         if checkString.rangeOfString("Segue") != nil{
             self.horizontalTransitionController.swipeDirection = false
             self.horizontalTransitionController.iname1 = iname1
@@ -51,6 +53,7 @@ class SantaRosaViewController: UIViewController, UITextViewDelegate {
             destinationViewController.loadView()
             self.horizontalTransitionController.tv2 = destinationViewController.TitleText
             self.horizontalTransitionController.iv2 = destinationViewController.Barview
+            self.horizontalTransitionController.iv22 = destinationViewController.Logoview
             self.horizontalTransitionController.f2 = destinationViewController.TitleText.frame
             self.horizontalTransitionController.vname2 = destinationViewController.vname
         }
@@ -61,6 +64,7 @@ class SantaRosaViewController: UIViewController, UITextViewDelegate {
             destinationViewController.loadView()
             self.horizontalTransitionController.tv2 = destinationViewController.TitleText
             self.horizontalTransitionController.iv2 = destinationViewController.Barview
+            self.horizontalTransitionController.iv22 = destinationViewController.Logoview
             self.horizontalTransitionController.f2 = destinationViewController.TitleText.frame
             self.horizontalTransitionController.vname2 = destinationViewController.vname
         }

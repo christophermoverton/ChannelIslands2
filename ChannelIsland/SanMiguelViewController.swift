@@ -17,6 +17,7 @@ class SanMiguelViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var Barview: UIImageView!
     @IBOutlet weak var TitleText: UITextView!
     let vname: String = "San Miguel Island"
+    @IBOutlet weak var Logoview: UIImageView!
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("Got This Far!")
@@ -27,7 +28,7 @@ class SanMiguelViewController: UIViewController, UITextViewDelegate {
         self.horizontalTransitionController.vname1 = "San Miguel Island"
         self.horizontalTransitionController.tv1 = self.TitleText
         self.horizontalTransitionController.iv1 = self.Barview
-
+        self.horizontalTransitionController.iv12 = self.Logoview
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if checkString.rangeOfString("Segue") != nil{
             self.horizontalTransitionController.swipeDirection = false
@@ -53,6 +54,7 @@ class SanMiguelViewController: UIViewController, UITextViewDelegate {
             print("Segue2 used!")
             self.horizontalTransitionController.tv2 = destinationViewController.TitleText
             self.horizontalTransitionController.iv2 = destinationViewController.Barview
+            self.horizontalTransitionController.iv22 = destinationViewController.Logoview
             self.horizontalTransitionController.f2 = destinationViewController.TitleText.frame
         }
     }

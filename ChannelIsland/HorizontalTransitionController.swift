@@ -25,6 +25,8 @@ class HorizontalTransitionController: NSObject, UIViewControllerAnimatedTransiti
     var tv2: UITextView!
     var iv1: UIImageView!
     var iv2: UIImageView!
+    var iv12: UIImageView!
+    var iv22: UIImageView!
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return 1.0
     }
@@ -37,15 +39,20 @@ class HorizontalTransitionController: NSObject, UIViewControllerAnimatedTransiti
         let toView = transitionContext.viewForKey(UITransitionContextToViewKey)!
         var customView1 = MyCustomView(frame: CGRect(x: 0, y: 0, width: 1024, height: 768))
         customView1.addImageV(iname1)
+        
         customView1.addTitleV( f1, title: vname1)
         var customView2 = MyCustomView(frame: CGRect(x: 0, y: 0, width: 1024, height: 768))
         customView2.addImageV(iname2)
         customView2.addTitleV(f2, title: vname2)
+        var customView3 = MyCustomView(frame: CGRect(x: 0, y: 0, width: 1024, height: 768))
+        customView3.addImageV("CI_LOGOS_FOR_DISSOLVE_LOOP")
         customView2.alpha = 0
         self.tv1.hidden = true
         self.iv1.hidden = true
         self.tv2.hidden = true
         self.iv2.hidden = true
+        self.iv12.hidden = true
+        self.iv22.hidden = true
         // set up from 2D transforms that we'll use in the animation
         let offScreenRight = CGAffineTransformMakeTranslation(container!.frame.width, 0)
         let offScreenLeft = CGAffineTransformMakeTranslation(-container!.frame.width, 0)
@@ -66,6 +73,7 @@ class HorizontalTransitionController: NSObject, UIViewControllerAnimatedTransiti
         container!.addSubview(fromView)
         container!.addSubview(customView1)
         container!.addSubview(customView2)
+        container!.addSubview(customView3)
         
         // get the duration of the animation
         // DON'T just type '0.5s' -- the reason why won't make sense until the next post
@@ -93,9 +101,11 @@ class HorizontalTransitionController: NSObject, UIViewControllerAnimatedTransiti
                 // tell our transitionContext object that we've finished animating
                 customView1.hidden = true
                 customView2.hidden = true
+                customView3.hidden = true
                 self.tv2.hidden = false
                 self.iv2.hidden = false
-                
+                self.iv12.hidden = false
+                self.iv22.hidden = false
                 transitionContext.completeTransition(true)
                 
         })

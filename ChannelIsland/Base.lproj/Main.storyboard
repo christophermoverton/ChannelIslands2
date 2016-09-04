@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wMw-6r-BdI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wMw-6r-BdI">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -577,6 +577,9 @@ Administered by the National Park Service within the Department of the Interior,
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar2" translatesAutoresizingMaskIntoConstraints="NO" id="avS-tn-VzI">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_LOGOS_FOR_DISSOLVE_LOOP" translatesAutoresizingMaskIntoConstraints="NO" id="GUy-Eq-FQg">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpL-dG-SwA">
                                 <rect key="frame" x="736" y="699" width="46" height="61"/>
                                 <connections>
@@ -598,6 +601,7 @@ Administered by the National Park Service within the Department of the Interior,
                     <connections>
                         <outlet property="Barview" destination="avS-tn-VzI" id="mQ2-Ul-DZa"/>
                         <outlet property="LeftSwipe" destination="0Xm-bA-Ers" id="c1o-07-POx"/>
+                        <outlet property="Logoview" destination="GUy-Eq-FQg" id="7QI-Cn-Djj"/>
                         <outlet property="RightSwipe" destination="PxO-Lw-iBA" id="DiT-SL-DAw"/>
                         <outlet property="TitleText" destination="kpy-AR-QaS" id="7Y3-U5-DUG"/>
                     </connections>
@@ -640,6 +644,9 @@ Administered by the National Park Service within the Department of the Interior,
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar1" translatesAutoresizingMaskIntoConstraints="NO" id="3fE-Cz-qgo">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_LOGOS_FOR_DISSOLVE_LOOP" translatesAutoresizingMaskIntoConstraints="NO" id="836-3y-bRg">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daP-Ge-kpc">
                                 <rect key="frame" x="737" y="701" width="46" height="59"/>
                                 <state key="normal" title="Button"/>
@@ -661,6 +668,7 @@ Administered by the National Park Service within the Department of the Interior,
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="Barview" destination="3fE-Cz-qgo" id="q1J-nA-4os"/>
+                        <outlet property="Logoview" destination="836-3y-bRg" id="W41-kW-sq7"/>
                         <outlet property="TitleText" destination="Bx0-Ds-P7S" id="RX1-iq-kF7"/>
                     </connections>
                 </viewController>
@@ -693,12 +701,9 @@ Administered by the National Park Service within the Department of the Interior,
                                     <outletCollection property="gestureRecognizers" destination="yja-QI-yVT" appends="YES" id="Peh-KQ-WKH"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tw1-Cb-IMe">
-                                <rect key="frame" x="741" y="703" width="46" height="57"/>
-                                <connections>
-                                    <segue destination="S4R-Ja-viH" kind="presentation" identifier="BackToMain" modalTransitionStyle="crossDissolve" id="zES-DJ-Qvu"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_LOGOS_FOR_DISSOLVE_LOOP" translatesAutoresizingMaskIntoConstraints="NO" id="lB1-YX-ojR">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" editable="NO" text="Santa Cruz Island" translatesAutoresizingMaskIntoConstraints="NO" id="HL1-Zz-pgs">
                                 <rect key="frame" x="46" y="23" width="333" height="43"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -709,6 +714,12 @@ Administered by the National Park Service within the Department of the Interior,
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar3" translatesAutoresizingMaskIntoConstraints="NO" id="zaR-pt-QQD">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tw1-Cb-IMe">
+                                <rect key="frame" x="741" y="703" width="46" height="57"/>
+                                <connections>
+                                    <segue destination="S4R-Ja-viH" kind="presentation" identifier="BackToMain" modalTransitionStyle="crossDissolve" id="zES-DJ-Qvu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -716,6 +727,7 @@ Administered by the National Park Service within the Department of the Interior,
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="Barview" destination="zaR-pt-QQD" id="SdW-hT-Onm"/>
+                        <outlet property="Logoview" destination="lB1-YX-ojR" id="bkq-Xt-xSi"/>
                         <outlet property="TitleText" destination="HL1-Zz-pgs" id="emQ-G9-Ove"/>
                     </connections>
                 </viewController>
@@ -763,6 +775,9 @@ Administered by the National Park Service within the Department of the Interior,
                                 <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_LOGOS_FOR_DISSOLVE_LOOP" translatesAutoresizingMaskIntoConstraints="NO" id="cQD-yi-M3g">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsl-sf-XRF">
                                 <rect key="frame" x="737" y="699" width="46" height="61"/>
                                 <connections>
@@ -776,6 +791,7 @@ Administered by the National Park Service within the Department of the Interior,
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="Barview" destination="D3S-nf-P11" id="xww-Nw-IaI"/>
+                        <outlet property="Logoview" destination="cQD-yi-M3g" id="TsI-kc-Po9"/>
                         <outlet property="TitleText" destination="voK-V2-BR2" id="IC2-Tu-2hb"/>
                     </connections>
                 </viewController>
@@ -828,6 +844,9 @@ Administered by the National Park Service within the Department of the Interior,
                                     <segue destination="S4R-Ja-viH" kind="presentation" identifier="BackToMain" modalTransitionStyle="crossDissolve" id="b7l-3o-hqg"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_LOGOS_FOR_DISSOLVE_LOOP" translatesAutoresizingMaskIntoConstraints="NO" id="JNY-j6-LV3">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -835,6 +854,7 @@ Administered by the National Park Service within the Department of the Interior,
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="Barview" destination="YFE-FH-WB3" id="njd-oX-9hI"/>
+                        <outlet property="Logoview" destination="JNY-j6-LV3" id="8yx-wn-TIJ"/>
                         <outlet property="TitleText" destination="SS2-Y7-Udl" id="yON-A0-oRE"/>
                     </connections>
                 </viewController>
@@ -870,11 +890,11 @@ Administered by the National Park Service within the Department of the Interior,
         <image name="bar5" width="2048" height="1536"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UxM-fJ-qBO"/>
+        <segue reference="drT-VG-ogL"/>
+        <segue reference="9Ks-Mh-gHR"/>
         <segue reference="ud3-wU-oGD"/>
         <segue reference="4jn-Lx-VjZ"/>
-        <segue reference="9Ks-Mh-gHR"/>
-        <segue reference="nva-S2-vam"/>
+        <segue reference="b7l-3o-hqg"/>
         <segue reference="yqe-Mp-YZ1"/>
     </inferredMetricsTieBreakers>
 </document>
