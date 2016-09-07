@@ -63,20 +63,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.ScrollView2.contentSize.height = 650
         self.ScrollView2.hidden = true
         self.CloseTV.hidden = true
-        var imageArr : [UIImage] = []
-        for i in 0...149{
-            let str : String = "MAIN_NAV_GREEN_DOTS_"+String(format: "%05d", i)+".png"
-            print(str)
-            imageArr.append(UIImage(named:str)!)
-        }
-        /*
-         ClickHere.animationImages = [
-         UIImage(named:"TAP_HERE_V01_LOOP_00000.png")!
-         ]
-         */
-        GreenDotAnimIView.animationImages = imageArr
-        GreenDotAnimIView.animationDuration = 5.0
-        GreenDotAnimIView.startAnimating()
+
         /*
         let path = NSBundle.mainBundle().pathForResource("SampleText", ofType: "txt")
         let fm = NSFileManager()
@@ -99,6 +86,20 @@ class DataViewController: UIViewController, UITextViewDelegate {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         //self.dataLabel!.text = dataObject
+        var imageArr : [UIImage] = []
+        for i in 0...149{
+            let str : String = "MAIN_NAV_GREEN_DOT_CROPPED"+String(format: "%05d", i)+".png"
+            //print(str)
+            imageArr.append(UIImage(named:str)!)
+        }
+        /*
+         ClickHere.animationImages = [
+         UIImage(named:"TAP_HERE_V01_LOOP_00000.png")!
+         ]
+         */
+        GreenDotAnimIView.animationImages = imageArr
+        GreenDotAnimIView.animationDuration = 5.0
+        GreenDotAnimIView.startAnimating()
     }
     override func prefersStatusBarHidden() -> Bool {
         return true

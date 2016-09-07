@@ -154,8 +154,8 @@ by people for at least 13,000 years.</string>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HIGHLIGHTS_NUMBERS" translatesAutoresizingMaskIntoConstraints="NO" id="156-Bi-vzA">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WeN-WH-98B">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MAIN_NAV_GREEN_DOT_CROPPED00000" translatesAutoresizingMaskIntoConstraints="NO" id="WeN-WH-98B">
+                                <rect key="frame" x="56" y="407" width="839" height="195"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_Main_Icon_MAPS" translatesAutoresizingMaskIntoConstraints="NO" id="8B8-Ep-wsj">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -897,6 +897,7 @@ Administered by the National Park Service within the Department of the Interior,
         <image name="Image-2" width="2048" height="1536"/>
         <image name="Image-3" width="2048" height="1536"/>
         <image name="Image-4" width="2048" height="1536"/>
+        <image name="MAIN_NAV_GREEN_DOT_CROPPED00000" width="1678" height="390"/>
         <image name="Main_Navigation_CLEAN_UP_V01" width="2048" height="1536"/>
         <image name="Main_Navigationblur" width="2048" height="1536"/>
         <image name="SANTA_BARBARA_CLEAN" width="2048" height="1536"/>
