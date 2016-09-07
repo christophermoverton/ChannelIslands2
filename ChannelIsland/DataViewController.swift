@@ -10,6 +10,10 @@ import UIKit
 
 class DataViewController: UIViewController, UITextViewDelegate {
     
+    @IBOutlet weak var GreenDotAnimView5: UIImageView!
+    @IBOutlet weak var GreenDotAnimView4: UIImageView!
+    @IBOutlet weak var GreenDotAnimView3: UIImageView!
+    @IBOutlet weak var GreenDotAnimView2: UIImageView!
     @IBOutlet weak var NavBar: UIImageView!
     @IBOutlet weak var GreenDotAnimIView: UIImageView!
     @IBOutlet weak var HighlightsButton: UIButton!
@@ -88,7 +92,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
         //self.dataLabel!.text = dataObject
         var imageArr : [UIImage] = []
         for i in 0...149{
-            let str : String = "MAIN_NAV_GREEN_DOT_CROPPED"+String(format: "%05d", i)+".png"
+            let str : String = "MAIN_NAV_SINGL_GREEN_DOT_"+String(format: "%05d", i)+".png"
             //print(str)
             imageArr.append(UIImage(named:str)!)
         }
@@ -100,6 +104,18 @@ class DataViewController: UIViewController, UITextViewDelegate {
         GreenDotAnimIView.animationImages = imageArr
         GreenDotAnimIView.animationDuration = 5.0
         GreenDotAnimIView.startAnimating()
+        GreenDotAnimView2.animationImages = imageArr
+        GreenDotAnimView2.animationDuration = 5.0
+        GreenDotAnimView2.startAnimating()
+        GreenDotAnimView3.animationImages = imageArr
+        GreenDotAnimView3.animationDuration = 5.0
+        GreenDotAnimView3.startAnimating()
+        GreenDotAnimView4.animationImages = imageArr
+        GreenDotAnimView4.animationDuration = 5.0
+        GreenDotAnimView4.startAnimating()
+        GreenDotAnimView5.animationImages = imageArr
+        GreenDotAnimView5.animationDuration = 5.0
+        GreenDotAnimView5.startAnimating()
     }
     override func prefersStatusBarHidden() -> Bool {
         return true
