@@ -148,7 +148,7 @@ by people for at least 13,000 years.</string>
                             <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Main_Navigation_CLEAN_UP_V01" translatesAutoresizingMaskIntoConstraints="NO" id="kLn-xz-Lbj">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <imageView opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Main_Navigationblur" translatesAutoresizingMaskIntoConstraints="NO" id="cMd-Z5-khC">
+                            <imageView opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Main_Navigation_CLEAN_UP_V01_Blur" translatesAutoresizingMaskIntoConstraints="NO" id="cMd-Z5-khC">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HIGHLIGHTS_NUMBERS" translatesAutoresizingMaskIntoConstraints="NO" id="156-Bi-vzA">
@@ -173,6 +173,48 @@ by people for at least 13,000 years.</string>
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Maps" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J6i-Um-ZQE">
+                                <rect key="frame" x="249" y="735" width="50" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.99287670850753784" green="0.99700695276260376" blue="0.99637609720230103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Back" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ajy-YG-V4A">
+                                <rect key="frame" x="751" y="735" width="50" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.99287670850753784" green="0.99700695276260376" blue="0.99637609720230103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Info" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pNz-gI-71f">
+                                <rect key="frame" x="453" y="735" width="50" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.99287670850753784" green="0.99700695276260376" blue="0.99637609720230103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Highlights" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QPC-VQ-gbm">
+                                <rect key="frame" x="338" y="735" width="80" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.99287670850753784" green="0.99700695276260376" blue="0.99637609720230103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Photography" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WIJ-cr-W2C">
+                                <rect key="frame" x="531" y="735" width="100" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.99287670850753784" green="0.99700695276260376" blue="0.99637609720230103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Planning" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aJ9-i9-n9z">
+                                <rect key="frame" x="641" y="735" width="100" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.99287670850753784" green="0.99700695276260376" blue="0.99637609720230103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.84999999999999998" contentMode="scaleAspectFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCN-16-zkn">
                                 <rect key="frame" x="890" y="6" width="81" height="86"/>
                                 <attributedString key="attributedText">
@@ -551,12 +593,17 @@ Administered by the National Park Service within the Department of the Interior,
                         <outlet property="GreenDotAnimView5" destination="xGT-1e-xuo" id="hhf-id-N9W"/>
                         <outlet property="HighlightNumbersView" destination="156-Bi-vzA" id="qjS-Mx-auz"/>
                         <outlet property="HighlightsButton" destination="DCo-rP-Udb" id="kpF-kV-61X"/>
+                        <outlet property="HighlightsLabel" destination="QPC-VQ-gbm" id="7Qt-Nt-V5v"/>
                         <outlet property="IView" destination="kLn-xz-Lbj" id="6xd-My-NOF"/>
                         <outlet property="IView2" destination="cMd-Z5-khC" id="Ru9-Iv-qQx"/>
                         <outlet property="InfoButton" destination="SjV-01-Ua8" id="D1F-ZH-ddb"/>
+                        <outlet property="InfoLabel" destination="pNz-gI-71f" id="35O-ue-pML"/>
                         <outlet property="MView" destination="ZwX-cT-FIQ" id="SuP-s1-7NA"/>
+                        <outlet property="MapsLabel" destination="J6i-Um-ZQE" id="evE-CB-KFf"/>
                         <outlet property="NavBar" destination="8B8-Ep-wsj" id="jGe-9S-6L2"/>
+                        <outlet property="PhotographyLabel" destination="WIJ-cr-W2C" id="31V-eE-e7B"/>
                         <outlet property="PlanningButton" destination="9p8-uz-5dT" id="Ly3-ee-N2C"/>
+                        <outlet property="PlanningLabel" destination="aJ9-i9-n9z" id="2fA-vk-pIb"/>
                         <outlet property="SanMigButton" destination="MTS-av-rkH" id="p1u-V4-RTf"/>
                         <outlet property="SantaBarbaraButton" destination="Oov-SV-MRp" id="YTB-Bl-2Gn"/>
                         <outlet property="SantaCruzButton" destination="4IY-UA-9rl" id="yC3-8s-cri"/>
@@ -915,7 +962,7 @@ Administered by the National Park Service within the Department of the Interior,
         <image name="Image-4" width="2048" height="1536"/>
         <image name="MAIN_NAV_SINGL_GREEN_DOT_00000" width="40" height="40"/>
         <image name="Main_Navigation_CLEAN_UP_V01" width="2048" height="1536"/>
-        <image name="Main_Navigationblur" width="2048" height="1536"/>
+        <image name="Main_Navigation_CLEAN_UP_V01_Blur" width="2048" height="1536"/>
         <image name="SANTA_BARBARA_CLEAN" width="2048" height="1536"/>
         <image name="SANTA_CRUZ_CLEAN" width="2048" height="1536"/>
         <image name="SANTA_ROSA_CLEAN" width="2048" height="1536"/>

@@ -10,6 +10,11 @@ import UIKit
 
 class DataViewController: UIViewController, UITextViewDelegate {
     
+    @IBOutlet weak var PlanningLabel: UITextField!
+    @IBOutlet weak var PhotographyLabel: UITextField!
+    @IBOutlet weak var HighlightsLabel: UITextField!
+    @IBOutlet weak var InfoLabel: UITextField!
+    @IBOutlet weak var MapsLabel: UITextField!
     @IBOutlet weak var GreenDotAnimView5: UIImageView!
     @IBOutlet weak var GreenDotAnimView4: UIImageView!
     @IBOutlet weak var GreenDotAnimView3: UIImageView!
@@ -131,6 +136,14 @@ class DataViewController: UIViewController, UITextViewDelegate {
         else{
             self.NavBar.image = UIImage(named: "CI_Main_Icon_MAPS")
         }
+        if self.HightlightsActive {
+           self.InfoLabel.textColor = UIColor.whiteColor()
+           self.HighlightsLabel.textColor = UIColor.blackColor()
+        }
+        else{
+           self.InfoLabel.textColor = UIColor.whiteColor()
+           self.MapsLabel.textColor = UIColor.blackColor()
+        }
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView.alpha = 1
             self.GreenDotAnimIView.alpha = 1
@@ -143,7 +156,8 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.CloseTV.alpha = 0
             }, completion: { finished in
                 if (finished){
-                    
+    
+
                     self.ScrollView.hidden = true
                     self.CloseTV.hidden = true
                 }
@@ -158,6 +172,14 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.ScrollView.hidden = false
         self.CloseTV.hidden = false
         self.NavBar.image = UIImage(named: "CI_Main_Icon_INFO")
+        if self.HightlightsActive {
+            self.InfoLabel.textColor = UIColor.blackColor()
+            self.HighlightsLabel.textColor = UIColor.whiteColor()
+        }
+        else{
+            self.InfoLabel.textColor = UIColor.blackColor()
+            self.MapsLabel.textColor = UIColor.whiteColor()
+        }
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView.alpha = 0
             self.ScrollView.alpha = 1
@@ -170,6 +192,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.CloseTV.alpha = 1
             }, completion: { finished in
                 if (finished){
+
                     self.IView.hidden = true
                     self.GreenDotAnimIView.hidden = true
                     if self.HightlightsActive{
@@ -187,27 +210,35 @@ class DataViewController: UIViewController, UITextViewDelegate {
     @IBAction func HighlightsClick(sender: AnyObject) {
         if self.HightlightsActive {
             self.NavBar.image = UIImage(named: "CI_Main_Icon_MAPS")
+            self.HighlightsLabel.textColor = UIColor.whiteColor()
+            self.MapsLabel.textColor = UIColor.blackColor()
             UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
                     self.HighlightNumbersView.alpha = 0
                 
                 }, completion: { finished in
                     if (finished){
+
                         self.HighlightNumbersView.hidden = true
                         self.HightlightsActive = false
-                        
+
+
                     }
             })
         }
         else{
-            self.NavBar.image = UIImage(named: "CI_Main_Icon_HIGHLIGHTS")
-            self.HighlightNumbersView.hidden = false
             
+            self.HighlightNumbersView.hidden = false
+            self.NavBar.image = UIImage(named: "CI_Main_Icon_HIGHLIGHTS")
+            self.HighlightsLabel.textColor = UIColor.blackColor()
+            self.MapsLabel.textColor = UIColor.whiteColor()
             UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
                 self.HighlightNumbersView.alpha = 1
                 
                 }, completion: { finished in
                     if (finished){
+
                         self.HightlightsActive = true
+
                     }
             })
         }
@@ -215,6 +246,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
     @IBAction func DismissPlanningClick(sender: AnyObject) {
         self.IView.hidden = false
         self.GreenDotAnimIView.hidden = false
+
         if self.HightlightsActive {
             self.HighlightNumbersView.hidden = false
             self.NavBar.image = UIImage(named: "CI_Main_Icon_HIGHLIGHTS")
@@ -223,8 +255,14 @@ class DataViewController: UIViewController, UITextViewDelegate {
         else{
             self.NavBar.image = UIImage(named: "CI_Main_Icon_MAPS")
         }
-        
-        
+        if self.HightlightsActive {
+            self.PlanningLabel.textColor = UIColor.whiteColor()
+            self.HighlightsLabel.textColor = UIColor.blackColor()
+        }
+        else{
+            self.PlanningLabel.textColor = UIColor.whiteColor()
+            self.MapsLabel.textColor = UIColor.blackColor()
+        }
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView.alpha = 1
             self.ScrollView2.alpha = 0
@@ -234,12 +272,14 @@ class DataViewController: UIViewController, UITextViewDelegate {
             if self.HightlightsActive {
                self.HighlightNumbersView.alpha = 1
             }
+
             //self.HighlightNumbersView.alpha = 1
             }, completion: { finished in
                 if (finished){
                     
                     self.ScrollView2.hidden = true
                     self.CloseTV.hidden = true
+                    
                 }
         })
         self.DismissPlanning.hidden = true
@@ -251,6 +291,14 @@ class DataViewController: UIViewController, UITextViewDelegate {
     @IBAction func PlanningClick(sender: AnyObject) {
         self.ScrollView2.hidden = false
         self.CloseTV.hidden = false
+        if self.HightlightsActive {
+            self.PlanningLabel.textColor = UIColor.blackColor()
+            self.HighlightsLabel.textColor = UIColor.whiteColor()
+        }
+        else{
+            self.PlanningLabel.textColor = UIColor.blackColor()
+            self.MapsLabel.textColor = UIColor.whiteColor()
+        }
         self.NavBar.image = UIImage(named: "CI_Main_Icon_PLANNING")
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView.alpha = 0
@@ -264,11 +312,13 @@ class DataViewController: UIViewController, UITextViewDelegate {
             }
             }, completion: { finished in
                 if (finished){
+
                     self.IView.hidden = true
                     self.GreenDotAnimIView.hidden = true
                     if self.HightlightsActive {
                        self.HighlightNumbersView.hidden = true
                     }
+
                 }
         })
         self.DismissPlanning.hidden = false
