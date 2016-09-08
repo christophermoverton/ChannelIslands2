@@ -92,8 +92,8 @@ class DataViewController: UIViewController, UITextViewDelegate {
         //self.dataLabel!.text = dataObject
         var imageArr : [UIImage] = []
         for i in 0...149{
-            let str : String = "MAIN_NAV_SINGL_GREEN_DOT_"+String(format: "%05d", i)+".png"
-            //print(str)
+            let str : String = "MAIN_NAV_SINGL_GREEN_DOT_"+String(format: "%05d", i)
+            print(str)
             imageArr.append(UIImage(named:str)!)
         }
         /*
