@@ -11,6 +11,12 @@
             <string>TrajanPro-Regular</string>
             <string>TrajanPro-Regular</string>
             <string>TrajanPro-Regular</string>
+            <string>TrajanPro-Regular</string>
+            <string>TrajanPro-Regular</string>
+            <string>TrajanPro-Regular</string>
+            <string>TrajanPro-Regular</string>
+            <string>TrajanPro-Regular</string>
+            <string>TrajanPro-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -309,6 +315,12 @@ Cg
                                     <action selector="HighlightsClick:" destination="S4R-Ja-viH" eventType="touchUpInside" id="UgC-gL-dwI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eia-vX-YwX">
+                                <rect key="frame" x="531" y="694" width="67" height="66"/>
+                                <connections>
+                                    <segue destination="8dJ-fM-KA1" kind="presentation" identifier="Photography" modalTransitionStyle="crossDissolve" id="OjJ-ZP-iCm"/>
+                                </connections>
+                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8d2-KK-2ym">
                                 <rect key="frame" x="0.0" y="118" width="1024" height="568"/>
                                 <subviews>
@@ -601,6 +613,7 @@ Administered by the National Park Service within the Department of the Interior,
                         <outlet property="MView" destination="ZwX-cT-FIQ" id="SuP-s1-7NA"/>
                         <outlet property="MapsLabel" destination="J6i-Um-ZQE" id="evE-CB-KFf"/>
                         <outlet property="NavBar" destination="8B8-Ep-wsj" id="jGe-9S-6L2"/>
+                        <outlet property="PhotographyButton" destination="eia-vX-YwX" id="t9G-S0-jSS"/>
                         <outlet property="PhotographyLabel" destination="WIJ-cr-W2C" id="31V-eE-e7B"/>
                         <outlet property="PlanningButton" destination="9p8-uz-5dT" id="Ly3-ee-N2C"/>
                         <outlet property="PlanningLabel" destination="aJ9-i9-n9z" id="2fA-vk-pIb"/>
@@ -888,6 +901,185 @@ Administered by the National Park Service within the Department of the Interior,
             </objects>
             <point key="canvasLocation" x="4472" y="36"/>
         </scene>
+        <!--Photo Comment View Controller-->
+        <scene sceneID="023-NW-SNu">
+            <objects>
+                <viewController storyboardIdentifier="v1" modalTransitionStyle="crossDissolve" id="8dJ-fM-KA1" customClass="PhotoCommentViewController" customModule="ChannelIsland" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g1x-Qf-IWD"/>
+                        <viewControllerLayoutGuide type="bottom" id="w0a-62-Kfe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8qY-dQ-VtX">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="sjP-ri-7lb">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_Main_Icon_PHOTOGRAPHY" translatesAutoresizingMaskIntoConstraints="NO" id="7qP-as-2OM">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Test Text" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gc7-NL-Kdo">
+                                <rect key="frame" x="201" y="580" width="623" height="30"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <color key="textColor" red="0.97932368516921997" green="0.99360793828964233" blue="0.99299520254135132" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Channel Islands" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GCO-2y-2p0">
+                                <rect key="frame" x="64" y="31" width="348" height="46"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="81"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="National Marine Sanctuary" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q5s-eb-EAC">
+                                <rect key="frame" x="64" y="64" width="303" height="32"/>
+                                <string key="placeholder">National Marine Sanctuary
+&amp; National Park</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="55"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="&amp; National Park" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hP1-x1-vwz">
+                                <rect key="frame" x="64" y="86" width="167" height="32"/>
+                                <string key="placeholder">National Marine Sanctuary
+&amp; National Park</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="55"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="12" translatesAutoresizingMaskIntoConstraints="NO" id="wVt-W5-Rtj">
+                                <rect key="frame" x="414" y="618" width="196" height="37"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="zsK-b7-DYl" appends="YES" id="MVP-vf-PaQ"/>
+                            <outletCollection property="gestureRecognizers" destination="FSW-KN-gKb" appends="YES" id="qRd-nH-bji"/>
+                        </connections>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="Caption" destination="Gc7-NL-Kdo" id="E86-d7-et8"/>
+                        <outlet property="NavigationBarImageView" destination="7qP-as-2OM" id="gbs-DG-gqP"/>
+                        <outlet property="PhotoImageView" destination="sjP-ri-7lb" id="X6N-AK-zNS"/>
+                        <outlet property="TitleText1" destination="GCO-2y-2p0" id="UEF-mV-osD"/>
+                        <outlet property="TitleText2" destination="q5s-eb-EAC" id="TOf-FJ-WmP"/>
+                        <outlet property="TitleText3" destination="hP1-x1-vwz" id="glj-bD-ljy"/>
+                        <outlet property="pagecontrol" destination="wVt-W5-Rtj" id="nxA-rz-UPE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rh6-8u-M2p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="zsK-b7-DYl">
+                    <connections>
+                        <segue destination="Pt7-em-sn4" kind="show" identifier="revealSegue" id="cXW-Yx-Jng"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="FSW-KN-gKb">
+                    <connections>
+                        <segue destination="Pt7-em-sn4" kind="show" identifier="revealSeque" id="BPa-BY-zGy"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="5597" y="-206"/>
+        </scene>
+        <!--Photo Comment View Controller2-->
+        <scene sceneID="1av-xE-7cu">
+            <objects>
+                <viewController storyboardIdentifier="v2" modalTransitionStyle="crossDissolve" id="Pt7-em-sn4" customClass="PhotoCommentViewController2" customModule="ChannelIsland" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Y5-u7-kuK"/>
+                        <viewControllerLayoutGuide type="bottom" id="IdB-0l-ZRC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a1V-l1-RGw">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-3" translatesAutoresizingMaskIntoConstraints="NO" id="txg-Ih-AWp">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_Main_Icon_PHOTOGRAPHY" translatesAutoresizingMaskIntoConstraints="NO" id="AEy-x6-2mx">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Test Text" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gar-uN-8Od">
+                                <rect key="frame" x="201" y="580" width="623" height="30"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <color key="textColor" red="0.97932368516921997" green="0.99360793828964233" blue="0.99299520254135132" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="12" translatesAutoresizingMaskIntoConstraints="NO" id="z06-Tk-ugh">
+                                <rect key="frame" x="414" y="618" width="196" height="37"/>
+                            </pageControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Channel Islands" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S2U-cm-0hA">
+                                <rect key="frame" x="64" y="31" width="348" height="46"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="81"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="National Marine Sanctuary" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TLg-OI-TeS">
+                                <rect key="frame" x="64" y="64" width="303" height="32"/>
+                                <string key="placeholder">National Marine Sanctuary
+&amp; National Park</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="55"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="&amp; National Park" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xn4-9G-XSd">
+                                <rect key="frame" x="64" y="86" width="167" height="32"/>
+                                <string key="placeholder">National Marine Sanctuary
+&amp; National Park</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="55"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="0hn-zQ-NUX" appends="YES" id="8GD-TZ-2JY"/>
+                            <outletCollection property="gestureRecognizers" destination="bka-ZM-WZd" appends="YES" id="b6f-hz-gHz"/>
+                        </connections>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="Caption" destination="gar-uN-8Od" id="Jpd-DJ-mf2"/>
+                        <outlet property="NavigationBarImageView" destination="AEy-x6-2mx" id="tQQ-g1-UKy"/>
+                        <outlet property="PhotoImageView" destination="txg-Ih-AWp" id="92j-MN-wJJ"/>
+                        <outlet property="TitleText1" destination="S2U-cm-0hA" id="Cgs-z0-3R2"/>
+                        <outlet property="TitleText2" destination="TLg-OI-TeS" id="oew-Rd-fBj"/>
+                        <outlet property="TitleText3" destination="Xn4-9G-XSd" id="WKc-jH-kPu"/>
+                        <outlet property="pagecontrol" destination="z06-Tk-ugh" id="nUM-z5-G78"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3P9-bH-rEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="0hn-zQ-NUX">
+                    <connections>
+                        <segue destination="8dJ-fM-KA1" kind="show" identifier="revealSegue" id="Mcr-xf-oZR"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="bka-ZM-WZd">
+                    <connections>
+                        <segue destination="8dJ-fM-KA1" kind="show" identifier="revealSeque" id="2Hc-a5-MTB"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="5522" y="780"/>
+        </scene>
         <!--Santa Barbara View Controller-->
         <scene sceneID="tiQ-i8-3nb">
             <objects>
@@ -956,7 +1148,9 @@ Administered by the National Park Service within the Department of the Interior,
         <image name="ANACAPA_CLEAN" width="2048" height="1536"/>
         <image name="CI_LOGOS_FOR_DISSOLVE_LOOP" width="2048" height="1536"/>
         <image name="CI_Main_Icon_MAPS" width="2048" height="1536"/>
+        <image name="CI_Main_Icon_PHOTOGRAPHY" width="2048" height="1536"/>
         <image name="HIGHLIGHTS_NUMBERS" width="2048" height="1536"/>
+        <image name="Image-1" width="2048" height="1536"/>
         <image name="Image-2" width="2048" height="1536"/>
         <image name="Image-3" width="2048" height="1536"/>
         <image name="Image-4" width="2048" height="1536"/>
@@ -974,11 +1168,13 @@ Administered by the National Park Service within the Department of the Interior,
         <image name="bar5" width="2048" height="1536"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jew-Ho-UNx"/>
-        <segue reference="Xfw-Zj-LSi"/>
-        <segue reference="Pis-kE-B5l"/>
-        <segue reference="iB9-rI-Hfy"/>
+        <segue reference="0j0-Vz-LUs"/>
         <segue reference="95q-E2-Vbw"/>
+        <segue reference="jew-Ho-UNx"/>
+        <segue reference="iB9-rI-Hfy"/>
+        <segue reference="Pis-kE-B5l"/>
         <segue reference="jZ1-9F-Fml"/>
+        <segue reference="BPa-BY-zGy"/>
+        <segue reference="Mcr-xf-oZR"/>
     </inferredMetricsTieBreakers>
 </document>

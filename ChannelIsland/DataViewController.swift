@@ -10,6 +10,7 @@ import UIKit
 
 class DataViewController: UIViewController, UITextViewDelegate {
     
+    @IBOutlet weak var PhotographyButton: UIButton!
     @IBOutlet weak var PlanningLabel: UITextField!
     @IBOutlet weak var PhotographyLabel: UITextField!
     @IBOutlet weak var HighlightsLabel: UITextField!
@@ -42,6 +43,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var dataLabel: UILabel!
     var dataObject: String = ""
     private let revealSequeId = "revealSegue"
+    private let photoSequeId = "Photography"
     private let horizontalTransitionController = HorizontalTransitionController()
     private var HightlightsActive: Bool = false
     var imageArray: [UIImage] = []
@@ -60,6 +62,15 @@ class DataViewController: UIViewController, UITextViewDelegate {
             print("Segue2 used!")
             
         }
+        
+        if segue.identifier == photoSequeId, let photographyPageViewController = segue.destinationViewController as? PhotoCommentViewController {
+            print("Hit Photography Page View Seque")
+            //photographyPageViewController.photos = photos
+            photographyPageViewController.photoIndex = 0
+            photographyPageViewController.photoName = photographyPageViewController.photos[0]
+            
+        }
+        
     }
 
     override func viewDidLoad() {
@@ -166,6 +177,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.PlanningButton.hidden = false
         self.InfoButton.hidden = false
         self.HighlightsButton.hidden = false
+        self.PhotographyButton.hidden = false
         print("Dismiss Button Pressed")
     }
     @IBAction func infoClick(sender: AnyObject) {
@@ -204,6 +216,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.DismissInfo.hidden = false
         self.PlanningButton.hidden = true
         self.InfoButton.hidden = true
+        self.PhotographyButton.hidden = true
         self.HighlightsButton.hidden = true
         print("Info Button Pressed")
     }
@@ -286,6 +299,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.PlanningButton.hidden = false
         self.InfoButton.hidden = false
         self.HighlightsButton.hidden = false
+        self.PhotographyButton.hidden = false
         print("Dismiss Planning Button Pressed")
     }
     @IBAction func PlanningClick(sender: AnyObject) {
@@ -325,8 +339,10 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.PlanningButton.hidden = true
         self.InfoButton.hidden = true
         self.HighlightsButton.hidden = true
+        self.PhotographyButton.hidden = true
         print("Planning Button Pressed")
     }
+    
     func getLargeText(text: String) -> NSMutableAttributedString {
         let string:NSMutableAttributedString = NSMutableAttributedString(string: text, attributes: [NSForegroundColorAttributeName: UIColor.whiteColor(),NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 14.0)!])
         let words:[String] = text.componentsSeparatedByString(" ")

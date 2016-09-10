@@ -54,6 +54,15 @@
 		B0EFD54D1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EFD54C1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift */; };
 		B0EFD54E1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EFD54C1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift */; };
 		B0EFD54F1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EFD54C1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift */; };
+		B0FB21B41D82099F00041DD8 /* PhotoCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FB21B31D82099F00041DD8 /* PhotoCommentViewController.swift */; };
+		B0FB21B51D82099F00041DD8 /* PhotoCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FB21B31D82099F00041DD8 /* PhotoCommentViewController.swift */; };
+		B0FB21B61D82099F00041DD8 /* PhotoCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FB21B31D82099F00041DD8 /* PhotoCommentViewController.swift */; };
+		B0FB21BC1D82B92100041DD8 /* HorizontalTransitionController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FB21BB1D82B92100041DD8 /* HorizontalTransitionController2.swift */; };
+		B0FB21BD1D82B92100041DD8 /* HorizontalTransitionController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FB21BB1D82B92100041DD8 /* HorizontalTransitionController2.swift */; };
+		B0FB21BE1D82B92100041DD8 /* HorizontalTransitionController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FB21BB1D82B92100041DD8 /* HorizontalTransitionController2.swift */; };
+		B0FB21C01D83922800041DD8 /* PhotoCommentViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FB21BF1D83922800041DD8 /* PhotoCommentViewController2.swift */; };
+		B0FB21C11D83922800041DD8 /* PhotoCommentViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FB21BF1D83922800041DD8 /* PhotoCommentViewController2.swift */; };
+		B0FB21C21D83922800041DD8 /* PhotoCommentViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FB21BF1D83922800041DD8 /* PhotoCommentViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +110,9 @@
 		B0E758841D77C94A00212694 /* MyCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomView.swift; sourceTree = "<group>"; };
 		B0EE853A1D6697AA0047EAB6 /* SampleText.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SampleText.txt; sourceTree = "<group>"; };
 		B0EFD54C1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
+		B0FB21B31D82099F00041DD8 /* PhotoCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCommentViewController.swift; sourceTree = "<group>"; };
+		B0FB21BB1D82B92100041DD8 /* HorizontalTransitionController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalTransitionController2.swift; sourceTree = "<group>"; };
+		B0FB21BF1D83922800041DD8 /* PhotoCommentViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCommentViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,12 +176,15 @@
 			children = (
 				B0EFD54C1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift */,
 				B0E758681D75020600212694 /* HorizontalTransitionController.swift */,
+				B0FB21BB1D82B92100041DD8 /* HorizontalTransitionController2.swift */,
 				B0E758841D77C94A00212694 /* MyCustomView.swift */,
 				B03151C91D4E69B60038FBA5 /* AppDelegate.swift */,
 				B03151CB1D4E69B60038FBA5 /* RootViewController.swift */,
 				B03151CD1D4E69B60038FBA5 /* DataViewController.swift */,
 				B03151CF1D4E69B60038FBA5 /* ModelController.swift */,
 				B03151D11D4E69B60038FBA5 /* Main.storyboard */,
+				B0FB21BF1D83922800041DD8 /* PhotoCommentViewController2.swift */,
+				B0FB21B31D82099F00041DD8 /* PhotoCommentViewController.swift */,
 				B0E758801D76319300212694 /* SantaBarbaraViewController.swift */,
 				B0E7587C1D7630FF00212694 /* AnacapaViewController.swift */,
 				B0E758781D762FAA00212694 /* SantaCruzViewController.swift */,
@@ -343,16 +358,19 @@
 				B0E758691D75020700212694 /* HorizontalTransitionController.swift in Sources */,
 				B0BB43C11D51719F0042CF5E /* ViewController.swift in Sources */,
 				B03151CC1D4E69B60038FBA5 /* RootViewController.swift in Sources */,
+				B0FB21C01D83922800041DD8 /* PhotoCommentViewController2.swift in Sources */,
 				B0E758851D77C94A00212694 /* MyCustomView.swift in Sources */,
 				B03151D01D4E69B60038FBA5 /* ModelController.swift in Sources */,
 				B0EFD54D1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */,
 				B03151CE1D4E69B60038FBA5 /* DataViewController.swift in Sources */,
 				B0E758811D76319300212694 /* SantaBarbaraViewController.swift in Sources */,
 				B0E7587D1D7630FF00212694 /* AnacapaViewController.swift in Sources */,
+				B0FB21BC1D82B92100041DD8 /* HorizontalTransitionController2.swift in Sources */,
 				B0E7586D1D7576A200212694 /* SantaRosaViewController.swift in Sources */,
 				B0E758791D762FAB00212694 /* SantaCruzViewController.swift in Sources */,
 				B0211E211D630742008208CC /* MapCard.swift in Sources */,
 				B0E758751D762AF600212694 /* SanMiguelViewController.swift in Sources */,
+				B0FB21B41D82099F00041DD8 /* PhotoCommentViewController.swift in Sources */,
 				B03151CA1D4E69B60038FBA5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +382,8 @@
 				B0E7587E1D7630FF00212694 /* AnacapaViewController.swift in Sources */,
 				B0211E221D630742008208CC /* MapCard.swift in Sources */,
 				B0E758761D762AF600212694 /* SanMiguelViewController.swift in Sources */,
+				B0FB21B51D82099F00041DD8 /* PhotoCommentViewController.swift in Sources */,
+				B0FB21BD1D82B92100041DD8 /* HorizontalTransitionController2.swift in Sources */,
 				B0E758861D77C94A00212694 /* MyCustomView.swift in Sources */,
 				B0E7587A1D762FAB00212694 /* SantaCruzViewController.swift in Sources */,
 				B0EFD54E1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */,
@@ -371,6 +391,7 @@
 				B0E758821D76319300212694 /* SantaBarbaraViewController.swift in Sources */,
 				B0E7586E1D7576A200212694 /* SantaRosaViewController.swift in Sources */,
 				B00364EF1D57D950001895D3 /* ViewController.swift in Sources */,
+				B0FB21C11D83922800041DD8 /* PhotoCommentViewController2.swift in Sources */,
 				B03151E31D4E69B60038FBA5 /* ChannelIslandTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,6 +403,8 @@
 				B0E7587F1D7630FF00212694 /* AnacapaViewController.swift in Sources */,
 				B0211E231D630742008208CC /* MapCard.swift in Sources */,
 				B0E758771D762AF600212694 /* SanMiguelViewController.swift in Sources */,
+				B0FB21B61D82099F00041DD8 /* PhotoCommentViewController.swift in Sources */,
+				B0FB21BE1D82B92100041DD8 /* HorizontalTransitionController2.swift in Sources */,
 				B0E758871D77C94A00212694 /* MyCustomView.swift in Sources */,
 				B0E7587B1D762FAB00212694 /* SantaCruzViewController.swift in Sources */,
 				B0EFD54F1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift in Sources */,
@@ -389,6 +412,7 @@
 				B0E758831D76319300212694 /* SantaBarbaraViewController.swift in Sources */,
 				B0E7586F1D7576A200212694 /* SantaRosaViewController.swift in Sources */,
 				B00364F01D57D951001895D3 /* ViewController.swift in Sources */,
+				B0FB21C21D83922800041DD8 /* PhotoCommentViewController2.swift in Sources */,
 				B03151EE1D4E69B60038FBA5 /* ChannelIslandUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

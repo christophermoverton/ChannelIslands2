@@ -92,5 +92,43 @@ class MyCustomView: UIView {
         myField.contentMode = UIViewContentMode.ScaleAspectFit;
         self.addSubview(myField)
     }
+    
+    func addTitleV(aframe: CGRect, textfield: UITextField){
+        var bframe: CGRect = aframe
+        bframe = textfield.frame
+        //bframe.origin.= textfield.frame.origin//bframe.origin.x+3
+        //bframe.origin.y = bframe.origin.y-3
+        let myField: UITextField = UITextField (frame: bframe)
+        myField.font = textfield.font
+        //myField.font = UIFont(name:"TrajanPro-Regular", size: 25)
+        //myField.textAlignment = NSTextAlignment.Left
+        myField.textAlignment = textfield.textAlignment
+        myField.text = textfield.text
+        myField.textColor = textfield.textColor
+        myField.contentMode = UIViewContentMode.ScaleAspectFit;
+        self.addSubview(myField)
+    }
+    
+    func addTitleV(textfield: UITextField){
+        let bframe: CGRect = textfield.frame
+        //bframe.origin.= textfield.frame.origin//bframe.origin.x+3
+        //bframe.origin.y = bframe.origin.y-3
+        let myField: UITextField = UITextField (frame: bframe)
+        myField.font = textfield.font
+        //myField.font = UIFont(name:"TrajanPro-Regular", size: 25)
+        //myField.textAlignment = NSTextAlignment.Left
+        myField.textAlignment = textfield.textAlignment
+        myField.text = textfield.text
+        myField.textColor = textfield.textColor
+        myField.contentMode = UIViewContentMode.ScaleAspectFit;
+        self.addSubview(myField)
+    }
+
+    func addPageControl(pageControl: UIPageControl){
+        let pc3 = UIPageControl(frame: pageControl.frame)
+        pc3.numberOfPages = pageControl.numberOfPages
+        pc3.currentPage = pageControl.currentPage
+        self.addSubview(pc3)
+    }
 
 }
