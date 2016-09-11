@@ -67,7 +67,7 @@ class PhotoCommentViewController: UIViewController {
                 destinationViewController.photoIndex = dphotoIndex
                 destinationViewController.photoName = photos[abs(dphotoIndex)]
                 self.horizontalTransitionController.vname2 = captions[abs(dphotoIndex)]
-                swipeState = false
+                swipeState = true
                 
             }
             else{
@@ -75,7 +75,7 @@ class PhotoCommentViewController: UIViewController {
                 destinationViewController.photoIndex = dphotoIndex
                 destinationViewController.photoName = photos[abs(dphotoIndex)]
                 self.horizontalTransitionController.vname2 = self.captions[abs(dphotoIndex)]
-                swipeState = true
+                swipeState = false
             }
             destinationViewController.loadView()
             self.horizontalTransitionController.tv2 = destinationViewController.Caption
