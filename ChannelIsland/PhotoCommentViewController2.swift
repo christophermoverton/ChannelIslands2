@@ -51,14 +51,15 @@ class PhotoCommentViewController2: UIViewController {
         self.horizontalTransitionController.titletf2 = self.TitleText2
         self.horizontalTransitionController.titletf3 = self.TitleText3
         self.horizontalTransitionController.tfarr = [Mapslabel,Backlabel,Highlightslabel,Infolabel,Photographylabel,Planninglabel]
-        
+        var dphotoIndex: Int = 0
         if checkString.rangeOfString("reveal") != nil, let destinationViewController = segue.destinationViewController as? PhotoCommentViewController {
             print("Got this far again")
             destinationViewController.transitioningDelegate = self
             print("Segue2 used!")
             print("Segue2 used!")
+            
             if checkString.rangeOfString(revealSequeId) != nil{
-                var dphotoIndex: Int = (photoIndex-1)%12
+                dphotoIndex = (photoIndex-1)%12
                 if (photoIndex == 0){
                     dphotoIndex = 11
                 }
@@ -69,7 +70,7 @@ class PhotoCommentViewController2: UIViewController {
                 
             }
             else{
-                let dphotoIndex: Int = abs(photoIndex+1)%12
+                dphotoIndex = abs(photoIndex+1)%12
                 destinationViewController.photoIndex = dphotoIndex
                 destinationViewController.photoName = photos[abs(dphotoIndex)]
                 self.horizontalTransitionController.vname2 = captions[abs(dphotoIndex)]
