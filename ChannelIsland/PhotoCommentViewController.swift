@@ -9,7 +9,7 @@
 import UIKit
 
 class PhotoCommentViewController: UIViewController {
-    var photos = ["Image-1", "Image-2", "Image-3", "Image-5", "Image-1", "Image-2", "Image-3", "Image-5","Image-1", "Image-2", "Image-3", "Image-5"]
+    var photos = ["Photogallery_Crop_0011_Photography1", "Photogallery_Crop_0010_Photography2", "Photogallery_Crop_0009_Photography3", "Photogallery_Crop_0008_Photography4", "Photogallery_Crop_0007_Photography5", "Photogallery_Crop_0006_Photography6", "Photogallery_Crop_0005_Photography7", "Photogallery_Crop_0004_Photography8","Photogallery_Crop_0003_Photography9", "Photogallery_Crop_0002_Photography10", "Photogallery_Crop_0001_Photography11", "Photogallery_Crop_0000_Photography12"]
     var captions = ["Sunset in the sanctuary, Channel Islands National Marine Sanctuary","Arch Point, Santa Cruz Island","Kayaker at Arch Rock, Anacapa Island, photo by Tim Hauf","Kelp forest at Scorpion Bay, Santa Cruz Island","California Sea Lions, Channel Islands","Spiny lobsters and other marine species enjoy miles of marine reserves and protected areas within the sanctuary","Pink-footed Shearwater, a summertime visitor to the Channel Islands","Ashy storm petrels actively nest in the Channel Islands","Island foxes—about the size of house cats—are among the endemic species found only in the Channel Islands","Island Packers operates ferry service between Channel Islands Harbor and Ventura Harbor and several of the islands","Fishing while kayaking on the Channel Islands","Lichen-encrusted rocks on Santa Cruz Island","The National Park Service and NOAA’s National Marine Sanctuary program work together to protect land and sea."]
     
     
