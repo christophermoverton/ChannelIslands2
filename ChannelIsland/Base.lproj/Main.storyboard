@@ -1032,12 +1032,12 @@ Administered by the National Park Service within the Department of the Interior,
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rh6-8u-M2p" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="zsK-b7-DYl">
+                <swipeGestureRecognizer direction="left" numberOfTouchesRequired="2" id="zsK-b7-DYl">
                     <connections>
                         <segue destination="Pt7-em-sn4" kind="show" identifier="revealSegue" id="cXW-Yx-Jng"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="FSW-KN-gKb">
+                <swipeGestureRecognizer direction="right" numberOfTouchesRequired="2" id="FSW-KN-gKb">
                     <connections>
                         <segue destination="Pt7-em-sn4" kind="show" identifier="revealSeque" id="BPa-BY-zGy"/>
                     </connections>
@@ -1176,12 +1176,12 @@ Administered by the National Park Service within the Department of the Interior,
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3P9-bH-rEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="0hn-zQ-NUX">
+                <swipeGestureRecognizer direction="left" numberOfTouchesRequired="2" id="0hn-zQ-NUX">
                     <connections>
                         <segue destination="8dJ-fM-KA1" kind="show" identifier="revealSegue" id="Mcr-xf-oZR"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="bka-ZM-WZd">
+                <swipeGestureRecognizer direction="right" numberOfTouchesRequired="2" id="bka-ZM-WZd">
                     <connections>
                         <segue destination="8dJ-fM-KA1" kind="show" identifier="revealSeque" id="2Hc-a5-MTB"/>
                     </connections>
@@ -1295,7 +1295,7 @@ Administered by the National Park Service within the Department of the Interior,
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="cXW-Yx-Jng"/>
-        <segue reference="2Hc-a5-MTB"/>
+        <segue reference="Mcr-xf-oZR"/>
         <segue reference="blp-PI-kkh"/>
         <segue reference="95q-E2-Vbw"/>
         <segue reference="jew-Ho-UNx"/>
