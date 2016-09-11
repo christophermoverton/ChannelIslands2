@@ -123,6 +123,19 @@ class MyCustomView: UIView {
         myField.contentMode = UIViewContentMode.ScaleAspectFit;
         self.addSubview(myField)
     }
+    
+    func addTextView(textview: UITextView){
+        let bframe: CGRect = textview.frame
+        let myTView: UITextView = UITextView(frame: bframe)
+        myTView.font = textview.font
+        myTView.textAlignment = textview.textAlignment
+        myTView.backgroundColor = textview.backgroundColor
+        myTView.text = textview.text
+        myTView.textColor = textview.textColor
+        myTView.contentMode = UIViewContentMode.ScaleAspectFit
+        self.addSubview(myTView)
+        
+    }
 
     func addPageControl(pageControl: UIPageControl){
         let pc3 = UIPageControl(frame: pageControl.frame)

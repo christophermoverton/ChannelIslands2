@@ -10,8 +10,7 @@ import UIKit
 
 class PhotoCommentViewController: UIViewController {
     var photos = ["Image-1", "Image-2", "Image-3", "Image-5", "Image-1", "Image-2", "Image-3", "Image-5","Image-1", "Image-2", "Image-3", "Image-5"]
-    var captions = ["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh",
-                    "Eighth", "Nineth", "Tenth", "Eleventh", "Twelfth"]
+    var captions = ["Sunset in the sanctuary, Channel Islands National Marine Sanctuary","Arch Point, Santa Cruz Island","Kayaker at Arch Rock, Anacapa Island, photo by Tim Hauf","Kelp forest at Scorpion Bay, Santa Cruz Island","California Sea Lions, Channel Islands","Spiny lobsters and other marine species enjoy miles of marine reserves and protected areas within the sanctuary","Pink-footed Shearwater, a summertime visitor to the Channel Islands","Ashy storm petrels actively nest in the Channel Islands","Island foxes—about the size of house cats—are among the endemic species found only in the Channel Islands","Island Packers operates ferry service between Channel Islands Harbor and Ventura Harbor and several of the islands","Fishing while kayaking on the Channel Islands","Lichen-encrusted rocks on Santa Cruz Island","The National Park Service and NOAA’s National Marine Sanctuary program work together to protect land and sea."]
     
     
     @IBOutlet weak var TitleText3: UITextField!
@@ -19,8 +18,15 @@ class PhotoCommentViewController: UIViewController {
     @IBOutlet weak var TitleText1: UITextField!
     @IBOutlet weak var pagecontrol: UIPageControl!
     @IBOutlet weak var NavigationBarImageView: UIImageView!
+    @IBOutlet weak var Caption: UITextView!
     
-    @IBOutlet weak var Caption: UITextField!
+    @IBOutlet weak var Infolabel: UITextField!
+    @IBOutlet weak var Mapslabel: UITextField!
+    @IBOutlet weak var Highlightslabel: UITextField!
+    @IBOutlet weak var Planninglabel: UITextField!
+    @IBOutlet weak var Photographylabel: UITextField!
+    
+    @IBOutlet weak var Backlabel: UITextField!
     @IBOutlet weak var PhotoImageView: UIImageView!
     
     private var swipeState: Bool = true  //right state
@@ -45,6 +51,7 @@ class PhotoCommentViewController: UIViewController {
         self.horizontalTransitionController.titletf1 = self.TitleText1
         self.horizontalTransitionController.titletf2 = self.TitleText2
         self.horizontalTransitionController.titletf3 = self.TitleText3
+        self.horizontalTransitionController.tfarr = [Mapslabel,Backlabel,Highlightslabel,Infolabel,Photographylabel,Planninglabel]
 
         if checkString.rangeOfString("reveal") != nil, let destinationViewController = segue.destinationViewController as? PhotoCommentViewController2 {
             print("Got this far again")
@@ -83,6 +90,7 @@ class PhotoCommentViewController: UIViewController {
             self.horizontalTransitionController.titletf12 = destinationViewController.TitleText1
             self.horizontalTransitionController.titletf22 = destinationViewController.TitleText2
             self.horizontalTransitionController.titletf32 = destinationViewController.TitleText3
+            self.horizontalTransitionController.tfarr2 = [destinationViewController.Mapslabel,destinationViewController.Backlabel,destinationViewController.Highlightslabel,destinationViewController.Infolabel,destinationViewController.Photographylabel,destinationViewController.Planninglabel]
         }
 
     }

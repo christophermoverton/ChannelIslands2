@@ -18,8 +18,8 @@ class HorizontalTransitionController2: NSObject, UIViewControllerAnimatedTransit
     var f2: CGRect!
     var vname1: String!
     var vname2: String!
-    var tv1: UITextField!
-    var tv2: UITextField!
+    //var tv1: UITextField!
+    //var tv2: UITextField!
     var titletf1: UITextField!
     var titletf2: UITextField!
     var titletf3: UITextField!
@@ -36,6 +36,10 @@ class HorizontalTransitionController2: NSObject, UIViewControllerAnimatedTransit
     var btn2: UIButton!
     var pc: UIPageControl!
     var pc2: UIPageControl!
+    var tv1: UITextView!
+    var tv2: UITextView!
+    var tfarr: [UITextField]!
+    var tfarr2: [UITextField]!
     var imageArray: [UIImage] = []
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return 1.0
@@ -51,16 +55,19 @@ class HorizontalTransitionController2: NSObject, UIViewControllerAnimatedTransit
         //customView1.addImageV(iname1)
         
         //customView1.addTitleV( f1, title: vname1)
-        customView1.addTitleV(f1, textfield: tv1)
+        customView1.addTextView(tv1)
         let customView2 = MyCustomView(frame: CGRect(x: 0, y: 0, width: 1024, height: 768))
         //customView2.addImageV(iname2)
         //customView2.addTitleV(f2, title: vname2)
-        customView2.addTitleV(f2, textfield: tv2)
+        customView2.addTextView(tv2)
         let customView3 = MyCustomView(frame: CGRect(x: 0, y: 0, width: 1024, height: 768))
         customView3.addImageV("CI_Main_Icon_PHOTOGRAPHY")
         customView3.addTitleV(titletf1)
         customView3.addTitleV(titletf2)
         customView3.addTitleV(titletf3)
+        for tfi in tfarr{
+            customView3.addTitleV(tfi)
+        }
         let customView4 = MyCustomView(frame: CGRect(x: 0, y: 0, width: 1024, height: 768))
         //customView4.addImageAnimV("TAP_HERE_V01_LOOP_")
         customView4.addPageControl(pc)
@@ -85,6 +92,12 @@ class HorizontalTransitionController2: NSObject, UIViewControllerAnimatedTransit
         self.titletf12.hidden = true
         self.titletf22.hidden = true
         self.titletf32.hidden = true
+        for tfi in tfarr{
+            tfi.hidden = true
+        }
+        for tfi in tfarr2{
+            tfi.hidden = true
+        }
         //self.iv13.hidden = true
         //self.iv23.hidden = true
         //self.iv23.alpha = 1
@@ -157,6 +170,12 @@ class HorizontalTransitionController2: NSObject, UIViewControllerAnimatedTransit
                 self.titletf12.hidden = false
                 self.titletf22.hidden = false
                 self.titletf32.hidden = false
+                for tfi in self.tfarr{
+                    tfi.hidden = false
+                }
+                for tfi in self.tfarr2{
+                    tfi.hidden = false
+                }
                 //self.iv13.hidden = false
                 //self.iv23.hidden = false
                 
