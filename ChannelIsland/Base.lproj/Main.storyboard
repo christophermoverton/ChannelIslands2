@@ -1008,6 +1008,8 @@ Administered by the National Park Service within the Department of the Interior,
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="zsK-b7-DYl" appends="YES" id="MVP-vf-PaQ"/>
                             <outletCollection property="gestureRecognizers" destination="FSW-KN-gKb" appends="YES" id="qRd-nH-bji"/>
+                            <outletCollection property="gestureRecognizers" destination="5ih-DT-mxk" appends="YES" id="xOG-nm-ViS"/>
+                            <outletCollection property="gestureRecognizers" destination="Nzb-UK-pd3" appends="YES" id="0hc-iH-OH6"/>
                         </connections>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -1040,6 +1042,16 @@ Administered by the National Park Service within the Department of the Interior,
                 <swipeGestureRecognizer direction="right" numberOfTouchesRequired="2" id="FSW-KN-gKb">
                     <connections>
                         <segue destination="Pt7-em-sn4" kind="show" identifier="revealSeque" id="BPa-BY-zGy"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="5ih-DT-mxk">
+                    <connections>
+                        <segue destination="Pt7-em-sn4" kind="presentation" identifier="revealSegue" id="JLr-nc-jt2"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="Nzb-UK-pd3">
+                    <connections>
+                        <segue destination="Pt7-em-sn4" kind="presentation" identifier="revealSeque" id="aTj-7v-ik0"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -1152,6 +1164,8 @@ Administered by the National Park Service within the Department of the Interior,
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="0hn-zQ-NUX" appends="YES" id="8GD-TZ-2JY"/>
                             <outletCollection property="gestureRecognizers" destination="bka-ZM-WZd" appends="YES" id="b6f-hz-gHz"/>
+                            <outletCollection property="gestureRecognizers" destination="ycR-oD-5cV" appends="YES" id="7rw-Dw-hnC"/>
+                            <outletCollection property="gestureRecognizers" destination="3iN-IM-e5x" appends="YES" id="jQv-Wn-j26"/>
                         </connections>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -1184,6 +1198,16 @@ Administered by the National Park Service within the Department of the Interior,
                 <swipeGestureRecognizer direction="right" numberOfTouchesRequired="2" id="bka-ZM-WZd">
                     <connections>
                         <segue destination="8dJ-fM-KA1" kind="show" identifier="revealSeque" id="2Hc-a5-MTB"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="ycR-oD-5cV">
+                    <connections>
+                        <segue destination="8dJ-fM-KA1" kind="presentation" identifier="revealSegue" id="WuG-mv-fAK"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="3iN-IM-e5x">
+                    <connections>
+                        <segue destination="8dJ-fM-KA1" kind="presentation" identifier="revealSeque" id="zHZ-WA-kA2"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -1294,8 +1318,8 @@ Administered by the National Park Service within the Department of the Interior,
         <image name="bar5" width="2048" height="1536"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cXW-Yx-Jng"/>
-        <segue reference="Mcr-xf-oZR"/>
+        <segue reference="aTj-7v-ik0"/>
+        <segue reference="zHZ-WA-kA2"/>
         <segue reference="blp-PI-kkh"/>
         <segue reference="95q-E2-Vbw"/>
         <segue reference="jew-Ho-UNx"/>
