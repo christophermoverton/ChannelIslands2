@@ -27,6 +27,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var ImageView2: UIImageView!
 
     
+    @IBOutlet weak var ImageView7: UIImageView!
+    @IBOutlet weak var ImageView6: UIImageView!
+    @IBOutlet weak var ImageView5: UIImageView!
     @IBOutlet var CardView: UIView!
     @IBOutlet weak var ImageView3: UIImageView!
     @IBOutlet weak var ImageView4: UIImageView!
@@ -96,12 +99,12 @@ class ViewController: UIViewController {
         var ini4 = true;
         //while !ini4{
         //UIView.animateWithDuration()
-        UIView.animateKeyframesWithDuration(24, delay: 0, options: .Repeat, animations:{
+        UIView.animateKeyframesWithDuration(42, delay: 0, options: .Repeat, animations:{
             /*
-            UIView.addKeyframeWithRelativeStartTime(0.08333333333333, relativeDuration: 0.01, animations: {
+            UIView.addKeyframeWithRelativeStartTime(0.0952380952381, relativeDuration: 0.01, animations: {
                 self.ImageView2.image = UIImage(named:"Image-2");
             }) */
-            UIView.addKeyframeWithRelativeStartTime(0.16666666666666, relativeDuration: 0.08333333333333, animations: {
+            UIView.addKeyframeWithRelativeStartTime(0.0952380952381, relativeDuration:0.04761904761905, animations: {
                 self.imageView1.alpha = 0;
                 self.ImageView2.alpha = 1;
                 self.T1.alpha = 1
@@ -113,7 +116,7 @@ class ViewController: UIViewController {
             UIView.addKeyframeWithRelativeStartTime(0.20833333333333, relativeDuration: 0.01, animations: {
                 self.imageView1.image = UIImage(named:"Image-3");
             })*/
-            UIView.addKeyframeWithRelativeStartTime(0.41666666666667, relativeDuration: 0.08333333333333, animations: {
+            UIView.addKeyframeWithRelativeStartTime(0.23809523809524, relativeDuration: 0.04761904761905, animations: {
                 self.ImageView3.alpha = 1;
                 self.ImageView2.alpha = 0;
                 self.T1.alpha = 1
@@ -124,9 +127,30 @@ class ViewController: UIViewController {
             UIView.addKeyframeWithRelativeStartTime(0.625, relativeDuration: 0.01, animations: {
                 self.ImageView2.image = UIImage(named:"Image-4");
             })*/
-            UIView.addKeyframeWithRelativeStartTime(0.66666666666667, relativeDuration: 0.08333333333333, animations: {
+            UIView.addKeyframeWithRelativeStartTime(0.38095238095238, relativeDuration: 0.04761904761905, animations: {
                 self.ImageView3.alpha = 0;
                 self.ImageView4.alpha = 1;
+                self.T1.alpha = 1
+                self.T2.alpha = 1
+                
+            })
+            UIView.addKeyframeWithRelativeStartTime(0.52380952380952, relativeDuration: 0.04761904761905, animations: {
+                self.ImageView4.alpha = 0;
+                self.ImageView5.alpha = 1;
+                self.T1.alpha = 1
+                self.T2.alpha = 1
+                
+            })
+            UIView.addKeyframeWithRelativeStartTime(0.66666666666667, relativeDuration: 0.04761904761905, animations: {
+                self.ImageView5.alpha = 0;
+                self.ImageView6.alpha = 1;
+                self.T1.alpha = 1
+                self.T2.alpha = 1
+                
+            })
+            UIView.addKeyframeWithRelativeStartTime(0.80952380952381, relativeDuration: 0.04761904761905, animations: {
+                self.ImageView6.alpha = 0;
+                self.ImageView7.alpha = 1;
                 self.T1.alpha = 1
                 self.T2.alpha = 1
                 
@@ -134,9 +158,9 @@ class ViewController: UIViewController {
             /*
             UIView.addKeyframeWithRelativeStartTime(0.70833333333333, relativeDuration: 0.01, animations: {
                 self.imageView1.image = UIImage(named:"Image-1");}) */
-            UIView.addKeyframeWithRelativeStartTime(0.91666666666667, relativeDuration: 0.08333333333333, animations: {
+            UIView.addKeyframeWithRelativeStartTime(0.95238095238095, relativeDuration: 0.04761904761905, animations: {
                     self.imageView1.alpha = 1;
-                    self.ImageView4.alpha = 0;
+                    self.ImageView7.alpha = 0;
                 self.T1.alpha = 1
                 self.T2.alpha = 1
                 

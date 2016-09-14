@@ -38,13 +38,22 @@
                                     <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_DISSOLVE_SUNSET" translatesAutoresizingMaskIntoConstraints="NO" id="NSM-be-cvw">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                     </imageView>
-                                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-2" translatesAutoresizingMaskIntoConstraints="NO" id="rvR-S3-bXe">
+                                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled1_0000_EE155C2E-155D-4519-3E56FA170AF76AEC.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rvR-S3-bXe">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                     </imageView>
-                                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-3" translatesAutoresizingMaskIntoConstraints="NO" id="zZk-p4-mkh">
+                                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled1_0001_EE1CBFC6-155D-4519-3EB64378D76B099E.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="zZk-p4-mkh">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                     </imageView>
-                                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-4" translatesAutoresizingMaskIntoConstraints="NO" id="aNz-qX-02W">
+                                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled1_0002_EE2A927A-155D-4519-3EA31588B403B035.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aNz-qX-02W">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled1_0003_EE5BC50E-155D-4519-3E9BE3EC0A024DDE.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="XHH-b6-WxV">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled1_0005_EF1628AE-155D-4519-3E78020D91FC371F.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="AQt-Zs-egV">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled1_0004_EEA70DDA-155D-4519-3EB01F49166C60D6.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="XDJ-2z-fQS">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Channel Islands" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qws-4k-PI3">
@@ -125,6 +134,9 @@ by people for at least 13,000 years.</string>
                         <outlet property="ImageView2" destination="rvR-S3-bXe" id="R6Q-GH-Vra"/>
                         <outlet property="ImageView3" destination="zZk-p4-mkh" id="PhR-Zm-9L0"/>
                         <outlet property="ImageView4" destination="aNz-qX-02W" id="62f-Eh-jbP"/>
+                        <outlet property="ImageView5" destination="XHH-b6-WxV" id="Xy5-eP-y7E"/>
+                        <outlet property="ImageView6" destination="AQt-Zs-egV" id="dI1-TB-3Aw"/>
+                        <outlet property="ImageView7" destination="XDJ-2z-fQS" id="0dX-W1-0Iw"/>
                         <outlet property="OText1" destination="qws-4k-PI3" id="Qpj-vP-KuC"/>
                         <outlet property="OText2" destination="uoL-mX-Tpr" id="pH6-ef-6sq"/>
                         <outlet property="T1" destination="u5F-aZ-Ypv" id="UOa-no-EXr"/>
@@ -709,7 +721,7 @@ Administered by the National Park Service within the Department of the Interior,
                         <segue destination="pyQ-KH-GOQ" kind="presentation" identifier="revealSegue" id="E2i-Is-AJo"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="WDk-Nf-cs7">
+                <swipeGestureRecognizer direction="left" id="WDk-Nf-cs7">
                     <connections>
                         <segue destination="xOZ-75-fK5" kind="presentation" identifier="revealSeque" id="GuC-ur-I38"/>
                     </connections>
@@ -1365,9 +1377,7 @@ Administered by the National Park Service within the Department of the Interior,
         <image name="CI_Main_Icon_PHOTOGRAPHY" width="2048" height="1536"/>
         <image name="HIGHLIGHTS_NUMBERS" width="2048" height="1536"/>
         <image name="Image-1" width="2048" height="1536"/>
-        <image name="Image-2" width="2048" height="1536"/>
         <image name="Image-3" width="2048" height="1536"/>
-        <image name="Image-4" width="2048" height="1536"/>
         <image name="MAIN_NAV_SINGL_GREEN_DOT_00000" width="40" height="40"/>
         <image name="Main_Navigation_CLEAN_UP_V01" width="2048" height="1536"/>
         <image name="Main_Navigation_CLEAN_UP_V01_Blur" width="2048" height="1536"/>
@@ -1375,6 +1385,12 @@ Administered by the National Park Service within the Department of the Interior,
         <image name="SANTA_CRUZ_CLEAN" width="2048" height="1536"/>
         <image name="SANTA_ROSA_CLEAN" width="2048" height="1536"/>
         <image name="SAN_MIGUEL_CLEAN" width="2048" height="1536"/>
+        <image name="Untitled1_0000_EE155C2E-155D-4519-3E56FA170AF76AEC.jpg" width="2048" height="1536"/>
+        <image name="Untitled1_0001_EE1CBFC6-155D-4519-3EB64378D76B099E.jpg" width="2048" height="1536"/>
+        <image name="Untitled1_0002_EE2A927A-155D-4519-3EA31588B403B035.jpg" width="2048" height="1536"/>
+        <image name="Untitled1_0003_EE5BC50E-155D-4519-3E9BE3EC0A024DDE.jpg" width="2048" height="1536"/>
+        <image name="Untitled1_0004_EEA70DDA-155D-4519-3EB01F49166C60D6.jpg" width="2048" height="1536"/>
+        <image name="Untitled1_0005_EF1628AE-155D-4519-3E78020D91FC371F.jpg" width="2048" height="1536"/>
         <image name="bar1" width="2048" height="1536"/>
         <image name="bar2" width="2048" height="1536"/>
         <image name="bar3" width="2048" height="1536"/>
@@ -1382,13 +1398,13 @@ Administered by the National Park Service within the Department of the Interior,
         <image name="bar5" width="2048" height="1536"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="E2i-Is-AJo"/>
+        <segue reference="drT-VG-ogL"/>
+        <segue reference="GuC-ur-I38"/>
+        <segue reference="zES-DJ-Qvu"/>
         <segue reference="aTj-7v-ik0"/>
         <segue reference="zHZ-WA-kA2"/>
         <segue reference="nsU-lD-j5o"/>
-        <segue reference="LZS-K1-g1h"/>
-        <segue reference="b7l-3o-hqg"/>
-        <segue reference="GuC-ur-I38"/>
-        <segue reference="5ZQ-iB-uCa"/>
-        <segue reference="E2i-Is-AJo"/>
+        <segue reference="ELr-bK-b7y"/>
     </inferredMetricsTieBreakers>
 </document>
