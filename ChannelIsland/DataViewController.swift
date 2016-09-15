@@ -137,29 +137,33 @@ class DataViewController: UIViewController, UITextViewDelegate {
         return true
     }
     @IBAction func DismissInfoClick(sender: AnyObject) {
+        dismissInfo()
+    }
+    
+    func dismissInfo(){
         self.IView.hidden = false
         self.GreenDotAnimIView.hidden = false
         if self.HightlightsActive {
-             self.HighlightNumbersView.hidden = false
-             self.NavBar.image = UIImage(named: "CI_Main_Icon_HIGHLIGHTS")
+            self.HighlightNumbersView.hidden = false
+            self.NavBar.image = UIImage(named: "CI_Main_Icon_HIGHLIGHTS")
             
         }
         else{
             self.NavBar.image = UIImage(named: "CI_Main_Icon_MAPS")
         }
         if self.HightlightsActive {
-           self.InfoLabel.textColor = UIColor.whiteColor()
-           self.HighlightsLabel.textColor = UIColor.blackColor()
+            self.InfoLabel.textColor = UIColor.whiteColor()
+            self.HighlightsLabel.textColor = UIColor.blackColor()
         }
         else{
-           self.InfoLabel.textColor = UIColor.whiteColor()
-           self.MapsLabel.textColor = UIColor.blackColor()
+            self.InfoLabel.textColor = UIColor.whiteColor()
+            self.MapsLabel.textColor = UIColor.blackColor()
         }
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView.alpha = 1
             self.GreenDotAnimIView.alpha = 1
             if self.HightlightsActive {
-                  self.HighlightNumbersView.alpha = 1
+                self.HighlightNumbersView.alpha = 1
                 
             }
             self.ScrollView.alpha = 0
@@ -167,8 +171,8 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.CloseTV.alpha = 0
             }, completion: { finished in
                 if (finished){
-    
-
+                    
+                    
                     self.ScrollView.hidden = true
                     self.CloseTV.hidden = true
                 }
@@ -180,7 +184,12 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.PhotographyButton.hidden = false
         print("Dismiss Button Pressed")
     }
+    
     @IBAction func infoClick(sender: AnyObject) {
+        enableInfo()
+    }
+    
+    func enableInfo(){
         self.ScrollView.hidden = false
         self.CloseTV.hidden = false
         self.NavBar.image = UIImage(named: "CI_Main_Icon_INFO")
@@ -198,17 +207,17 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.IView2.alpha = 1
             self.GreenDotAnimIView.alpha = 0
             if self.HightlightsActive {
-                 self.HighlightNumbersView.alpha = 0
+                self.HighlightNumbersView.alpha = 0
                 
             }
             self.CloseTV.alpha = 1
             }, completion: { finished in
                 if (finished){
-
+                    
                     self.IView.hidden = true
                     self.GreenDotAnimIView.hidden = true
                     if self.HightlightsActive{
-                         self.HighlightNumbersView.hidden = true
+                        self.HighlightNumbersView.hidden = true
                         
                     }
                 }
@@ -220,21 +229,26 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.HighlightsButton.hidden = true
         print("Info Button Pressed")
     }
+    
     @IBAction func HighlightsClick(sender: AnyObject) {
+        enabledisableHighlights()
+    }
+    
+    func enabledisableHighlights(){
         if self.HightlightsActive {
             self.NavBar.image = UIImage(named: "CI_Main_Icon_MAPS")
             self.HighlightsLabel.textColor = UIColor.whiteColor()
             self.MapsLabel.textColor = UIColor.blackColor()
             UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
-                    self.HighlightNumbersView.alpha = 0
+                self.HighlightNumbersView.alpha = 0
                 
                 }, completion: { finished in
                     if (finished){
-
+                        
                         self.HighlightNumbersView.hidden = true
                         self.HightlightsActive = false
-
-
+                        
+                        
                     }
             })
         }
@@ -249,17 +263,26 @@ class DataViewController: UIViewController, UITextViewDelegate {
                 
                 }, completion: { finished in
                     if (finished){
-
+                        
                         self.HightlightsActive = true
-
+                        
                     }
             })
         }
     }
+    
     @IBAction func DismissPlanningClick(sender: AnyObject) {
+        dismissPlanning()
+    }
+    @IBAction func PlanningClick(sender: AnyObject) {
+        enablePlanning()
+        print("Planning Button Pressed")
+    }
+    
+    func dismissPlanning(){
         self.IView.hidden = false
         self.GreenDotAnimIView.hidden = false
-
+        
         if self.HightlightsActive {
             self.HighlightNumbersView.hidden = false
             self.NavBar.image = UIImage(named: "CI_Main_Icon_HIGHLIGHTS")
@@ -283,9 +306,9 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.CloseTV.alpha = 0
             self.GreenDotAnimIView.alpha = 1
             if self.HightlightsActive {
-               self.HighlightNumbersView.alpha = 1
+                self.HighlightNumbersView.alpha = 1
             }
-
+            
             //self.HighlightNumbersView.alpha = 1
             }, completion: { finished in
                 if (finished){
@@ -302,7 +325,8 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.PhotographyButton.hidden = false
         print("Dismiss Planning Button Pressed")
     }
-    @IBAction func PlanningClick(sender: AnyObject) {
+    
+    func enablePlanning(){
         self.ScrollView2.hidden = false
         self.CloseTV.hidden = false
         if self.HightlightsActive {
@@ -326,13 +350,13 @@ class DataViewController: UIViewController, UITextViewDelegate {
             }
             }, completion: { finished in
                 if (finished){
-
+                    
                     self.IView.hidden = true
                     self.GreenDotAnimIView.hidden = true
                     if self.HightlightsActive {
-                       self.HighlightNumbersView.hidden = true
+                        self.HighlightNumbersView.hidden = true
                     }
-
+                    
                 }
         })
         self.DismissPlanning.hidden = false
@@ -340,7 +364,6 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.InfoButton.hidden = true
         self.HighlightsButton.hidden = true
         self.PhotographyButton.hidden = true
-        print("Planning Button Pressed")
     }
     
     func getLargeText(text: String) -> NSMutableAttributedString {

@@ -191,7 +191,7 @@ by people for at least 13,000 years.</string>
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Maps" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J6i-Um-ZQE">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Map" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J6i-Um-ZQE">
                                 <rect key="frame" x="249" y="735" width="50" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
@@ -1029,7 +1029,7 @@ Administered by the National Park Service within the Department of the Interior,
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Maps" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Sf-qx-xaX">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Map" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Sf-qx-xaX">
                                 <rect key="frame" x="249" y="735" width="50" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1069,6 +1069,24 @@ Administered by the National Park Service within the Department of the Interior,
                                     <segue destination="S4R-Ja-viH" kind="presentation" identifier="backtomain" modalTransitionStyle="crossDissolve" id="blp-PI-kkh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOt-Si-aBX">
+                                <rect key="frame" x="636" y="698" width="52" height="67"/>
+                                <connections>
+                                    <segue destination="S4R-Ja-viH" kind="presentation" identifier="Planningseque" modalTransitionStyle="crossDissolve" id="oRO-kb-75R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoG-hb-Ekw">
+                                <rect key="frame" x="333" y="697" width="57" height="63"/>
+                                <connections>
+                                    <segue destination="S4R-Ja-viH" kind="presentation" identifier="Highlightsseque" modalTransitionStyle="crossDissolve" id="A3f-lT-dV0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Lt-Mk-6HU">
+                                <rect key="frame" x="436" y="698" width="46" height="62"/>
+                                <connections>
+                                    <segue destination="S4R-Ja-viH" kind="presentation" identifier="Infoseque" modalTransitionStyle="crossDissolve" id="ram-lg-9hF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -1087,12 +1105,15 @@ Administered by the National Park Service within the Department of the Interior,
                     <connections>
                         <outlet property="Backlabel" destination="nKc-cX-WvE" id="tkR-ln-SqA"/>
                         <outlet property="Caption" destination="U2m-JG-ZZE" id="W8Q-UR-qZX"/>
+                        <outlet property="HIghlightsButton" destination="uoG-hb-Ekw" id="yif-00-wB7"/>
                         <outlet property="Highlightslabel" destination="RFE-XI-FuX" id="XNL-6R-q4y"/>
+                        <outlet property="InfoButton" destination="5Lt-Mk-6HU" id="plg-ag-NXC"/>
                         <outlet property="Infolabel" destination="Nlb-ye-fSm" id="kV5-UX-ZyD"/>
                         <outlet property="Mapslabel" destination="1Sf-qx-xaX" id="TUj-Z1-7pr"/>
                         <outlet property="NavigationBarImageView" destination="7qP-as-2OM" id="gbs-DG-gqP"/>
                         <outlet property="PhotoImageView" destination="sjP-ri-7lb" id="X6N-AK-zNS"/>
                         <outlet property="Photographylabel" destination="77V-bj-qsD" id="x0s-n4-Xg1"/>
+                        <outlet property="PlanningButton" destination="KOt-Si-aBX" id="Cf7-BW-Bue"/>
                         <outlet property="Planninglabel" destination="Ovb-Ic-3rq" id="Dcu-dq-HdJ"/>
                         <outlet property="TitleText1" destination="GCO-2y-2p0" id="UEF-mV-osD"/>
                         <outlet property="TitleText2" destination="q5s-eb-EAC" id="TOf-FJ-WmP"/>
@@ -1178,7 +1199,7 @@ Administered by the National Park Service within the Department of the Interior,
                                 <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="55"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Maps" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jbG-PI-Wz3">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Map" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jbG-PI-Wz3">
                                 <rect key="frame" x="249" y="735" width="50" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1225,6 +1246,24 @@ Administered by the National Park Service within the Department of the Interior,
                                     <segue destination="S4R-Ja-viH" kind="presentation" identifier="backtomain" modalTransitionStyle="crossDissolve" id="fsd-yR-3Ea"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xA2-Ic-BJG">
+                                <rect key="frame" x="636" y="698" width="52" height="67"/>
+                                <connections>
+                                    <segue destination="S4R-Ja-viH" kind="presentation" identifier="Planningseque" modalTransitionStyle="crossDissolve" id="buQ-Cy-cCb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46R-2R-mr4">
+                                <rect key="frame" x="333" y="697" width="57" height="63"/>
+                                <connections>
+                                    <segue destination="S4R-Ja-viH" kind="presentation" identifier="Highlightsseque" modalTransitionStyle="crossDissolve" id="8tO-Tc-Q4g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5GT-fc-xgg">
+                                <rect key="frame" x="436" y="698" width="46" height="62"/>
+                                <connections>
+                                    <segue destination="S4R-Ja-viH" kind="presentation" identifier="Infoseque" modalTransitionStyle="crossDissolve" id="IZY-JJ-cvq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -1243,12 +1282,15 @@ Administered by the National Park Service within the Department of the Interior,
                     <connections>
                         <outlet property="Backlabel" destination="s9c-SR-zmw" id="TOr-FU-Dvh"/>
                         <outlet property="Caption" destination="Y1l-bu-7z4" id="Emn-oS-Awu"/>
+                        <outlet property="HIghlightsButton" destination="46R-2R-mr4" id="9JC-je-thf"/>
                         <outlet property="Highlightslabel" destination="Jw3-RD-S89" id="ibk-QC-bcu"/>
+                        <outlet property="InfoButton" destination="5GT-fc-xgg" id="sR8-Gk-XsM"/>
                         <outlet property="Infolabel" destination="efP-Ry-1Ar" id="80o-o4-F6X"/>
                         <outlet property="Mapslabel" destination="jbG-PI-Wz3" id="vRu-vv-p3e"/>
                         <outlet property="NavigationBarImageView" destination="AEy-x6-2mx" id="tQQ-g1-UKy"/>
                         <outlet property="PhotoImageView" destination="txg-Ih-AWp" id="92j-MN-wJJ"/>
                         <outlet property="Photographylabel" destination="gzm-zq-6F0" id="90V-xI-l3c"/>
+                        <outlet property="PlanningButton" destination="xA2-Ic-BJG" id="eLU-nx-QNh"/>
                         <outlet property="Planninglabel" destination="yKf-bc-6xZ" id="Rww-t8-WGS"/>
                         <outlet property="TitleText1" destination="S2U-cm-0hA" id="Cgs-z0-3R2"/>
                         <outlet property="TitleText2" destination="TLg-OI-TeS" id="oew-Rd-fBj"/>
@@ -1398,13 +1440,13 @@ Administered by the National Park Service within the Department of the Interior,
         <image name="bar5" width="2048" height="1536"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="E2i-Is-AJo"/>
         <segue reference="drT-VG-ogL"/>
         <segue reference="GuC-ur-I38"/>
-        <segue reference="zES-DJ-Qvu"/>
-        <segue reference="aTj-7v-ik0"/>
+        <segue reference="E2i-Is-AJo"/>
+        <segue reference="ram-lg-9hF"/>
         <segue reference="zHZ-WA-kA2"/>
-        <segue reference="nsU-lD-j5o"/>
+        <segue reference="aTj-7v-ik0"/>
         <segue reference="ELr-bK-b7y"/>
+        <segue reference="nsU-lD-j5o"/>
     </inferredMetricsTieBreakers>
 </document>

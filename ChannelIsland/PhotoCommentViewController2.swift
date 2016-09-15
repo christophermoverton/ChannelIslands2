@@ -13,6 +13,9 @@ class PhotoCommentViewController2: UIViewController {
     var photos = ["Photogallery_Crop_0011_Photography1", "Photogallery_Crop_0010_Photography2", "Photogallery_Crop_0009_Photography3", "Photogallery_Crop_0008_Photography4", "Photogallery_Crop_0007_Photography5", "Photogallery_Crop_0006_Photography6", "Photogallery_Crop_0005_Photography7", "Photogallery_Crop_0004_Photography8","Photogallery_Crop_0003_Photography9", "Photogallery_Crop_0002_Photography10", "Photogallery_Crop_0001_Photography11", "Photogallery_Crop_0000_Photography12"]
     var captions = ["\nSunset in the sanctuary, Channel Islands National Marine Sanctuary","\nArch Point, Santa Cruz Island","\nKayaker at Arch Rock, Anacapa Island, photo by Tim Hauf","\nKelp forest at Scorpion Bay, Santa Cruz Island","\nCalifornia Sea Lions, Channel Islands","Spiny lobsters and other marine species enjoy miles of marine reserves and protected areas within the sanctuary","\nPink-footed Shearwater, a summertime visitor to the Channel Islands","\nAshy storm petrels actively nest in the Channel Islands","Island foxes—about the size of house cats—are among the endemic species found only in the Channel Islands","Island Packers operates ferry service between Channel Islands Harbor and Ventura Harbor and several of the islands","\nFishing while kayaking on the Channel Islands","\nLichen-encrusted rocks on Santa Cruz Island","The National Park Service and NOAA’s National Marine Sanctuary program work together to protect land and sea."]
 
+    @IBOutlet weak var InfoButton: UIButton!
+    @IBOutlet weak var HIghlightsButton: UIButton!
+    @IBOutlet weak var PlanningButton: UIButton!
     @IBOutlet weak var TitleText3: UITextField!
     @IBOutlet weak var TitleText2: UITextField!
     @IBOutlet weak var TitleText1: UITextField!
@@ -89,6 +92,24 @@ class PhotoCommentViewController2: UIViewController {
             self.horizontalTransitionController.titletf22 = destinationViewController.TitleText2
             self.horizontalTransitionController.titletf32 = destinationViewController.TitleText3
             self.horizontalTransitionController.tfarr2 = [destinationViewController.Mapslabel,destinationViewController.Backlabel,destinationViewController.Highlightslabel,destinationViewController.Infolabel,destinationViewController.Photographylabel,destinationViewController.Planninglabel]
+        }
+        if segue.identifier == "Highlightsseque", let destinationViewController = segue.destinationViewController as? DataViewController {
+            
+            //destinationViewController.transitioningDelegate = self
+            destinationViewController.loadView()
+            destinationViewController.enabledisableHighlights()
+        }
+        if segue.identifier == "Planningseque", let destinationViewController = segue.destinationViewController as? DataViewController {
+            
+            //destinationViewController.transitioningDelegate = self
+            destinationViewController.loadView()
+            destinationViewController.enablePlanning()
+        }
+        if segue.identifier == "Infoseque", let destinationViewController = segue.destinationViewController as? DataViewController {
+            
+            //destinationViewController.transitioningDelegate = self
+            destinationViewController.loadView()
+            destinationViewController.enableInfo()
         }
         
     }
