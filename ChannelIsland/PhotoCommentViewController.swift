@@ -37,6 +37,8 @@ class PhotoCommentViewController: UIViewController {
     internal var photoIndex: Int!
     private let revealSequeId = "revealSegue"
     private let horizontalTransitionController = HorizontalTransitionController2()
+    private let ccrossDissolveAnimationController = CCrossDissolveAnimationController()
+    private var crossDissolveState: Bool = false
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("Got This Far!")
@@ -98,21 +100,24 @@ class PhotoCommentViewController: UIViewController {
 
         if segue.identifier == "Highlightsseque", let destinationViewController = segue.destinationViewController as? DataViewController {
             
-            //destinationViewController.transitioningDelegate = self
+            destinationViewController.transitioningDelegate = self
             destinationViewController.loadView()
             destinationViewController.enabledisableHighlights()
+            self.crossDissolveState = true
         }
         if segue.identifier == "Planningseque", let destinationViewController = segue.destinationViewController as? DataViewController {
             
-            //destinationViewController.transitioningDelegate = self
+            destinationViewController.transitioningDelegate = self
             destinationViewController.loadView()
             destinationViewController.enablePlanning()
+            self.crossDissolveState = true
         }
         if segue.identifier == "Infoseque", let destinationViewController = segue.destinationViewController as? DataViewController {
             
-            //destinationViewController.transitioningDelegate = self
+            destinationViewController.transitioningDelegate = self
             destinationViewController.loadView()
             destinationViewController.enableInfo()
+            self.crossDissolveState = true
         }
 
     }
@@ -170,6 +175,9 @@ extension PhotoCommentViewController: UIViewControllerTransitioningDelegate {
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         //horizontalTransitionController.originFrame = CardView.frame
         //horizontalTransitionController.swipeDirection = self.swipeState
+        if self.crossDissolveState{
+            return ccrossDissolveAnimationController
+        }
         return horizontalTransitionController
     }
 }

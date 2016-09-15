@@ -14,6 +14,9 @@
 		B00364EA1D57D6DB001895D3 /* TrajanPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B00364E71D57D6DB001895D3 /* TrajanPro-Regular.otf */; };
 		B00364EF1D57D950001895D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB43C01D51719F0042CF5E /* ViewController.swift */; };
 		B00364F01D57D951001895D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB43C01D51719F0042CF5E /* ViewController.swift */; };
+		B01669EF1D8A52CC006CDAB3 /* CCrossDissolveAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01669EE1D8A52CC006CDAB3 /* CCrossDissolveAnimationController.swift */; };
+		B01669F01D8A52CC006CDAB3 /* CCrossDissolveAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01669EE1D8A52CC006CDAB3 /* CCrossDissolveAnimationController.swift */; };
+		B01669F11D8A52CC006CDAB3 /* CCrossDissolveAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01669EE1D8A52CC006CDAB3 /* CCrossDissolveAnimationController.swift */; };
 		B0211E211D630742008208CC /* MapCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0211E201D630742008208CC /* MapCard.swift */; };
 		B0211E221D630742008208CC /* MapCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0211E201D630742008208CC /* MapCard.swift */; };
 		B0211E231D630742008208CC /* MapCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0211E201D630742008208CC /* MapCard.swift */; };
@@ -84,6 +87,7 @@
 
 /* Begin PBXFileReference section */
 		B00364E71D57D6DB001895D3 /* TrajanPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TrajanPro-Regular.otf"; sourceTree = "<group>"; };
+		B01669EE1D8A52CC006CDAB3 /* CCrossDissolveAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCrossDissolveAnimationController.swift; sourceTree = "<group>"; };
 		B0211E201D630742008208CC /* MapCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCard.swift; sourceTree = "<group>"; };
 		B03151C61D4E69B60038FBA5 /* ChannelIsland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChannelIsland.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03151C91D4E69B60038FBA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -194,6 +198,7 @@
 				B03151D61D4E69B60038FBA5 /* LaunchScreen.storyboard */,
 				B03151D91D4E69B60038FBA5 /* Info.plist */,
 				B0BB43C01D51719F0042CF5E /* ViewController.swift */,
+				B01669EE1D8A52CC006CDAB3 /* CCrossDissolveAnimationController.swift */,
 			);
 			path = ChannelIsland;
 			sourceTree = "<group>";
@@ -369,6 +374,7 @@
 				B0E7586D1D7576A200212694 /* SantaRosaViewController.swift in Sources */,
 				B0E758791D762FAB00212694 /* SantaCruzViewController.swift in Sources */,
 				B0211E211D630742008208CC /* MapCard.swift in Sources */,
+				B01669EF1D8A52CC006CDAB3 /* CCrossDissolveAnimationController.swift in Sources */,
 				B0E758751D762AF600212694 /* SanMiguelViewController.swift in Sources */,
 				B0FB21B41D82099F00041DD8 /* PhotoCommentViewController.swift in Sources */,
 				B03151CA1D4E69B60038FBA5 /* AppDelegate.swift in Sources */,
@@ -393,6 +399,7 @@
 				B00364EF1D57D950001895D3 /* ViewController.swift in Sources */,
 				B0FB21C11D83922800041DD8 /* PhotoCommentViewController2.swift in Sources */,
 				B03151E31D4E69B60038FBA5 /* ChannelIslandTests.swift in Sources */,
+				B01669F01D8A52CC006CDAB3 /* CCrossDissolveAnimationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +421,7 @@
 				B00364F01D57D951001895D3 /* ViewController.swift in Sources */,
 				B0FB21C21D83922800041DD8 /* PhotoCommentViewController2.swift in Sources */,
 				B03151EE1D4E69B60038FBA5 /* ChannelIslandUITests.swift in Sources */,
+				B01669F11D8A52CC006CDAB3 /* CCrossDissolveAnimationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
