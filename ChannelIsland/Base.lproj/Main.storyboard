@@ -332,6 +332,18 @@ Cg
                                     <segue destination="8dJ-fM-KA1" kind="presentation" identifier="Photography" modalTransitionStyle="crossDissolve" id="OjJ-ZP-iCm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTv-M5-yKu">
+                                <rect key="frame" x="239" y="702" width="46" height="58"/>
+                                <connections>
+                                    <action selector="MapClick:" destination="S4R-Ja-viH" eventType="touchUpInside" id="Pwd-6T-FE6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uj-bn-UCL">
+                                <rect key="frame" x="738" y="702" width="46" height="63"/>
+                                <connections>
+                                    <segue destination="wMw-6r-BdI" kind="presentation" identifier="backseque" id="CEp-gn-PUb"/>
+                                </connections>
+                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8d2-KK-2ym">
                                 <rect key="frame" x="0.0" y="118" width="1024" height="568"/>
                                 <subviews>
@@ -606,6 +618,7 @@ Administered by the National Park Service within the Department of the Interior,
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="AnacapaButton" destination="gR9-rN-X64" id="eAw-S5-a6Q"/>
+                        <outlet property="BackButton" destination="3uj-bn-UCL" id="DTr-Dg-fBy"/>
                         <outlet property="CloseTV" destination="kCN-16-zkn" id="dPf-dh-RCT"/>
                         <outlet property="DismissInfo" destination="CmQ-vy-JnW" id="jE0-bG-2LA"/>
                         <outlet property="DismissPlanning" destination="lcY-De-ee1" id="A75-8i-uvC"/>
@@ -622,6 +635,7 @@ Administered by the National Park Service within the Department of the Interior,
                         <outlet property="InfoButton" destination="SjV-01-Ua8" id="D1F-ZH-ddb"/>
                         <outlet property="InfoLabel" destination="pNz-gI-71f" id="35O-ue-pML"/>
                         <outlet property="MView" destination="ZwX-cT-FIQ" id="SuP-s1-7NA"/>
+                        <outlet property="MapButton" destination="LTv-M5-yKu" id="8Xq-PY-VHd"/>
                         <outlet property="MapsLabel" destination="J6i-Um-ZQE" id="evE-CB-KFf"/>
                         <outlet property="NavBar" destination="8B8-Ep-wsj" id="jGe-9S-6L2"/>
                         <outlet property="PhotographyButton" destination="eia-vX-YwX" id="t9G-S0-jSS"/>
@@ -1087,6 +1101,12 @@ Administered by the National Park Service within the Department of the Interior,
                                     <segue destination="S4R-Ja-viH" kind="presentation" identifier="Infoseque" modalTransitionStyle="crossDissolve" id="ram-lg-9hF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hG-CS-fyM">
+                                <rect key="frame" x="239" y="697" width="46" height="63"/>
+                                <connections>
+                                    <segue destination="S4R-Ja-viH" kind="presentation" identifier="Mapseque" id="zOU-1R-PoP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -1109,6 +1129,7 @@ Administered by the National Park Service within the Department of the Interior,
                         <outlet property="Highlightslabel" destination="RFE-XI-FuX" id="XNL-6R-q4y"/>
                         <outlet property="InfoButton" destination="5Lt-Mk-6HU" id="plg-ag-NXC"/>
                         <outlet property="Infolabel" destination="Nlb-ye-fSm" id="kV5-UX-ZyD"/>
+                        <outlet property="MapButton" destination="9hG-CS-fyM" id="PlI-dU-g5n"/>
                         <outlet property="Mapslabel" destination="1Sf-qx-xaX" id="TUj-Z1-7pr"/>
                         <outlet property="NavigationBarImageView" destination="7qP-as-2OM" id="gbs-DG-gqP"/>
                         <outlet property="PhotoImageView" destination="sjP-ri-7lb" id="X6N-AK-zNS"/>
@@ -1264,6 +1285,12 @@ Administered by the National Park Service within the Department of the Interior,
                                     <segue destination="S4R-Ja-viH" kind="presentation" identifier="Infoseque" modalTransitionStyle="crossDissolve" id="IZY-JJ-cvq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qkm-bo-4vX">
+                                <rect key="frame" x="239" y="697" width="46" height="63"/>
+                                <connections>
+                                    <segue destination="S4R-Ja-viH" kind="presentation" identifier="Mapseque" id="63O-JC-Itq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -1286,6 +1313,7 @@ Administered by the National Park Service within the Department of the Interior,
                         <outlet property="Highlightslabel" destination="Jw3-RD-S89" id="ibk-QC-bcu"/>
                         <outlet property="InfoButton" destination="5GT-fc-xgg" id="sR8-Gk-XsM"/>
                         <outlet property="Infolabel" destination="efP-Ry-1Ar" id="80o-o4-F6X"/>
+                        <outlet property="MapButton" destination="Qkm-bo-4vX" id="Tn3-mo-iMm"/>
                         <outlet property="Mapslabel" destination="jbG-PI-Wz3" id="vRu-vv-p3e"/>
                         <outlet property="NavigationBarImageView" destination="AEy-x6-2mx" id="tQQ-g1-UKy"/>
                         <outlet property="PhotoImageView" destination="txg-Ih-AWp" id="92j-MN-wJJ"/>
@@ -1440,13 +1468,13 @@ Administered by the National Park Service within the Department of the Interior,
         <image name="bar5" width="2048" height="1536"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jew-Ho-UNx"/>
-        <segue reference="8tO-Tc-Q4g"/>
-        <segue reference="aTj-7v-ik0"/>
+        <segue reference="0j0-Vz-LUs"/>
         <segue reference="OjJ-ZP-iCm"/>
+        <segue reference="Pis-kE-B5l"/>
+        <segue reference="jZ1-9F-Fml"/>
         <segue reference="iB9-rI-Hfy"/>
         <segue reference="95q-E2-Vbw"/>
-        <segue reference="jZ1-9F-Fml"/>
-        <segue reference="Pis-kE-B5l"/>
+        <segue reference="jew-Ho-UNx"/>
+        <segue reference="aTj-7v-ik0"/>
     </inferredMetricsTieBreakers>
 </document>

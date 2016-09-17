@@ -10,6 +10,8 @@ import UIKit
 
 class DataViewController: UIViewController, UITextViewDelegate {
     
+    @IBOutlet weak var BackButton: UIButton!
+    @IBOutlet weak var MapButton: UIButton!
     @IBOutlet weak var PhotographyButton: UIButton!
     @IBOutlet weak var PlanningLabel: UITextField!
     @IBOutlet weak var PhotographyLabel: UITextField!
@@ -45,6 +47,8 @@ class DataViewController: UIViewController, UITextViewDelegate {
     private let revealSequeId = "revealSegue"
     private let photoSequeId = "Photography"
     private let horizontalTransitionController = HorizontalTransitionController()
+    private let flipPresentAnimationcontroller = FlipPresentAnimationController()
+    private var flipPresentUse: Bool = false
     private var HightlightsActive: Bool = false
     var imageArray: [UIImage] = []
     //var lightBlur: UIBlurEffect
@@ -69,6 +73,10 @@ class DataViewController: UIViewController, UITextViewDelegate {
             photographyPageViewController.photoIndex = 0
             photographyPageViewController.photoName = photographyPageViewController.photos[0]
             
+        }
+        if segue.identifier == "backseque", let viewController = segue.destinationViewController as? ViewController {
+            viewController.transitioningDelegate = self
+            flipPresentUse = true
         }
         
     }
@@ -142,6 +150,10 @@ class DataViewController: UIViewController, UITextViewDelegate {
     
     func dismissInfo(){
         self.IView.hidden = false
+        self.GreenDotAnimView2.hidden = false
+        self.GreenDotAnimView3.hidden = false
+        self.GreenDotAnimView4.hidden = false
+        self.GreenDotAnimView5.hidden = false
         self.GreenDotAnimIView.hidden = false
         if self.HightlightsActive {
             self.HighlightNumbersView.hidden = false
@@ -162,6 +174,10 @@ class DataViewController: UIViewController, UITextViewDelegate {
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView.alpha = 1
             self.GreenDotAnimIView.alpha = 1
+            self.GreenDotAnimView2.alpha = 1
+            self.GreenDotAnimView3.alpha = 1
+            self.GreenDotAnimView4.alpha = 1
+            self.GreenDotAnimView5.alpha = 1
             if self.HightlightsActive {
                 self.HighlightNumbersView.alpha = 1
                 
@@ -206,6 +222,10 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.ScrollView.alpha = 1
             self.IView2.alpha = 1
             self.GreenDotAnimIView.alpha = 0
+            self.GreenDotAnimView2.alpha = 0
+            self.GreenDotAnimView3.alpha = 0
+            self.GreenDotAnimView4.alpha = 0
+            self.GreenDotAnimView5.alpha = 0
             if self.HightlightsActive {
                 self.HighlightNumbersView.alpha = 0
                 
@@ -216,6 +236,10 @@ class DataViewController: UIViewController, UITextViewDelegate {
                     
                     self.IView.hidden = true
                     self.GreenDotAnimIView.hidden = true
+                    self.GreenDotAnimView2.hidden = true
+                    self.GreenDotAnimView3.hidden = true
+                    self.GreenDotAnimView4.hidden = true
+                    self.GreenDotAnimView5.hidden = true
                     if self.HightlightsActive{
                         self.HighlightNumbersView.hidden = true
                         
@@ -279,10 +303,19 @@ class DataViewController: UIViewController, UITextViewDelegate {
         print("Planning Button Pressed")
     }
     
+    @IBAction func MapClick(sender: AnyObject) {
+        if self.HightlightsActive {
+            enabledisableHighlights()
+        }
+    }
+    
     func dismissPlanning(){
         self.IView.hidden = false
         self.GreenDotAnimIView.hidden = false
-        
+        self.GreenDotAnimView2.hidden = false
+        self.GreenDotAnimView3.hidden = false
+        self.GreenDotAnimView4.hidden = false
+        self.GreenDotAnimView5.hidden = false
         if self.HightlightsActive {
             self.HighlightNumbersView.hidden = false
             self.NavBar.image = UIImage(named: "CI_Main_Icon_HIGHLIGHTS")
@@ -305,6 +338,10 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.IView2.alpha = 0
             self.CloseTV.alpha = 0
             self.GreenDotAnimIView.alpha = 1
+            self.GreenDotAnimView2.alpha = 1
+            self.GreenDotAnimView3.alpha = 1
+            self.GreenDotAnimView4.alpha = 1
+            self.GreenDotAnimView5.alpha = 1
             if self.HightlightsActive {
                 self.HighlightNumbersView.alpha = 1
             }
@@ -344,6 +381,10 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.IView2.alpha = 1
             self.CloseTV.alpha = 1
             self.GreenDotAnimIView.alpha = 0
+            self.GreenDotAnimView2.alpha = 0
+            self.GreenDotAnimView3.alpha = 0
+            self.GreenDotAnimView4.alpha = 0
+            self.GreenDotAnimView5.alpha = 0
             if self.HightlightsActive {
                 self.HighlightNumbersView.alpha = 0
                 
@@ -353,6 +394,10 @@ class DataViewController: UIViewController, UITextViewDelegate {
                     
                     self.IView.hidden = true
                     self.GreenDotAnimIView.hidden = true
+                    self.GreenDotAnimView2.hidden = true
+                    self.GreenDotAnimView3.hidden = true
+                    self.GreenDotAnimView4.hidden = true
+                    self.GreenDotAnimView5.hidden = true
                     if self.HightlightsActive {
                         self.HighlightNumbersView.hidden = true
                     }
@@ -394,7 +439,9 @@ extension DataViewController: UIViewControllerTransitioningDelegate {
     
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
        //horizontalTransitionController.originFrame = CardView.frame
-        
+        if flipPresentUse {
+            return flipPresentAnimationcontroller
+        }
         return horizontalTransitionController
     }
 }
