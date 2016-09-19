@@ -214,6 +214,8 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.planningActive = false
             self.infoActive = true
             self.NavBar.image = UIImage(named: "CI_Main_Icon_INFO")
+            self.InfoLabel.textColor = UIColor.blackColor()
+            self.PlanningLabel.textColor = UIColor.whiteColor()
             UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
 
                 self.ScrollView2.alpha = 0
@@ -418,6 +420,8 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.infoActive = false
             self.planningActive = true
             self.NavBar.image = UIImage(named: "CI_Main_Icon_PLANNING")
+            self.InfoLabel.textColor = UIColor.whiteColor()
+            self.PlanningLabel.textColor = UIColor.blackColor()
             UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
                 
                 self.ScrollView.alpha = 0
