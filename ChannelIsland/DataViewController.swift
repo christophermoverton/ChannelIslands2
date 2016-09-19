@@ -50,6 +50,8 @@ class DataViewController: UIViewController, UITextViewDelegate {
     private let flipPresentAnimationcontroller = FlipPresentAnimationController()
     private var flipPresentUse: Bool = false
     private var HightlightsActive: Bool = false
+    private var planningActive: Bool = false
+    private var infoActive: Bool = false
     var imageArray: [UIImage] = []
     //var lightBlur: UIBlurEffect
     //var blurView: UIVisualEffectView
@@ -155,6 +157,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.GreenDotAnimView4.hidden = false
         self.GreenDotAnimView5.hidden = false
         self.GreenDotAnimIView.hidden = false
+        self.infoActive = false
         if self.HightlightsActive {
             self.HighlightNumbersView.hidden = false
             self.NavBar.image = UIImage(named: "CI_Main_Icon_HIGHLIGHTS")
@@ -206,56 +209,88 @@ class DataViewController: UIViewController, UITextViewDelegate {
     }
     
     func enableInfo(){
-        self.ScrollView.hidden = false
-        self.CloseTV.hidden = false
-        self.NavBar.image = UIImage(named: "CI_Main_Icon_INFO")
-        if self.HightlightsActive {
-            self.InfoLabel.textColor = UIColor.blackColor()
-            self.HighlightsLabel.textColor = UIColor.whiteColor()
+        if self.planningActive {
+            self.ScrollView.hidden = false
+            self.planningActive = false
+            self.infoActive = true
+            self.NavBar.image = UIImage(named: "CI_Main_Icon_INFO")
+            UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
+
+                self.ScrollView2.alpha = 0
+                self.ScrollView.alpha = 1
+                }, completion: { finished in
+                    if (finished){
+                        self.PlanningButton.hidden = false
+                        self.InfoButton.hidden = true
+                        self.ScrollView2.hidden = true
+                    }
+            })
         }
         else{
-            self.InfoLabel.textColor = UIColor.blackColor()
-            self.MapsLabel.textColor = UIColor.whiteColor()
-        }
-        UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
-            self.IView.alpha = 0
-            self.ScrollView.alpha = 1
-            self.IView2.alpha = 1
-            self.GreenDotAnimIView.alpha = 0
-            self.GreenDotAnimView2.alpha = 0
-            self.GreenDotAnimView3.alpha = 0
-            self.GreenDotAnimView4.alpha = 0
-            self.GreenDotAnimView5.alpha = 0
+            self.ScrollView.hidden = false
+            self.CloseTV.hidden = false
+            self.NavBar.image = UIImage(named: "CI_Main_Icon_INFO")
+            self.infoActive = true
             if self.HightlightsActive {
-                self.HighlightNumbersView.alpha = 0
-                
+                self.InfoLabel.textColor = UIColor.blackColor()
+                self.HighlightsLabel.textColor = UIColor.whiteColor()
             }
-            self.CloseTV.alpha = 1
-            }, completion: { finished in
-                if (finished){
+            else{
+                self.InfoLabel.textColor = UIColor.blackColor()
+                self.MapsLabel.textColor = UIColor.whiteColor()
+            }
+            UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
+                self.IView.alpha = 0
+                self.ScrollView.alpha = 1
+                self.IView2.alpha = 1
+                self.GreenDotAnimIView.alpha = 0
+                self.GreenDotAnimView2.alpha = 0
+                self.GreenDotAnimView3.alpha = 0
+                self.GreenDotAnimView4.alpha = 0
+                self.GreenDotAnimView5.alpha = 0
+                if self.HightlightsActive {
+                    self.HighlightNumbersView.alpha = 0
                     
-                    self.IView.hidden = true
-                    self.GreenDotAnimIView.hidden = true
-                    self.GreenDotAnimView2.hidden = true
-                    self.GreenDotAnimView3.hidden = true
-                    self.GreenDotAnimView4.hidden = true
-                    self.GreenDotAnimView5.hidden = true
-                    if self.HightlightsActive{
-                        self.HighlightNumbersView.hidden = true
-                        
-                    }
                 }
-        })
-        self.DismissInfo.hidden = false
-        self.PlanningButton.hidden = true
-        self.InfoButton.hidden = true
-        self.PhotographyButton.hidden = true
-        self.HighlightsButton.hidden = true
-        print("Info Button Pressed")
+                self.CloseTV.alpha = 1
+                }, completion: { finished in
+                    if (finished){
+                        
+                        self.IView.hidden = true
+                        self.GreenDotAnimIView.hidden = true
+                        self.GreenDotAnimView2.hidden = true
+                        self.GreenDotAnimView3.hidden = true
+                        self.GreenDotAnimView4.hidden = true
+                        self.GreenDotAnimView5.hidden = true
+                        if self.HightlightsActive{
+                            self.HighlightNumbersView.hidden = true
+                            
+                        }
+                    }
+            })
+            self.DismissInfo.hidden = false
+            self.PlanningButton.hidden = false
+            self.InfoButton.hidden = true
+            self.PhotographyButton.hidden = false
+            self.HighlightsButton.hidden = false
+            print("Info Button Pressed")
+        }
     }
     
     @IBAction func HighlightsClick(sender: AnyObject) {
-        enabledisableHighlights()
+        if self.planningActive {
+            dismissPlanning()
+        }
+        else{
+            enabledisableHighlights()
+        }
+        if self.infoActive {
+            dismissInfo()
+        }
+        else{
+            enabledisableHighlights()
+        }
+        
     }
     
     func enabledisableHighlights(){
@@ -304,8 +339,21 @@ class DataViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func MapClick(sender: AnyObject) {
-        if self.HightlightsActive {
-            enabledisableHighlights()
+        if self.planningActive {
+            dismissPlanning()
+        }
+        else{
+            if self.HightlightsActive {
+                enabledisableHighlights()
+            }
+        }
+        if self.infoActive {
+            dismissInfo()
+        }
+        else{
+            if self.HightlightsActive {
+                enabledisableHighlights()
+            }
         }
     }
     
@@ -316,6 +364,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.GreenDotAnimView3.hidden = false
         self.GreenDotAnimView4.hidden = false
         self.GreenDotAnimView5.hidden = false
+        self.planningActive = false
         if self.HightlightsActive {
             self.HighlightNumbersView.hidden = false
             self.NavBar.image = UIImage(named: "CI_Main_Icon_HIGHLIGHTS")
@@ -364,51 +413,72 @@ class DataViewController: UIViewController, UITextViewDelegate {
     }
     
     func enablePlanning(){
-        self.ScrollView2.hidden = false
-        self.CloseTV.hidden = false
-        if self.HightlightsActive {
-            self.PlanningLabel.textColor = UIColor.blackColor()
-            self.HighlightsLabel.textColor = UIColor.whiteColor()
+        if self.infoActive {
+            self.ScrollView2.hidden = false
+            self.infoActive = false
+            self.planningActive = true
+            self.NavBar.image = UIImage(named: "CI_Main_Icon_PLANNING")
+            UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
+                
+                self.ScrollView.alpha = 0
+                self.ScrollView2.alpha = 1
+                }, completion: { finished in
+                    if (finished){
+                        self.PlanningButton.hidden = true
+                        self.InfoButton.hidden = false
+                        self.ScrollView.hidden = true
+                        
+                    }
+            })
         }
         else{
-            self.PlanningLabel.textColor = UIColor.blackColor()
-            self.MapsLabel.textColor = UIColor.whiteColor()
-        }
-        self.NavBar.image = UIImage(named: "CI_Main_Icon_PLANNING")
-        UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
-            self.IView.alpha = 0
-            self.ScrollView2.alpha = 1
-            self.IView2.alpha = 1
-            self.CloseTV.alpha = 1
-            self.GreenDotAnimIView.alpha = 0
-            self.GreenDotAnimView2.alpha = 0
-            self.GreenDotAnimView3.alpha = 0
-            self.GreenDotAnimView4.alpha = 0
-            self.GreenDotAnimView5.alpha = 0
+            self.ScrollView2.hidden = false
+            self.CloseTV.hidden = false
+            self.planningActive = true
             if self.HightlightsActive {
-                self.HighlightNumbersView.alpha = 0
-                
+                self.PlanningLabel.textColor = UIColor.blackColor()
+                self.HighlightsLabel.textColor = UIColor.whiteColor()
             }
-            }, completion: { finished in
-                if (finished){
-                    
-                    self.IView.hidden = true
-                    self.GreenDotAnimIView.hidden = true
-                    self.GreenDotAnimView2.hidden = true
-                    self.GreenDotAnimView3.hidden = true
-                    self.GreenDotAnimView4.hidden = true
-                    self.GreenDotAnimView5.hidden = true
-                    if self.HightlightsActive {
-                        self.HighlightNumbersView.hidden = true
-                    }
+            else{
+                self.PlanningLabel.textColor = UIColor.blackColor()
+                self.MapsLabel.textColor = UIColor.whiteColor()
+            }
+            self.NavBar.image = UIImage(named: "CI_Main_Icon_PLANNING")
+            UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
+                self.IView.alpha = 0
+                self.ScrollView2.alpha = 1
+                self.IView2.alpha = 1
+                self.CloseTV.alpha = 1
+                self.GreenDotAnimIView.alpha = 0
+                self.GreenDotAnimView2.alpha = 0
+                self.GreenDotAnimView3.alpha = 0
+                self.GreenDotAnimView4.alpha = 0
+                self.GreenDotAnimView5.alpha = 0
+                if self.HightlightsActive {
+                    self.HighlightNumbersView.alpha = 0
                     
                 }
-        })
-        self.DismissPlanning.hidden = false
-        self.PlanningButton.hidden = true
-        self.InfoButton.hidden = true
-        self.HighlightsButton.hidden = true
-        self.PhotographyButton.hidden = true
+                }, completion: { finished in
+                    if (finished){
+                        
+                        self.IView.hidden = true
+                        self.GreenDotAnimIView.hidden = true
+                        self.GreenDotAnimView2.hidden = true
+                        self.GreenDotAnimView3.hidden = true
+                        self.GreenDotAnimView4.hidden = true
+                        self.GreenDotAnimView5.hidden = true
+                        if self.HightlightsActive {
+                            self.HighlightNumbersView.hidden = true
+                        }
+                        
+                    }
+            })
+            self.DismissPlanning.hidden = false
+            self.PlanningButton.hidden = true
+            self.InfoButton.hidden = false
+            self.HighlightsButton.hidden = false
+            self.PhotographyButton.hidden = false
+        }
     }
     
     func getLargeText(text: String) -> NSMutableAttributedString {
