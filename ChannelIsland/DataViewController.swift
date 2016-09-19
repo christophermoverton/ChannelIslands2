@@ -280,19 +280,32 @@ class DataViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func HighlightsClick(sender: AnyObject) {
+
         if self.planningActive {
+            if self.HightlightsActive {
+                self.HightlightsActive = false
+            }
+            else{
+                self.HightlightsActive = true
+            }
             dismissPlanning()
+            return
         }
-        else{
-            enabledisableHighlights()
-        }
+
         if self.infoActive {
+            if self.HightlightsActive {
+                self.HightlightsActive = false
+            }
+            else{
+                self.HightlightsActive = true
+            }
             dismissInfo()
+            return 
         }
-        else{
+
+        if !self.infoActive && !self.planningActive {
             enabledisableHighlights()
         }
-        
     }
     
     func enabledisableHighlights(){
