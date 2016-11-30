@@ -42,6 +42,9 @@ class DataViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var ScrollView: UIScrollView!
     @IBOutlet weak var IView: UIImageView!
     @IBOutlet var MView: UIView!
+    @IBOutlet weak var WaterImg0: UIImageView!
+    @IBOutlet weak var WaterImg1: UIImageView!
+    @IBOutlet weak var WaterImg2: UIImageView!
     @IBOutlet weak var dataLabel: UILabel!
     var dataObject: String = ""
     private let revealSequeId = "revealSegue"
@@ -142,6 +145,26 @@ class DataViewController: UIViewController, UITextViewDelegate {
         GreenDotAnimView5.animationImages = imageArr
         GreenDotAnimView5.animationDuration = 5.0
         GreenDotAnimView5.startAnimating()
+        UIView.animateKeyframesWithDuration(6.0, delay: 0, options: .Repeat, animations:{
+            UIView.addKeyframeWithRelativeStartTime(0.0, relativeDuration: 0.33, animations: {
+                
+                self.WaterImg0.alpha = 0;
+                self.WaterImg1.alpha = 1.0;
+            })
+            UIView.addKeyframeWithRelativeStartTime(0.33, relativeDuration: 0.33, animations: {
+                
+                self.WaterImg1.alpha = 0.0;
+                self.WaterImg2.alpha = 1.0;
+            })
+            UIView.addKeyframeWithRelativeStartTime(0.67, relativeDuration: 0.33, animations: {
+                
+                self.WaterImg2.alpha = 0.0;
+                self.WaterImg0.alpha = 1.0;
+            })
+            
+            }, completion: { finished in
+                print("Finished7!")}
+        )
     }
     override func prefersStatusBarHidden() -> Bool {
         return true

@@ -169,6 +169,15 @@ by people for at least 13,000 years.</string>
                             <imageView opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Main_Navigation_CLEAN_UP_V01_Blur" translatesAutoresizingMaskIntoConstraints="NO" id="cMd-Z5-khC">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Water_00000" translatesAutoresizingMaskIntoConstraints="NO" id="BJv-bK-yP7">
+                                <rect key="frame" x="0.0" y="150" width="1024" height="618"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Water_00001" translatesAutoresizingMaskIntoConstraints="NO" id="KSc-Z9-sM7">
+                                <rect key="frame" x="0.0" y="150" width="1024" height="618"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Water_00002" translatesAutoresizingMaskIntoConstraints="NO" id="NYK-p9-0gq">
+                                <rect key="frame" x="0.0" y="150" width="1024" height="618"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HIGHLIGHTS_NUMBERS" translatesAutoresizingMaskIntoConstraints="NO" id="156-Bi-vzA">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
@@ -649,6 +658,9 @@ Administered by the National Park Service within the Department of the Interior,
                         <outlet property="ScrollView" destination="vwb-27-UOI" id="5j6-OL-9ii"/>
                         <outlet property="ScrollView2" destination="8d2-KK-2ym" id="IyK-IA-1R1"/>
                         <outlet property="TextView2" destination="CE0-uh-29B" id="yJx-fK-PrQ"/>
+                        <outlet property="WaterImg0" destination="BJv-bK-yP7" id="l6n-DI-37k"/>
+                        <outlet property="WaterImg1" destination="KSc-Z9-sM7" id="TER-L8-b3r"/>
+                        <outlet property="WaterImg2" destination="NYK-p9-0gq" id="Rwc-Sr-uEP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GmD-Rr-ZGN" sceneMemberID="firstResponder"/>
@@ -1461,6 +1473,9 @@ Administered by the National Park Service within the Department of the Interior,
         <image name="Untitled1_0003_EE5BC50E-155D-4519-3E9BE3EC0A024DDE.jpg" width="2048" height="1536"/>
         <image name="Untitled1_0004_EEA70DDA-155D-4519-3EB01F49166C60D6.jpg" width="2048" height="1536"/>
         <image name="Untitled1_0005_EF1628AE-155D-4519-3E78020D91FC371F.jpg" width="2048" height="1536"/>
+        <image name="Water_00000" width="2048" height="1236"/>
+        <image name="Water_00001" width="2048" height="1236"/>
+        <image name="Water_00002" width="2048" height="1236"/>
         <image name="bar1" width="2048" height="1536"/>
         <image name="bar2" width="2048" height="1536"/>
         <image name="bar3" width="2048" height="1536"/>
