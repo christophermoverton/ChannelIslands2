@@ -109,6 +109,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
         }
         TextView2.attributedText = getLargeText(cString)
         */
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -125,6 +126,9 @@ class DataViewController: UIViewController, UITextViewDelegate {
             print(str)
             imageArr.append(UIImage(named:str)!)
         }
+        var imageArr2 : [UIImage] = [UIImage(imageLiteral: "Water_00000"),
+                                     UIImage(imageLiteral: "Water_00001"),
+                                     UIImage(imageLiteral: "Water_00002")]
         /*
          ClickHere.animationImages = [
          UIImage(named:"TAP_HERE_V01_LOOP_00000.png")!
@@ -145,6 +149,10 @@ class DataViewController: UIViewController, UITextViewDelegate {
         GreenDotAnimView5.animationImages = imageArr
         GreenDotAnimView5.animationDuration = 5.0
         GreenDotAnimView5.startAnimating()
+        WaterImg0.animationImages = imageArr2
+        WaterImg0.animationDuration = 6.0
+        WaterImg0.startAnimating()
+        /*
         UIView.animateKeyframesWithDuration(6.0, delay: 0, options: .Repeat, animations:{
             UIView.addKeyframeWithRelativeStartTime(0.0, relativeDuration: 0.33, animations: {
                 
@@ -164,7 +172,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
             
             }, completion: { finished in
                 print("Finished7!")}
-        )
+        )*/
     }
     override func prefersStatusBarHidden() -> Bool {
         return true
