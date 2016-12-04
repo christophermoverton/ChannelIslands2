@@ -196,8 +196,8 @@ by people for at least 13,000 years.</string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MAIN_NAV_SINGL_GREEN_DOT_00000" translatesAutoresizingMaskIntoConstraints="NO" id="xGT-1e-xuo">
                                 <rect key="frame" x="787" y="580" width="20" height="20"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_Main_Icon_MAPS" translatesAutoresizingMaskIntoConstraints="NO" id="8B8-Ep-wsj">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_Main_Icon_HOME_V02" translatesAutoresizingMaskIntoConstraints="NO" id="8B8-Ep-wsj">
+                                <rect key="frame" x="236" y="695" width="450" height="45"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Map" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J6i-Um-ZQE">
@@ -279,12 +279,6 @@ Cg
                                 </state>
                                 <connections>
                                     <action selector="DismissPlanningClick:" destination="S4R-Ja-viH" eventType="touchUpInside" id="WRd-MC-z0v"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmQ-vy-JnW">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                                <connections>
-                                    <action selector="DismissInfoClick:" destination="S4R-Ja-viH" eventType="touchUpInside" id="aTt-Mp-t4l"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8d2-KK-2ym">
@@ -619,6 +613,12 @@ Administered by the National Park Service within the Department of the Interior,
                                 <rect key="frame" x="738" y="702" width="46" height="63"/>
                                 <connections>
                                     <segue destination="wMw-6r-BdI" kind="presentation" identifier="backseque" id="CEp-gn-PUb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmQ-vy-JnW">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <connections>
+                                    <action selector="DismissInfoClick:" destination="S4R-Ja-viH" eventType="touchUpInside" id="aTt-Mp-t4l"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1455,7 +1455,7 @@ Administered by the National Park Service within the Department of the Interior,
         <image name="1_DISSOLVE_SUNSET" width="2048" height="1536"/>
         <image name="ANACAPA_CLEAN" width="2048" height="1536"/>
         <image name="CI_LOGOS_FOR_DISSOLVE_LOOP" width="2048" height="1536"/>
-        <image name="CI_Main_Icon_MAPS" width="2048" height="1536"/>
+        <image name="CI_Main_Icon_HOME_V02" width="900" height="90"/>
         <image name="CI_Main_Icon_PHOTOGRAPHY" width="2048" height="1536"/>
         <image name="HIGHLIGHTS_NUMBERS" width="2048" height="1536"/>
         <image name="Image-1" width="2048" height="1536"/>

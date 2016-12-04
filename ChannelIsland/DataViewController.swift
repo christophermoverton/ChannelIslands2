@@ -191,11 +191,11 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.infoActive = false
         if self.HightlightsActive {
             self.HighlightNumbersView.hidden = false
-            self.NavBar.image = UIImage(named: "CI_Main_Icon_HIGHLIGHTS")
+            self.NavBar.image = UIImage(named: "CI_Main_Icon_HIGHLIGHTS_V02")
             
         }
         else{
-            self.NavBar.image = UIImage(named: "CI_Main_Icon_MAPS")
+            self.NavBar.image = UIImage(named: "CI_Main_Icon_HOME_V02")
         }
         if self.HightlightsActive {
             self.InfoLabel.textColor = UIColor.whiteColor()
@@ -244,7 +244,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.ScrollView.hidden = false
             self.planningActive = false
             self.infoActive = true
-            self.NavBar.image = UIImage(named: "CI_Main_Icon_INFO")
+            self.NavBar.image = UIImage(named: "CI_Main_Icon_INFO_V02")
             self.InfoLabel.textColor = UIColor.blackColor()
             self.PlanningLabel.textColor = UIColor.whiteColor()
             UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
@@ -262,7 +262,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
         else{
             self.ScrollView.hidden = false
             self.CloseTV.hidden = false
-            self.NavBar.image = UIImage(named: "CI_Main_Icon_INFO")
+            self.NavBar.image = UIImage(named: "CI_Main_Icon_INFO_V02")
             self.infoActive = true
             if self.HightlightsActive {
                 self.InfoLabel.textColor = UIColor.blackColor()
@@ -341,7 +341,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
     
     func enabledisableHighlights(){
         if self.HightlightsActive {
-            self.NavBar.image = UIImage(named: "CI_Main_Icon_MAPS")
+            self.NavBar.image = UIImage(named: "CI_Main_Icon_HOME_V02")
             self.HighlightsLabel.textColor = UIColor.whiteColor()
             self.MapsLabel.textColor = UIColor.blackColor()
             UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
@@ -360,7 +360,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
         else{
             
             self.HighlightNumbersView.hidden = false
-            self.NavBar.image = UIImage(named: "CI_Main_Icon_HIGHLIGHTS")
+            self.NavBar.image = UIImage(named: "CI_Main_Icon_HIGHLIGHTS_V02")
             self.HighlightsLabel.textColor = UIColor.blackColor()
             self.MapsLabel.textColor = UIColor.whiteColor()
             UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
@@ -413,11 +413,11 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.planningActive = false
         if self.HightlightsActive {
             self.HighlightNumbersView.hidden = false
-            self.NavBar.image = UIImage(named: "CI_Main_Icon_HIGHLIGHTS")
+            self.NavBar.image = UIImage(named: "CI_Main_Icon_HIGHLIGHTS_V02")
             
         }
         else{
-            self.NavBar.image = UIImage(named: "CI_Main_Icon_MAPS")
+            self.NavBar.image = UIImage(named: "CI_Main_Icon_HOME_V02")
         }
         if self.HightlightsActive {
             self.PlanningLabel.textColor = UIColor.whiteColor()
@@ -463,7 +463,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.ScrollView2.hidden = false
             self.infoActive = false
             self.planningActive = true
-            self.NavBar.image = UIImage(named: "CI_Main_Icon_PLANNING")
+            self.NavBar.image = UIImage(named: "CI_Main_Icon_PLANNING_V02")
             self.InfoLabel.textColor = UIColor.whiteColor()
             self.PlanningLabel.textColor = UIColor.blackColor()
             UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
@@ -491,7 +491,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
                 self.PlanningLabel.textColor = UIColor.blackColor()
                 self.MapsLabel.textColor = UIColor.whiteColor()
             }
-            self.NavBar.image = UIImage(named: "CI_Main_Icon_PLANNING")
+            self.NavBar.image = UIImage(named: "CI_Main_Icon_PLANNING_V02")
             UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
                 self.IView.alpha = 0
                 self.ScrollView2.alpha = 1
