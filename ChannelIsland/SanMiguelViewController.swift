@@ -20,6 +20,7 @@ class SanMiguelViewController: UIViewController, UITextViewDelegate {
     let vname: String = "San Miguel Island"
     @IBOutlet weak var Logoview: UIImageView!
     @IBOutlet weak var Clickhere: UIImageView!
+    @IBOutlet weak var NavBar: UIImageView!
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("Got This Far!")

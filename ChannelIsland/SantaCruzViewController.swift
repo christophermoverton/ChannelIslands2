@@ -22,6 +22,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate {
     let vname: String = "Santa Cruz Island"
     @IBOutlet weak var Logoview: UIImageView!
     @IBOutlet weak var Clickhere: UIImageView!
+    @IBOutlet weak var NavBar: UIImageView!
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("Got This Far!")
         print(segue.identifier)

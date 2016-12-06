@@ -682,10 +682,6 @@ Administered by the National Park Service within the Department of the Interior,
                             <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SANTA_ROSA_CLEAN" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sfP-Ng-UYO">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="0Xm-bA-Ers" appends="YES" id="nLn-5b-ogt"/>
-                                    <outletCollection property="gestureRecognizers" destination="PxO-Lw-iBA" appends="YES" id="hZG-9i-o1d"/>
-                                </connections>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar2" translatesAutoresizingMaskIntoConstraints="NO" id="avS-tn-VzI">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -710,48 +706,24 @@ Administered by the National Park Service within the Department of the Interior,
                                     <segue destination="S4R-Ja-viH" kind="presentation" identifier="BackToMain" modalTransitionStyle="crossDissolve" id="1fy-7I-gvp"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IslandIcons_HOME" translatesAutoresizingMaskIntoConstraints="NO" id="NE2-65-ZYY">
+                                <rect key="frame" x="36" y="220" width="55" height="330"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="goZ-uc-ebZ" appends="YES" id="qoH-sY-NKB"/>
-                            <outletCollection property="gestureRecognizers" destination="WDk-Nf-cs7" appends="YES" id="6Ww-26-iUp"/>
-                        </connections>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="Barview" destination="avS-tn-VzI" id="mQ2-Ul-DZa"/>
                         <outlet property="Clickhere" destination="cW1-nq-pVr" id="3eB-NN-wP1"/>
-                        <outlet property="LeftSwipe" destination="0Xm-bA-Ers" id="c1o-07-POx"/>
                         <outlet property="Logoview" destination="GUy-Eq-FQg" id="7QI-Cn-Djj"/>
-                        <outlet property="RightSwipe" destination="PxO-Lw-iBA" id="DiT-SL-DAw"/>
+                        <outlet property="NavBar" destination="NE2-65-ZYY" id="daE-PD-Y0F"/>
                         <outlet property="TitleText" destination="kpy-AR-QaS" id="7Y3-U5-DUG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ec-0s-b7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" numberOfTouchesRequired="2" id="0Xm-bA-Ers">
-                    <connections>
-                        <action selector="LeftSwipeAction:" destination="2YF-RJ-H4w" id="RX2-gs-HEw"/>
-                        <segue destination="pyQ-KH-GOQ" kind="presentation" identifier="revealSegue" id="yqe-Mp-YZ1"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="left" numberOfTouchesRequired="2" id="PxO-Lw-iBA">
-                    <connections>
-                        <action selector="RightSwipeAction:" destination="2YF-RJ-H4w" id="zuk-0c-qol"/>
-                        <segue destination="xOZ-75-fK5" kind="presentation" identifier="revealSeque" modalTransitionStyle="flipHorizontal" id="36E-6T-gB9"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="goZ-uc-ebZ">
-                    <connections>
-                        <segue destination="pyQ-KH-GOQ" kind="presentation" identifier="revealSegue" id="E2i-Is-AJo"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="WDk-Nf-cs7">
-                    <connections>
-                        <segue destination="xOZ-75-fK5" kind="presentation" identifier="revealSeque" id="GuC-ur-I38"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4442" y="-1841"/>
         </scene>
@@ -797,6 +769,9 @@ Administered by the National Park Service within the Department of the Interior,
                                     <segue destination="S4R-Ja-viH" kind="presentation" identifier="BackToMain" modalTransitionStyle="crossDissolve" id="Xfw-Zj-LSi"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IslandIcons_HOME" translatesAutoresizingMaskIntoConstraints="NO" id="9TL-G8-FyY">
+                                <rect key="frame" x="36" y="220" width="55" height="330"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -810,18 +785,19 @@ Administered by the National Park Service within the Department of the Interior,
                         <outlet property="Barview" destination="3fE-Cz-qgo" id="q1J-nA-4os"/>
                         <outlet property="Clickhere" destination="qbi-9Z-dh3" id="tJx-vJ-or4"/>
                         <outlet property="Logoview" destination="836-3y-bRg" id="W41-kW-sq7"/>
+                        <outlet property="NavBar" destination="9TL-G8-FyY" id="ftz-LQ-sHg"/>
                         <outlet property="TitleText" destination="Bx0-Ds-P7S" id="RX1-iq-kF7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uda-Yq-m73" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" numberOfTouchesRequired="2" id="gmw-y1-xHg">
                     <connections>
-                        <segue destination="2YF-RJ-H4w" kind="presentation" identifier="revealSeque" modalTransitionStyle="flipHorizontal" id="nva-S2-vam"/>
+                        <segue destination="2YF-RJ-H4w" kind="presentation" identifier="reveal1Seque" modalTransitionStyle="flipHorizontal" id="nva-S2-vam"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="9dx-3U-91z">
                     <connections>
-                        <segue destination="2YF-RJ-H4w" kind="presentation" identifier="revealSeque" id="5ZQ-iB-uCa"/>
+                        <segue destination="2YF-RJ-H4w" kind="presentation" identifier="reveal1Seque1" id="5ZQ-iB-uCa"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -842,10 +818,6 @@ Administered by the National Park Service within the Department of the Interior,
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SANTA_CRUZ_CLEAN" translatesAutoresizingMaskIntoConstraints="NO" id="rlw-Of-cjs">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="XUP-uB-cU0" appends="YES" id="ogw-9G-eVV"/>
-                                    <outletCollection property="gestureRecognizers" destination="yja-QI-yVT" appends="YES" id="Peh-KQ-WKH"/>
-                                </connections>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_LOGOS_FOR_DISSOLVE_LOOP" translatesAutoresizingMaskIntoConstraints="NO" id="lB1-YX-ojR">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -869,13 +841,12 @@ Administered by the National Park Service within the Department of the Interior,
                                     <segue destination="S4R-Ja-viH" kind="presentation" identifier="BackToMain" modalTransitionStyle="crossDissolve" id="zES-DJ-Qvu"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IslandIcons_HOME" translatesAutoresizingMaskIntoConstraints="NO" id="jsM-DL-9DA">
+                                <rect key="frame" x="36" y="220" width="55" height="330"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="7T1-DP-H7j" appends="YES" id="2sS-fi-PcT"/>
-                            <outletCollection property="gestureRecognizers" destination="e3X-ve-CAp" appends="YES" id="bc1-1X-FVa"/>
-                        </connections>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -883,30 +854,11 @@ Administered by the National Park Service within the Department of the Interior,
                         <outlet property="Barview" destination="zaR-pt-QQD" id="SdW-hT-Onm"/>
                         <outlet property="Clickhere" destination="fqE-iy-knw" id="C0h-bY-rNJ"/>
                         <outlet property="Logoview" destination="lB1-YX-ojR" id="bkq-Xt-xSi"/>
+                        <outlet property="NavBar" destination="jsM-DL-9DA" id="XjG-wr-CXV"/>
                         <outlet property="TitleText" destination="HL1-Zz-pgs" id="emQ-G9-Ove"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ass-9b-Ej7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" numberOfTouchesRequired="2" id="XUP-uB-cU0">
-                    <connections>
-                        <segue destination="2YF-RJ-H4w" kind="presentation" identifier="revealSegue" modalTransitionStyle="flipHorizontal" id="drT-VG-ogL"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="left" numberOfTouchesRequired="2" id="yja-QI-yVT">
-                    <connections>
-                        <segue destination="gfQ-kY-mDd" kind="presentation" identifier="revealSeque" modalTransitionStyle="flipHorizontal" id="ELr-bK-b7y"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="7T1-DP-H7j">
-                    <connections>
-                        <segue destination="2YF-RJ-H4w" kind="presentation" identifier="revealSegue" id="bkP-Jg-uNx"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="e3X-ve-CAp">
-                    <connections>
-                        <segue destination="gfQ-kY-mDd" kind="presentation" identifier="revealSeque" id="rcM-ae-ZuW"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4442" y="-912"/>
         </scene>
@@ -925,10 +877,6 @@ Administered by the National Park Service within the Department of the Interior,
                             <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ANACAPA_CLEAN" translatesAutoresizingMaskIntoConstraints="NO" id="6Na-Uf-alT">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="wjH-w9-h0o" appends="YES" id="wDq-Mk-mcK"/>
-                                    <outletCollection property="gestureRecognizers" destination="ALx-vQ-XaG" appends="YES" id="JO4-vb-BOY"/>
-                                </connections>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar4" translatesAutoresizingMaskIntoConstraints="NO" id="D3S-nf-P11">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -952,13 +900,12 @@ Administered by the National Park Service within the Department of the Interior,
                                     <segue destination="S4R-Ja-viH" kind="presentation" identifier="BackToMain" modalTransitionStyle="crossDissolve" id="UxM-fJ-qBO"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IslandIcons_HOME" translatesAutoresizingMaskIntoConstraints="NO" id="Pdn-sW-QqL">
+                                <rect key="frame" x="36" y="220" width="55" height="330"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="5ug-u4-9ot" appends="YES" id="kdg-qX-EPb"/>
-                            <outletCollection property="gestureRecognizers" destination="K0p-TS-GhL" appends="YES" id="n68-rI-WDN"/>
-                        </connections>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -966,30 +913,11 @@ Administered by the National Park Service within the Department of the Interior,
                         <outlet property="Barview" destination="D3S-nf-P11" id="xww-Nw-IaI"/>
                         <outlet property="Clickhere" destination="yfF-KO-E2J" id="r8j-HP-6NY"/>
                         <outlet property="Logoview" destination="cQD-yi-M3g" id="TsI-kc-Po9"/>
+                        <outlet property="NavBar" destination="Pdn-sW-QqL" id="AcM-ZJ-GtO"/>
                         <outlet property="TitleText" destination="voK-V2-BR2" id="IC2-Tu-2hb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ufb-Wk-5i9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" numberOfTouchesRequired="2" id="wjH-w9-h0o">
-                    <connections>
-                        <segue destination="xOZ-75-fK5" kind="presentation" identifier="revealSegue" modalTransitionStyle="flipHorizontal" id="9Ks-Mh-gHR"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="left" numberOfTouchesRequired="2" id="ALx-vQ-XaG">
-                    <connections>
-                        <segue destination="jD5-Az-AEW" kind="presentation" identifier="revealSeque" modalTransitionStyle="flipHorizontal" id="4jn-Lx-VjZ"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="5ug-u4-9ot">
-                    <connections>
-                        <segue destination="xOZ-75-fK5" kind="presentation" identifier="revealSegue" id="quA-lf-1bV"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="K0p-TS-GhL">
-                    <connections>
-                        <segue destination="jD5-Az-AEW" kind="presentation" identifier="revealSeque" id="nsU-lD-j5o"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4472" y="36"/>
         </scene>
@@ -1377,9 +1305,6 @@ Administered by the National Park Service within the Department of the Interior,
                             <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SANTA_BARBARA_CLEAN" translatesAutoresizingMaskIntoConstraints="NO" id="zfZ-BX-C9B">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="DTp-x3-sfa" appends="YES" id="6p0-Nq-fMP"/>
-                                </connections>
                             </imageView>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" editable="NO" text="Santa Barbara Island" translatesAutoresizingMaskIntoConstraints="NO" id="SS2-Y7-Udl">
                                 <rect key="frame" x="46" y="26" width="333" height="43"/>
@@ -1403,12 +1328,12 @@ Administered by the National Park Service within the Department of the Interior,
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nBW-8k-3j1">
                                 <rect key="frame" x="450" y="321" width="125" height="125"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IslandIcons_HOME" translatesAutoresizingMaskIntoConstraints="NO" id="4n5-bc-ihJ">
+                                <rect key="frame" x="36" y="219" width="55" height="330"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="pZ1-dM-vyP" appends="YES" id="f6Z-es-6zw"/>
-                        </connections>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -1416,20 +1341,11 @@ Administered by the National Park Service within the Department of the Interior,
                         <outlet property="Barview" destination="YFE-FH-WB3" id="njd-oX-9hI"/>
                         <outlet property="Clickhere" destination="nBW-8k-3j1" id="W5S-f6-udM"/>
                         <outlet property="Logoview" destination="JNY-j6-LV3" id="8yx-wn-TIJ"/>
+                        <outlet property="NavBar" destination="4n5-bc-ihJ" id="IpH-iC-rW6"/>
                         <outlet property="TitleText" destination="SS2-Y7-Udl" id="yON-A0-oRE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Th-Kw-Ic0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" numberOfTouchesRequired="2" id="DTp-x3-sfa">
-                    <connections>
-                        <segue destination="gfQ-kY-mDd" kind="presentation" identifier="revealSegue" modalTransitionStyle="flipHorizontal" id="ud3-wU-oGD"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="pZ1-dM-vyP">
-                    <connections>
-                        <segue destination="gfQ-kY-mDd" kind="presentation" identifier="revealSegue" id="LZS-K1-g1h"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4480" y="972"/>
         </scene>
@@ -1460,6 +1376,7 @@ Administered by the National Park Service within the Department of the Interior,
         <image name="HIGHLIGHTS_NUMBERS" width="2048" height="1536"/>
         <image name="Image-1" width="2048" height="1536"/>
         <image name="Image-3" width="2048" height="1536"/>
+        <image name="IslandIcons_HOME" width="110" height="660"/>
         <image name="MAIN_NAV_SINGL_GREEN_DOT_00000" width="40" height="40"/>
         <image name="Main_Navigation_CLEAN_UP_V01" width="2048" height="1536"/>
         <image name="Main_Navigation_CLEAN_UP_V01_Blur" width="2048" height="1536"/>
@@ -1483,13 +1400,9 @@ Administered by the National Park Service within the Department of the Interior,
         <image name="bar5" width="2048" height="1536"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0j0-Vz-LUs"/>
+        <segue reference="UxM-fJ-qBO"/>
         <segue reference="OjJ-ZP-iCm"/>
-        <segue reference="Pis-kE-B5l"/>
-        <segue reference="jZ1-9F-Fml"/>
-        <segue reference="iB9-rI-Hfy"/>
-        <segue reference="95q-E2-Vbw"/>
-        <segue reference="jew-Ho-UNx"/>
+        <segue reference="5ZQ-iB-uCa"/>
         <segue reference="aTj-7v-ik0"/>
     </inferredMetricsTieBreakers>
 </document>

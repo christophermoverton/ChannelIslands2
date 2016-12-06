@@ -24,6 +24,7 @@ class SantaRosaViewController: UIViewController, UITextViewDelegate {
     internal let vname: String = "Santa Rosa Island"
     @IBOutlet weak var Logoview: UIImageView!
     @IBOutlet weak var Clickhere: UIImageView!
+    @IBOutlet weak var NavBar: UIImageView!
     
     
     
