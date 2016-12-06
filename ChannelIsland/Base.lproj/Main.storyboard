@@ -178,8 +178,32 @@ by people for at least 13,000 years.</string>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Water_00002" translatesAutoresizingMaskIntoConstraints="NO" id="NYK-p9-0gq">
                                 <rect key="frame" x="0.0" y="150" width="1024" height="618"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HIGHLIGHTS_NUMBERS" translatesAutoresizingMaskIntoConstraints="NO" id="156-Bi-vzA">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HIGHLIGHT_REFERENCE" translatesAutoresizingMaskIntoConstraints="NO" id="156-Bi-vzA">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HIGHLIGHT8_00010" translatesAutoresizingMaskIntoConstraints="NO" id="Dlt-FW-Vvy">
+                                <rect key="frame" x="813" y="523" width="45" height="45"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HIGHLIGHT7_00010" translatesAutoresizingMaskIntoConstraints="NO" id="vxU-Wp-msz">
+                                <rect key="frame" x="380" y="354" width="45" height="45"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HIGHLIGHT6_00010" translatesAutoresizingMaskIntoConstraints="NO" id="atI-QW-qaT">
+                                <rect key="frame" x="27" y="353" width="45" height="45"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HIGHLIGHT5_00010" translatesAutoresizingMaskIntoConstraints="NO" id="1Dz-4e-Q1m">
+                                <rect key="frame" x="483" y="334" width="45" height="45"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HIGHLIGHT4_00010" translatesAutoresizingMaskIntoConstraints="NO" id="C3c-ZM-rVi">
+                                <rect key="frame" x="787" y="359" width="45" height="45"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HIGHLIGHT3_00010" translatesAutoresizingMaskIntoConstraints="NO" id="a5B-RT-1fe">
+                                <rect key="frame" x="767" y="341" width="45" height="45"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HIGHLIGHT2_00010" translatesAutoresizingMaskIntoConstraints="NO" id="404-SE-TU5">
+                                <rect key="frame" x="890" y="355" width="45" height="45"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HIGHLIGHT1_00010" translatesAutoresizingMaskIntoConstraints="NO" id="fr8-Qh-Ahn">
+                                <rect key="frame" x="880" y="252" width="45" height="45"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MAIN_NAV_SINGL_GREEN_DOT_00000" translatesAutoresizingMaskIntoConstraints="NO" id="WeN-WH-98B">
                                 <rect key="frame" x="58" y="408" width="20" height="20"/>
@@ -637,6 +661,14 @@ Administered by the National Park Service within the Department of the Interior,
                         <outlet property="GreenDotAnimView4" destination="OVh-rQ-mXn" id="STh-aF-D7n"/>
                         <outlet property="GreenDotAnimView5" destination="xGT-1e-xuo" id="hhf-id-N9W"/>
                         <outlet property="HighlightNumbersView" destination="156-Bi-vzA" id="qjS-Mx-auz"/>
+                        <outlet property="Highlights1" destination="fr8-Qh-Ahn" id="mS2-37-6sg"/>
+                        <outlet property="Highlights2" destination="404-SE-TU5" id="5OT-TE-k9L"/>
+                        <outlet property="Highlights3" destination="a5B-RT-1fe" id="N5q-pU-C1U"/>
+                        <outlet property="Highlights4" destination="C3c-ZM-rVi" id="Lej-P9-VYX"/>
+                        <outlet property="Highlights5" destination="1Dz-4e-Q1m" id="omZ-B4-PBN"/>
+                        <outlet property="Highlights6" destination="atI-QW-qaT" id="Wxb-dt-kcd"/>
+                        <outlet property="Highlights7" destination="vxU-Wp-msz" id="0CP-cj-DNh"/>
+                        <outlet property="Highlights8" destination="Dlt-FW-Vvy" id="1qb-8e-h7m"/>
                         <outlet property="HighlightsButton" destination="DCo-rP-Udb" id="kpF-kV-61X"/>
                         <outlet property="HighlightsLabel" destination="QPC-VQ-gbm" id="7Qt-Nt-V5v"/>
                         <outlet property="IView" destination="kLn-xz-Lbj" id="6xd-My-NOF"/>
@@ -1373,7 +1405,15 @@ Administered by the National Park Service within the Department of the Interior,
         <image name="CI_LOGOS_FOR_DISSOLVE_LOOP" width="2048" height="1536"/>
         <image name="CI_Main_Icon_HOME_V02" width="900" height="90"/>
         <image name="CI_Main_Icon_PHOTOGRAPHY" width="2048" height="1536"/>
-        <image name="HIGHLIGHTS_NUMBERS" width="2048" height="1536"/>
+        <image name="HIGHLIGHT1_00010" width="90" height="90"/>
+        <image name="HIGHLIGHT2_00010" width="90" height="90"/>
+        <image name="HIGHLIGHT3_00010" width="90" height="90"/>
+        <image name="HIGHLIGHT4_00010" width="90" height="90"/>
+        <image name="HIGHLIGHT5_00010" width="90" height="90"/>
+        <image name="HIGHLIGHT6_00010" width="90" height="90"/>
+        <image name="HIGHLIGHT7_00010" width="90" height="90"/>
+        <image name="HIGHLIGHT8_00010" width="90" height="90"/>
+        <image name="HIGHLIGHT_REFERENCE" width="2048" height="1536"/>
         <image name="Image-1" width="2048" height="1536"/>
         <image name="Image-3" width="2048" height="1536"/>
         <image name="IslandIcons_HOME" width="110" height="660"/>
@@ -1401,8 +1441,8 @@ Administered by the National Park Service within the Department of the Interior,
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UxM-fJ-qBO"/>
+        <segue reference="jew-Ho-UNx"/>
         <segue reference="OjJ-ZP-iCm"/>
-        <segue reference="5ZQ-iB-uCa"/>
         <segue reference="aTj-7v-ik0"/>
     </inferredMetricsTieBreakers>
 </document>

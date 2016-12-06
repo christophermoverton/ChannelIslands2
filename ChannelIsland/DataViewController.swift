@@ -58,6 +58,15 @@ class DataViewController: UIViewController, UITextViewDelegate {
     var imageArray: [UIImage] = []
     //var lightBlur: UIBlurEffect
     //var blurView: UIVisualEffectView
+    @IBOutlet weak var Highlights8: UIImageView!
+    @IBOutlet weak var Highlights7: UIImageView!
+    @IBOutlet weak var Highlights6: UIImageView!
+    @IBOutlet weak var Highlights5: UIImageView!
+    @IBOutlet weak var Highlights4: UIImageView!
+    @IBOutlet weak var Highlights3: UIImageView!
+    @IBOutlet weak var Highlights2: UIImageView!
+    @IBOutlet weak var Highlights1: UIImageView!
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("Got This Far!")
@@ -213,7 +222,15 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.GreenDotAnimView4.alpha = 1
             self.GreenDotAnimView5.alpha = 1
             if self.HightlightsActive {
-                self.HighlightNumbersView.alpha = 1
+                //self.HighlightNumbersView.alpha = 1
+                self.Highlights1.alpha = 1
+                self.Highlights2.alpha = 1
+                self.Highlights3.alpha = 1
+                self.Highlights4.alpha = 1
+                self.Highlights5.alpha = 1
+                self.Highlights6.alpha = 1
+                self.Highlights7.alpha = 1
+                self.Highlights8.alpha = 1
                 
             }
             self.ScrollView.alpha = 0
@@ -281,6 +298,14 @@ class DataViewController: UIViewController, UITextViewDelegate {
                 self.GreenDotAnimView3.alpha = 0
                 self.GreenDotAnimView4.alpha = 0
                 self.GreenDotAnimView5.alpha = 0
+                self.Highlights1.alpha = 0
+                self.Highlights2.alpha = 0
+                self.Highlights3.alpha = 0
+                self.Highlights4.alpha = 0
+                self.Highlights5.alpha = 0
+                self.Highlights6.alpha = 0
+                self.Highlights7.alpha = 0
+                self.Highlights8.alpha = 0
                 if self.HightlightsActive {
                     self.HighlightNumbersView.alpha = 0
                     
@@ -344,8 +369,17 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.NavBar.image = UIImage(named: "CI_Main_Icon_HOME_V02")
             self.HighlightsLabel.textColor = UIColor.whiteColor()
             self.MapsLabel.textColor = UIColor.blackColor()
+            
             UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
                 self.HighlightNumbersView.alpha = 0
+                self.Highlights1.alpha = 0
+                self.Highlights2.alpha = 0
+                self.Highlights3.alpha = 0
+                self.Highlights4.alpha = 0
+                self.Highlights5.alpha = 0
+                self.Highlights6.alpha = 0
+                self.Highlights7.alpha = 0
+                self.Highlights8.alpha = 0
                 
                 }, completion: { finished in
                     if (finished){
@@ -363,12 +397,102 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.NavBar.image = UIImage(named: "CI_Main_Icon_HIGHLIGHTS_V02")
             self.HighlightsLabel.textColor = UIColor.blackColor()
             self.MapsLabel.textColor = UIColor.whiteColor()
-            UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
-                self.HighlightNumbersView.alpha = 1
+            self.Highlights1.alpha = 1
+            self.Highlights2.alpha = 1
+            self.Highlights3.alpha = 1
+            self.Highlights4.alpha = 1
+            self.Highlights5.alpha = 1
+            self.Highlights6.alpha = 1
+            self.Highlights7.alpha = 1
+            self.Highlights8.alpha = 1
+            var imageArr : [UIImage] = []
+            for i in 0...9{
+                let str : String = "HIGHLIGHT1_"+String(format: "%05d", i)
+            
+                imageArr.append(UIImage(named:str)!)
+            }
+            Highlights1.animationImages = imageArr
+            Highlights1.animationRepeatCount = 1
+            Highlights1.animationDuration = 0.667
+            Highlights1.startAnimating()
+            var imageArr2 : [UIImage] = []
+            for i in 0...9{
+                let str : String = "HIGHLIGHT2_"+String(format: "%05d", i)
+                
+                imageArr2.append(UIImage(named:str)!)
+            }
+            Highlights2.animationImages = imageArr2
+            Highlights2.animationRepeatCount = 1
+            Highlights2.animationDuration = 0.667
+            Highlights2.startAnimating()
+            var imageArr3 : [UIImage] = []
+            for i in 0...9{
+                let str : String = "HIGHLIGHT3_"+String(format: "%05d", i)
+                
+                imageArr3.append(UIImage(named:str)!)
+            }
+            Highlights3.animationImages = imageArr3
+            Highlights3.animationRepeatCount = 1
+            Highlights3.animationDuration = 0.667
+            Highlights3.startAnimating()
+            var imageArr4 : [UIImage] = []
+            for i in 0...9{
+                let str : String = "HIGHLIGHT4_"+String(format: "%05d", i)
+                
+                imageArr4.append(UIImage(named:str)!)
+            }
+            Highlights4.animationImages = imageArr4
+            Highlights4.animationRepeatCount = 1
+            Highlights4.animationDuration = 0.667
+            Highlights4.startAnimating()
+            var imageArr5 : [UIImage] = []
+            for i in 0...9{
+                let str : String = "HIGHLIGHT5_"+String(format: "%05d", i)
+                
+                imageArr5.append(UIImage(named:str)!)
+            }
+            Highlights5.animationImages = imageArr5
+            Highlights5.animationRepeatCount = 1
+            Highlights5.animationDuration = 0.667
+            Highlights5.startAnimating()
+            var imageArr6 : [UIImage] = []
+            for i in 0...9{
+                let str : String = "HIGHLIGHT6_"+String(format: "%05d", i)
+                
+                imageArr6.append(UIImage(named:str)!)
+            }
+            Highlights6.animationImages = imageArr6
+            Highlights6.animationRepeatCount = 1
+            Highlights6.animationDuration = 0.667
+            Highlights6.startAnimating()
+            var imageArr7 : [UIImage] = []
+            for i in 0...9{
+                let str : String = "HIGHLIGHT7_"+String(format: "%05d", i)
+                
+                imageArr7.append(UIImage(named:str)!)
+            }
+            Highlights7.animationImages = imageArr7
+            Highlights7.animationRepeatCount = 1
+            Highlights7.animationDuration = 0.667
+            Highlights7.startAnimating()
+            var imageArr8 : [UIImage] = []
+            for i in 0...9{
+                let str : String = "HIGHLIGHT8_"+String(format: "%05d", i)
+                
+                imageArr8.append(UIImage(named:str)!)
+            }
+            Highlights8.animationImages = imageArr8
+            Highlights8.animationRepeatCount = 1
+            Highlights8.animationDuration = 0.667
+            Highlights8.startAnimating()
+            
+            UIView.animateWithDuration(0.667, delay: 0.0, options: .CurveEaseOut, animations: {
+                //self.HighlightNumbersView.alpha = 1
                 
                 }, completion: { finished in
                     if (finished){
-                        
+                        //self.Highlights1.stopAnimating()
+                        //self.Highlights1.image = UIImage(named:"CI_Main_Icon_HOME_V02")
                         self.HightlightsActive = true
                         
                     }
@@ -437,8 +561,17 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.GreenDotAnimView3.alpha = 1
             self.GreenDotAnimView4.alpha = 1
             self.GreenDotAnimView5.alpha = 1
+
             if self.HightlightsActive {
-                self.HighlightNumbersView.alpha = 1
+                //self.HighlightNumbersView.alpha = 1
+                self.Highlights1.alpha = 1
+                self.Highlights2.alpha = 1
+                self.Highlights3.alpha = 1
+                self.Highlights4.alpha = 1
+                self.Highlights5.alpha = 1
+                self.Highlights6.alpha = 1
+                self.Highlights7.alpha = 1
+                self.Highlights8.alpha = 1
             }
             
             //self.HighlightNumbersView.alpha = 1
@@ -502,6 +635,14 @@ class DataViewController: UIViewController, UITextViewDelegate {
                 self.GreenDotAnimView3.alpha = 0
                 self.GreenDotAnimView4.alpha = 0
                 self.GreenDotAnimView5.alpha = 0
+                self.Highlights1.alpha = 0
+                self.Highlights2.alpha = 0
+                self.Highlights3.alpha = 0
+                self.Highlights4.alpha = 0
+                self.Highlights5.alpha = 0
+                self.Highlights6.alpha = 0
+                self.Highlights7.alpha = 0
+                self.Highlights8.alpha = 0
                 if self.HightlightsActive {
                     self.HighlightNumbersView.alpha = 0
                     
