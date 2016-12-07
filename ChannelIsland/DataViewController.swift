@@ -398,13 +398,8 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.HighlightsLabel.textColor = UIColor.blackColor()
             self.MapsLabel.textColor = UIColor.whiteColor()
             self.Highlights1.alpha = 1
-            self.Highlights2.alpha = 1
-            self.Highlights3.alpha = 1
-            self.Highlights4.alpha = 1
-            self.Highlights5.alpha = 1
-            self.Highlights6.alpha = 1
-            self.Highlights7.alpha = 1
-            self.Highlights8.alpha = 1
+
+            let stime = 1000000
             var imageArr : [UIImage] = []
             for i in 0...9{
                 let str : String = "HIGHLIGHT1_"+String(format: "%05d", i)
@@ -424,7 +419,14 @@ class DataViewController: UIViewController, UITextViewDelegate {
             Highlights2.animationImages = imageArr2
             Highlights2.animationRepeatCount = 1
             Highlights2.animationDuration = 0.667
-            Highlights2.startAnimating()
+            let delay = 0.25 * Double(NSEC_PER_SEC)
+            let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+            dispatch_after(time, dispatch_get_main_queue()) {
+                self.Highlights2.alpha = 1
+                self.Highlights2.startAnimating()
+            }
+            
+            
             var imageArr3 : [UIImage] = []
             for i in 0...9{
                 let str : String = "HIGHLIGHT3_"+String(format: "%05d", i)
@@ -434,7 +436,13 @@ class DataViewController: UIViewController, UITextViewDelegate {
             Highlights3.animationImages = imageArr3
             Highlights3.animationRepeatCount = 1
             Highlights3.animationDuration = 0.667
-            Highlights3.startAnimating()
+            let delay2 = 0.50 * Double(NSEC_PER_SEC)
+            let time2 = dispatch_time(DISPATCH_TIME_NOW, Int64(delay2))
+            dispatch_after(time2, dispatch_get_main_queue()) {
+                self.Highlights3.alpha = 1
+                self.Highlights3.startAnimating()
+            }
+            //Highlights3.startAnimating()
             var imageArr4 : [UIImage] = []
             for i in 0...9{
                 let str : String = "HIGHLIGHT4_"+String(format: "%05d", i)
@@ -444,7 +452,13 @@ class DataViewController: UIViewController, UITextViewDelegate {
             Highlights4.animationImages = imageArr4
             Highlights4.animationRepeatCount = 1
             Highlights4.animationDuration = 0.667
-            Highlights4.startAnimating()
+            let delay3 = 0.75 * Double(NSEC_PER_SEC)
+            let time3 = dispatch_time(DISPATCH_TIME_NOW, Int64(delay3))
+            dispatch_after(time3, dispatch_get_main_queue()) {
+                self.Highlights4.alpha = 1
+                self.Highlights4.startAnimating()
+            }
+            //Highlights4.startAnimating()
             var imageArr5 : [UIImage] = []
             for i in 0...9{
                 let str : String = "HIGHLIGHT5_"+String(format: "%05d", i)
@@ -454,7 +468,14 @@ class DataViewController: UIViewController, UITextViewDelegate {
             Highlights5.animationImages = imageArr5
             Highlights5.animationRepeatCount = 1
             Highlights5.animationDuration = 0.667
-            Highlights5.startAnimating()
+            //sleep(1000000)
+            let delay4 = 1.0 * Double(NSEC_PER_SEC)
+            let time4 = dispatch_time(DISPATCH_TIME_NOW, Int64(delay4))
+            dispatch_after(time4, dispatch_get_main_queue()) {
+                self.Highlights5.alpha = 1
+                self.Highlights5.startAnimating()
+            }
+            //Highlights5.startAnimating()
             var imageArr6 : [UIImage] = []
             for i in 0...9{
                 let str : String = "HIGHLIGHT6_"+String(format: "%05d", i)
@@ -464,7 +485,14 @@ class DataViewController: UIViewController, UITextViewDelegate {
             Highlights6.animationImages = imageArr6
             Highlights6.animationRepeatCount = 1
             Highlights6.animationDuration = 0.667
-            Highlights6.startAnimating()
+            //sleep(1)
+            let delay5 = 1.25 * Double(NSEC_PER_SEC)
+            let time5 = dispatch_time(DISPATCH_TIME_NOW, Int64(delay5))
+            dispatch_after(time5, dispatch_get_main_queue()) {
+                self.Highlights6.alpha = 1
+                self.Highlights6.startAnimating()
+            }
+            //Highlights6.startAnimating()
             var imageArr7 : [UIImage] = []
             for i in 0...9{
                 let str : String = "HIGHLIGHT7_"+String(format: "%05d", i)
@@ -474,7 +502,13 @@ class DataViewController: UIViewController, UITextViewDelegate {
             Highlights7.animationImages = imageArr7
             Highlights7.animationRepeatCount = 1
             Highlights7.animationDuration = 0.667
-            Highlights7.startAnimating()
+            let delay6 = 1.5 * Double(NSEC_PER_SEC)
+            let time6 = dispatch_time(DISPATCH_TIME_NOW, Int64(delay6))
+            dispatch_after(time6, dispatch_get_main_queue()) {
+                self.Highlights7.alpha = 1
+                self.Highlights7.startAnimating()
+            }
+            //Highlights7.startAnimating()
             var imageArr8 : [UIImage] = []
             for i in 0...9{
                 let str : String = "HIGHLIGHT8_"+String(format: "%05d", i)
@@ -484,7 +518,14 @@ class DataViewController: UIViewController, UITextViewDelegate {
             Highlights8.animationImages = imageArr8
             Highlights8.animationRepeatCount = 1
             Highlights8.animationDuration = 0.667
-            Highlights8.startAnimating()
+            //sleep(1)
+            let delay7 = 1.75 * Double(NSEC_PER_SEC)
+            let time7 = dispatch_time(DISPATCH_TIME_NOW, Int64(delay7))
+            dispatch_after(time7, dispatch_get_main_queue()) {
+                self.Highlights8.alpha = 1
+                self.Highlights8.startAnimating()
+            }
+            //Highlights8.startAnimating()
             
             UIView.animateWithDuration(0.667, delay: 0.0, options: .CurveEaseOut, animations: {
                 //self.HighlightNumbersView.alpha = 1
