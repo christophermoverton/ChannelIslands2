@@ -118,7 +118,31 @@ class DataViewController: UIViewController, UITextViewDelegate {
         }
         TextView2.attributedText = getLargeText(cString)
         */
+        
 
+    }
+    
+    override func viewDidAppear(animated: Bool){
+        UIView.animateKeyframesWithDuration(6.0, delay: 0, options: .Repeat, animations:{
+            UIView.addKeyframeWithRelativeStartTime(0.0, relativeDuration: 0.33, animations: {
+                
+                self.WaterImg0.alpha = 0;
+                self.WaterImg1.alpha = 1.0;
+            })
+            UIView.addKeyframeWithRelativeStartTime(0.33, relativeDuration: 0.33, animations: {
+                
+                self.WaterImg1.alpha = 0.0;
+                self.WaterImg2.alpha = 1.0;
+            })
+            UIView.addKeyframeWithRelativeStartTime(0.67, relativeDuration: 0.33, animations: {
+                
+                self.WaterImg2.alpha = 0.0;
+                self.WaterImg0.alpha = 1.0;
+            })
+            
+            }, completion: { finished in
+                print("Finished7!")}
+        )//*/
     }
 
     override func didReceiveMemoryWarning() {
@@ -158,30 +182,10 @@ class DataViewController: UIViewController, UITextViewDelegate {
         GreenDotAnimView5.animationImages = imageArr
         GreenDotAnimView5.animationDuration = 5.0
         GreenDotAnimView5.startAnimating()
-        WaterImg0.animationImages = imageArr2
-        WaterImg0.animationDuration = 6.0
-        WaterImg0.startAnimating()
-        /*
-        UIView.animateKeyframesWithDuration(6.0, delay: 0, options: .Repeat, animations:{
-            UIView.addKeyframeWithRelativeStartTime(0.0, relativeDuration: 0.33, animations: {
-                
-                self.WaterImg0.alpha = 0;
-                self.WaterImg1.alpha = 1.0;
-            })
-            UIView.addKeyframeWithRelativeStartTime(0.33, relativeDuration: 0.33, animations: {
-                
-                self.WaterImg1.alpha = 0.0;
-                self.WaterImg2.alpha = 1.0;
-            })
-            UIView.addKeyframeWithRelativeStartTime(0.67, relativeDuration: 0.33, animations: {
-                
-                self.WaterImg2.alpha = 0.0;
-                self.WaterImg0.alpha = 1.0;
-            })
-            
-            }, completion: { finished in
-                print("Finished7!")}
-        )*/
+        //WaterImg0.animationImages = imageArr2
+        //WaterImg0.animationDuration = 6.0
+        //WaterImg0.startAnimating()
+
     }
     override func prefersStatusBarHidden() -> Bool {
         return true
