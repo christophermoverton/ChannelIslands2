@@ -55,6 +55,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
     private var HightlightsActive: Bool = false
     private var planningActive: Bool = false
     private var infoActive: Bool = false
+    private var Highlight1Active = false
     var imageArray: [UIImage] = []
     //var lightBlur: UIBlurEffect
     //var blurView: UIVisualEffectView
@@ -66,6 +67,12 @@ class DataViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var Highlights3: UIImageView!
     @IBOutlet weak var Highlights2: UIImageView!
     @IBOutlet weak var Highlights1: UIImageView!
+    @IBOutlet weak var Highlight1ScrollView: UIScrollView!
+    @IBOutlet weak var Highlight1Title: UITextView!
+    @IBOutlet weak var Highlight1Logo: UIImageView!
+    
+    @IBOutlet weak var Highlight1Button: UIButton!
+    @IBOutlet weak var DismissHighlight1: UIButton!
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -246,6 +253,9 @@ class DataViewController: UIViewController, UITextViewDelegate {
                     
                     self.ScrollView.hidden = true
                     self.CloseTV.hidden = true
+                    if self.HightlightsActive{
+                        self.Highlight1Button.hidden = false
+                    }
                 }
         })
         self.DismissInfo.hidden = true
@@ -373,7 +383,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.NavBar.image = UIImage(named: "CI_Main_Icon_HOME_V02")
             self.HighlightsLabel.textColor = UIColor.whiteColor()
             self.MapsLabel.textColor = UIColor.blackColor()
-            
+            self.Highlight1Button.hidden = true
             UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
                 self.HighlightNumbersView.alpha = 0
                 self.Highlights1.alpha = 0
@@ -402,8 +412,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.HighlightsLabel.textColor = UIColor.blackColor()
             self.MapsLabel.textColor = UIColor.whiteColor()
             self.Highlights1.alpha = 1
-
-            let stime = 1000000
+            self.Highlight1Button.hidden = false
             var imageArr : [UIImage] = []
             for i in 0...9{
                 let str : String = "HIGHLIGHT1_"+String(format: "%05d", i)
@@ -553,6 +562,168 @@ class DataViewController: UIViewController, UITextViewDelegate {
         print("Planning Button Pressed")
     }
     
+
+    @IBAction func Highlight1Clicked(sender: AnyObject) {
+        print("Clicked")
+        self.enableHighlight1()
+    }
+
+    
+    func enableHighlight1(){
+        if self.infoActive {
+            self.ScrollView2.hidden = false
+            self.infoActive = false
+            self.planningActive = true
+            self.NavBar.image = UIImage(named: "CI_Main_Icon_Set_ALL_WHITE_V02")
+            self.InfoLabel.textColor = UIColor.whiteColor()
+            //self.PlanningLabel.textColor = UIColor.blackColor()
+            UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
+                
+                self.ScrollView.alpha = 0
+                self.ScrollView2.alpha = 1
+                }, completion: { finished in
+                    if (finished){
+                        //self.PlanningButton.hidden = true
+                        self.InfoButton.hidden = true
+                        self.ScrollView.hidden = true
+                        
+                    }
+            })
+        }
+        else{
+            self.Highlight1ScrollView.hidden = false
+            self.CloseTV.hidden = false
+            self.Highlight1Active = true
+            /*
+            if self.HightlightsActive {
+                self.PlanningLabel.textColor = UIColor.blackColor()
+                self.HighlightsLabel.textColor = UIColor.whiteColor()
+            }
+            else{
+                self.PlanningLabel.textColor = UIColor.blackColor()
+                self.MapsLabel.textColor = UIColor.whiteColor()
+            }*/
+            self.NavBar.image = UIImage(named: "CI_Main_Icon_Set_ALL_WHITE_V02")
+            UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
+                self.IView.alpha = 0
+                self.Highlight1ScrollView.alpha = 1
+                self.IView2.alpha = 1
+                self.CloseTV.alpha = 1
+                self.Highlight1Logo.alpha = 1
+                self.Highlight1Title.alpha = 1
+                self.GreenDotAnimIView.alpha = 0
+                self.GreenDotAnimView2.alpha = 0
+                self.GreenDotAnimView3.alpha = 0
+                self.GreenDotAnimView4.alpha = 0
+                self.GreenDotAnimView5.alpha = 0
+                self.Highlights1.alpha = 0
+                self.Highlights2.alpha = 0
+                self.Highlights3.alpha = 0
+                self.Highlights4.alpha = 0
+                self.Highlights5.alpha = 0
+                self.Highlights6.alpha = 0
+                self.Highlights7.alpha = 0
+                self.Highlights8.alpha = 0
+                if self.HightlightsActive {
+                    self.HighlightNumbersView.alpha = 0
+                    
+                }
+                }, completion: { finished in
+                    if (finished){
+                        
+                        self.IView.hidden = true
+                        self.GreenDotAnimIView.hidden = true
+                        self.GreenDotAnimView2.hidden = true
+                        self.GreenDotAnimView3.hidden = true
+                        self.GreenDotAnimView4.hidden = true
+                        self.GreenDotAnimView5.hidden = true
+                        if self.HightlightsActive {
+                            self.HighlightNumbersView.hidden = true
+                        }
+                        
+                    }
+            })
+            self.DismissHighlight1.hidden = false
+            self.PlanningButton.hidden = false
+            self.InfoButton.hidden = false
+            self.HighlightsButton.hidden = false
+            self.PhotographyButton.hidden = false
+        }
+    }
+    
+    
+    @IBAction func DismissHighlight1Clicked(sender: AnyObject) {
+        self.dismissHighlight1()
+    }
+    
+    func dismissHighlight1(){
+        self.IView.hidden = false
+        self.GreenDotAnimIView.hidden = false
+        self.GreenDotAnimView2.hidden = false
+        self.GreenDotAnimView3.hidden = false
+        self.GreenDotAnimView4.hidden = false
+        self.GreenDotAnimView5.hidden = false
+        self.planningActive = false
+        self.Highlight1Active = false
+        if self.HightlightsActive {
+            self.HighlightNumbersView.hidden = false
+            self.NavBar.image = UIImage(named: "CI_Main_Icon_HIGHLIGHTS_V02")
+            
+        }
+        else{
+            self.NavBar.image = UIImage(named: "CI_Main_Icon_HOME_V02")
+        }
+        if self.HightlightsActive {
+            //self.PlanningLabel.textColor = UIColor.whiteColor()
+            self.HighlightsLabel.textColor = UIColor.blackColor()
+        }
+        else{
+            //self.PlanningLabel.textColor = UIColor.whiteColor()
+            self.MapsLabel.textColor = UIColor.blackColor()
+        }
+        UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.IView.alpha = 1
+            self.Highlight1ScrollView.alpha = 0
+            self.IView2.alpha = 0
+            self.CloseTV.alpha = 0
+            self.GreenDotAnimIView.alpha = 1
+            self.GreenDotAnimView2.alpha = 1
+            self.GreenDotAnimView3.alpha = 1
+            self.GreenDotAnimView4.alpha = 1
+            self.GreenDotAnimView5.alpha = 1
+            self.Highlight1Logo.alpha = 0
+            self.Highlight1Title.alpha = 0
+            if self.HightlightsActive {
+                //self.HighlightNumbersView.alpha = 1
+                self.Highlights1.alpha = 1
+                self.Highlights2.alpha = 1
+                self.Highlights3.alpha = 1
+                self.Highlights4.alpha = 1
+                self.Highlights5.alpha = 1
+                self.Highlights6.alpha = 1
+                self.Highlights7.alpha = 1
+                self.Highlights8.alpha = 1
+                self.Highlight1Button.hidden = false
+            }
+            
+            //self.HighlightNumbersView.alpha = 1
+            }, completion: { finished in
+                if (finished){
+                    
+                    self.ScrollView2.hidden = true
+                    self.CloseTV.hidden = true
+                    
+                }
+        })
+        self.DismissHighlight1.hidden = true
+        //self.DismissPlanning.hidden = true
+        self.PlanningButton.hidden = false
+        self.InfoButton.hidden = false
+        self.HighlightsButton.hidden = false
+        self.PhotographyButton.hidden = false
+        print("Dismiss Highlights1 Button Pressed")
+    }
+    
     @IBAction func MapClick(sender: AnyObject) {
         if self.planningActive {
             dismissPlanning()
@@ -617,6 +788,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
                 self.Highlights6.alpha = 1
                 self.Highlights7.alpha = 1
                 self.Highlights8.alpha = 1
+                self.Highlight1Button.hidden = false
             }
             
             //self.HighlightNumbersView.alpha = 1
