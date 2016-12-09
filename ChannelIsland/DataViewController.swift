@@ -70,10 +70,26 @@ class DataViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var Highlight1ScrollView: UIScrollView!
     @IBOutlet weak var Highlight1Title: UITextView!
     @IBOutlet weak var Highlight1Logo: UIImageView!
+    @IBOutlet weak var TextView1: UITextView!
     
     @IBOutlet weak var Highlight1Button: UIButton!
     @IBOutlet weak var DismissHighlight1: UIButton!
+    private var Highlighttextstrings: [[String]] = [["Visitor Center & Channel Islands Live\n\n","Begin your discovery of the Channel Islands at the Robert J. Lagomarsino Visitor Center, featuring exhibits, a native plant garden, a park film, and bookstore. Tour the islands via Channel Islands Live, featuring ranger-led virtual hikes and dives, interactive broadcasts, and webcams. The fully accessible facility operates daily except Thanksgiving and December 25th."]]
+    private var HighlightAttributes : [[[String: AnyObject]]] = [[[NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica Light", size: 14.0)!]]]
+    /*
+    // create attributed string
+    let myString = "Swift Attributed String"
+    let myAttribute = [ NSForegroundColorAttributeName: UIColor.whiteColor()]
+    let myAttrString = NSAttributedString(string: "Test string", attributes: myAttribute)
     
+    // set attributed text on a UILabel
+    TextView1.attributedText = myAttrString
+    */
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("Got This Far!")
@@ -681,6 +697,17 @@ class DataViewController: UIViewController, UITextViewDelegate {
             //self.PlanningLabel.textColor = UIColor.whiteColor()
             self.MapsLabel.textColor = UIColor.blackColor()
         }
+        var str: String = Highlighttextstrings[0][0]
+        var str2: String = Highlighttextstrings[0][1]
+        var myAttributes = HighlightAttributes[0][0]
+        var myAttrString1 = NSAttributedString(string: str, attributes: myAttributes)
+        var myAttributes1 = HighlightAttributes[0][1]
+        let myAttrString2 = NSAttributedString(string: str2, attributes: myAttributes1)
+        let result = NSMutableAttributedString()
+        result.appendAttributedString(myAttrString1)
+        result.appendAttributedString(myAttrString2)
+        TextView1.attributedText = result
+        //myAttrString1.append(myAttrString2)
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView.alpha = 1
             self.Highlight1ScrollView.alpha = 0
