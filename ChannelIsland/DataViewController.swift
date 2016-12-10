@@ -72,16 +72,25 @@ class DataViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var Highlight1Logo: UIImageView!
     @IBOutlet weak var TextView1: UITextView!
     @IBOutlet weak var WaterAnimView: UIView!
+    @IBOutlet weak var Caption1: UITextView!
+    @IBOutlet weak var Caption2: UITextView!
     
     @IBOutlet weak var Highlight1Button: UIButton!
     @IBOutlet weak var DismissHighlight1: UIButton!
     private var Highlighttextstrings: [[String]] = [["Visitor Center & Channel Islands Live\n\n","Begin your discovery of the Channel Islands at the Robert J. Lagomarsino Visitor Center, featuring exhibits, a native plant garden, a park film, and bookstore. Tour the islands via Channel Islands Live, featuring ranger-led virtual hikes and dives, interactive broadcasts, and webcams. The fully accessible facility operates daily except Thanksgiving and December 25th."]]
     private var HighlightAttributes : [[[String: AnyObject]]] = [[[NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
-        NSFontAttributeName: UIFont(name: "Helvetica Bold", size: 24.0)!],
+        NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
             NSBackgroundColorAttributeName: UIColor.clearColor(),
-            NSFontAttributeName: UIFont(name: "Helvetica Light", size: 14.0)!]]]
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 16.0)!]]]
+    private var HighlightCaptiontextstrings: [[String]] = [["Channel Islands Live presentation (NPS, photo by Bill Kendig )", "Bald Eagle web cam view (NPS)"]]
+    private var HighlightCaptionAttributes : [[[String: AnyObject]]] = [[[NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 12.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 12.0)!]]]
     /*
     // create attributed string
     let myString = "Swift Attributed String"
@@ -129,7 +138,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.ScrollView2.contentSize.height = 650
         self.ScrollView2.hidden = true
         self.CloseTV.hidden = true
-
+        self.Highlight1ScrollView.contentSize.height = 650
         /*
         let path = NSBundle.mainBundle().pathForResource("SampleText", ofType: "txt")
         let fm = NSFileManager()
@@ -609,6 +618,25 @@ class DataViewController: UIViewController, UITextViewDelegate {
             })
         }
         else{
+            var str: String = Highlighttextstrings[0][0]
+            var str2: String = Highlighttextstrings[0][1]
+            var myAttributes = HighlightAttributes[0][0]
+            var myAttrString1 = NSAttributedString(string: str, attributes: myAttributes)
+            var myAttributes1 = HighlightAttributes[0][1]
+            let myAttrString2 = NSAttributedString(string: str2, attributes: myAttributes1)
+            let result = NSMutableAttributedString()
+            result.appendAttributedString(myAttrString1)
+            result.appendAttributedString(myAttrString2)
+            var cstr: String = HighlightCaptiontextstrings[0][0]
+            var cstr2: String = HighlightCaptiontextstrings[0][1]
+            var cmyAttributes = HighlightCaptionAttributes[0][0]
+            var cmyAttrString1 = NSAttributedString(string: cstr, attributes: cmyAttributes)
+            var cmyAttributes1 = HighlightCaptionAttributes[0][1]
+            let cmyAttrString2 = NSAttributedString(string: cstr2, attributes: cmyAttributes1)
+            //let cresult = NSMutableAttributedString()
+            //cresult.appendAttributedString(cmyAttrString1)
+            self.Caption1.attributedText = cmyAttrString1
+            self.Caption2.attributedText = cmyAttrString2
             self.Highlight1ScrollView.hidden = false
             self.CloseTV.hidden = false
             self.Highlight1Active = true
@@ -700,16 +728,8 @@ class DataViewController: UIViewController, UITextViewDelegate {
             //self.PlanningLabel.textColor = UIColor.whiteColor()
             self.MapsLabel.textColor = UIColor.blackColor()
         }
-        var str: String = Highlighttextstrings[0][0]
-        var str2: String = Highlighttextstrings[0][1]
-        var myAttributes = HighlightAttributes[0][0]
-        var myAttrString1 = NSAttributedString(string: str, attributes: myAttributes)
-        var myAttributes1 = HighlightAttributes[0][1]
-        let myAttrString2 = NSAttributedString(string: str2, attributes: myAttributes1)
-        let result = NSMutableAttributedString()
-        result.appendAttributedString(myAttrString1)
-        result.appendAttributedString(myAttrString2)
-        TextView1.attributedText = result
+
+
         //myAttrString1.append(myAttrString2)
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView.alpha = 1

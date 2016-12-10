@@ -25,8 +25,8 @@
             <objects>
                 <viewController id="wMw-6r-BdI" customClass="ViewController" customModule="ChannelIsland" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yRg-Cs-l5y"/>
-                        <viewControllerLayoutGuide type="bottom" id="vCL-Hb-Stu"/>
+                        <viewControllerLayoutGuide type="top" id="UzS-bW-NKb"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vvk-tN-SFX"/>
                     </layoutGuides>
                     <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="KE6-oJ-iqK">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -113,11 +113,8 @@ by people for at least 13,000 years.</string>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22.200000762939453"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yon-QB-BtV">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yon-QB-BtV">
                                 <rect key="frame" x="450" y="321" width="125" height="125"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="125" id="L5s-I6-k2T"/>
-                                </constraints>
                                 <connections>
                                     <segue destination="S4R-Ja-viH" kind="presentation" identifier="revealSegue" id="0j0-Vz-LUs"/>
                                 </connections>
@@ -156,8 +153,8 @@ by people for at least 13,000 years.</string>
             <objects>
                 <viewController storyboardIdentifier="DataViewController" id="S4R-Ja-viH" customClass="DataViewController" customModule="ChannelIsland" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="qjH-T1-MoF"/>
-                        <viewControllerLayoutGuide type="bottom" id="9M8-LP-Xax"/>
+                        <viewControllerLayoutGuide type="top" id="cn0-gd-3sw"/>
+                        <viewControllerLayoutGuide type="bottom" id="vK4-Ba-51t"/>
                     </layoutGuides>
                     <view key="view" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFit" id="ZwX-cT-FIQ">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -606,169 +603,199 @@ Channel Islands National Park Visitor Center</string>
                                     <action selector="DismissPlanningClick:" destination="S4R-Ja-viH" eventType="touchUpInside" id="enz-3Q-ytF"/>
                                 </connections>
                             </button>
-                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4xI-cI-lIO">
-                                <rect key="frame" x="0.0" y="120" width="1024" height="565"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BNB-Aj-c8V">
+                                <rect key="frame" x="0.0" y="0.0" width="760" height="900"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GAa-ht-PVy">
-                                        <rect key="frame" x="368" y="5" width="650" height="250"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Visitor Center &amp; Channel Islands Live">
-                                                <attributes>
-                                                    <color key="NSBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="deviceRGB"/>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="24" name="Helvetica-Bold"/>
-                                                    <real key="NSKern" value="0.0"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="20" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                                    <real key="NSStrokeWidth" value="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4xI-cI-lIO">
+                                        <rect key="frame" x="0.0" y="119" width="1024" height="565"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GAa-ht-PVy">
+                                                <rect key="frame" x="368" y="5" width="650" height="800"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Visitor Center &amp; Channel Islands Live">
+                                                        <attributes>
+                                                            <color key="NSBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="deviceRGB"/>
+                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="24" name="Helvetica-Bold"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="20" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content" base64-UTF8="YES">
 Cg
 </string>
-                                                <attributes>
-                                                    <color key="NSBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="deviceRGB"/>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="12" name="Times-Roman"/>
-                                                    <real key="NSKern" value="0.0"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="20" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                                    <real key="NSStrokeWidth" value="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
+                                                        <attributes>
+                                                            <color key="NSBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="deviceRGB"/>
+                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="12" name="Times-Roman"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="20" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content" base64-UTF8="YES">
 Cg
 </string>
-                                                <attributes>
-                                                    <color key="NSBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="deviceRGB"/>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="12" name="Times-Roman"/>
-                                                    <real key="NSKern" value="0.0"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                                    <real key="NSStrokeWidth" value="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">Begin your discovery of the Channel Islands at the Robert J. Lagomarsino Visitor Center, featuring exhibits, a native plant garden, a park film, and bookstore. Tour the islands via Channel Islands Live, featuring ranger-led virtual hikes and dives, interactive broadcasts, and webcams. The fully accessible facility operates daily except Thanksgiving and December 25</string>
-                                                <attributes>
-                                                    <color key="NSBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="deviceRGB"/>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica-Light"/>
-                                                    <real key="NSKern" value="0.0"/>
-                                                    <font key="NSOriginalFont" size="13" name="Helvetica-Light"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="17" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                                    <real key="NSStrokeWidth" value="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="th">
-                                                <attributes>
-                                                    <color key="NSBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="deviceRGB"/>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica-Light"/>
-                                                    <real key="NSKern" value="0.0"/>
-                                                    <font key="NSOriginalFont" size="13" name="Helvetica-Light"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="17" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                                    <real key="NSStrokeWidth" value="0.0"/>
-                                                    <integer key="NSSuperScript" value="1"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content=".">
-                                                <attributes>
-                                                    <color key="NSBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="deviceRGB"/>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica-Light"/>
-                                                    <real key="NSKern" value="0.0"/>
-                                                    <font key="NSOriginalFont" size="13" name="Helvetica-Light"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="17" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                                    <real key="NSStrokeWidth" value="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
+                                                        <attributes>
+                                                            <color key="NSBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="deviceRGB"/>
+                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="12" name="Times-Roman"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">Begin your discovery of the Channel Islands at the Robert J. Lagomarsino Visitor Center, featuring exhibits, a native plant garden, a park film, and bookstore. Tour the islands via Channel Islands Live, featuring ranger-led virtual hikes and dives, interactive broadcasts, and webcams. The fully accessible facility operates daily except Thanksgiving and December 25</string>
+                                                        <attributes>
+                                                            <color key="NSBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="deviceRGB"/>
+                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="14" name="Helvetica-Light"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <font key="NSOriginalFont" size="13" name="Helvetica-Light"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="17" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="th">
+                                                        <attributes>
+                                                            <color key="NSBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="deviceRGB"/>
+                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="14" name="Helvetica-Light"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <font key="NSOriginalFont" size="13" name="Helvetica-Light"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="17" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                            <integer key="NSSuperScript" value="1"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=".">
+                                                        <attributes>
+                                                            <color key="NSBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="deviceRGB"/>
+                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="14" name="Helvetica-Light"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <font key="NSOriginalFont" size="13" name="Helvetica-Light"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="17" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content" base64-UTF8="YES">
 Cg
 </string>
-                                                <attributes>
-                                                    <color key="NSBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="deviceRGB"/>
-                                                    <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                    <font key="NSFont" size="13" name="ArialMT"/>
-                                                    <real key="NSKern" value="0.0"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="17" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                        <tabStops/>
-                                                    </paragraphStyle>
-                                                    <color key="NSStrokeColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                    <real key="NSStrokeWidth" value="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <textView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CHC-ob-RrF">
-                                        <rect key="frame" x="-317" y="0.0" width="873" height="128"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <string key="text">A visit to the Channel Islands is an exercise in preparation and self-reliance.  Since there are no services on the islands, there are no remedies for poor planning once you have arrived.  Please pay attention to the directives to visit each island. </string>
-                                        <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <textView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6vq-Ld-YEp">
-                                        <rect key="frame" x="-255" y="-10" width="750" height="149"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <attributedString key="attributedText">
-                                            <fragment>
-                                                <string key="content">Interpretive Information 
+                                                        <attributes>
+                                                            <color key="NSBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="deviceRGB"/>
+                                                            <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
+                                                            <font key="NSFont" size="13" name="ArialMT"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="17" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
+                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CHC-ob-RrF">
+                                                <rect key="frame" x="54" y="225" width="275" height="60"/>
+                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment>
+                                                        <string key="content">A visit to the Channel Islands is an exercise in preparation and self-reliance.  Since there are no services on the islands, there are no remedies for poor planning once you have arrived.  Please pay attention to the directives to visit each island. </string>
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="22" name="Helvetica-Light"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3YB-X6-Vli">
+                                                <rect key="frame" x="54" y="510" width="275" height="60"/>
+                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment>
+                                                        <string key="content">A visit to the Channel Islands is an exercise in preparation and self-reliance.  Since there are no services on the islands, there are no remedies for poor planning once you have arrived.  Please pay attention to the directives to visit each island. </string>
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="22" name="Helvetica-Light"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6vq-Ld-YEp">
+                                                <rect key="frame" x="-255" y="-10" width="750" height="149"/>
+                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment>
+                                                        <string key="content">Interpretive Information 
 </string>
-                                                <attributes>
-                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <font key="NSFont" size="24" name="Helvetica"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
+                                                        <attributes>
+                                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="24" name="Helvetica"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content" base64-UTF8="YES">
 Cg
 </string>
-                                                <attributes>
-                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <font key="NSFont" size="16" name="Helvetica"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">Books and materials about the park are available for sale through Western National Parks Association either in the park visitor center or by mail order.
+                                                        <attributes>
+                                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">Books and materials about the park are available for sale through Western National Parks Association either in the park visitor center or by mail order.
 
 This nonprofit organization supports the education and research programs of the park.  Western National Parks Association, 805-….</string>
-                                                <attributes>
-                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <font key="NSFont" size="16" name="Helvetica-Light"/>
-                                                    <font key="NSOriginalFont" size="16" name="Helvetica-Light"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bald_Eagle_Web_Cam_View" translatesAutoresizingMaskIntoConstraints="NO" id="j9x-UI-fyP">
-                                        <rect key="frame" x="59" y="231" width="265" height="200"/>
-                                    </imageView>
+                                                        <attributes>
+                                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="16" name="Helvetica-Light"/>
+                                                            <font key="NSOriginalFont" size="16" name="Helvetica-Light"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bald_Eagle_Web_Cam_View" translatesAutoresizingMaskIntoConstraints="NO" id="j9x-UI-fyP">
+                                                <rect key="frame" x="59" y="25" width="265" height="200"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Channel_Island_Live_Presentation" translatesAutoresizingMaskIntoConstraints="NO" id="VPE-T0-Lsh">
+                                                <rect key="frame" x="59" y="310" width="265" height="200"/>
+                                            </imageView>
+                                        </subviews>
+                                    </scrollView>
                                 </subviews>
-                            </scrollView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmQ-vy-JnW">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -855,6 +882,8 @@ This nonprofit organization supports the education and research programs of the 
                     <connections>
                         <outlet property="AnacapaButton" destination="gR9-rN-X64" id="eAw-S5-a6Q"/>
                         <outlet property="BackButton" destination="3uj-bn-UCL" id="DTr-Dg-fBy"/>
+                        <outlet property="Caption1" destination="CHC-ob-RrF" id="nRZ-rx-tw3"/>
+                        <outlet property="Caption2" destination="3YB-X6-Vli" id="SEa-pw-4qh"/>
                         <outlet property="CloseTV" destination="kCN-16-zkn" id="dPf-dh-RCT"/>
                         <outlet property="DismissHighlight1" destination="5bE-PF-TWX" id="noR-k9-ioQ"/>
                         <outlet property="DismissInfo" destination="CmQ-vy-JnW" id="jE0-bG-2LA"/>
@@ -914,8 +943,8 @@ This nonprofit organization supports the education and research programs of the 
             <objects>
                 <viewController storyboardIdentifier="SantaRosaViewC" id="2YF-RJ-H4w" customClass="SantaRosaViewController" customModule="ChannelIsland" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7WZ-5V-Uuj"/>
-                        <viewControllerLayoutGuide type="bottom" id="mvs-z1-uQM"/>
+                        <viewControllerLayoutGuide type="top" id="n1U-7j-Bqd"/>
+                        <viewControllerLayoutGuide type="bottom" id="bb4-Eo-weN"/>
                     </layoutGuides>
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="vZR-Sd-lGk">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -967,15 +996,15 @@ This nonprofit organization supports the education and research programs of the 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ec-0s-b7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4442" y="-1841"/>
+            <point key="canvasLocation" x="4442" y="-1840.9999999999998"/>
         </scene>
         <!--San Miguel View Controller-->
         <scene sceneID="aHe-yp-SED">
             <objects>
                 <viewController id="pyQ-KH-GOQ" customClass="SanMiguelViewController" customModule="ChannelIsland" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jo2-tc-2Rh"/>
-                        <viewControllerLayoutGuide type="bottom" id="qD8-w9-oef"/>
+                        <viewControllerLayoutGuide type="top" id="WUq-Q9-ZNd"/>
+                        <viewControllerLayoutGuide type="bottom" id="pTy-Cf-pj8"/>
                     </layoutGuides>
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleAspectFit" id="Gka-0h-Yhz">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -1043,15 +1072,15 @@ This nonprofit organization supports the education and research programs of the 
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4426" y="-2802"/>
+            <point key="canvasLocation" x="4426" y="-2801.9999999999995"/>
         </scene>
         <!--Santa Cruz View Controller-->
         <scene sceneID="D1S-wc-LGx">
             <objects>
                 <viewController id="xOZ-75-fK5" customClass="SantaCruzViewController" customModule="ChannelIsland" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="pf4-Jg-uSc"/>
-                        <viewControllerLayoutGuide type="bottom" id="zV0-IK-Yn6"/>
+                        <viewControllerLayoutGuide type="top" id="Lby-XJ-jB3"/>
+                        <viewControllerLayoutGuide type="bottom" id="oTL-TQ-1qx"/>
                     </layoutGuides>
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="wKN-Ev-zjR">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -1109,8 +1138,8 @@ This nonprofit organization supports the education and research programs of the 
             <objects>
                 <viewController id="gfQ-kY-mDd" customClass="AnacapaViewController" customModule="ChannelIsland" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hvv-hz-jpA"/>
-                        <viewControllerLayoutGuide type="bottom" id="s0Q-Af-qy0"/>
+                        <viewControllerLayoutGuide type="top" id="dUY-pY-Cjv"/>
+                        <viewControllerLayoutGuide type="bottom" id="LmA-iY-ini"/>
                     </layoutGuides>
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="GSi-kc-UHp">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -1161,15 +1190,15 @@ This nonprofit organization supports the education and research programs of the 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ufb-Wk-5i9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4472" y="36"/>
+            <point key="canvasLocation" x="4472" y="35.999999999999993"/>
         </scene>
         <!--Photo Comment View Controller-->
         <scene sceneID="023-NW-SNu">
             <objects>
                 <viewController storyboardIdentifier="v1" modalTransitionStyle="crossDissolve" id="8dJ-fM-KA1" customClass="PhotoCommentViewController" customModule="ChannelIsland" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="g1x-Qf-IWD"/>
-                        <viewControllerLayoutGuide type="bottom" id="w0a-62-Kfe"/>
+                        <viewControllerLayoutGuide type="top" id="sMV-ty-9Pj"/>
+                        <viewControllerLayoutGuide type="bottom" id="13M-Lk-cSC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8qY-dQ-VtX">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -1327,12 +1356,12 @@ This nonprofit organization supports the education and research programs of the 
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rh6-8u-M2p" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" numberOfTouchesRequired="2" id="zsK-b7-DYl">
                     <connections>
-                        <segue destination="Pt7-em-sn4" kind="show" identifier="revealSegue" id="cXW-Yx-Jng"/>
+                        <segue destination="Pt7-em-sn4" kind="presentation" identifier="revealSegue" id="cXW-Yx-Jng"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="right" numberOfTouchesRequired="2" id="FSW-KN-gKb">
                     <connections>
-                        <segue destination="Pt7-em-sn4" kind="show" identifier="revealSeque" id="BPa-BY-zGy"/>
+                        <segue destination="Pt7-em-sn4" kind="presentation" identifier="revealSeque" id="BPa-BY-zGy"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="5ih-DT-mxk">
@@ -1346,15 +1375,15 @@ This nonprofit organization supports the education and research programs of the 
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="5597" y="-206"/>
+            <point key="canvasLocation" x="5597" y="-205.99999999999997"/>
         </scene>
         <!--Photo Comment View Controller2-->
         <scene sceneID="1av-xE-7cu">
             <objects>
                 <viewController storyboardIdentifier="v2" modalTransitionStyle="crossDissolve" id="Pt7-em-sn4" customClass="PhotoCommentViewController2" customModule="ChannelIsland" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2Y5-u7-kuK"/>
-                        <viewControllerLayoutGuide type="bottom" id="IdB-0l-ZRC"/>
+                        <viewControllerLayoutGuide type="top" id="RSk-bj-2Fg"/>
+                        <viewControllerLayoutGuide type="bottom" id="h0F-e1-9cz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="a1V-l1-RGw">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -1511,12 +1540,12 @@ This nonprofit organization supports the education and research programs of the 
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3P9-bH-rEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" numberOfTouchesRequired="2" id="0hn-zQ-NUX">
                     <connections>
-                        <segue destination="8dJ-fM-KA1" kind="show" identifier="revealSegue" id="Mcr-xf-oZR"/>
+                        <segue destination="8dJ-fM-KA1" kind="presentation" identifier="revealSegue" id="Mcr-xf-oZR"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="right" numberOfTouchesRequired="2" id="bka-ZM-WZd">
                     <connections>
-                        <segue destination="8dJ-fM-KA1" kind="show" identifier="revealSeque" id="2Hc-a5-MTB"/>
+                        <segue destination="8dJ-fM-KA1" kind="presentation" identifier="revealSeque" id="2Hc-a5-MTB"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="ycR-oD-5cV">
@@ -1530,15 +1559,15 @@ This nonprofit organization supports the education and research programs of the 
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="5522" y="780"/>
+            <point key="canvasLocation" x="5522" y="779.99999999999989"/>
         </scene>
         <!--Santa Barbara View Controller-->
         <scene sceneID="tiQ-i8-3nb">
             <objects>
                 <viewController id="jD5-Az-AEW" customClass="SantaBarbaraViewController" customModule="ChannelIsland" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="h1r-95-O0e"/>
-                        <viewControllerLayoutGuide type="bottom" id="3We-WX-4r5"/>
+                        <viewControllerLayoutGuide type="top" id="rii-V4-dY6"/>
+                        <viewControllerLayoutGuide type="bottom" id="WdH-e4-LmW"/>
                     </layoutGuides>
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="srG-VG-iiY">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -1589,15 +1618,15 @@ This nonprofit organization supports the education and research programs of the 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Th-Kw-Ic0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4480" y="972"/>
+            <point key="canvasLocation" x="4480" y="971.99999999999989"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9m0-gb-ziv">
             <objects>
                 <viewController id="bn2-bb-MxT" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4uV-r1-1RB"/>
-                        <viewControllerLayoutGuide type="bottom" id="l9r-4c-Gft"/>
+                        <viewControllerLayoutGuide type="top" id="eig-Zz-jQ5"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Wr-lO-kxG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pEG-wQ-MUV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -1607,6 +1636,7 @@ This nonprofit organization supports the education and research programs of the 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p0T-hm-qLS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="174" y="316.5"/>
         </scene>
     </scenes>
     <resources>
@@ -1616,6 +1646,7 @@ This nonprofit organization supports the education and research programs of the 
         <image name="CI_LOGOS_FOR_DISSOLVE_LOOP" width="2048" height="1536"/>
         <image name="CI_Main_Icon_HOME_V02" width="900" height="90"/>
         <image name="CI_Main_Icon_PHOTOGRAPHY" width="2048" height="1536"/>
+        <image name="Channel_Island_Live_Presentation" width="530" height="400"/>
         <image name="HIGHLIGHT1_00010" width="90" height="90"/>
         <image name="HIGHLIGHT2_00010" width="90" height="90"/>
         <image name="HIGHLIGHT3_00010" width="90" height="90"/>
@@ -1656,6 +1687,6 @@ This nonprofit organization supports the education and research programs of the 
         <segue reference="0j0-Vz-LUs"/>
         <segue reference="jew-Ho-UNx"/>
         <segue reference="OjJ-ZP-iCm"/>
-        <segue reference="aTj-7v-ik0"/>
+        <segue reference="cXW-Yx-Jng"/>
     </inferredMetricsTieBreakers>
 </document>
