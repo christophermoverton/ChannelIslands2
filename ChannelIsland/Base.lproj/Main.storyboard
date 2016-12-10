@@ -169,15 +169,21 @@ by people for at least 13,000 years.</string>
                             <imageView opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Main_Navigation_CLEAN_UP_V01_Blur" translatesAutoresizingMaskIntoConstraints="NO" id="cMd-Z5-khC">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Water_00000" translatesAutoresizingMaskIntoConstraints="NO" id="BJv-bK-yP7">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JFh-w5-TCb">
                                 <rect key="frame" x="0.0" y="150" width="1024" height="618"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Water_00001" translatesAutoresizingMaskIntoConstraints="NO" id="KSc-Z9-sM7">
-                                <rect key="frame" x="0.0" y="150" width="1024" height="618"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Water_00002" translatesAutoresizingMaskIntoConstraints="NO" id="NYK-p9-0gq">
-                                <rect key="frame" x="0.0" y="150" width="1024" height="618"/>
-                            </imageView>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Water_00000" translatesAutoresizingMaskIntoConstraints="NO" id="BJv-bK-yP7">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="618"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Water_00001" translatesAutoresizingMaskIntoConstraints="NO" id="KSc-Z9-sM7">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="618"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Water_00002" translatesAutoresizingMaskIntoConstraints="NO" id="NYK-p9-0gq">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="618"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HIGHLIGHT_REFERENCE" translatesAutoresizingMaskIntoConstraints="NO" id="156-Bi-vzA">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
@@ -758,6 +764,9 @@ This nonprofit organization supports the education and research programs of the 
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bald_Eagle_Web_Cam_View" translatesAutoresizingMaskIntoConstraints="NO" id="j9x-UI-fyP">
+                                        <rect key="frame" x="59" y="231" width="265" height="200"/>
+                                    </imageView>
                                 </subviews>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmQ-vy-JnW">
@@ -890,6 +899,7 @@ This nonprofit organization supports the education and research programs of the 
                         <outlet property="ScrollView2" destination="8d2-KK-2ym" id="IyK-IA-1R1"/>
                         <outlet property="TextView1" destination="GAa-ht-PVy" id="lsE-I1-z2E"/>
                         <outlet property="TextView2" destination="CE0-uh-29B" id="yJx-fK-PrQ"/>
+                        <outlet property="WaterAnimView" destination="JFh-w5-TCb" id="fh6-aS-Kzv"/>
                         <outlet property="WaterImg0" destination="BJv-bK-yP7" id="l6n-DI-37k"/>
                         <outlet property="WaterImg1" destination="KSc-Z9-sM7" id="TER-L8-b3r"/>
                         <outlet property="WaterImg2" destination="NYK-p9-0gq" id="Rwc-Sr-uEP"/>
@@ -1602,6 +1612,7 @@ This nonprofit organization supports the education and research programs of the 
     <resources>
         <image name="1_DISSOLVE_SUNSET" width="2048" height="1536"/>
         <image name="ANACAPA_CLEAN" width="2048" height="1536"/>
+        <image name="Bald_Eagle_Web_Cam_View" width="530" height="400"/>
         <image name="CI_LOGOS_FOR_DISSOLVE_LOOP" width="2048" height="1536"/>
         <image name="CI_Main_Icon_HOME_V02" width="900" height="90"/>
         <image name="CI_Main_Icon_PHOTOGRAPHY" width="2048" height="1536"/>

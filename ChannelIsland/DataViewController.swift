@@ -71,6 +71,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var Highlight1Title: UITextView!
     @IBOutlet weak var Highlight1Logo: UIImageView!
     @IBOutlet weak var TextView1: UITextView!
+    @IBOutlet weak var WaterAnimView: UIView!
     
     @IBOutlet weak var Highlight1Button: UIButton!
     @IBOutlet weak var DismissHighlight1: UIButton!
@@ -258,7 +259,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
                 self.Highlights6.alpha = 1
                 self.Highlights7.alpha = 1
                 self.Highlights8.alpha = 1
-                
+                self.WaterAnimView.alpha = 1
             }
             self.ScrollView.alpha = 0
             self.IView2.alpha = 0
@@ -336,6 +337,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
                 self.Highlights6.alpha = 0
                 self.Highlights7.alpha = 0
                 self.Highlights8.alpha = 0
+                self.WaterAnimView.alpha = 0
                 if self.HightlightsActive {
                     self.HighlightNumbersView.alpha = 0
                     
@@ -640,6 +642,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
                 self.Highlights6.alpha = 0
                 self.Highlights7.alpha = 0
                 self.Highlights8.alpha = 0
+                self.WaterAnimView.alpha = 0
                 if self.HightlightsActive {
                     self.HighlightNumbersView.alpha = 0
                     
@@ -720,6 +723,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.GreenDotAnimView5.alpha = 1
             self.Highlight1Logo.alpha = 0
             self.Highlight1Title.alpha = 0
+            self.WaterAnimView.alpha = 1
             if self.HightlightsActive {
                 //self.HighlightNumbersView.alpha = 1
                 self.Highlights1.alpha = 1
@@ -804,7 +808,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.GreenDotAnimView3.alpha = 1
             self.GreenDotAnimView4.alpha = 1
             self.GreenDotAnimView5.alpha = 1
-
+            self.WaterAnimView.alpha = 1
             if self.HightlightsActive {
                 //self.HighlightNumbersView.alpha = 1
                 self.Highlights1.alpha = 1
@@ -887,6 +891,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
                 self.Highlights6.alpha = 0
                 self.Highlights7.alpha = 0
                 self.Highlights8.alpha = 0
+                self.WaterAnimView.alpha = 0
                 if self.HightlightsActive {
                     self.HighlightNumbersView.alpha = 0
                     
