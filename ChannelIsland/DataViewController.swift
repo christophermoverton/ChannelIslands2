@@ -56,6 +56,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
     private var planningActive: Bool = false
     private var infoActive: Bool = false
     private var Highlight1Active = false
+    private var Highlight2Active = false
     var imageArray: [UIImage] = []
     //var lightBlur: UIBlurEffect
     //var blurView: UIVisualEffectView
@@ -74,23 +75,40 @@ class DataViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var WaterAnimView: UIView!
     @IBOutlet weak var Caption1: UITextView!
     @IBOutlet weak var Caption2: UITextView!
+    @IBOutlet weak var Highlight1Image: UIImageView!
+    @IBOutlet weak var Highlight1Image2: UIImageView!
+    
+    @IBOutlet weak var Highlight2Button: UIButton!
     
     @IBOutlet weak var Highlight1Button: UIButton!
     @IBOutlet weak var DismissHighlight1: UIButton!
-    private var Highlighttextstrings: [[String]] = [["Visitor Center & Channel Islands Live\n\n","Begin your discovery of the Channel Islands at the Robert J. Lagomarsino Visitor Center, featuring exhibits, a native plant garden, a park film, and bookstore. Tour the islands via Channel Islands Live, featuring ranger-led virtual hikes and dives, interactive broadcasts, and webcams. The fully accessible facility operates daily except Thanksgiving and December 25th."]]
+    private var Highlighttextstrings: [[String]] = [["Visitor Center & Channel Islands Live\n\n","Begin your discovery of the Channel Islands at the Robert J. Lagomarsino Visitor Center, featuring exhibits, a native plant garden, a park film, and bookstore. Tour the islands via Channel Islands Live, featuring ranger-led virtual hikes and dives, interactive broadcasts, and webcams. The fully accessible facility operates daily except Thanksgiving and December 25th."],["Anacapa: Three Islands in One\n\n","Just 14 miles from Ventura, rugged and rocky Anacapa attracts experienced boaters, kayakers, divers, snorkelers, and day-trippers alike. Visit the iconic lighthouse and look for the original Fresnel lens inside the Visitor Center. Gorgeous views, hikes, and abundant birdlife on Anacapa’s three islets make it a must-see destination. Concession ferry operators offer full- and half-day trips year-round.\n\nWeather and Safety\n\n \u{2022} There are no all-weather anchorages around the islands. One capable person should stay on board the boat at all times.\n\n \u{2022} Boaters are responsible for any damage to the resources caused by their boat.\n\n \u{2022} Private boaters may land on all five islands within the national park year round.\n\n \u{2022} There are no landing permits required for the Channel Islands, except for the Nature Conservancy property on Santa Cruz Island and San Miguel Island. Please refer to the Channel Islands National Park newspaper and website for closed and restricted areas ((805) 658-5730 www.nps.gov/chis)\n\n \u{2022} Boaters should contact the park ranger on Channel 16 before landing.\n\n \u{2022} Be aware there is no personal watercraft are allowed within 1 mile of the National Park."]]
     private var HighlightAttributes : [[[String: AnyObject]]] = [[[NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
         NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
             NSBackgroundColorAttributeName: UIColor.clearColor(),
-            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 16.0)!]]]
-    private var HighlightCaptiontextstrings: [[String]] = [["Channel Islands Live presentation (NPS, photo by Bill Kendig )", "Bald Eagle web cam view (NPS)"]]
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 16.0)!]],[[NSForegroundColorAttributeName: UIColor.whiteColor(),
+                NSBackgroundColorAttributeName: UIColor.clearColor(),
+                NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+                [NSForegroundColorAttributeName: UIColor.whiteColor(),
+                    NSBackgroundColorAttributeName: UIColor.clearColor(),
+                    NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 16.0)!]]]
+    private var HighlightCaptiontextstrings: [[String]] = [["Channel Islands Live presentation (NPS, photo by Bill Kendig )", "Bald Eagle web cam view (NPS)"],["Anacapa Island, lighthouse springtime flowers"]]
     private var HighlightCaptionAttributes : [[[String: AnyObject]]] = [[[NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
         NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 12.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
             NSBackgroundColorAttributeName: UIColor.clearColor(),
-            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 12.0)!]]]
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 12.0)!]],[[NSForegroundColorAttributeName: UIColor.whiteColor(),
+                NSBackgroundColorAttributeName: UIColor.clearColor(),
+                NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 12.0)!]]]
+    private let photonames: [[String]] = [["Bald_Eagle_Web_Cam_View","Channel_Island_Live_Presentation"],["ANACAPA_LIGHTHOUSE","none"]]
+    private var logonames: [String] = ["HIGHLIGHT_1_BIG", "HIGHLIGHT_2_BIG"]
+    private var HighlightTitlestrings: [String] = ["Channel Islands Live and\nChannel Islands National Park Visitor Center", "Anacapa Island"]
+    private var HighlightTitleAttributes : [[String: AnyObject]] = [[NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 33.0)!]]
     /*
     // create attributed string
     let myString = "Swift Attributed String"
@@ -113,7 +131,10 @@ class DataViewController: UIViewController, UITextViewDelegate {
             print("Segue2 used!")
             
         }
-        
+        if self.Highlight2Active{
+            if segue.identifier == "AncToIsland"{
+            }
+        }
         if segue.identifier == photoSequeId, let photographyPageViewController = segue.destinationViewController as? PhotoCommentViewController {
             print("Hit Photography Page View Seque")
             //photographyPageViewController.photos = photos
@@ -592,11 +613,16 @@ class DataViewController: UIViewController, UITextViewDelegate {
 
     @IBAction func Highlight1Clicked(sender: AnyObject) {
         print("Clicked")
-        self.enableHighlight1()
+        self.enableHighlight1(0)
     }
 
+
+    @IBAction func Highlight2Clicked(sender: AnyObject) {
+        self.enableHighlight1(1)
+        self.Highlight2Active = true
+    }
     
-    func enableHighlight1(){
+    func enableHighlight1(hlightID : Int){
         if self.infoActive {
             self.ScrollView2.hidden = false
             self.infoActive = false
@@ -618,6 +644,28 @@ class DataViewController: UIViewController, UITextViewDelegate {
             })
         }
         else{
+            
+            var captions: [UITextView!] = [self.Caption1, self.Caption2]
+            var images: [UIImageView!] = [self.Highlight1Image, self.Highlight1Image2]
+            var ihighlightstrs : [String] = self.Highlighttextstrings[hlightID]
+            var i = 0
+            let result = NSMutableAttributedString()
+            self.Highlight1Logo.image = UIImage(imageLiteral: self.logonames[hlightID])
+            var lmystr = self.HighlightTitlestrings[hlightID]
+            var lmyAttributes = self.HighlightTitleAttributes[0]
+            var lmyAttrString1 = NSAttributedString(string: lmystr,
+                                                   attributes: lmyAttributes)
+            self.Highlight1Title.attributedText = lmyAttrString1
+            for ihighlightstr: String in ihighlightstrs{
+                
+                var myAttributes = self.HighlightAttributes[hlightID][i]
+                var myAttrString1 = NSAttributedString(string: ihighlightstr,
+                                                       attributes: myAttributes)
+                result.appendAttributedString(myAttrString1)
+                i+=1
+            }
+            self.TextView1.attributedText = result
+            /*
             var str: String = Highlighttextstrings[0][0]
             var str2: String = Highlighttextstrings[0][1]
             var myAttributes = HighlightAttributes[0][0]
@@ -627,16 +675,48 @@ class DataViewController: UIViewController, UITextViewDelegate {
             let result = NSMutableAttributedString()
             result.appendAttributedString(myAttrString1)
             result.appendAttributedString(myAttrString2)
+            */
+            i = 0
+            let skip : [[Bool]] = [[false,false],[false,true]]
+            let cihighlightstrs : [String] = self.HighlightCaptiontextstrings[hlightID]
+            for cihighlightstr: String in cihighlightstrs{
+                let cmyAttributes = self.HighlightCaptionAttributes[hlightID][i]
+                let cmyAttrString1 = NSAttributedString(string: cihighlightstr,attributes: cmyAttributes)
+                let caption  = captions[i]
+                let Image = images[i]
+                
+                
+                Image.image = UIImage(imageLiteral: self.photonames[hlightID][i])
+
+                caption.attributedText = cmyAttrString1
+                i+=1
+            }
+            i = 0
+            for skipi : Bool in skip[hlightID]{
+                let Image = images[i]
+                let caption = captions[i]
+                if skipi{
+                    Image.alpha = 0
+                    caption.alpha = 0
+                }
+                else{
+                    Image.alpha = 1
+                    caption.alpha = 1
+                }
+                i+=1
+            }
+            /*
             var cstr: String = HighlightCaptiontextstrings[0][0]
             var cstr2: String = HighlightCaptiontextstrings[0][1]
             var cmyAttributes = HighlightCaptionAttributes[0][0]
             var cmyAttrString1 = NSAttributedString(string: cstr, attributes: cmyAttributes)
             var cmyAttributes1 = HighlightCaptionAttributes[0][1]
             let cmyAttrString2 = NSAttributedString(string: cstr2, attributes: cmyAttributes1)
+            */
             //let cresult = NSMutableAttributedString()
             //cresult.appendAttributedString(cmyAttrString1)
-            self.Caption1.attributedText = cmyAttrString1
-            self.Caption2.attributedText = cmyAttrString2
+            //self.Caption1.attributedText = cmyAttrString1
+            //self.Caption2.attributedText = cmyAttrString2
             self.Highlight1ScrollView.hidden = false
             self.CloseTV.hidden = false
             self.Highlight1Active = true
