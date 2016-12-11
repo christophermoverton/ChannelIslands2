@@ -846,6 +846,14 @@ This nonprofit organization supports the education and research programs of the 
                                     <action selector="Highlight2Clicked:" destination="S4R-Ja-viH" eventType="touchUpInside" id="Y6b-gZ-ghw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8s-bu-0fg">
+                                <rect key="frame" x="765" y="341" width="45" height="45"/>
+                                <connections>
+                                    <action selector="Highlight1Clicked:" destination="S4R-Ja-viH" eventType="touchUpInside" id="NSi-CJ-Jh6"/>
+                                    <action selector="Highlight2Clicked:" destination="S4R-Ja-viH" eventType="touchUpInside" id="lSV-fg-Hm1"/>
+                                    <action selector="Highlight3Clicked:" destination="S4R-Ja-viH" eventType="touchUpInside" id="Gdw-10-knO"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SjV-01-Ua8">
                                 <rect key="frame" x="439" y="694" width="46" height="60"/>
                                 <connections>
@@ -907,6 +915,7 @@ This nonprofit organization supports the education and research programs of the 
                         <outlet property="Highlight1ScrollView" destination="4xI-cI-lIO" id="lTD-v8-B5x"/>
                         <outlet property="Highlight1Title" destination="yWo-mw-cH8" id="J3R-Kd-3DO"/>
                         <outlet property="Highlight2Button" destination="nZW-Tz-EoR" id="a5D-yC-sBP"/>
+                        <outlet property="Highlight3Button" destination="b8s-bu-0fg" id="szW-b1-axX"/>
                         <outlet property="HighlightNumbersView" destination="156-Bi-vzA" id="qjS-Mx-auz"/>
                         <outlet property="Highlights1" destination="fr8-Qh-Ahn" id="mS2-37-6sg"/>
                         <outlet property="Highlights2" destination="404-SE-TU5" id="5OT-TE-k9L"/>
