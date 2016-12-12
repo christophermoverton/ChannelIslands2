@@ -341,7 +341,7 @@ Cg
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8d2-KK-2ym">
                                 <rect key="frame" x="0.0" y="118" width="1024" height="568"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g83-Cu-zcL">
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g83-Cu-zcL">
                                         <rect key="frame" x="74" y="0.0" width="873" height="128"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <string key="text">A visit to the Channel Islands is an exercise in preparation and self-reliance.  Since there are no services on the islands, there are no remedies for poor planning once you have arrived.  Please pay attention to the directives to visit each island. </string>
@@ -349,7 +349,7 @@ Cg
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2WR-t5-oBo">
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2WR-t5-oBo">
                                         <rect key="frame" x="209" y="100" width="750" height="250"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Visitor Centers ">
@@ -398,7 +398,7 @@ Located at 113 Harbor Way, 4th Floor, Santa Barbara, CA 93109, 805-884-1475.</st
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rrT-VG-kgG">
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rrT-VG-kgG">
                                         <rect key="frame" x="209" y="375" width="750" height="149"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <attributedString key="attributedText">
@@ -449,7 +449,7 @@ This nonprofit organization supports the education and research programs of the 
                                 <rect key="frame" x="0.0" y="118" width="1024" height="568"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CE0-uh-29B">
-                                        <rect key="frame" x="370" y="223" width="646" height="222"/>
+                                        <rect key="frame" x="370" y="280" width="646" height="280"/>
                                         <attributedString key="attributedText">
                                             <fragment>
                                                 <string key="content">The Channel Islands National Marine Sanctuary
@@ -462,10 +462,19 @@ This nonprofit organization supports the education and research programs of the 
                                                 </attributes>
                                             </fragment>
                                             <fragment>
-                                                <string key="content">Established in 1980, the sanctuary in the Santa Barbara Channel is an area of national significance because of its exceptional natural beauty and resources. The sanctuary is home to an extremely rich and diverse array of marine species, making it one of the best places in the world for viewing whales and other wildlif</string>
+                                                <string key="content">Established in 1980, the sanctuary in the Santa Barbara Channel is an area of national significance because of its exceptional natural </string>
                                                 <attributes>
                                                     <color key="NSColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica-Light"/>
+                                                    <font key="NSFont" size="18" name="Helvetica-Light"/>
+                                                    <font key="NSOriginalFont" size="18" name="Helvetica-Light"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">beauty and resources. The sanctuary is home to an extremely rich and diverse array of marine species, making it one of the best places in the world for viewing whales and other wildlif</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="18" name="Helvetica-Light"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -475,7 +484,7 @@ This nonprofit organization supports the education and research programs of the 
 Administered by the National Oceanic and Atmospheric Administration (NOAA), within the Department of Commerce, the sanctuary encompasses 1,470 square miles of water from mean high tide to six nautical miles offshore of Santa Barbara, Anacapa, Santa Cruz, Santa Rosa, and San Miguel islands.</string>
                                                 <attributes>
                                                     <color key="NSColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica-Light"/>
+                                                    <font key="NSFont" size="18" name="Helvetica-Light"/>
                                                     <font key="NSOriginalFont" size="14" name="Helvetica-Light"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
@@ -487,90 +496,37 @@ Administered by the National Oceanic and Atmospheric Administration (NOAA), with
                                         <rect key="frame" x="14" y="234" width="353" height="199"/>
                                     </imageView>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hpG-AC-ik8">
-                                        <rect key="frame" x="370" y="33" width="637" height="182"/>
+                                        <rect key="frame" x="370" y="33" width="637" height="240"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="Welcome!">
+                                            <fragment>
+                                                <string key="content">Welcome! The Channel Islands are a rugged gem waiting for you, just a short boat ride from the Southern California coast. Here the cold currents of the north merge with warmer waters coming from the south, creating a dynamic transition zone of sea life. Explore these rugged and scenic islands—a world away, yet so close: 
+</string>
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica-Light"/>
+                                                    <font key="NSFont" size="18" name="Helvetica-Light"/>
+                                                    <font key="NSOriginalFont" size="18" name="Helvetica-Light"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                             <fragment>
-                                                <string key="content"> The Channel Islands are a rugged gem waiting for you, just a short boat ride from the Southern California coast. Here the cold currents of the north merge with warmer waters coming from the south, creating a dynamic transition zone of sea life. Explore these rugged and scenic islands—a world away, yet so close: 
+                                                <string key="content">* 1,470 square miles (3800 km2) of coastal waters 
+* 175 miles of stunning California coastline 
+* 150 historic shipwrecks 
 </string>
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica-Light"/>
-                                                    <font key="NSOriginalFont" size="14" name="Helvetica-Light"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="* ">
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica-Light"/>
+                                                    <font key="NSFont" size="18" name="Helvetica-Light"/>
+                                                    <font key="NSOriginalFont" size="18" name="Helvetica-Light"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="24" headIndent="24" defaultTabInterval="1" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                             <fragment>
-                                                <string key="content">1,470 square miles (3800 km2) of coastal waters 
-</string>
+                                                <string key="content">* 8 islands make up the Channel Islands chain, 5 of which are protected as a national park and marine sanctuary, including their submerged lands and surrounding waters</string>
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica-Light"/>
-                                                    <font key="NSOriginalFont" size="14" name="Helvetica-Light"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="24" headIndent="24" defaultTabInterval="1" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="* ">
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica-Light"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="24" headIndent="24" defaultTabInterval="1" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">175 miles of stunning California coastline 
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica-Light"/>
-                                                    <font key="NSOriginalFont" size="14" name="Helvetica-Light"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="24" headIndent="24" defaultTabInterval="1" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="* ">
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica-Light"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="24" headIndent="24" defaultTabInterval="1" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">150 historic shipwrecks 
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica-Light"/>
-                                                    <font key="NSOriginalFont" size="14" name="Helvetica-Light"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="24" headIndent="24" defaultTabInterval="1" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="* ">
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica-Light"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="25" headIndent="35" defaultTabInterval="1" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">8 islands make up the Channel Islands chain, 5 of which are protected as a national park and marine sanctuary, including their submerged lands and surrounding waters</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica-Light"/>
-                                                    <font key="NSOriginalFont" size="14" name="Helvetica-Light"/>
+                                                    <font key="NSFont" size="18" name="Helvetica-Light"/>
+                                                    <font key="NSOriginalFont" size="18" name="Helvetica-Light"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="25" headIndent="35" defaultTabInterval="1" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -578,7 +534,7 @@ Administered by the National Oceanic and Atmospheric Administration (NOAA), with
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ek8-oy-gHH">
-                                        <rect key="frame" x="370" y="443" width="646" height="193"/>
+                                        <rect key="frame" x="370" y="570" width="646" height="300"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Channel Islands National Park">
                                                 <attributes>
@@ -588,13 +544,30 @@ Administered by the National Oceanic and Atmospheric Administration (NOAA), with
                                                 </attributes>
                                             </fragment>
                                             <fragment>
-                                                <string key="content">
-Channel Islands National Park encompasses five of the eight remarkable islands and their ocean environment, preserving and protecting a wealth of natural and cultural resources. Isolation over thousands of years has created unique animals, plants, and archeological resources found nowhere else on Earth and helped preserve a place where visitors can experience coastal southern California as it once was.
+                                                <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="14" name="Helvetica-Light"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="Channel Islands National Park encompasses five of ">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="18" name="Helvetica-Light"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">the eight remarkable islands and their ocean environment, preserving and protecting a wealth of natural and cultural resources. Isolation over thousands of years has created unique animals, plants, and archeological resources found nowhere else on Earth and helped preserve a place where visitors can experience coastal southern California as it once was.
 
 Administered by the National Park Service within the Department of the Interior, the park consists of 250,000 acres of land and ocean environment, encompassing Anacapa, Santa Cruz, Santa Rosa, San Miguel, and Santa Barbara Islands, their submerged lands, and the waters within one nautical mile of each island.</string>
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="14" name="Helvetica-Light"/>
+                                                    <font key="NSFont" size="18" name="Helvetica-Light"/>
+                                                    <font key="NSOriginalFont" size="18" name="Helvetica-Light"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -640,7 +613,7 @@ Channel Islands National Park Visitor Center</string>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4xI-cI-lIO">
                                 <rect key="frame" x="0.0" y="120" width="1024" height="565"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GAa-ht-PVy">
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GAa-ht-PVy">
                                         <rect key="frame" x="368" y="5" width="600" height="900"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
