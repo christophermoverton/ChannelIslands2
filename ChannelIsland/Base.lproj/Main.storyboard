@@ -438,6 +438,13 @@ This nonprofit organization supports the education and research programs of the 
                                     </view>
                                 </subviews>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmQ-vy-JnW">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="DismissInfoClick:" destination="S4R-Ja-viH" eventType="touchUpInside" id="aTt-Mp-t4l"/>
+                                </connections>
+                            </button>
                             <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vwb-27-UOI">
                                 <rect key="frame" x="0.0" y="118" width="1024" height="568"/>
                                 <subviews>
@@ -483,15 +490,6 @@ Administered by the National Oceanic and Atmospheric Administration (NOAA), with
                                         <rect key="frame" x="370" y="33" width="637" height="182"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <attributedString key="attributedText">
-                                            <fragment>
-                                                <string key="content">Discover Your Channel Islands
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="18" name="Helvetica-Light"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
                                             <fragment content="Welcome!">
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -640,10 +638,10 @@ Channel Islands National Park Visitor Center</string>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4xI-cI-lIO">
-                                <rect key="frame" x="0.0" y="102" width="1024" height="565"/>
+                                <rect key="frame" x="0.0" y="120" width="1024" height="565"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GAa-ht-PVy">
-                                        <rect key="frame" x="368" y="5" width="650" height="800"/>
+                                        <rect key="frame" x="368" y="5" width="600" height="900"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <attributedString key="attributedText">
@@ -826,13 +824,6 @@ This nonprofit organization supports the education and research programs of the 
                                     </imageView>
                                 </subviews>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmQ-vy-JnW">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <action selector="DismissInfoClick:" destination="S4R-Ja-viH" eventType="touchUpInside" id="aTt-Mp-t4l"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTc-bl-b5P">
                                 <rect key="frame" x="880" y="252" width="45" height="45"/>
                                 <connections>

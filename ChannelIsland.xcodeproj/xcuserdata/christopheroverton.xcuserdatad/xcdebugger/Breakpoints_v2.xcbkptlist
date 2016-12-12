@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChannelIsland/DataViewController.swift"
-            timestampString = "503180463.490953"
+            timestampString = "503215573.563935"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "667"
-            endingLineNumber = "667"
+            startingLineNumber = "674"
+            endingLineNumber = "674"
             landmarkName = "enableHighlight1(_:)"
             landmarkType = "5">
          </BreakpointContent>

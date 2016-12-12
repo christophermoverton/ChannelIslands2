@@ -89,30 +89,30 @@ class DataViewController: UIViewController, UITextViewDelegate {
         NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
             NSBackgroundColorAttributeName: UIColor.clearColor(),
-            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 16.0)!]],[[NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!]],[[NSForegroundColorAttributeName: UIColor.whiteColor(),
                 NSBackgroundColorAttributeName: UIColor.clearColor(),
                 NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
                 [NSForegroundColorAttributeName: UIColor.whiteColor(),
                     NSBackgroundColorAttributeName: UIColor.clearColor(),
-                    NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 16.0)!]], [[NSForegroundColorAttributeName: UIColor.whiteColor(),
+                    NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!]], [[NSForegroundColorAttributeName: UIColor.whiteColor(),
                         NSBackgroundColorAttributeName: UIColor.clearColor(),
                         NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
                         [NSForegroundColorAttributeName: UIColor.whiteColor(),
                             NSBackgroundColorAttributeName: UIColor.clearColor(),
-                            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 16.0)!]]]
+                            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!]]]
     private var HighlightCaptiontextstrings: [[String]] = [["Channel Islands Live presentation (NPS, photo by Bill Kendig )", "Bald Eagle web cam view (NPS)"],["Anacapa Island, lighthouse springtime flowers"],["Island Packers ferry service at Scorpion Bay, Santa Cruz Island (photo by Tim Hauf)"]]
     private var HighlightCaptionAttributes : [[[String: AnyObject]]] = [[[NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
-        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 12.0)!],
+        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 16.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
             NSBackgroundColorAttributeName: UIColor.clearColor(),
-            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 12.0)!]],
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 16.0)!]],
                 [[NSForegroundColorAttributeName: UIColor.whiteColor(),
                 NSBackgroundColorAttributeName: UIColor.clearColor(),
-                NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 12.0)!]],
+                NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 16.0)!]],
                 [[NSForegroundColorAttributeName: UIColor.whiteColor(),
                     NSBackgroundColorAttributeName: UIColor.clearColor(),
-                    NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 12.0)!]]]
+                    NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 16.0)!]]]
     private let photonames: [[String]] = [["Bald_Eagle_Web_Cam_View","Channel_Island_Live_Presentation"],["ANACAPA_LIGHTHOUSE","none"],["SCORPION_BAY","none"]]
     private var logonames: [String] = ["HIGHLIGHT_1_BIG", "HIGHLIGHT_2_BIG", "HIGHLIGHT_3_BIG"]
     private var HighlightTitlestrings: [String] = ["Channel Islands Live and\nChannel Islands National Park Visitor Center", "Anacapa Island", "Santa Cruz Island"]
@@ -162,14 +162,14 @@ class DataViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.ScrollView.contentSize.height = 650
+        self.ScrollView.contentSize.height = 950
         self.ScrollView.hidden = true
         self.DismissInfo.hidden = true
         self.DismissPlanning.hidden = true
-        self.ScrollView2.contentSize.height = 650
+        self.ScrollView2.contentSize.height = 950
         self.ScrollView2.hidden = true
         self.CloseTV.hidden = true
-        self.Highlight1ScrollView.contentSize.height = 650
+        self.Highlight1ScrollView.contentSize.height = 950
         /*
         let path = NSBundle.mainBundle().pathForResource("SampleText", ofType: "txt")
         let fm = NSFileManager()
@@ -304,6 +304,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.ScrollView.alpha = 0
             self.IView2.alpha = 0
             self.CloseTV.alpha = 0
+            self.Highlight1Title.alpha = 0
             }, completion: { finished in
                 if (finished){
                     
@@ -348,6 +349,11 @@ class DataViewController: UIViewController, UITextViewDelegate {
             })
         }
         else{
+            let lmystr = "Discover your Channnel Islands"
+            let lmyAttributes = self.HighlightTitleAttributes[0]
+            let lmyAttrString1 = NSAttributedString(string: lmystr,
+                                                    attributes: lmyAttributes)
+            self.Highlight1Title.attributedText = lmyAttrString1
             self.ScrollView.hidden = false
             self.CloseTV.hidden = false
             self.NavBar.image = UIImage(named: "CI_Main_Icon_INFO_V02")
@@ -364,6 +370,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
                 self.IView.alpha = 0
                 self.ScrollView.alpha = 1
                 self.IView2.alpha = 1
+                self.Highlight1Title.alpha = 1
                 self.GreenDotAnimIView.alpha = 0
                 self.GreenDotAnimView2.alpha = 0
                 self.GreenDotAnimView3.alpha = 0
@@ -490,7 +497,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
             Highlights2.animationImages = imageArr2
             Highlights2.animationRepeatCount = 1
             Highlights2.animationDuration = 0.667
-            let delay = 0.25 * Double(NSEC_PER_SEC)
+            let delay = 0.10 * Double(NSEC_PER_SEC)
             let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
             dispatch_after(time, dispatch_get_main_queue()) {
                 self.Highlights2.alpha = 1
@@ -507,7 +514,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
             Highlights3.animationImages = imageArr3
             Highlights3.animationRepeatCount = 1
             Highlights3.animationDuration = 0.667
-            let delay2 = 0.50 * Double(NSEC_PER_SEC)
+            let delay2 = 0.20 * Double(NSEC_PER_SEC)
             let time2 = dispatch_time(DISPATCH_TIME_NOW, Int64(delay2))
             dispatch_after(time2, dispatch_get_main_queue()) {
                 self.Highlights3.alpha = 1
@@ -523,7 +530,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
             Highlights4.animationImages = imageArr4
             Highlights4.animationRepeatCount = 1
             Highlights4.animationDuration = 0.667
-            let delay3 = 0.75 * Double(NSEC_PER_SEC)
+            let delay3 = 0.3 * Double(NSEC_PER_SEC)
             let time3 = dispatch_time(DISPATCH_TIME_NOW, Int64(delay3))
             dispatch_after(time3, dispatch_get_main_queue()) {
                 self.Highlights4.alpha = 1
@@ -540,7 +547,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
             Highlights5.animationRepeatCount = 1
             Highlights5.animationDuration = 0.667
             //sleep(1000000)
-            let delay4 = 1.0 * Double(NSEC_PER_SEC)
+            let delay4 = 0.4 * Double(NSEC_PER_SEC)
             let time4 = dispatch_time(DISPATCH_TIME_NOW, Int64(delay4))
             dispatch_after(time4, dispatch_get_main_queue()) {
                 self.Highlights5.alpha = 1
@@ -557,7 +564,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
             Highlights6.animationRepeatCount = 1
             Highlights6.animationDuration = 0.667
             //sleep(1)
-            let delay5 = 1.25 * Double(NSEC_PER_SEC)
+            let delay5 = 0.5 * Double(NSEC_PER_SEC)
             let time5 = dispatch_time(DISPATCH_TIME_NOW, Int64(delay5))
             dispatch_after(time5, dispatch_get_main_queue()) {
                 self.Highlights6.alpha = 1
@@ -573,7 +580,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
             Highlights7.animationImages = imageArr7
             Highlights7.animationRepeatCount = 1
             Highlights7.animationDuration = 0.667
-            let delay6 = 1.5 * Double(NSEC_PER_SEC)
+            let delay6 = 0.6 * Double(NSEC_PER_SEC)
             let time6 = dispatch_time(DISPATCH_TIME_NOW, Int64(delay6))
             dispatch_after(time6, dispatch_get_main_queue()) {
                 self.Highlights7.alpha = 1
@@ -590,7 +597,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
             Highlights8.animationRepeatCount = 1
             Highlights8.animationDuration = 0.667
             //sleep(1)
-            let delay7 = 1.75 * Double(NSEC_PER_SEC)
+            let delay7 = 0.7 * Double(NSEC_PER_SEC)
             let time7 = dispatch_time(DISPATCH_TIME_NOW, Int64(delay7))
             dispatch_after(time7, dispatch_get_main_queue()) {
                 self.Highlights8.alpha = 1
