@@ -115,7 +115,10 @@ class DataViewController: UIViewController, UITextViewDelegate {
                     NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 16.0)!]]]
     private let photonames: [[String]] = [["Bald_Eagle_Web_Cam_View","Channel_Island_Live_Presentation"],["ANACAPA_LIGHTHOUSE","none"],["SCORPION_BAY","none"]]
     private var logonames: [String] = ["HIGHLIGHT_1_BIG", "HIGHLIGHT_2_BIG", "HIGHLIGHT_3_BIG"]
-    private var HighlightTitlestrings: [String] = ["Channel Islands Live and\nChannel Islands National Park Visitor Center", "Anacapa Island", "Santa Cruz Island"]
+    private var HighlightTitlestrings: [String] = ["Channel Islands Live and\nChannel Islands National Park Visitor Center", " Anacapa Island", " Santa Cruz Island"]
+    
+    
+    
     private var HighlightTitleAttributes : [[String: AnyObject]] = [[NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
         NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 33.0)!]]
@@ -170,6 +173,11 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.ScrollView2.hidden = true
         self.CloseTV.hidden = true
         self.Highlight1ScrollView.contentSize.height = 950
+        /*
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = .Center
+        self.HighlightTitleAttributes[0][NSParagraphStyleAttributeName]=paragraphStyle
+        */
         /*
         let path = NSBundle.mainBundle().pathForResource("SampleText", ofType: "txt")
         let fm = NSFileManager()
