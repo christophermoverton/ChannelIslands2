@@ -181,7 +181,7 @@ by people for at least 13,000 years.</string>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HIGHLIGHT_REFERENCE" translatesAutoresizingMaskIntoConstraints="NO" id="156-Bi-vzA">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HIGHLIGHT_REFERENCE" translatesAutoresizingMaskIntoConstraints="NO" id="156-Bi-vzA">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HIGHLIGHT8_00010" translatesAutoresizingMaskIntoConstraints="NO" id="Dlt-FW-Vvy">
@@ -659,7 +659,7 @@ Channel Islands National Park Visitor Center</string>
                                 <rect key="frame" x="0.0" y="120" width="1024" height="565"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GAa-ht-PVy">
-                                        <rect key="frame" x="368" y="5" width="600" height="900"/>
+                                        <rect key="frame" x="368" y="5" width="600" height="1000"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <attributedString key="attributedText">
@@ -863,6 +863,12 @@ This nonprofit organization supports the education and research programs of the 
                                     <action selector="Highlight3Clicked:" destination="S4R-Ja-viH" eventType="touchUpInside" id="Gdw-10-knO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2w-BK-ngB">
+                                <rect key="frame" x="787" y="359" width="45" height="45"/>
+                                <connections>
+                                    <action selector="Highlight4Clicked:" destination="S4R-Ja-viH" eventType="touchUpInside" id="UT6-en-USd"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SjV-01-Ua8">
                                 <rect key="frame" x="439" y="694" width="46" height="60"/>
                                 <connections>
@@ -925,6 +931,7 @@ This nonprofit organization supports the education and research programs of the 
                         <outlet property="Highlight1Title" destination="yWo-mw-cH8" id="J3R-Kd-3DO"/>
                         <outlet property="Highlight2Button" destination="nZW-Tz-EoR" id="a5D-yC-sBP"/>
                         <outlet property="Highlight3Button" destination="b8s-bu-0fg" id="szW-b1-axX"/>
+                        <outlet property="Highlight4Button" destination="e2w-BK-ngB" id="MoA-h1-7Hx"/>
                         <outlet property="HighlightNumbersView" destination="156-Bi-vzA" id="qjS-Mx-auz"/>
                         <outlet property="Highlights1" destination="fr8-Qh-Ahn" id="mS2-37-6sg"/>
                         <outlet property="Highlights2" destination="404-SE-TU5" id="5OT-TE-k9L"/>
