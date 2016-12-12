@@ -341,7 +341,7 @@ Cg
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8d2-KK-2ym">
                                 <rect key="frame" x="0.0" y="118" width="1024" height="568"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g83-Cu-zcL">
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g83-Cu-zcL">
                                         <rect key="frame" x="74" y="0.0" width="873" height="128"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <string key="text">A visit to the Channel Islands is an exercise in preparation and self-reliance.  Since there are no services on the islands, there are no remedies for poor planning once you have arrived.  Please pay attention to the directives to visit each island. </string>
@@ -349,7 +349,7 @@ Cg
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2WR-t5-oBo">
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2WR-t5-oBo">
                                         <rect key="frame" x="209" y="100" width="750" height="250"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Visitor Centers ">
@@ -398,7 +398,7 @@ Located at 113 Harbor Way, 4th Floor, Santa Barbara, CA 93109, 805-884-1475.</st
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rrT-VG-kgG">
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rrT-VG-kgG">
                                         <rect key="frame" x="209" y="375" width="750" height="149"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <attributedString key="attributedText">
@@ -449,7 +449,7 @@ This nonprofit organization supports the education and research programs of the 
                                 <rect key="frame" x="0.0" y="118" width="1024" height="568"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CE0-uh-29B">
-                                        <rect key="frame" x="370" y="280" width="646" height="280"/>
+                                        <rect key="frame" x="370" y="280" width="600" height="280"/>
                                         <attributedString key="attributedText">
                                             <fragment>
                                                 <string key="content">The Channel Islands National Marine Sanctuary
@@ -492,11 +492,56 @@ Administered by the National Oceanic and Atmospheric Administration (NOAA), with
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-3" translatesAutoresizingMaskIntoConstraints="NO" id="16C-GO-kjY">
-                                        <rect key="frame" x="14" y="234" width="353" height="199"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SAILBOAT_ANCHOR" translatesAutoresizingMaskIntoConstraints="NO" id="16C-GO-kjY">
+                                        <rect key="frame" x="48" y="45" width="286" height="166"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EHI-q7-8GF">
+                                        <rect key="frame" x="48" y="220" width="275" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Sail boat at anchor, Santa Cruz Island">
+                                                <attributes>
+                                                    <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="deviceRGB"/>
+                                                    <color key="NSColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica-Light"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <font key="NSOriginalFont" size="16" name="Helvetica-Light"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="11" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                    <color key="NSStrokeColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MUf-OM-c4w">
+                                        <rect key="frame" x="48" y="760" width="275" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Santa Cruz Island shipwreck and diver, Channel Islands National Marine Sanctuary">
+                                                <attributes>
+                                                    <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="deviceRGB"/>
+                                                    <color key="NSColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica-Light"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <font key="NSOriginalFont" size="16" name="Helvetica-Light"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="11" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                    <color key="NSStrokeColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SHIPWRECK_DIVER" translatesAutoresizingMaskIntoConstraints="NO" id="W8d-CU-DLj">
+                                        <rect key="frame" x="48" y="325" width="286" height="431"/>
                                     </imageView>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hpG-AC-ik8">
-                                        <rect key="frame" x="370" y="33" width="637" height="240"/>
+                                        <rect key="frame" x="370" y="33" width="600" height="240"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <attributedString key="attributedText">
                                             <fragment>
@@ -534,7 +579,7 @@ Administered by the National Oceanic and Atmospheric Administration (NOAA), with
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ek8-oy-gHH">
-                                        <rect key="frame" x="370" y="570" width="646" height="300"/>
+                                        <rect key="frame" x="370" y="570" width="600" height="300"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Channel Islands National Park">
                                                 <attributes>
@@ -613,7 +658,7 @@ Channel Islands National Park Visitor Center</string>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4xI-cI-lIO">
                                 <rect key="frame" x="0.0" y="120" width="1024" height="565"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GAa-ht-PVy">
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GAa-ht-PVy">
                                         <rect key="frame" x="368" y="5" width="600" height="900"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1647,10 +1692,12 @@ This nonprofit organization supports the education and research programs of the 
         <image name="MAIN_NAV_SINGL_GREEN_DOT_00000" width="40" height="40"/>
         <image name="Main_Navigation_CLEAN_UP_V01" width="2048" height="1536"/>
         <image name="Main_Navigation_CLEAN_UP_V01_Blur" width="2048" height="1536"/>
+        <image name="SAILBOAT_ANCHOR" width="530" height="308"/>
         <image name="SANTA_BARBARA_CLEAN" width="2048" height="1536"/>
         <image name="SANTA_CRUZ_CLEAN" width="2048" height="1536"/>
         <image name="SANTA_ROSA_CLEAN" width="2048" height="1536"/>
         <image name="SAN_MIGUEL_CLEAN" width="2048" height="1536"/>
+        <image name="SHIPWRECK_DIVER" width="530" height="797"/>
         <image name="Untitled1_0000_EE155C2E-155D-4519-3E56FA170AF76AEC.jpg" width="2048" height="1536"/>
         <image name="Untitled1_0001_EE1CBFC6-155D-4519-3EB64378D76B099E.jpg" width="2048" height="1536"/>
         <image name="Untitled1_0002_EE2A927A-155D-4519-3EA31588B403B035.jpg" width="2048" height="1536"/>
