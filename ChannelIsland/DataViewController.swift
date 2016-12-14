@@ -397,6 +397,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
     }
     
     func enableInfo(){
+        /*
         if self.planningActive {
             self.ScrollView.hidden = false
             self.planningActive = false
@@ -417,69 +418,92 @@ class DataViewController: UIViewController, UITextViewDelegate {
             })
         }
         else{
-            let lmystr = "Discover your Channnel Islands"
-            let lmyAttributes = self.HighlightTitleAttributes[0]
-            let lmyAttrString1 = NSAttributedString(string: lmystr,
-                                                    attributes: lmyAttributes)
-            self.Highlight1Title.attributedText = lmyAttrString1
-            self.ScrollView.hidden = false
-            self.CloseTV.hidden = false
-            self.NavBar.image = UIImage(named: "CI_Main_Icon_INFO_V02")
-            self.infoActive = true
-            if self.HightlightsActive {
-                self.InfoLabel.textColor = UIColor.blackColor()
-                self.HighlightsLabel.textColor = UIColor.whiteColor()
-            }
-            else{
-                self.InfoLabel.textColor = UIColor.blackColor()
-                self.MapsLabel.textColor = UIColor.whiteColor()
-            }
-            UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
-                self.IView.alpha = 0
-                self.ScrollView.alpha = 1
-                self.IView2.alpha = 1
-                self.Highlight1Title.alpha = 1
-                self.GreenDotAnimIView.alpha = 0
-                self.GreenDotAnimView2.alpha = 0
-                self.GreenDotAnimView3.alpha = 0
-                self.GreenDotAnimView4.alpha = 0
-                self.GreenDotAnimView5.alpha = 0
-                self.Highlights1.alpha = 0
-                self.Highlights2.alpha = 0
-                self.Highlights3.alpha = 0
-                self.Highlights4.alpha = 0
-                self.Highlights5.alpha = 0
-                self.Highlights6.alpha = 0
-                self.Highlights7.alpha = 0
-                self.Highlights8.alpha = 0
-                self.WaterAnimView.alpha = 0
-                if self.HightlightsActive {
-                    self.HighlightNumbersView.alpha = 0
-                    
-                }
-                self.CloseTV.alpha = 1
-                }, completion: { finished in
-                    if (finished){
-                        
-                        self.IView.hidden = true
-                        self.GreenDotAnimIView.hidden = true
-                        self.GreenDotAnimView2.hidden = true
-                        self.GreenDotAnimView3.hidden = true
-                        self.GreenDotAnimView4.hidden = true
-                        self.GreenDotAnimView5.hidden = true
-                        if self.HightlightsActive{
-                            self.HighlightNumbersView.hidden = true
-                            
-                        }
-                    }
-            })
-            self.DismissInfo.hidden = false
-            self.PlanningButton.hidden = false
-            self.InfoButton.hidden = true
-            self.PhotographyButton.hidden = false
-            self.HighlightsButton.hidden = false
-            print("Info Button Pressed")
+        */
+        let lmystr = "Discover your Channnel Islands"
+        let lmyAttributes = self.HighlightTitleAttributes[0]
+        let lmyAttrString1 = NSAttributedString(string: lmystr,
+                                                attributes: lmyAttributes)
+        self.Highlight1Title.attributedText = lmyAttrString1
+        self.ScrollView.hidden = false
+        self.CloseTV.hidden = false
+        self.NavBar.image = UIImage(named: "CI_Main_Icon_INFO_V02")
+        self.infoActive = true
+        if self.HightlightsActive {
+            self.InfoLabel.textColor = UIColor.blackColor()
+            self.HighlightsLabel.textColor = UIColor.whiteColor()
         }
+        else{
+            self.InfoLabel.textColor = UIColor.blackColor()
+            self.MapsLabel.textColor = UIColor.whiteColor()
+        }
+        if self.Highlight1Active{
+            self.DismissHighlight1.hidden = true
+        }
+        if self.planningActive{
+            self.PlanningLabel.textColor = UIColor.whiteColor()
+        }
+        UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.IView.alpha = 0
+            self.ScrollView.alpha = 1
+            self.IView2.alpha = 1
+            self.Highlight1Title.alpha = 1
+            self.GreenDotAnimIView.alpha = 0
+            self.GreenDotAnimView2.alpha = 0
+            self.GreenDotAnimView3.alpha = 0
+            self.GreenDotAnimView4.alpha = 0
+            self.GreenDotAnimView5.alpha = 0
+            self.Highlights1.alpha = 0
+            self.Highlights2.alpha = 0
+            self.Highlights3.alpha = 0
+            self.Highlights4.alpha = 0
+            self.Highlights5.alpha = 0
+            self.Highlights6.alpha = 0
+            self.Highlights7.alpha = 0
+            self.Highlights8.alpha = 0
+            self.WaterAnimView.alpha = 0
+            if self.HightlightsActive {
+                self.HighlightNumbersView.alpha = 0
+                
+            }
+            if self.Highlight1Active{
+                self.Highlight1ScrollView.alpha = 0
+                self.Highlight1Logo.alpha = 0
+                //self.Highlight1Title.alpha = 0
+            }
+            if self.planningActive{
+                self.ScrollView2.alpha = 0
+            }
+            self.CloseTV.alpha = 1
+            }, completion: { finished in
+                if (finished){
+                    
+                    self.IView.hidden = true
+                    self.GreenDotAnimIView.hidden = true
+                    self.GreenDotAnimView2.hidden = true
+                    self.GreenDotAnimView3.hidden = true
+                    self.GreenDotAnimView4.hidden = true
+                    self.GreenDotAnimView5.hidden = true
+                    if self.HightlightsActive{
+                        self.HighlightNumbersView.hidden = true
+                        
+                    }
+                    if self.Highlight1Active{
+                        self.Highlight1Active = false
+                    }
+                    if self.planningActive{
+                        self.planningActive = false
+                        self.DismissPlanning.hidden = true
+                        self.ScrollView2.hidden = true
+                    }
+                }
+        })
+        self.DismissInfo.hidden = false
+        self.PlanningButton.hidden = false
+        self.InfoButton.hidden = true
+        self.PhotographyButton.hidden = false
+        self.HighlightsButton.hidden = false
+        print("Info Button Pressed")
+        
     }
     
     @IBAction func HighlightsClick(sender: AnyObject) {
@@ -983,6 +1007,9 @@ class DataViewController: UIViewController, UITextViewDelegate {
                 enabledisableHighlights()
             }
         }
+        if self.Highlight1Active{
+            self.dismissHighlight1()
+        }
     }
     
     func dismissPlanning(){
@@ -1051,6 +1078,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
     }
     
     func enablePlanning(){
+        /*
         if self.infoActive {
             self.ScrollView2.hidden = false
             self.infoActive = false
@@ -1072,6 +1100,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
             })
         }
         else{
+        */
             self.ScrollView2.hidden = false
             self.CloseTV.hidden = false
             self.planningActive = true
@@ -1083,6 +1112,12 @@ class DataViewController: UIViewController, UITextViewDelegate {
                 self.PlanningLabel.textColor = UIColor.blackColor()
                 self.MapsLabel.textColor = UIColor.whiteColor()
             }
+            if self.Highlight1Active{
+                self.DismissHighlight1.hidden = true;
+            }
+        if self.infoActive{
+            self.InfoLabel.textColor = UIColor.whiteColor()
+        }
             self.NavBar.image = UIImage(named: "CI_Main_Icon_PLANNING_V02")
             UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
                 self.IView.alpha = 0
@@ -1105,7 +1140,15 @@ class DataViewController: UIViewController, UITextViewDelegate {
                 self.WaterAnimView.alpha = 0
                 if self.HightlightsActive {
                     self.HighlightNumbersView.alpha = 0
+                    self.Highlight1Logo.alpha = 0
+                    self.Highlight1Title.alpha = 0
                     
+                }
+                if self.Highlight1Active{
+                    self.Highlight1ScrollView.alpha = 0
+                }
+                if self.infoActive{
+                    self.ScrollView.alpha = 0
                 }
                 }, completion: { finished in
                     if (finished){
@@ -1119,7 +1162,14 @@ class DataViewController: UIViewController, UITextViewDelegate {
                         if self.HightlightsActive {
                             self.HighlightNumbersView.hidden = true
                         }
-                        
+                        if self.Highlight1Active{
+                            self.Highlight1Active = false
+                        }
+                        if self.infoActive{
+                            self.infoActive = false
+                            self.DismissInfo.hidden = true
+                            self.ScrollView.hidden = true
+                        }
                     }
             })
             self.DismissPlanning.hidden = false
@@ -1127,7 +1177,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.InfoButton.hidden = false
             self.HighlightsButton.hidden = false
             self.PhotographyButton.hidden = false
-        }
+        
     }
     
     func getLargeText(text: String) -> NSMutableAttributedString {
