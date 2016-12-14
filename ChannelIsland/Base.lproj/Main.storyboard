@@ -881,6 +881,18 @@ This nonprofit organization supports the education and research programs of the 
                                     <action selector="Highlight6Clicked:" destination="S4R-Ja-viH" eventType="touchUpInside" id="gVc-gg-Idf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k32-sv-DuZ">
+                                <rect key="frame" x="380" y="354" width="45" height="45"/>
+                                <connections>
+                                    <action selector="Highlight7Clicked:" destination="S4R-Ja-viH" eventType="touchUpInside" id="J6g-VP-Fbg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qit-5r-ez7">
+                                <rect key="frame" x="813" y="523" width="45" height="45"/>
+                                <connections>
+                                    <action selector="HIghlight8Clicked:" destination="S4R-Ja-viH" eventType="touchUpInside" id="v5O-cJ-fbu"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SjV-01-Ua8">
                                 <rect key="frame" x="439" y="694" width="46" height="60"/>
                                 <connections>
@@ -946,6 +958,8 @@ This nonprofit organization supports the education and research programs of the 
                         <outlet property="Highlight4Button" destination="e2w-BK-ngB" id="MoA-h1-7Hx"/>
                         <outlet property="Highlight5Button" destination="Pi7-Wu-giM" id="Jv0-58-hiC"/>
                         <outlet property="Highlight6Button" destination="uKd-4N-P41" id="7fX-3v-pAf"/>
+                        <outlet property="Highlight7Button" destination="k32-sv-DuZ" id="rNq-ne-edQ"/>
+                        <outlet property="Highlight8Button" destination="qit-5r-ez7" id="10G-kY-utJ"/>
                         <outlet property="HighlightNumbersView" destination="156-Bi-vzA" id="qjS-Mx-auz"/>
                         <outlet property="Highlights1" destination="fr8-Qh-Ahn" id="mS2-37-6sg"/>
                         <outlet property="Highlights2" destination="404-SE-TU5" id="5OT-TE-k9L"/>

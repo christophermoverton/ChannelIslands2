@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChannelIsland/DataViewController.swift"
-            timestampString = "503290320.926576"
+            timestampString = "503370056.134563"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "258"
-            endingLineNumber = "258"
+            startingLineNumber = "281"
+            endingLineNumber = "281"
             landmarkName = "didReceiveMemoryWarning()"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChannelIsland/DataViewController.swift"
-            timestampString = "503290320.926576"
+            timestampString = "503370056.134563"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChannelIsland/DataViewController.swift"
-            timestampString = "503290320.926576"
+            timestampString = "503370056.134563"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "732"
-            endingLineNumber = "732"
+            startingLineNumber = "762"
+            endingLineNumber = "762"
             landmarkName = "enableHighlight1(_:)"
             landmarkType = "5">
          </BreakpointContent>
