@@ -225,14 +225,14 @@ class DataViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.ScrollView.contentSize.height = 950
+        self.ScrollView.contentSize.height = 1050
         self.ScrollView.hidden = true
         self.DismissInfo.hidden = true
         self.DismissPlanning.hidden = true
-        self.ScrollView2.contentSize.height = 950
+        self.ScrollView2.contentSize.height = 1050
         self.ScrollView2.hidden = true
         self.CloseTV.hidden = true
-        self.Highlight1ScrollView.contentSize.height = 950
+        self.Highlight1ScrollView.contentSize.height = 1050
         /*
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .Center
