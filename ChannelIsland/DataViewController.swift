@@ -83,6 +83,8 @@ class DataViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var Highlight6Button: UIButton!
     @IBOutlet weak var Highlight7Button: UIButton!
     @IBOutlet weak var Highlight8Button: UIButton!
+    @IBOutlet weak var InfoTextView: UITextView!
+    @IBOutlet weak var InfoTextView2: UITextView!
     
     @IBOutlet weak var Highlight2Button: UIButton!
     
@@ -225,7 +227,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.ScrollView.contentSize.height = 1050
+        self.ScrollView.contentSize.height = 1350
         self.ScrollView.hidden = true
         self.DismissInfo.hidden = true
         self.DismissPlanning.hidden = true
@@ -419,7 +421,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
         }
         else{
         */
-        let lmystr = "Discover your Channnel Islands"
+        let lmystr = "Discover Your Channnel Islands"
         let lmyAttributes = self.HighlightTitleAttributes[0]
         let lmyAttrString1 = NSAttributedString(string: lmystr,
                                                 attributes: lmyAttributes)
@@ -429,6 +431,29 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.NavBar.image = UIImage(named: "CI_Main_Icon_INFO_V02")
         self.infoActive = true
         self.ScrollView.contentOffset = CGPoint(x: 0, y: 0)
+        let tvstr: String = "Welcome! The Channel Islands are a rugged gem waiting for you, just a short boat ride from the Southern California coast. Here the cold currents of the north merge with warmer waters coming from the south, creating a dynamic transition zone of sea life. Explore these rugged and scenic islands—a world away, yet so close:\n\n  * 1,470 square miles (3800 km2) of coastal  waters\n  * 175 miles of stunning California coastline\n  * 150 historic shipwrecks\n  * 8 islands make up the Channel Islands chain, 5 of which are protected as a national park and marine sanctuary, including their submerged lands and surrounding waters"
+        let tvstr2: String = "Channel Islands National Park\n\n"
+        let InfoTextAttributes2: [String: AnyObject] = [NSForegroundColorAttributeName: UIColor.whiteColor(),
+                                                       NSBackgroundColorAttributeName: UIColor.clearColor(),
+                                                       NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 18.0)!]
+        let infoAttrString2 = NSAttributedString(string: tvstr2,
+                                                 attributes: InfoTextAttributes2)
+        let tvstr3: String = "Channel Islands National Park encompasses five of the eight remarkable islands and their ocean environment, preserving and protecting a wealth of natural and cultural resources. Isolation over thousands of years has created unique animals, plants, and archeological resources found nowhere else on Earth and helped preserve a place where visitors can experience coastal southern California as it once was.\n\nAdministered by the National Park Service within the Department of the Interior, the park consists of 250,000 acres of land and ocean environment, encompassing Anacapa, Santa Cruz, Santa Rosa, San Miguel, and Santa Barbara Islands, their submerged lands, and the waters within one nautical mile of each island."
+        let InfoTextAttributes3: [String: AnyObject] = [NSForegroundColorAttributeName: UIColor.whiteColor(),
+                                                        NSBackgroundColorAttributeName: UIColor.clearColor(),
+                                                        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 18.0)!]
+        let infoAttrString3 = NSAttributedString(string: tvstr3,
+                                                 attributes: InfoTextAttributes3)
+        let result = NSMutableAttributedString()
+        result.appendAttributedString(infoAttrString2)
+        result.appendAttributedString(infoAttrString3)
+        self.InfoTextView2.attributedText = result
+        let InfoTextAttributes: [String: AnyObject] = [NSForegroundColorAttributeName: UIColor.whiteColor(),
+                                                       NSBackgroundColorAttributeName: UIColor.clearColor(),
+                                                       NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 18.0)!]
+        let infoAttrString1 = NSAttributedString(string: tvstr,
+                                                attributes: InfoTextAttributes)
+        self.InfoTextView.attributedText = infoAttrString1
         if self.HightlightsActive {
             self.InfoLabel.textColor = UIColor.blackColor()
             self.HighlightsLabel.textColor = UIColor.whiteColor()

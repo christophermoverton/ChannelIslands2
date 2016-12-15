@@ -449,11 +449,20 @@ This nonprofit organization supports the education and research programs of the 
                                 <rect key="frame" x="0.0" y="118" width="1024" height="568"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CE0-uh-29B">
-                                        <rect key="frame" x="370" y="280" width="600" height="280"/>
+                                        <rect key="frame" x="370" y="300" width="600" height="320"/>
                                         <attributedString key="attributedText">
                                             <fragment>
                                                 <string key="content">The Channel Islands National Marine Sanctuary
-
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content" base64-UTF8="YES">
+Cg
 </string>
                                                 <attributes>
                                                     <color key="NSColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -494,6 +503,12 @@ Administered by the National Oceanic and Atmospheric Administration (NOAA), with
                                     </textView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SAILBOAT_ANCHOR" translatesAutoresizingMaskIntoConstraints="NO" id="16C-GO-kjY">
                                         <rect key="frame" x="48" y="45" width="286" height="166"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LOGOS_PARTA" translatesAutoresizingMaskIntoConstraints="NO" id="4h0-XL-J9y">
+                                        <rect key="frame" x="48" y="850" width="286" height="151"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LOGOS_PARTB" translatesAutoresizingMaskIntoConstraints="NO" id="Wza-Az-dw5">
+                                        <rect key="frame" x="48" y="1075" width="286" height="151"/>
                                     </imageView>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EHI-q7-8GF">
                                         <rect key="frame" x="48" y="220" width="275" height="60"/>
@@ -537,15 +552,58 @@ Administered by the National Oceanic and Atmospheric Administration (NOAA), with
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aR0-CF-72e">
+                                        <rect key="frame" x="48" y="1001" width="275" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="NOAA and NMS logosMarine Sanctuary">
+                                                <attributes>
+                                                    <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="deviceRGB"/>
+                                                    <color key="NSColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica-Light"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <font key="NSOriginalFont" size="16" name="Helvetica-Light"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="11" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                    <color key="NSStrokeColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fRK-Eh-qef">
+                                        <rect key="frame" x="48" y="1225" width="275" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="NPS and DOI logos">
+                                                <attributes>
+                                                    <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="deviceRGB"/>
+                                                    <color key="NSColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica-Light"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <font key="NSOriginalFont" size="16" name="Helvetica-Light"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="11" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                    <color key="NSStrokeColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SHIPWRECK_DIVER" translatesAutoresizingMaskIntoConstraints="NO" id="W8d-CU-DLj">
                                         <rect key="frame" x="48" y="325" width="286" height="431"/>
                                     </imageView>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hpG-AC-ik8">
-                                        <rect key="frame" x="370" y="33" width="600" height="240"/>
+                                        <rect key="frame" x="370" y="33" width="600" height="260"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <attributedString key="attributedText">
                                             <fragment>
                                                 <string key="content">Welcome! The Channel Islands are a rugged gem waiting for you, just a short boat ride from the Southern California coast. Here the cold currents of the north merge with warmer waters coming from the south, creating a dynamic transition zone of sea life. Explore these rugged and scenic islands—a world away, yet so close: 
+
 </string>
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -579,7 +637,7 @@ Administered by the National Oceanic and Atmospheric Administration (NOAA), with
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ek8-oy-gHH">
-                                        <rect key="frame" x="370" y="570" width="600" height="300"/>
+                                        <rect key="frame" x="370" y="630" width="600" height="300"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Channel Islands National Park">
                                                 <attributes>
@@ -975,6 +1033,8 @@ This nonprofit organization supports the education and research programs of the 
                         <outlet property="IView2" destination="cMd-Z5-khC" id="Ru9-Iv-qQx"/>
                         <outlet property="InfoButton" destination="SjV-01-Ua8" id="D1F-ZH-ddb"/>
                         <outlet property="InfoLabel" destination="pNz-gI-71f" id="35O-ue-pML"/>
+                        <outlet property="InfoTextView" destination="hpG-AC-ik8" id="JTq-ps-Kik"/>
+                        <outlet property="InfoTextView2" destination="Ek8-oy-gHH" id="a4J-wv-tgK"/>
                         <outlet property="MView" destination="ZwX-cT-FIQ" id="SuP-s1-7NA"/>
                         <outlet property="MapButton" destination="LTv-M5-yKu" id="8Xq-PY-VHd"/>
                         <outlet property="MapsLabel" destination="J6i-Um-ZQE" id="evE-CB-KFf"/>
@@ -1724,6 +1784,8 @@ This nonprofit organization supports the education and research programs of the 
         <image name="Image-1" width="2048" height="1536"/>
         <image name="Image-3" width="2048" height="1536"/>
         <image name="IslandIcons_HOME" width="110" height="660"/>
+        <image name="LOGOS_PARTA" width="530" height="280"/>
+        <image name="LOGOS_PARTB" width="530" height="280"/>
         <image name="MAIN_NAV_SINGL_GREEN_DOT_00000" width="40" height="40"/>
         <image name="Main_Navigation_CLEAN_UP_V01" width="2048" height="1536"/>
         <image name="Main_Navigation_CLEAN_UP_V01_Blur" width="2048" height="1536"/>
