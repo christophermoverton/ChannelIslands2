@@ -428,6 +428,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.CloseTV.hidden = false
         self.NavBar.image = UIImage(named: "CI_Main_Icon_INFO_V02")
         self.infoActive = true
+        self.ScrollView.contentOffset = CGPoint(x: 0, y: 0)
         if self.HightlightsActive {
             self.InfoLabel.textColor = UIColor.blackColor()
             self.HighlightsLabel.textColor = UIColor.whiteColor()
@@ -852,6 +853,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
             //cresult.appendAttributedString(cmyAttrString1)
             //self.Caption1.attributedText = cmyAttrString1
             //self.Caption2.attributedText = cmyAttrString2
+            self.Highlight1ScrollView.contentOffset = CGPoint(x: 0, y: 0)
             self.Highlight1ScrollView.hidden = false
             self.CloseTV.hidden = false
             self.Highlight1Active = true
@@ -864,7 +866,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
                 self.PlanningLabel.textColor = UIColor.blackColor()
                 self.MapsLabel.textColor = UIColor.whiteColor()
             }*/
-            self.NavBar.image = UIImage(named: "CI_Main_Icon_Set_ALL_WHITE_V02")
+            self.NavBar.image = UIImage(named: "CI_Main_Icon_HIGHLIGHTS_V02")
             UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
                 self.IView.alpha = 0
                 self.Highlight1ScrollView.alpha = 1
@@ -1102,6 +1104,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
         else{
         */
             self.ScrollView2.hidden = false
+        self.ScrollView2.contentOffset = CGPoint(x: 0, y: 0)
             self.CloseTV.hidden = false
             self.planningActive = true
             if self.HightlightsActive {

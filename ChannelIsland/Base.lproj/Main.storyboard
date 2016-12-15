@@ -338,7 +338,7 @@ Cg
                                     <action selector="DismissPlanningClick:" destination="S4R-Ja-viH" eventType="touchUpInside" id="WRd-MC-z0v"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8d2-KK-2ym">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8d2-KK-2ym" customClass="FadeScrollVIew" customModule="ChannelIsland" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="118" width="1024" height="568"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g83-Cu-zcL">
@@ -445,7 +445,7 @@ This nonprofit organization supports the education and research programs of the 
                                     <action selector="DismissInfoClick:" destination="S4R-Ja-viH" eventType="touchUpInside" id="aTt-Mp-t4l"/>
                                 </connections>
                             </button>
-                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vwb-27-UOI">
+                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vwb-27-UOI" customClass="FadeScrollVIew" customModule="ChannelIsland" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="118" width="1024" height="568"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CE0-uh-29B">
@@ -655,7 +655,7 @@ Channel Islands National Park Visitor Center</string>
                                     <action selector="DismissHighlight1Clicked:" destination="S4R-Ja-viH" eventType="touchUpInside" id="4Eo-sF-IZf"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4xI-cI-lIO">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4xI-cI-lIO" customClass="FadeScrollVIew" customModule="ChannelIsland" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="120" width="1024" height="565"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GAa-ht-PVy">
