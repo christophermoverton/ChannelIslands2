@@ -196,7 +196,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
     // set attributed text on a UILabel
     TextView1.attributedText = myAttrString
     */
-    var Planningstrings: [String] = ["Plan Your Trip\n\n","Known for its dynamic weather patterns and busy shipping lanes, crossing the Santa Barbara Channel requires self-sufficiency and careful planning. If you wish to go ashore, visit the National Park Service web site in advance: https://www.nps.gov/chis/index.htm.\n\n","  Before you go:\n·             Be self-sufficient. Plan your trip well with the right provisions. There are no stores or fuel stations, and few potable water sources. Pack out what you pack in.\n\n     ·             Be aware you will be in a national marine sanctuary. You can’t discharge anything from your boat. For complete information on the regulations please visit: http://channelislands.noaa.gov/management/resource/boating.html\n\n     ·             Take full advantage of the harbor’s facilities before you go. Pump out the bilge before leaving. Once underway, pump bilge outside the sanctuary boundary, or 6 nautical miles off island.\n\n     ·             Remember that there are no all-weather anchorages. One capable person is recommended to stay on the boat at all times.\n\n     ·             Pets stay aboard. Beach camping is restricted to Santa Rosa Island, and only at certain times of year.\n\n","Watch the Weather\n\n","Always be aware that the weather in the Channel Islands is in a continuous state of change. Fog and winds are a challenge to the most experienced boaters. Before going boating, become aware of current conditions and forecasts.\n\n","  Reliable sources for weather reports and forecasts include:\n\n     ·             www.nwsla.noaa.gov\n\n     ·             National Weather Service (NWS) Public Information: (805) 988-6610\n\n     ·             Marine Weather Radio CH 3 for marine weather only\n\n     ·             www.channelislands.noaa.gov\n\n     ·             Weather Kiosks located at Santa Barbara and Channel Island Harbors\n\n","   Marine Mammal Viewing Code of Conduct\n\n","     ·             Remain at least 100 yards from any marine mammal.\n\n     ·             If approached by a whale, put your boat’s engine in neutral and allow the whale to pass.\n\n     ·             Boat movement should be from the rear of the whale.\n\n     ·             Federal law prohibits pursuit of marine mammals.\n\n     ·             Always leave marine mammals an escape route.\n\n     ·             When viewing whales, operate at a no-wake speed.\n\n","Sea Cave Safety \n\n","Sea caves on Santa Cruz, Anacapa, and Santa Barbara Islands offer world-class kayaking. Consult with guided tours for both rental equipment and expertise. Kayakers of all levels need to wear helmets and life preservers. All sea caves and offshore islets are closed to landing.\n\n","Accessibility\n\n","The Robert J. Lagomarsino Channel Islands National Park Visitor Center in Ventura is fully accessible. Due to their isolation and transportation requirements, the islands are not readily accessible for individuals in wheelchairs or those with limited mobility. Limited wheelchair access is available with the park boat and air concessioners, Island Packers and Channel Islands Aviation. \n\n","Fees\n\n","There are no entrance fees to visit the park. However, a reservation fee is charged for camping on the islands. Overnight fees include the National Park Service fee that supports the operation and maintenance of the campgrounds and the service fee charged by the contractor that manages the national reservation service.\n\n"]
+    var Planningstrings: [String] = ["Plan Your Trip\n\n","Known for its dynamic weather patterns and busy shipping lanes, crossing the Santa Barbara Channel requires self-sufficiency and careful planning. If you wish to go ashore, visit the National Park Service web site in advance: https://www.nps.gov/chis/index.htm.\n\n","  Before you go:\n\t\t· Be self-sufficient. Plan your trip well with the right provisions. There are no stores or fuel stations, and few potable water sources. Pack out what you pack in.\n\n\t\t· Be aware you will be in a national marine sanctuary. You can’t discharge anything from your boat. For complete information on the regulations please visit: http://channelislands.noaa.gov/management/resource/boating.html\n\n\t\t· Take full advantage of the harbor’s facilities before you go. Pump out the bilge before leaving. Once underway, pump bilge outside the sanctuary boundary, or 6 nautical miles off island.\n\n\t\t· Remember that there are no all-weather anchorages. One capable person is recommended to stay on the boat at all times.\n\n\t\t· Pets stay aboard. Beach camping is restricted to Santa Rosa Island, and only at certain times of year.\n\n","Watch the Weather\n\n","Always be aware that the weather in the Channel Islands is in a continuous state of change. Fog and winds are a challenge to the most experienced boaters. Before going boating, become aware of current conditions and forecasts.\n\n","  Reliable sources for weather reports and forecasts include:\n\n\t\t· www.nwsla.noaa.gov\n\n\t\t· National Weather Service (NWS) Public Information: (805) 988-6610\n\n\t\t· Marine Weather Radio CH 3 for marine weather only\n\n\t\t· www.channelislands.noaa.gov\n\n\t\t· Weather Kiosks located at Santa Barbara and Channel Island Harbors\n\n","   Marine Mammal Viewing Code of Conduct\n\n","\t\t· Remain at least 100 yards from any marine mammal.\n\n\t\t· If approached by a whale, put your boat’s engine in neutral and allow the whale to pass.\n\n\t\t· Boat movement should be from the rear of the whale.\n\n\t\t· Federal law prohibits pursuit of marine mammals.\n\n\t\t· Always leave marine mammals an escape route.\n\n\t\t· When viewing whales, operate at a no-wake speed.\n\n","Sea Cave Safety \n\n","Sea caves on Santa Cruz, Anacapa, and Santa Barbara Islands offer world-class kayaking. Consult with guided tours for both rental equipment and expertise. Kayakers of all levels need to wear helmets and life preservers. All sea caves and offshore islets are closed to landing.\n\n","Accessibility\n\n","The Robert J. Lagomarsino Channel Islands National Park Visitor Center in Ventura is fully accessible. Due to their isolation and transportation requirements, the islands are not readily accessible for individuals in wheelchairs or those with limited mobility. Limited wheelchair access is available with the park boat and air concessioners, Island Packers and Channel Islands Aviation. \n\n","Fees\n\n","There are no entrance fees to visit the park. However, a reservation fee is charged for camping on the islands. Overnight fees include the National Park Service fee that supports the operation and maintenance of the campgrounds and the service fee charged by the contractor that manages the national reservation service.\n\n"]
     private var PlanningAttributes: [[String: AnyObject]] = [[NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
         NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 18.0)!],
@@ -828,6 +828,18 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.enableHighlight1(7)
     }
     
+    func createParagraphAttribute() ->NSParagraphStyle
+    {
+        var paragraphStyle: NSMutableParagraphStyle
+        paragraphStyle = NSParagraphStyle.defaultParagraphStyle().mutableCopy() as! NSMutableParagraphStyle
+        paragraphStyle.tabStops = [NSTextTab(textAlignment: .Left, location: 15, options: NSDictionary() as! [String : AnyObject])]
+        paragraphStyle.defaultTabInterval = 15
+        paragraphStyle.firstLineHeadIndent = 0
+        paragraphStyle.headIndent = 15
+        
+        return paragraphStyle
+    }
+    
     func enableHighlight1(hlightID : Int){
         if self.infoActive {
             self.ScrollView2.hidden = false
@@ -1173,6 +1185,14 @@ class DataViewController: UIViewController, UITextViewDelegate {
         }
         else{
         */
+        let pintlist: [Int] = [2,5,6,7]
+        let paragraphStyle = createParagraphAttribute()
+        /*
+        for j: Int in pintlist{
+            
+            self.PlanningAttributes[j][NSParagraphStyleAttributeName]=paragraphStyle
+        }
+        */
             self.ScrollView2.hidden = false
         self.ScrollView2.contentOffset = CGPoint(x: 0, y: 0)
             self.CloseTV.hidden = false
@@ -1195,9 +1215,14 @@ class DataViewController: UIViewController, UITextViewDelegate {
         let result = NSMutableAttributedString()
         for ptvstr: String in self.Planningstrings{
             let pstrAttr: [String: AnyObject] = self.PlanningAttributes[i]
-            let myAttrString1 = NSAttributedString(string: ptvstr,
-                                                   attributes: pstrAttr)
+            let myAttrString1 = NSMutableAttributedString(string: ptvstr, attributes: pstrAttr)
+            if pintlist.contains(i)
+            {
+                print("hit attribute!")
+                myAttrString1.addAttributes([NSParagraphStyleAttributeName: paragraphStyle], range: NSMakeRange(0, myAttrString1.length))
+            }
             result.appendAttributedString(myAttrString1)
+            
             i+=1
         }
         self.PlanningTextView.attributedText = result
