@@ -341,7 +341,7 @@ Cg
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8d2-KK-2ym" customClass="FadeScrollVIew" customModule="ChannelIsland" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="118" width="1024" height="568"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g83-Cu-zcL">
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g83-Cu-zcL">
                                         <rect key="frame" x="74" y="0.0" width="873" height="128"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <string key="text">A visit to the Channel Islands is an exercise in preparation and self-reliance.  Since there are no services on the islands, there are no remedies for poor planning once you have arrived.  Please pay attention to the directives to visit each island. </string>
@@ -350,7 +350,7 @@ Cg
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2WR-t5-oBo">
-                                        <rect key="frame" x="209" y="100" width="750" height="250"/>
+                                        <rect key="frame" x="370" y="33" width="600" height="2000"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Visitor Centers ">
                                                 <attributes>
@@ -398,7 +398,7 @@ Located at 113 Harbor Way, 4th Floor, Santa Barbara, CA 93109, 805-884-1475.</st
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rrT-VG-kgG">
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rrT-VG-kgG">
                                         <rect key="frame" x="209" y="375" width="750" height="149"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <attributedString key="attributedText">
@@ -432,7 +432,7 @@ This nonprofit organization supports the education and research programs of the 
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ETp-8K-W9g">
+                                    <view userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ETp-8K-W9g">
                                         <rect key="frame" x="74" y="350" width="873" height="2"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -1043,6 +1043,7 @@ This nonprofit organization supports the education and research programs of the 
                         <outlet property="PhotographyLabel" destination="WIJ-cr-W2C" id="31V-eE-e7B"/>
                         <outlet property="PlanningButton" destination="9p8-uz-5dT" id="Ly3-ee-N2C"/>
                         <outlet property="PlanningLabel" destination="aJ9-i9-n9z" id="2fA-vk-pIb"/>
+                        <outlet property="PlanningTextView" destination="2WR-t5-oBo" id="BdT-fA-cMm"/>
                         <outlet property="SanMigButton" destination="MTS-av-rkH" id="p1u-V4-RTf"/>
                         <outlet property="SantaBarbaraButton" destination="Oov-SV-MRp" id="YTB-Bl-2Gn"/>
                         <outlet property="SantaCruzButton" destination="4IY-UA-9rl" id="yC3-8s-cri"/>
