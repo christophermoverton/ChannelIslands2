@@ -242,7 +242,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("Got This Far!")
         print(segue.identifier)
-        var checkString: String = (segue.identifier)!
+        let checkString: String = (segue.identifier)!
         print(checkString.rangeOfString(revealSequeId) != nil)
         if checkString.rangeOfString(revealSequeId) != nil, let destinationViewController = segue.destinationViewController as? UIViewController {
             print("Got this far again")
@@ -338,7 +338,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
             print(str)
             imageArr.append(UIImage(named:str)!)
         }
-        var imageArr2 : [UIImage] = [UIImage(imageLiteral: "Water_00000"),
+        let imageArr2 : [UIImage] = [UIImage(imageLiteral: "Water_00000"),
                                      UIImage(imageLiteral: "Water_00001"),
                                      UIImage(imageLiteral: "Water_00002")]
         /*
@@ -381,22 +381,26 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.GreenDotAnimView5.hidden = false
         self.GreenDotAnimIView.hidden = false
         self.infoActive = false
+        /*
         if self.HightlightsActive {
             self.HighlightNumbersView.hidden = false
             self.NavBar.image = UIImage(named: "CI_Main_Icon_HIGHLIGHTS_V02")
             
         }
         else{
-            self.NavBar.image = UIImage(named: "CI_Main_Icon_HOME_V02")
-        }
+        */
+        self.NavBar.image = UIImage(named: "CI_Main_Icon_HOME_V02")
+        //}
+        /*
         if self.HightlightsActive {
             self.InfoLabel.textColor = UIColor.whiteColor()
             self.HighlightsLabel.textColor = UIColor.blackColor()
         }
         else{
+        */
             self.InfoLabel.textColor = UIColor.whiteColor()
             self.MapsLabel.textColor = UIColor.blackColor()
-        }
+        //}
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView.alpha = 1
             self.GreenDotAnimIView.alpha = 1
@@ -404,6 +408,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.GreenDotAnimView3.alpha = 1
             self.GreenDotAnimView4.alpha = 1
             self.GreenDotAnimView5.alpha = 1
+            /*
             if self.HightlightsActive {
                 //self.HighlightNumbersView.alpha = 1
                 self.Highlights1.alpha = 1
@@ -415,7 +420,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
                 self.Highlights7.alpha = 1
                 self.Highlights8.alpha = 1
                 self.WaterAnimView.alpha = 1
-            }
+            }*/
             self.ScrollView.alpha = 0
             self.IView2.alpha = 0
             self.CloseTV.alpha = 0
@@ -426,9 +431,10 @@ class DataViewController: UIViewController, UITextViewDelegate {
                     
                     self.ScrollView.hidden = true
                     self.CloseTV.hidden = true
+                    /*
                     if self.HightlightsActive{
                         self.Highlight1Button.hidden = false
-                    }
+                    }*/
                 }
         })
         self.DismissInfo.hidden = true
@@ -556,6 +562,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
                     self.GreenDotAnimView5.hidden = true
                     if self.HightlightsActive{
                         self.HighlightNumbersView.hidden = true
+                        self.HightlightsActive = false
                         
                     }
                     if self.Highlight1Active{
@@ -580,24 +587,32 @@ class DataViewController: UIViewController, UITextViewDelegate {
     @IBAction func HighlightsClick(sender: AnyObject) {
 
         if self.planningActive {
+            /*
             if self.HightlightsActive {
                 self.HightlightsActive = false
             }
             else{
                 self.HightlightsActive = true
             }
-            dismissPlanning()
+            */
+            enabledisableHighlights()
+            //dismissPlanning()
+            
             return
         }
 
         if self.infoActive {
+            /*
             if self.HightlightsActive {
                 self.HightlightsActive = false
             }
             else{
                 self.HightlightsActive = true
             }
-            dismissInfo()
+            */
+            enabledisableHighlights()
+            //dismissInfo()
+            
             return 
         }
 
@@ -634,9 +649,9 @@ class DataViewController: UIViewController, UITextViewDelegate {
             })
         }
         else{
-            
+
             self.HighlightNumbersView.hidden = false
-            self.NavBar.image = UIImage(named: "CI_Main_Icon_HIGHLIGHTS_V02")
+            //self.NavBar.image = UIImage(named: "CI_Main_Icon_HIGHLIGHTS_V02")
             self.HighlightsLabel.textColor = UIColor.blackColor()
             self.MapsLabel.textColor = UIColor.whiteColor()
             self.Highlights1.alpha = 1
@@ -767,7 +782,15 @@ class DataViewController: UIViewController, UITextViewDelegate {
                 self.Highlights8.startAnimating()
             }
             //Highlights8.startAnimating()
-            
+            if (self.planningActive){
+                self.dismissPlanning()
+                self.MapsLabel.textColor = UIColor.whiteColor()
+            }
+            if (self.infoActive){
+                self.dismissInfo()
+                self.MapsLabel.textColor = UIColor.whiteColor()
+            }
+            self.NavBar.image = UIImage(named: "CI_Main_Icon_HIGHLIGHTS_V02")
             UIView.animateWithDuration(0.667, delay: 0.0, options: .CurveEaseOut, animations: {
                 //self.HighlightNumbersView.alpha = 1
                 
@@ -865,19 +888,19 @@ class DataViewController: UIViewController, UITextViewDelegate {
             
             var captions: [UITextView!] = [self.Caption1, self.Caption2]
             var images: [UIImageView!] = [self.Highlight1Image, self.Highlight1Image2]
-            var ihighlightstrs : [String] = self.Highlighttextstrings[hlightID]
+            let ihighlightstrs : [String] = self.Highlighttextstrings[hlightID]
             var i = 0
             let result = NSMutableAttributedString()
             self.Highlight1Logo.image = UIImage(imageLiteral: self.logonames[hlightID])
-            var lmystr = self.HighlightTitlestrings[hlightID]
-            var lmyAttributes = self.HighlightTitleAttributes[0]
-            var lmyAttrString1 = NSAttributedString(string: lmystr,
+            let lmystr = self.HighlightTitlestrings[hlightID]
+            let lmyAttributes = self.HighlightTitleAttributes[0]
+            let lmyAttrString1 = NSAttributedString(string: lmystr,
                                                    attributes: lmyAttributes)
             self.Highlight1Title.attributedText = lmyAttrString1
             for ihighlightstr: String in ihighlightstrs{
                 
-                var myAttributes = self.HighlightAttributes[hlightID][i]
-                var myAttrString1 = NSAttributedString(string: ihighlightstr,
+                let myAttributes = self.HighlightAttributes[hlightID][i]
+                let myAttrString1 = NSAttributedString(string: ihighlightstr,
                                                        attributes: myAttributes)
                 result.appendAttributedString(myAttrString1)
                 i+=1
@@ -1104,22 +1127,26 @@ class DataViewController: UIViewController, UITextViewDelegate {
         self.GreenDotAnimView4.hidden = false
         self.GreenDotAnimView5.hidden = false
         self.planningActive = false
+        /*
         if self.HightlightsActive {
             self.HighlightNumbersView.hidden = false
             self.NavBar.image = UIImage(named: "CI_Main_Icon_HIGHLIGHTS_V02")
             
         }
         else{
+        */
             self.NavBar.image = UIImage(named: "CI_Main_Icon_HOME_V02")
-        }
+        //}
+        /*
         if self.HightlightsActive {
             self.PlanningLabel.textColor = UIColor.whiteColor()
             self.HighlightsLabel.textColor = UIColor.blackColor()
         }
         else{
+        */
             self.PlanningLabel.textColor = UIColor.whiteColor()
             self.MapsLabel.textColor = UIColor.blackColor()
-        }
+        //}
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView.alpha = 1
             self.ScrollView2.alpha = 0
@@ -1131,6 +1158,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
             self.GreenDotAnimView4.alpha = 1
             self.GreenDotAnimView5.alpha = 1
             self.WaterAnimView.alpha = 1
+            /*
             if self.HightlightsActive {
                 //self.HighlightNumbersView.alpha = 1
                 self.Highlights1.alpha = 1
@@ -1142,7 +1170,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
                 self.Highlights7.alpha = 1
                 self.Highlights8.alpha = 1
                 self.Highlight1Button.hidden = false
-            }
+            }*/
             
             //self.HighlightNumbersView.alpha = 1
             }, completion: { finished in
@@ -1269,6 +1297,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
                         self.GreenDotAnimView5.hidden = true
                         if self.HightlightsActive {
                             self.HighlightNumbersView.hidden = true
+                            self.HightlightsActive = false
                         }
                         if self.Highlight1Active{
                             self.Highlight1Active = false
