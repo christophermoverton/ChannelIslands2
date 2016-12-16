@@ -203,7 +203,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
          [NSForegroundColorAttributeName: UIColor.whiteColor(),NSBackgroundColorAttributeName: UIColor.clearColor(),NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 18.0)!],
          [NSForegroundColorAttributeName: UIColor.whiteColor(),
             NSBackgroundColorAttributeName: UIColor.clearColor(),
-            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 14.0)!],
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 18.0)!],
          [NSForegroundColorAttributeName: UIColor.whiteColor(),
             NSBackgroundColorAttributeName: UIColor.clearColor(),
             NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 18.0)!],
@@ -212,13 +212,13 @@ class DataViewController: UIViewController, UITextViewDelegate {
             NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 18.0)!],
          [NSForegroundColorAttributeName: UIColor.whiteColor(),
             NSBackgroundColorAttributeName: UIColor.clearColor(),
-            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 14.0)!],
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 18.0)!],
          [NSForegroundColorAttributeName: UIColor.whiteColor(),
             NSBackgroundColorAttributeName: UIColor.clearColor(),
-            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 14.0)!],
+            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 18.0)!],
          [NSForegroundColorAttributeName: UIColor.whiteColor(),
             NSBackgroundColorAttributeName: UIColor.clearColor(),
-            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 14.0)!],
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 18.0)!],
          [NSForegroundColorAttributeName: UIColor.whiteColor(),
             NSBackgroundColorAttributeName: UIColor.clearColor(),
             NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 18.0)!],
@@ -1186,7 +1186,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
         else{
         */
         let pintlist: [Int] = [2,5,6,7]
-        let paragraphStyle = createParagraphAttribute()
+        
         /*
         for j: Int in pintlist{
             
@@ -1218,7 +1218,7 @@ class DataViewController: UIViewController, UITextViewDelegate {
             let myAttrString1 = NSMutableAttributedString(string: ptvstr, attributes: pstrAttr)
             if pintlist.contains(i)
             {
-                print("hit attribute!")
+                let paragraphStyle = createParagraphAttribute()
                 myAttrString1.addAttributes([NSParagraphStyleAttributeName: paragraphStyle], range: NSMakeRange(0, myAttrString1.length))
             }
             result.appendAttributedString(myAttrString1)
