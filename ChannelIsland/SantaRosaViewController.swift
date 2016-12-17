@@ -28,6 +28,13 @@ class SantaRosaViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var IView: UIImageView!
     @IBOutlet weak var IView2: UIImageView!
     @IBOutlet weak var CloseTV: UITextView!
+    @IBOutlet weak var InfoButton: UIButton!
+    @IBOutlet weak var AnchorageButton: UIButton!
+    @IBOutlet weak var ActivitiesButton: UIButton!
+    @IBOutlet weak var DismissPage: UIButton!
+    private let infoActive: Bool = false
+    private let anchorageActive: Bool = false
+    private let activitiesActive: Bool = false
     
     
     
@@ -131,19 +138,38 @@ class SantaRosaViewController: UIViewController, UITextViewDelegate {
         //self.dataLabel!.text = dataObject
     }
     
+    @IBAction func DismissPageClicked(sender: AnyObject) {
+        self.enablemainpageTransition()
+    }
+    
+    
+    @IBAction func ActivitiesClicked(sender: AnyObject) {
+        enableActivities()
+    }
+    
+    @IBAction func AnchorageClicked(sender: AnyObject) {
+        enableAnchorages()
+    }
+    
+    @IBAction func InfoClicked(sender: AnyObject) {
+        enableInfo()
+    }
+    
+    
     func enableActivities(){
-        
+        self.enablepageTransition()
     }
     
     func enableAnchorages(){
-        
+        self.enablepageTransition()
     }
     
     func enableInfo(){
-        
+        self.enablepageTransition()
     }
 
     func enablepageTransition(){
+        self.IView2.hidden = false
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView.alpha = 0
             self.IView2.alpha = 1
@@ -154,7 +180,25 @@ class SantaRosaViewController: UIViewController, UITextViewDelegate {
                 if (finished){
                     
                     self.IView.hidden = true
-
+                    self.DismissPage.hidden = false
+                    
+                }
+        })
+    }
+    
+    func enablemainpageTransition(){
+        self.IView.hidden = false
+        UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.IView2.alpha = 0
+            self.IView.alpha = 1
+            
+            
+            self.CloseTV.alpha = 0
+            }, completion: { finished in
+                if (finished){
+                    
+                    self.IView2.hidden = true
+                    self.DismissPage.hidden = true
                     
                 }
         })

@@ -1199,10 +1199,10 @@ This nonprofit organization supports the education and research programs of the 
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SANTA_ROSA_CLEANBLUR" translatesAutoresizingMaskIntoConstraints="NO" id="Clf-KP-KLR">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SANTA_ROSA_CLEANBLUR" translatesAutoresizingMaskIntoConstraints="NO" id="Clf-KP-KLR">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.85000002384185791" contentMode="scaleAspectFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39l-mt-hzC">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleAspectFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39l-mt-hzC">
                                 <rect key="frame" x="890" y="6" width="81" height="86"/>
                                 <attributedString key="attributedText">
                                     <fragment content="x">
@@ -1232,6 +1232,16 @@ Cg
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADt-o2-qru">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="12"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="DismissPageClicked:" destination="2YF-RJ-H4w" eventType="touchUpInside" id="m0p-4U-1rO"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar2" translatesAutoresizingMaskIntoConstraints="NO" id="avS-tn-VzI">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
@@ -1258,6 +1268,24 @@ Cg
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IslandIcons_HOME" translatesAutoresizingMaskIntoConstraints="NO" id="NE2-65-ZYY">
                                 <rect key="frame" x="36" y="220" width="55" height="330"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPa-qJ-cuS">
+                                <rect key="frame" x="42" y="225" width="47" height="40"/>
+                                <connections>
+                                    <action selector="InfoClicked:" destination="2YF-RJ-H4w" eventType="touchUpInside" id="I6N-CQ-0Pb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vF7-Cd-gHW">
+                                <rect key="frame" x="41" y="325" width="47" height="40"/>
+                                <connections>
+                                    <action selector="AnchorageClicked:" destination="2YF-RJ-H4w" eventType="touchUpInside" id="Wk2-8E-cBA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2S-Kw-Edg">
+                                <rect key="frame" x="41" y="373" width="47" height="40"/>
+                                <connections>
+                                    <action selector="ActivitiesClicked:" destination="2YF-RJ-H4w" eventType="touchUpInside" id="C2c-up-nF9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -1265,11 +1293,15 @@ Cg
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="ActivitiesButton" destination="x2S-Kw-Edg" id="UtB-fc-VxN"/>
+                        <outlet property="AnchorageButton" destination="vF7-Cd-gHW" id="h1H-Jl-ljo"/>
                         <outlet property="Barview" destination="avS-tn-VzI" id="mQ2-Ul-DZa"/>
                         <outlet property="Clickhere" destination="cW1-nq-pVr" id="3eB-NN-wP1"/>
                         <outlet property="CloseTV" destination="39l-mt-hzC" id="oHb-6v-U1I"/>
+                        <outlet property="DismissPage" destination="ADt-o2-qru" id="uvH-WA-mkv"/>
                         <outlet property="IView" destination="sfP-Ng-UYO" id="3Qr-WC-Oht"/>
                         <outlet property="IView2" destination="Clf-KP-KLR" id="UQ4-2Y-kIh"/>
+                        <outlet property="InfoButton" destination="aPa-qJ-cuS" id="QYv-sY-A3J"/>
                         <outlet property="Logoview" destination="GUy-Eq-FQg" id="7QI-Cn-Djj"/>
                         <outlet property="NavBar" destination="NE2-65-ZYY" id="daE-PD-Y0F"/>
                         <outlet property="TitleText" destination="kpy-AR-QaS" id="7Y3-U5-DUG"/>
@@ -1317,6 +1349,16 @@ Cg
                                 <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dT-fJ-5NI">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="12"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="DismissPageClicked:" destination="pyQ-KH-GOQ" eventType="touchUpInside" id="Tf5-Z7-OvS"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daP-Ge-kpc">
                                 <rect key="frame" x="737" y="701" width="46" height="59"/>
                                 <state key="normal" title="Button"/>
@@ -1357,6 +1399,24 @@ Cg
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKb-SI-eGj">
+                                <rect key="frame" x="42" y="225" width="47" height="40"/>
+                                <connections>
+                                    <action selector="InfoClicked:" destination="pyQ-KH-GOQ" eventType="touchUpInside" id="Zt9-1z-sae"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kw0-fd-GvP">
+                                <rect key="frame" x="41" y="325" width="47" height="40"/>
+                                <connections>
+                                    <action selector="AnchorageClicked:" destination="pyQ-KH-GOQ" eventType="touchUpInside" id="7C9-6W-dHo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyQ-mD-Ooy">
+                                <rect key="frame" x="41" y="373" width="47" height="40"/>
+                                <connections>
+                                    <action selector="ActivitiesClicked:" destination="pyQ-KH-GOQ" eventType="touchUpInside" id="Rgf-5r-k9f"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -1367,11 +1427,15 @@ Cg
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="ActivitiesButton" destination="qyQ-mD-Ooy" id="08x-ik-8TE"/>
+                        <outlet property="AnchorageButton" destination="kw0-fd-GvP" id="YPi-Xe-v8V"/>
                         <outlet property="Barview" destination="3fE-Cz-qgo" id="q1J-nA-4os"/>
                         <outlet property="Clickhere" destination="qbi-9Z-dh3" id="tJx-vJ-or4"/>
                         <outlet property="CloseTV" destination="Gvb-eH-qgs" id="UKG-7O-3DC"/>
+                        <outlet property="DismissPage" destination="4dT-fJ-5NI" id="YRx-AS-NU6"/>
                         <outlet property="IView" destination="E9h-pX-N4e" id="Z3L-vK-kVs"/>
                         <outlet property="IView2" destination="1TW-0L-v47" id="TQa-Qb-bMV"/>
+                        <outlet property="InfoButton" destination="sKb-SI-eGj" id="IBr-CA-wix"/>
                         <outlet property="Logoview" destination="836-3y-bRg" id="W41-kW-sq7"/>
                         <outlet property="NavBar" destination="9TL-G8-FyY" id="ftz-LQ-sHg"/>
                         <outlet property="TitleText" destination="Bx0-Ds-P7S" id="RX1-iq-kF7"/>
@@ -1423,6 +1487,16 @@ Cg
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar3" translatesAutoresizingMaskIntoConstraints="NO" id="zaR-pt-QQD">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1u2-oe-qZB">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="12"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="DismissPageClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="50J-gg-m9I"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fqE-iy-knw">
                                 <rect key="frame" x="450" y="321" width="125" height="125"/>
                             </imageView>
@@ -1465,6 +1539,24 @@ Cg
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7Y-SW-bQs">
+                                <rect key="frame" x="42" y="225" width="47" height="40"/>
+                                <connections>
+                                    <action selector="InfoClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="HCa-wu-Wi1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btx-QE-sNl">
+                                <rect key="frame" x="41" y="325" width="47" height="40"/>
+                                <connections>
+                                    <action selector="AnchorageClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="vgj-mO-rgJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcu-VE-QSc">
+                                <rect key="frame" x="41" y="373" width="47" height="40"/>
+                                <connections>
+                                    <action selector="ActivitiesClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="P3b-J9-Z3e"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -1472,11 +1564,15 @@ Cg
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="ActivitiesButton" destination="gcu-VE-QSc" id="Y0p-a9-htc"/>
+                        <outlet property="AnchorageButton" destination="btx-QE-sNl" id="BZd-Jp-GZ4"/>
                         <outlet property="Barview" destination="zaR-pt-QQD" id="SdW-hT-Onm"/>
                         <outlet property="Clickhere" destination="fqE-iy-knw" id="C0h-bY-rNJ"/>
                         <outlet property="CloseTV" destination="Ygp-pl-f59" id="Bof-FF-9YL"/>
+                        <outlet property="DismissPage" destination="1u2-oe-qZB" id="wxU-Lf-Dy3"/>
                         <outlet property="IView" destination="rlw-Of-cjs" id="XgG-bQ-YLN"/>
                         <outlet property="IView2" destination="Tnh-Hb-UI4" id="OPa-Cy-ytZ"/>
+                        <outlet property="InfoButton" destination="O7Y-SW-bQs" id="iii-dG-bSc"/>
                         <outlet property="Logoview" destination="lB1-YX-ojR" id="bkq-Xt-xSi"/>
                         <outlet property="NavBar" destination="jsM-DL-9DA" id="XjG-wr-CXV"/>
                         <outlet property="TitleText" destination="HL1-Zz-pgs" id="emQ-G9-Ove"/>
@@ -1515,6 +1611,16 @@ Cg
                                 <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPp-hX-0TK">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="12"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="DismissPageClicked:" destination="gfQ-kY-mDd" eventType="touchUpInside" id="8Eo-P5-dmm"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_LOGOS_FOR_DISSOLVE_LOOP" translatesAutoresizingMaskIntoConstraints="NO" id="cQD-yi-M3g">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
@@ -1560,6 +1666,24 @@ Cg
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4e-P1-pFA">
+                                <rect key="frame" x="42" y="225" width="47" height="40"/>
+                                <connections>
+                                    <action selector="InfoClicked:" destination="gfQ-kY-mDd" eventType="touchUpInside" id="s4l-qM-I2Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTP-JD-VrL">
+                                <rect key="frame" x="41" y="325" width="47" height="40"/>
+                                <connections>
+                                    <action selector="AnchorageClicked:" destination="gfQ-kY-mDd" eventType="touchUpInside" id="oCX-3b-YiJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eb2-Uk-0td">
+                                <rect key="frame" x="41" y="373" width="47" height="40"/>
+                                <connections>
+                                    <action selector="ActivitiesClicked:" destination="gfQ-kY-mDd" eventType="touchUpInside" id="tIz-10-ZYR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -1567,11 +1691,15 @@ Cg
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="ActivitiesButton" destination="eb2-Uk-0td" id="ubQ-OO-hUE"/>
+                        <outlet property="AnchorageButton" destination="RTP-JD-VrL" id="u9q-sy-5k9"/>
                         <outlet property="Barview" destination="D3S-nf-P11" id="xww-Nw-IaI"/>
                         <outlet property="Clickhere" destination="yfF-KO-E2J" id="r8j-HP-6NY"/>
                         <outlet property="CloseTV" destination="ZTe-Hk-Exv" id="A1J-uW-yh4"/>
+                        <outlet property="DismissPage" destination="aPp-hX-0TK" id="hTL-5R-1sw"/>
                         <outlet property="IView" destination="6Na-Uf-alT" id="JCg-Vm-TIk"/>
                         <outlet property="IView2" destination="BYy-J7-mep" id="PAO-Dg-SWa"/>
+                        <outlet property="InfoButton" destination="b4e-P1-pFA" id="rgT-qQ-PbE"/>
                         <outlet property="Logoview" destination="cQD-yi-M3g" id="TsI-kc-Po9"/>
                         <outlet property="NavBar" destination="Pdn-sW-QqL" id="AcM-ZJ-GtO"/>
                         <outlet property="TitleText" destination="voK-V2-BR2" id="IC2-Tu-2hb"/>
@@ -1979,6 +2107,16 @@ Cg
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar5" translatesAutoresizingMaskIntoConstraints="NO" id="YFE-FH-WB3">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7F-9G-uxN">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="12"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="DismissPageClicked:" destination="jD5-Az-AEW" eventType="touchUpInside" id="2Vy-d8-gig"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_LOGOS_FOR_DISSOLVE_LOOP" translatesAutoresizingMaskIntoConstraints="NO" id="JNY-j6-LV3">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
@@ -1988,7 +2126,7 @@ Cg
                                     <segue destination="S4R-Ja-viH" kind="presentation" identifier="BackToMain" modalTransitionStyle="crossDissolve" id="b7l-3o-hqg"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nBW-8k-3j1">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nBW-8k-3j1">
                                 <rect key="frame" x="450" y="321" width="125" height="125"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IslandIcons_HOME" translatesAutoresizingMaskIntoConstraints="NO" id="4n5-bc-ihJ">
@@ -2024,6 +2162,27 @@ Cg
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3H-Y0-iOV">
+                                <rect key="frame" x="41" y="325" width="47" height="40"/>
+                                <connections>
+                                    <action selector="AnchorageClicked:" destination="jD5-Az-AEW" eventType="touchUpInside" id="gOh-vR-V3h"/>
+                                    <action selector="AnchorageClicked:" destination="gfQ-kY-mDd" eventType="touchUpInside" id="h4c-We-Oo1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F06-0b-141">
+                                <rect key="frame" x="42" y="225" width="47" height="40"/>
+                                <connections>
+                                    <action selector="InfoClicked:" destination="gfQ-kY-mDd" eventType="touchUpInside" id="KB6-2e-gLY"/>
+                                    <action selector="InfoClicked:" destination="jD5-Az-AEW" eventType="touchUpInside" id="Wto-6y-inU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmg-mY-EwG">
+                                <rect key="frame" x="41" y="373" width="47" height="40"/>
+                                <connections>
+                                    <action selector="ActivitiesClicked:" destination="jD5-Az-AEW" eventType="touchUpInside" id="iYA-Uc-AaO"/>
+                                    <action selector="ActivitiesClicked:" destination="gfQ-kY-mDd" eventType="touchUpInside" id="m2t-wX-jLi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -2031,11 +2190,15 @@ Cg
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="ActivitiesButton" destination="tmg-mY-EwG" id="J6K-2O-84q"/>
+                        <outlet property="AnchorageButton" destination="e3H-Y0-iOV" id="jQP-e7-mC7"/>
                         <outlet property="Barview" destination="YFE-FH-WB3" id="njd-oX-9hI"/>
                         <outlet property="Clickhere" destination="nBW-8k-3j1" id="W5S-f6-udM"/>
                         <outlet property="CloseTV" destination="7lW-N7-dSN" id="3Tz-KR-DOC"/>
+                        <outlet property="DismissPage" destination="t7F-9G-uxN" id="FYx-Ew-ODb"/>
                         <outlet property="IView" destination="zfZ-BX-C9B" id="ue5-my-xFT"/>
                         <outlet property="IView2" destination="809-dh-vFy" id="9p6-Xj-m4l"/>
+                        <outlet property="InfoButton" destination="F06-0b-141" id="l9Y-1G-2Mf"/>
                         <outlet property="Logoview" destination="JNY-j6-LV3" id="8yx-wn-TIJ"/>
                         <outlet property="NavBar" destination="4n5-bc-ihJ" id="IpH-iC-rW6"/>
                         <outlet property="TitleText" destination="SS2-Y7-Udl" id="yON-A0-oRE"/>

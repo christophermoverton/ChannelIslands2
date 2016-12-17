@@ -26,6 +26,11 @@ class SantaBarbaraViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var IView: UIImageView!
     @IBOutlet weak var IView2: UIImageView!
     @IBOutlet weak var CloseTV: UITextView!
+    @IBOutlet weak var DismissPage: UIButton!
+    @IBOutlet weak var InfoButton: UIButton!
+    @IBOutlet weak var AnchorageButton: UIButton!
+    @IBOutlet weak var ActivitiesButton: UIButton!
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("Got This Far!")
         print(segue.identifier)
@@ -110,19 +115,37 @@ class SantaBarbaraViewController: UIViewController, UITextViewDelegate {
     
     }
     
+    @IBAction func DismissPageClicked(sender: AnyObject) {
+        enablemainpageTransition()
+    }
+    
+    @IBAction func InfoClicked(sender: AnyObject) {
+        enableInfo()
+    }
+    
+    @IBAction func AnchorageClicked(sender: AnyObject) {
+        enableAnchorages()
+    }
+    
+    @IBAction func ActivitiesClicked(sender: AnyObject) {
+        enableActivities()
+    }
+    
+    
     func enableActivities(){
-        
+        self.enablepageTransition()
     }
     
     func enableAnchorages(){
-        
+        self.enablepageTransition()
     }
     
     func enableInfo(){
-        
+        self.enablepageTransition()
     }
     
     func enablepageTransition(){
+        self.IView2.hidden = false
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView.alpha = 0
             self.IView2.alpha = 1
@@ -133,7 +156,25 @@ class SantaBarbaraViewController: UIViewController, UITextViewDelegate {
                 if (finished){
                     
                     self.IView.hidden = true
+                    self.DismissPage.hidden = false
                     
+                }
+        })
+    }
+    
+    func enablemainpageTransition(){
+        self.IView.hidden = false
+        UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.IView2.alpha = 0
+            self.IView.alpha = 1
+            
+            
+            self.CloseTV.alpha = 0
+            }, completion: { finished in
+                if (finished){
+                    
+                    self.IView2.hidden = true
+                    self.DismissPage.hidden = true
                     
                 }
         })
