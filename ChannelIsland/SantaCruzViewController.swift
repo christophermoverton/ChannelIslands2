@@ -23,6 +23,9 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var Logoview: UIImageView!
     @IBOutlet weak var Clickhere: UIImageView!
     @IBOutlet weak var NavBar: UIImageView!
+    @IBOutlet weak var IView: UIImageView!
+    @IBOutlet weak var IView2: UIImageView!
+    @IBOutlet weak var CloseTV: UITextView!
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("Got This Far!")
         print(segue.identifier)
@@ -116,6 +119,36 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate {
         Clickhere.startAnimating()
     
     }
+    
+    func enableActivities(){
+        
+    }
+    
+    func enableAnchorages(){
+        
+    }
+    
+    func enableInfo(){
+        
+    }
+    
+    func enablepageTransition(){
+        UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.IView.alpha = 0
+            self.IView2.alpha = 1
+            
+            
+            self.CloseTV.alpha = 1
+            }, completion: { finished in
+                if (finished){
+                    
+                    self.IView.hidden = true
+                    
+                    
+                }
+        })
+    }
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }

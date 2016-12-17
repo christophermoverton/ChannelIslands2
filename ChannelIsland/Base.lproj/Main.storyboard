@@ -1199,6 +1199,39 @@ This nonprofit organization supports the education and research programs of the 
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <gestureRecognizers/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SANTA_ROSA_CLEANBLUR" translatesAutoresizingMaskIntoConstraints="NO" id="Clf-KP-KLR">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.85000002384185791" contentMode="scaleAspectFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39l-mt-hzC">
+                                <rect key="frame" x="890" y="6" width="81" height="86"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="x">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="56" name="HelveticaNeue-UltraLight"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Close">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="11" name="Helvetica-Light"/>
+                                            <font key="NSOriginalFont" size="11" name="Helvetica-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar2" translatesAutoresizingMaskIntoConstraints="NO" id="avS-tn-VzI">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
@@ -1212,7 +1245,7 @@ This nonprofit organization supports the education and research programs of the 
                                 <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cW1-nq-pVr">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cW1-nq-pVr">
                                 <rect key="frame" x="450" y="321" width="125" height="125"/>
                                 <gestureRecognizers/>
                             </imageView>
@@ -1234,6 +1267,9 @@ This nonprofit organization supports the education and research programs of the 
                     <connections>
                         <outlet property="Barview" destination="avS-tn-VzI" id="mQ2-Ul-DZa"/>
                         <outlet property="Clickhere" destination="cW1-nq-pVr" id="3eB-NN-wP1"/>
+                        <outlet property="CloseTV" destination="39l-mt-hzC" id="oHb-6v-U1I"/>
+                        <outlet property="IView" destination="sfP-Ng-UYO" id="3Qr-WC-Oht"/>
+                        <outlet property="IView2" destination="Clf-KP-KLR" id="UQ4-2Y-kIh"/>
                         <outlet property="Logoview" destination="GUy-Eq-FQg" id="7QI-Cn-Djj"/>
                         <outlet property="NavBar" destination="NE2-65-ZYY" id="daE-PD-Y0F"/>
                         <outlet property="TitleText" destination="kpy-AR-QaS" id="7Y3-U5-DUG"/>
@@ -1262,13 +1298,16 @@ This nonprofit organization supports the education and research programs of the 
                                     <outletCollection property="gestureRecognizers" destination="gmw-y1-xHg" appends="YES" id="JhE-gO-haC"/>
                                 </connections>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SAN_MIGUEL_CLEANBLUR" translatesAutoresizingMaskIntoConstraints="NO" id="1TW-0L-v47">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar1" translatesAutoresizingMaskIntoConstraints="NO" id="3fE-Cz-qgo">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_LOGOS_FOR_DISSOLVE_LOOP" translatesAutoresizingMaskIntoConstraints="NO" id="836-3y-bRg">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qbi-9Z-dh3">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qbi-9Z-dh3">
                                 <rect key="frame" x="450" y="321" width="125" height="125"/>
                             </imageView>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" editable="NO" text="San Miguel Island" translatesAutoresizingMaskIntoConstraints="NO" id="Bx0-Ds-P7S">
@@ -1288,6 +1327,36 @@ This nonprofit organization supports the education and research programs of the 
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IslandIcons_HOME" translatesAutoresizingMaskIntoConstraints="NO" id="9TL-G8-FyY">
                                 <rect key="frame" x="36" y="220" width="55" height="330"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.85000002384185791" contentMode="scaleAspectFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gvb-eH-qgs">
+                                <rect key="frame" x="890" y="6" width="81" height="86"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="x">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="56" name="HelveticaNeue-UltraLight"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Close">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="11" name="Helvetica-Light"/>
+                                            <font key="NSOriginalFont" size="11" name="Helvetica-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -1300,6 +1369,9 @@ This nonprofit organization supports the education and research programs of the 
                     <connections>
                         <outlet property="Barview" destination="3fE-Cz-qgo" id="q1J-nA-4os"/>
                         <outlet property="Clickhere" destination="qbi-9Z-dh3" id="tJx-vJ-or4"/>
+                        <outlet property="CloseTV" destination="Gvb-eH-qgs" id="UKG-7O-3DC"/>
+                        <outlet property="IView" destination="E9h-pX-N4e" id="Z3L-vK-kVs"/>
+                        <outlet property="IView2" destination="1TW-0L-v47" id="TQa-Qb-bMV"/>
                         <outlet property="Logoview" destination="836-3y-bRg" id="W41-kW-sq7"/>
                         <outlet property="NavBar" destination="9TL-G8-FyY" id="ftz-LQ-sHg"/>
                         <outlet property="TitleText" destination="Bx0-Ds-P7S" id="RX1-iq-kF7"/>
@@ -1335,6 +1407,9 @@ This nonprofit organization supports the education and research programs of the 
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <gestureRecognizers/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SANTA_CRUZ_CLEANBLUR" translatesAutoresizingMaskIntoConstraints="NO" id="Tnh-Hb-UI4">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_LOGOS_FOR_DISSOLVE_LOOP" translatesAutoresizingMaskIntoConstraints="NO" id="lB1-YX-ojR">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
@@ -1348,7 +1423,7 @@ This nonprofit organization supports the education and research programs of the 
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar3" translatesAutoresizingMaskIntoConstraints="NO" id="zaR-pt-QQD">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fqE-iy-knw">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fqE-iy-knw">
                                 <rect key="frame" x="450" y="321" width="125" height="125"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tw1-Cb-IMe">
@@ -1360,6 +1435,36 @@ This nonprofit organization supports the education and research programs of the 
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IslandIcons_HOME" translatesAutoresizingMaskIntoConstraints="NO" id="jsM-DL-9DA">
                                 <rect key="frame" x="36" y="220" width="55" height="330"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.85000002384185791" contentMode="scaleAspectFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygp-pl-f59">
+                                <rect key="frame" x="890" y="6" width="81" height="86"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="x">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="56" name="HelveticaNeue-UltraLight"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Close">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="11" name="Helvetica-Light"/>
+                                            <font key="NSOriginalFont" size="11" name="Helvetica-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -1369,6 +1474,9 @@ This nonprofit organization supports the education and research programs of the 
                     <connections>
                         <outlet property="Barview" destination="zaR-pt-QQD" id="SdW-hT-Onm"/>
                         <outlet property="Clickhere" destination="fqE-iy-knw" id="C0h-bY-rNJ"/>
+                        <outlet property="CloseTV" destination="Ygp-pl-f59" id="Bof-FF-9YL"/>
+                        <outlet property="IView" destination="rlw-Of-cjs" id="XgG-bQ-YLN"/>
+                        <outlet property="IView2" destination="Tnh-Hb-UI4" id="OPa-Cy-ytZ"/>
                         <outlet property="Logoview" destination="lB1-YX-ojR" id="bkq-Xt-xSi"/>
                         <outlet property="NavBar" destination="jsM-DL-9DA" id="XjG-wr-CXV"/>
                         <outlet property="TitleText" destination="HL1-Zz-pgs" id="emQ-G9-Ove"/>
@@ -1394,6 +1502,9 @@ This nonprofit organization supports the education and research programs of the 
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <gestureRecognizers/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ANACAPA_CLEANBLUR" translatesAutoresizingMaskIntoConstraints="NO" id="BYy-J7-mep">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar4" translatesAutoresizingMaskIntoConstraints="NO" id="D3S-nf-P11">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
@@ -1407,7 +1518,7 @@ This nonprofit organization supports the education and research programs of the 
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_LOGOS_FOR_DISSOLVE_LOOP" translatesAutoresizingMaskIntoConstraints="NO" id="cQD-yi-M3g">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yfF-KO-E2J">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yfF-KO-E2J">
                                 <rect key="frame" x="450" y="321" width="125" height="125"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsl-sf-XRF">
@@ -1419,6 +1530,36 @@ This nonprofit organization supports the education and research programs of the 
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IslandIcons_HOME" translatesAutoresizingMaskIntoConstraints="NO" id="Pdn-sW-QqL">
                                 <rect key="frame" x="36" y="220" width="55" height="330"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.85000002384185791" contentMode="scaleAspectFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTe-Hk-Exv">
+                                <rect key="frame" x="890" y="6" width="81" height="86"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="x">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="56" name="HelveticaNeue-UltraLight"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Close">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="11" name="Helvetica-Light"/>
+                                            <font key="NSOriginalFont" size="11" name="Helvetica-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -1428,6 +1569,9 @@ This nonprofit organization supports the education and research programs of the 
                     <connections>
                         <outlet property="Barview" destination="D3S-nf-P11" id="xww-Nw-IaI"/>
                         <outlet property="Clickhere" destination="yfF-KO-E2J" id="r8j-HP-6NY"/>
+                        <outlet property="CloseTV" destination="ZTe-Hk-Exv" id="A1J-uW-yh4"/>
+                        <outlet property="IView" destination="6Na-Uf-alT" id="JCg-Vm-TIk"/>
+                        <outlet property="IView2" destination="BYy-J7-mep" id="PAO-Dg-SWa"/>
                         <outlet property="Logoview" destination="cQD-yi-M3g" id="TsI-kc-Po9"/>
                         <outlet property="NavBar" destination="Pdn-sW-QqL" id="AcM-ZJ-GtO"/>
                         <outlet property="TitleText" destination="voK-V2-BR2" id="IC2-Tu-2hb"/>
@@ -1822,6 +1966,9 @@ This nonprofit organization supports the education and research programs of the 
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <gestureRecognizers/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SANTA_BARBARA_CLEANBLUR" translatesAutoresizingMaskIntoConstraints="NO" id="809-dh-vFy">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" editable="NO" text="Santa Barbara Island" translatesAutoresizingMaskIntoConstraints="NO" id="SS2-Y7-Udl">
                                 <rect key="frame" x="46" y="26" width="333" height="43"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1847,6 +1994,36 @@ This nonprofit organization supports the education and research programs of the 
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IslandIcons_HOME" translatesAutoresizingMaskIntoConstraints="NO" id="4n5-bc-ihJ">
                                 <rect key="frame" x="36" y="219" width="55" height="330"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.85000002384185791" contentMode="scaleAspectFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lW-N7-dSN">
+                                <rect key="frame" x="890" y="6" width="81" height="86"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="x">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="56" name="HelveticaNeue-UltraLight"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Close">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="11" name="Helvetica-Light"/>
+                                            <font key="NSOriginalFont" size="11" name="Helvetica-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -1856,6 +2033,9 @@ This nonprofit organization supports the education and research programs of the 
                     <connections>
                         <outlet property="Barview" destination="YFE-FH-WB3" id="njd-oX-9hI"/>
                         <outlet property="Clickhere" destination="nBW-8k-3j1" id="W5S-f6-udM"/>
+                        <outlet property="CloseTV" destination="7lW-N7-dSN" id="3Tz-KR-DOC"/>
+                        <outlet property="IView" destination="zfZ-BX-C9B" id="ue5-my-xFT"/>
+                        <outlet property="IView2" destination="809-dh-vFy" id="9p6-Xj-m4l"/>
                         <outlet property="Logoview" destination="JNY-j6-LV3" id="8yx-wn-TIJ"/>
                         <outlet property="NavBar" destination="4n5-bc-ihJ" id="IpH-iC-rW6"/>
                         <outlet property="TitleText" destination="SS2-Y7-Udl" id="yON-A0-oRE"/>
@@ -1887,6 +2067,7 @@ This nonprofit organization supports the education and research programs of the 
     <resources>
         <image name="1_DISSOLVE_SUNSET" width="2048" height="1536"/>
         <image name="ANACAPA_CLEAN" width="2048" height="1536"/>
+        <image name="ANACAPA_CLEANBLUR" width="2048" height="1536"/>
         <image name="Bald_Eagle_Web_Cam_View" width="530" height="400"/>
         <image name="CI_LOGOS_FOR_DISSOLVE_LOOP" width="2048" height="1536"/>
         <image name="CI_Main_Icon_HOME_V02" width="900" height="90"/>
@@ -1913,9 +2094,13 @@ This nonprofit organization supports the education and research programs of the 
         <image name="Main_Navigation_CLEAN_UP_V01_Blur" width="2048" height="1536"/>
         <image name="SAILBOAT_ANCHOR" width="530" height="308"/>
         <image name="SANTA_BARBARA_CLEAN" width="2048" height="1536"/>
+        <image name="SANTA_BARBARA_CLEANBLUR" width="2048" height="1536"/>
         <image name="SANTA_CRUZ_CLEAN" width="2048" height="1536"/>
+        <image name="SANTA_CRUZ_CLEANBLUR" width="2048" height="1536"/>
         <image name="SANTA_ROSA_CLEAN" width="2048" height="1536"/>
+        <image name="SANTA_ROSA_CLEANBLUR" width="2048" height="1536"/>
         <image name="SAN_MIGUEL_CLEAN" width="2048" height="1536"/>
+        <image name="SAN_MIGUEL_CLEANBLUR" width="2048" height="1536"/>
         <image name="SHIPWRECK_DIVER" width="530" height="797"/>
         <image name="Untitled1_0000_EE155C2E-155D-4519-3E56FA170AF76AEC.jpg" width="2048" height="1536"/>
         <image name="Untitled1_0001_EE1CBFC6-155D-4519-3EB64378D76B099E.jpg" width="2048" height="1536"/>
