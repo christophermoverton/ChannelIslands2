@@ -1492,12 +1492,6 @@ Cg
                                 <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar3" translatesAutoresizingMaskIntoConstraints="NO" id="zaR-pt-QQD">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ACTVITIES_SUBMENU_V01" translatesAutoresizingMaskIntoConstraints="NO" id="DWr-pe-hra">
-                                <rect key="frame" x="100" y="222" width="64" height="328"/>
-                            </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1u2-oe-qZB">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="12"/>
@@ -1508,6 +1502,140 @@ Cg
                                     <action selector="DismissPageClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="50J-gg-m9I"/>
                                 </connections>
                             </button>
+                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NVb-Oy-hDX" customClass="FadeScrollVIew" customModule="ChannelIsland" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="120" width="1024" height="565"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JWU-1T-Mpx">
+                                        <rect key="frame" x="185" y="75" width="510" height="1300"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <attributes>
+                                                    <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="omZ-7B-0Pz">
+                                        <rect key="frame" x="710" y="90" width="286" height="184"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7O9-vz-cEJ">
+                                        <rect key="frame" x="710" y="340" width="286" height="209"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IHW-gW-CfT">
+                                        <rect key="frame" x="710" y="620" width="286" height="217"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VFe-FE-HeB">
+                                        <rect key="frame" x="710" y="920" width="286" height="150"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6T4-SD-iOf">
+                                        <rect key="frame" x="710" y="1160" width="286" height="172"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ywk-za-4UJ">
+                                        <rect key="frame" x="710" y="1420" width="286" height="153"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ej5-vO-mO9">
+                                        <rect key="frame" x="710" y="265" width="285" height="80"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <attributes>
+                                                    <color key="NSBackgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hkv-T9-LB9">
+                                        <rect key="frame" x="710" y="540" width="285" height="80"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <attributes>
+                                                    <color key="NSBackgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UYL-hf-rv2">
+                                        <rect key="frame" x="710" y="837" width="285" height="80"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <attributes>
+                                                    <color key="NSBackgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fEE-Rb-SbK">
+                                        <rect key="frame" x="710" y="1070" width="285" height="80"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <attributes>
+                                                    <color key="NSBackgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="au4-TS-vTI">
+                                        <rect key="frame" x="710" y="1332" width="285" height="80"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <attributes>
+                                                    <color key="NSBackgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PuA-l5-sZW">
+                                        <rect key="frame" x="710" y="1573" width="285" height="80"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <attributes>
+                                                    <color key="NSBackgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar3" translatesAutoresizingMaskIntoConstraints="NO" id="zaR-pt-QQD">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ACTVITIES_SUBMENU_V01" translatesAutoresizingMaskIntoConstraints="NO" id="DWr-pe-hra">
+                                <rect key="frame" x="100" y="222" width="64" height="328"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fqE-iy-knw">
                                 <rect key="frame" x="450" y="321" width="125" height="125"/>
                             </imageView>
@@ -1579,6 +1707,12 @@ Cg
                         <outlet property="ActivitiesButton" destination="gcu-VE-QSc" id="Y0p-a9-htc"/>
                         <outlet property="AnchorageButton" destination="btx-QE-sNl" id="BZd-Jp-GZ4"/>
                         <outlet property="Barview" destination="zaR-pt-QQD" id="SdW-hT-Onm"/>
+                        <outlet property="CapPagTV1" destination="ej5-vO-mO9" id="lCW-74-vnC"/>
+                        <outlet property="CapPagTV2" destination="hkv-T9-LB9" id="39a-Ge-Aac"/>
+                        <outlet property="CapPagTV3" destination="UYL-hf-rv2" id="u0t-0C-PV1"/>
+                        <outlet property="CapPagTV4" destination="fEE-Rb-SbK" id="rTS-zV-bZ7"/>
+                        <outlet property="CapPagTV5" destination="au4-TS-vTI" id="Kck-Uy-SN6"/>
+                        <outlet property="CapPagTV6" destination="PuA-l5-sZW" id="hXp-qo-GCJ"/>
                         <outlet property="Clickhere" destination="fqE-iy-knw" id="C0h-bY-rNJ"/>
                         <outlet property="CloseTV" destination="Ygp-pl-f59" id="Bof-FF-9YL"/>
                         <outlet property="DismissPage" destination="1u2-oe-qZB" id="wxU-Lf-Dy3"/>
@@ -1587,6 +1721,14 @@ Cg
                         <outlet property="InfoButton" destination="O7Y-SW-bQs" id="iii-dG-bSc"/>
                         <outlet property="Logoview" destination="lB1-YX-ojR" id="bkq-Xt-xSi"/>
                         <outlet property="NavBar" destination="jsM-DL-9DA" id="XjG-wr-CXV"/>
+                        <outlet property="PageIV1" destination="omZ-7B-0Pz" id="G6d-om-zY4"/>
+                        <outlet property="PageIV2" destination="7O9-vz-cEJ" id="a7q-Kh-mfT"/>
+                        <outlet property="PageIV3" destination="IHW-gW-CfT" id="B5Z-F9-uJe"/>
+                        <outlet property="PageIV4" destination="VFe-FE-HeB" id="jcc-xg-Ief"/>
+                        <outlet property="PageIV5" destination="6T4-SD-iOf" id="PLn-Cb-Jbb"/>
+                        <outlet property="PageIV6" destination="Ywk-za-4UJ" id="Ws2-EI-8Zz"/>
+                        <outlet property="PageScrollView" destination="NVb-Oy-hDX" id="8Ti-Oj-tZk"/>
+                        <outlet property="PageTextView" destination="JWU-1T-Mpx" id="v4a-Of-0EB"/>
                         <outlet property="TitleText" destination="HL1-Zz-pgs" id="emQ-G9-Ove"/>
                     </connections>
                 </viewController>
@@ -2307,9 +2449,9 @@ Cg
         <image name="upper_campsite" width="530" height="268"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UxM-fJ-qBO"/>
-        <segue reference="jew-Ho-UNx"/>
+        <segue reference="zES-DJ-Qvu"/>
         <segue reference="OjJ-ZP-iCm"/>
+        <segue reference="jew-Ho-UNx"/>
         <segue reference="cXW-Yx-Jng"/>
     </inferredMetricsTieBreakers>
 </document>
