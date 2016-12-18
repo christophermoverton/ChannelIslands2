@@ -32,9 +32,10 @@ class SantaRosaViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var AnchorageButton: UIButton!
     @IBOutlet weak var ActivitiesButton: UIButton!
     @IBOutlet weak var DismissPage: UIButton!
-    private let infoActive: Bool = false
-    private let anchorageActive: Bool = false
-    private let activitiesActive: Bool = false
+    private var infoActive: Bool = false
+    private var anchorageActive: Bool = false
+    private var activitiesActive: Bool = false
+    @IBOutlet weak var ActivitiesBar: UIImageView!
     
     
     
@@ -157,14 +158,17 @@ class SantaRosaViewController: UIViewController, UITextViewDelegate {
     
     
     func enableActivities(){
+        self.activitiesActive = true
         self.enablepageTransition()
     }
     
     func enableAnchorages(){
+        self.anchorageActive = true
         self.enablepageTransition()
     }
     
     func enableInfo(){
+        self.infoActive = true
         self.enablepageTransition()
     }
 
@@ -173,8 +177,9 @@ class SantaRosaViewController: UIViewController, UITextViewDelegate {
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView.alpha = 0
             self.IView2.alpha = 1
-            
-
+            if self.activitiesActive{
+                self.ActivitiesBar.alpha = 1
+            }
             self.CloseTV.alpha = 1
             }, completion: { finished in
                 if (finished){
@@ -191,7 +196,9 @@ class SantaRosaViewController: UIViewController, UITextViewDelegate {
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView2.alpha = 0
             self.IView.alpha = 1
-            
+            if self.activitiesActive{
+                self.ActivitiesBar.alpha = 0
+            }
             
             self.CloseTV.alpha = 0
             }, completion: { finished in
@@ -199,6 +206,9 @@ class SantaRosaViewController: UIViewController, UITextViewDelegate {
                     
                     self.IView2.hidden = true
                     self.DismissPage.hidden = true
+                    self.infoActive = false
+                    self.anchorageActive = false
+                    self.activitiesActive = false
                     
                 }
         })
