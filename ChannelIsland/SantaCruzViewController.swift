@@ -50,6 +50,14 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var CapPagTV4: UITextView!
     @IBOutlet weak var CapPagTV5: UITextView!
     @IBOutlet weak var CapPagTV6: UITextView!
+    private var Infotextstrings: [String] = ["INFO\n\n","With relatively easy boat access, amazing kayaking, and great kelp beds near popular campsites, Santa Cruz offers an all-in-one destination. Located in the transition zone between warm southern currents and colder northern currents, Santa Cruz supports diverse marine life. Fishing is permitted outside reserves and protected areas. Land management is shared by the National Park Service and Nature Conservancy. Going ashore on the Nature Conservancy property requires a permit."]
+    
+    private var InfoAttributes : [[String: AnyObject]] = [[NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!]]
     private var Anchoragestextstrings: [String] = ["ANCHORAGES\n\n","Santa Cruz offers several anchorages around the island. Going ashore on the Nature Conservancy property requires a permit.\n\nPlease note: there are no public moorings or all-weather anchorages on any of the Channel Islands. It is recommended that one capable person stay on board at all times. Boaters are responsible for any damage to the resources caused by their boat.\n\n","Prisoner’s Pier\n","Prisoner’s Pier is an excellent anchorage on relatively calm days. Going ashore is easiest west of the pier. Swells can wrap around the point, which makes sleeping onboard difficult.\n\n","Scorpion’s Bay\n","Little Scorpion Anchorage is the primary overnight anchorage. It often affords protection from prevailing westerlies, but the swell can make for rough and sleepless nights.\n\nThe shore near Scorpion Ranch offers two anchorages. Ferry operators use the western anchorage closer to the pier. Often without breaking surf, this is one of the few easy places to go ashore.\n\n","Smuggler’s Cove\n","The anchorage at Smuggler’s Cove is often exposed to prevailing westerlies and going ashore may involve breaking surf.\n\n","Pelican Bay\n","The anchorage at Pelican Bay is accessible to boaters. Going ashore requires a permit from the Nature Conservancy."]
     private var AnchoragesAttributes : [[String: AnyObject]] = [[NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
@@ -82,8 +90,20 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate {
             NSBackgroundColorAttributeName: UIColor.clearColor(),
             NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!]]
     private let photonames: [String] = ["PRISONERS_HARBOR","SCORPION_BAY_PIER","SCORPION_BAY_ANCHORAGES","AERIAL_SMUG","PELICAN_BAY_BOATERS","AERIAL_PELICAN"]
-    
+    private let infophotonames: [String] = ["SANTA_CRUZ_LOOKING_NORTH","SCORPION_CANYON_SC","SC_KAYAKERS"]
+    private var InfoCaptiontextstrings: [String] = ["Santa Cruz Island, looking west. (photo by Tim Hauf)","Scorpion Canyon near Scorpion Bay anchorages, Santa Cruz Island","Kayakers at Potato Harbor, Santa Cruz Island"]
     private var AnchoragesCaptiontextstrings: [String] = ["Prisoner’s Harbor Pier, Santa Cruz Island","Scorpion Bay pier on Santa Cruz Island","Scorpion Bay anchorages, Santa Cruz Island","Aerial of anchorage at Smugglers’ Cove, Santa Cruz Island","Boaters at anchor in Pelican Bay, Santa Cruz Island","Aerial view of Pelican Bay, Santa Cruz Island"]
+    private var InfoCaptionAttributes : [[String: AnyObject]] =
+        [[NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 16.0)!],
+         [NSForegroundColorAttributeName: UIColor.whiteColor(),NSBackgroundColorAttributeName: UIColor.clearColor(),NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 16.0)!],
+         [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 16.0)!],
+         [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 16.0)!]]
     private var AnchoragesCaptionAttributes : [[String: AnyObject]] =
         [[NSForegroundColorAttributeName: UIColor.whiteColor(),
             NSBackgroundColorAttributeName: UIColor.clearColor(),
@@ -233,6 +253,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate {
     }
     
     func enablepageTransition(){
+        self.PageScrollView.contentOffset = CGPoint(x: 0, y: 0)
         self.IView2.hidden = false
         self.PageScrollView.hidden = false
         if self.anchorageActive{
@@ -247,10 +268,45 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate {
             }
             i = 0
             for piv: UIImageView in self.pageIVs{
+                piv.alpha = 1
+                self.capPagTVs[i].alpha = 1
                 let ui = UIImage(imageLiteral: self.photonames[i])
                 let newheight = ui.size.height/1.85
                 print(newheight)
                 //piv.frame = CGRectMake(piv.frame.origin.x, piv.frame.origin.y, piv.frame.size.width, newheight)//(piv.frame.x,piv.frame.y,piv.frame.width,newheight)
+                piv.image = ui
+                let mystring = self.AnchoragesCaptiontextstrings[i]
+                let myAttributes = self.AnchoragesCaptionAttributes[i]
+                let myAttrString1 = NSAttributedString(string: mystring,
+                                                       attributes: myAttributes)
+                self.capPagTVs[i].attributedText = myAttrString1
+                i+=1
+            }
+            self.PageTextView.attributedText = result
+        }
+        
+        if self.infoActive{
+            var i = 0
+            let result = NSMutableAttributedString()
+            for astr: String in self.Infotextstrings{
+                let myAttributes = self.InfoAttributes[i]
+                let myAttrString1 = NSAttributedString(string: astr,
+                                                       attributes: myAttributes)
+                result.appendAttributedString(myAttrString1)
+                i+=1
+            }
+            i = 0
+            for piv: UIImageView in self.pageIVs{
+                if (i > 2){
+                    piv.alpha = 0
+                    self.capPagTVs[i].alpha = 0
+                    i+=1
+                    continue
+                }
+                let ui = UIImage(imageLiteral: self.infophotonames[i])
+                let newheight = ui.size.height/1.85
+                print(newheight)
+                piv.frame = CGRectMake(piv.frame.origin.x, piv.frame.origin.y, piv.frame.size.width, newheight)//(piv.frame.x,piv.frame.y,piv.frame.width,newheight)
                 piv.image = ui
                 let mystring = self.AnchoragesCaptiontextstrings[i]
                 let myAttributes = self.AnchoragesCaptionAttributes[i]
