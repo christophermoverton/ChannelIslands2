@@ -8,7 +8,7 @@
 
 
 import UIKit
-class SantaCruzViewController: UIViewController, UITextViewDelegate {
+class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollViewDelegate {
     
     private let revealSequeId = "revealSegue"
     private var swipeState: Bool = true  //right state
@@ -50,6 +50,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var CapPagTV4: UITextView!
     @IBOutlet weak var CapPagTV5: UITextView!
     @IBOutlet weak var CapPagTV6: UITextView!
+    @IBOutlet weak var IPageV1: UIImageView!
     private var Infotextstrings: [String] = ["INFO\n\n","With relatively easy boat access, amazing kayaking, and great kelp beds near popular campsites, Santa Cruz offers an all-in-one destination. Located in the transition zone between warm southern currents and colder northern currents, Santa Cruz supports diverse marine life. Fishing is permitted outside reserves and protected areas. Land management is shared by the National Park Service and Nature Conservancy. Going ashore on the Nature Conservancy property requires a permit."]
     
     private var InfoAttributes : [[String: AnyObject]] = [[NSForegroundColorAttributeName: UIColor.whiteColor(),
@@ -171,6 +172,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.PageScrollView.delegate = self
         self.pageIVs = [self.PageIV1, self.PageIV2, self.PageIV3, self.PageIV4, self.PageIV5, self.PageIV6]
         self.capPagTVs = [self.CapPagTV1, self.CapPagTV2, self.CapPagTV3, self.CapPagTV4, self.CapPagTV5, self.CapPagTV6]
         self.PageScrollView.contentSize.height = 1900
@@ -219,6 +221,26 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate {
     
     }
     
+    func scrollViewDidScroll(PageScrollView: UIScrollView) {
+        /*
+        if self.infoActive{
+            var i = 0
+            for piv: UIImageView in self.pageIVs{
+                if (i > 2){
+                    piv.alpha = 0
+                    self.capPagTVs[i].alpha = 0
+                    i+=1
+                    continue
+                }
+                let ui = UIImage(imageLiteral: self.infophotonames[i])
+                let newheight = ui.size.height/1.85
+                print(newheight)
+                piv.frame = CGRectMake(piv.frame.origin.x, piv.frame.origin.y, piv.frame.size.width, newheight)
+                i+=1
+            }
+        }
+       */
+    }
     
     @IBAction func DismissPageClicked(sender: AnyObject) {
         enablemainpageTransition()
@@ -283,6 +305,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate {
                 i+=1
             }
             self.PageTextView.attributedText = result
+            //self.viewDidLayoutSubviews()
         }
         
         if self.infoActive{
@@ -303,11 +326,21 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate {
                     i+=1
                     continue
                 }
+                if (i == 0){
+                    piv.alpha = 0
+                    IPageV1.alpha = 1
+
+                }
                 let ui = UIImage(imageLiteral: self.infophotonames[i])
                 let newheight = ui.size.height/1.85
                 print(newheight)
-                piv.frame = CGRectMake(piv.frame.origin.x, piv.frame.origin.y, piv.frame.size.width, newheight)//(piv.frame.x,piv.frame.y,piv.frame.width,newheight)
+                //piv.frame = CGRectMake(piv.frame.origin.x, piv.frame.origin.y, piv.frame.size.width, newheight)//(piv.frame.x,piv.frame.y,piv.frame.width,newheight)
                 piv.image = ui
+                if (i == 0){
+                    piv.alpha = 0
+                    IPageV1.alpha = 1
+                    IPageV1.image = ui
+                }
                 let mystring = self.AnchoragesCaptiontextstrings[i]
                 let myAttributes = self.AnchoragesCaptionAttributes[i]
                 let myAttrString1 = NSAttributedString(string: mystring,
@@ -349,6 +382,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate {
             self.CloseTV.alpha = 0
             }, completion: { finished in
                 if (finished){
+                    self.IPageV1.alpha = 0
                     self.PageScrollView.hidden = true
                     self.IView2.hidden = true
                     self.DismissPage.hidden = true
