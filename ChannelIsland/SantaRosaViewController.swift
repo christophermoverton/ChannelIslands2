@@ -36,9 +36,58 @@ class SantaRosaViewController: UIViewController, UITextViewDelegate {
     private var anchorageActive: Bool = false
     private var activitiesActive: Bool = false
     @IBOutlet weak var ActivitiesBar: UIImageView!
+    @IBOutlet weak var PageScrollView: FadeScrollVIew!
+    @IBOutlet weak var PageTextView: UITextView!
+    @IBOutlet weak var PageIV1: UIImageView!
+    @IBOutlet weak var IPageV1: UIImageView!
+    @IBOutlet weak var PageIV2: UIImageView!
+    @IBOutlet weak var PageIV3: UIImageView!
+    @IBOutlet weak var PageIV4: UIImageView!
+    @IBOutlet weak var PageIV5: UIImageView!
+    @IBOutlet weak var PageIV6: UIImageView!
+    @IBOutlet weak var CapPagTV1: UITextView!
+    @IBOutlet weak var CapPagTV2: UITextView!
+    @IBOutlet weak var CapPagTV3: UITextView!
+    @IBOutlet weak var CapPagTV4: UITextView!
+    @IBOutlet weak var CapPagTV5: UITextView!
+    @IBOutlet weak var CapPagTV6: UITextView!
+    private var Infotextstrings: [String] = ["INFO\n\n","Forty miles from Ventura, Santa Rosa is the second largest of the Channel Islands. You may encounter rough seas and high winds when visiting this outer island. But when the weather is calm, Santa Rosa is a fisherman’s dream and scuba diver’s paradise. Marine life here is influenced by the colder California Current, much like San Miguel Island."]
     
-    
-    
+    private var InfoAttributes : [[String: AnyObject]] = [[NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!]]
+    private var Anchoragestextstrings: [String] = ["ANCHORAGES\n\n","Santa Rosa Island has a pier at Bechers Bay. Other locations involve beach landings. Check for seasonal beach closings to protect snowy plover nests, as well as seal and sea lion haul-out and pupping areas.\n\n","Please note: there are no public moorings or all-weather anchorages on any of the Channel Islands. It is recommended that one capable person stay on board at all times. Boaters are responsible for any damage to the resources caused by their boat.  \n\n","Bechers Bay\n\n","Bechers Bay offers a pier as well as two fair-weather anchorages, northwest (NW) and southeast (SE). The NW anchorage is the more sheltered and popular of the two.\n\n ","Johnson’s Lee\n\n","Located on the southwest coast, Johnson’s Lee provides a potential anchorage spot when weather permits. When winds are southeasterly or if there is a southern swell, this site is not favorable.\n\n","Ford Point\n\n","Ford Point is a fair-weather anchorage on the southeast shore, about four miles east of Johnson’s Lee.  \n\n"]
+    private var AnchoragesAttributes : [[String: AnyObject]] = [[NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!]
+    ]
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("Got This Far!")
         print(segue.identifier)
@@ -88,6 +137,7 @@ class SantaRosaViewController: UIViewController, UITextViewDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.PageScrollView.contentSize.height = 1900
         var imageArr : [UIImage] = []
         for i in 0...58{
             let str : String = "TAP_HERE_V01_LOOP_"+String(format: "%05d", i)+".png"
@@ -173,13 +223,87 @@ class SantaRosaViewController: UIViewController, UITextViewDelegate {
     }
 
     func enablepageTransition(){
+        self.PageScrollView.contentOffset = CGPoint(x: 0, y: 0)
         self.IView2.hidden = false
+        self.PageScrollView.hidden = false
+        if self.anchorageActive{
+            var i = 0
+            let result = NSMutableAttributedString()
+            for astr: String in self.Anchoragestextstrings{
+                let myAttributes = self.AnchoragesAttributes[i]
+                let myAttrString1 = NSAttributedString(string: astr,
+                                                       attributes: myAttributes)
+                result.appendAttributedString(myAttrString1)
+                i+=1
+            }
+            i = 0
+            /*
+             for piv: UIImageView in self.pageIVs{
+             piv.alpha = 1
+             self.capPagTVs[i].alpha = 1
+             let ui = UIImage(imageLiteral: self.photonames[i])
+             let newheight = ui.size.height/1.85
+             print(newheight)
+             //piv.frame = CGRectMake(piv.frame.origin.x, piv.frame.origin.y, piv.frame.size.width, newheight)//(piv.frame.x,piv.frame.y,piv.frame.width,newheight)
+             piv.image = ui
+             let mystring = self.AnchoragesCaptiontextstrings[i]
+             let myAttributes = self.AnchoragesCaptionAttributes[i]
+             let myAttrString1 = NSAttributedString(string: mystring,
+             attributes: myAttributes)
+             self.capPagTVs[i].attributedText = myAttrString1
+             i+=1
+             }
+             */
+            self.PageTextView.attributedText = result
+            //self.viewDidLayoutSubviews()
+        }
+        
+        if self.infoActive{
+            var i = 0
+            let result = NSMutableAttributedString()
+            for astr: String in self.Infotextstrings{
+                let myAttributes = self.InfoAttributes[i]
+                let myAttrString1 = NSAttributedString(string: astr,
+                                                       attributes: myAttributes)
+                result.appendAttributedString(myAttrString1)
+                i+=1
+            }
+            i = 0
+            /*
+             for piv: UIImageView in self.pageIVs{
+             if (i > 2){
+             piv.alpha = 0
+             self.capPagTVs[i].alpha = 0
+             i+=1
+             continue
+             }
+             
+             let ui = UIImage(imageLiteral: self.infophotonames[i])
+             let newheight = ui.size.height/1.85
+             print(newheight)
+             //piv.frame = CGRectMake(piv.frame.origin.x, piv.frame.origin.y, piv.frame.size.width, newheight)//(piv.frame.x,piv.frame.y,piv.frame.width,newheight)
+             piv.image = ui
+             if (i == 0){
+             piv.alpha = 0
+             IPageV1.alpha = 1
+             IPageV1.image = ui
+             }
+             let mystring = self.AnchoragesCaptiontextstrings[i]
+             let myAttributes = self.AnchoragesCaptionAttributes[i]
+             let myAttrString1 = NSAttributedString(string: mystring,
+             attributes: myAttributes)
+             self.capPagTVs[i].attributedText = myAttrString1
+             i+=1
+             } */
+            self.PageTextView.attributedText = result
+        }
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView.alpha = 0
             self.IView2.alpha = 1
             if self.activitiesActive{
                 self.ActivitiesBar.alpha = 1
             }
+            self.PageScrollView.alpha = 1
             self.CloseTV.alpha = 1
             }, completion: { finished in
                 if (finished){
@@ -196,6 +320,7 @@ class SantaRosaViewController: UIViewController, UITextViewDelegate {
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView2.alpha = 0
             self.IView.alpha = 1
+            self.PageScrollView.alpha = 0
             if self.activitiesActive{
                 self.ActivitiesBar.alpha = 0
             }
@@ -204,6 +329,8 @@ class SantaRosaViewController: UIViewController, UITextViewDelegate {
             }, completion: { finished in
                 if (finished){
                     
+                    self.IPageV1.alpha = 0
+                    self.PageScrollView.hidden = true
                     self.IView2.hidden = true
                     self.DismissPage.hidden = true
                     self.infoActive = false

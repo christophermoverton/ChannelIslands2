@@ -326,11 +326,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
                     i+=1
                     continue
                 }
-                if (i == 0){
-                    piv.alpha = 0
-                    IPageV1.alpha = 1
 
-                }
                 let ui = UIImage(imageLiteral: self.infophotonames[i])
                 let newheight = ui.size.height/1.85
                 print(newheight)
