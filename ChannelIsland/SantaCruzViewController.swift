@@ -242,7 +242,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
             let myAttrString1 = NSAttributedString(string: acstr,
                                                    attributes: myAttributes)
             textView.attributedText = myAttrString1
-            textView.frame = CGRectMake(xcg, ycg+newheight+10.0, 300.0, 60.0)
+            textView.frame = CGRectMake(xcg, ycg+newheight-10.0, 300.0, 60.0)
             textView.alpha = 0
             textView.backgroundColor = UIColor.clearColor()
             self.actpageTVs.append(textView)
