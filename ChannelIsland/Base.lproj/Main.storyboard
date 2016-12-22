@@ -1808,7 +1808,7 @@ Cg
                                 <rect key="frame" x="0.0" y="120" width="1024" height="565"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JWU-1T-Mpx">
-                                        <rect key="frame" x="185" y="75" width="510" height="1300"/>
+                                        <rect key="frame" x="185" y="75" width="510" height="2500"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <attributedString key="attributedText">
                                             <fragment>
@@ -3047,7 +3047,7 @@ Cg
         <image name="upper_campsite" width="530" height="268"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="b7l-3o-hqg"/>
+        <segue reference="zES-DJ-Qvu"/>
         <segue reference="OjJ-ZP-iCm"/>
         <segue reference="cXW-Yx-Jng"/>
         <segue reference="nva-S2-vam"/>
