@@ -48,8 +48,8 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
     private var capPagTVs: [UITextView!] = []
     private var actpageIVs: [UIImageView!] = []
     private var actpageTVs: [UITextView!] = []
-    private var pageIVs2: [[UIImageView!]] = [[]]
-    private var capPagTVs2: [[UITextView!]] = [[]]
+    private var pageIVs2: [[UIImageView!]] = [[UIImageView!]]()
+    private var capPagTVs2: [[UITextView!]] = [[UITextView!]]()
     private var pageID : Int = 0
     private var prevpageID: Int = 0
     @IBOutlet weak var CapPagTV1: UITextView!
@@ -249,6 +249,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
             let x = 710.0
             var iViews: [UIImageView!] = []
             var tViews: [UITextView!] = []
+            print(iname)
             for astr : String in iname{
                 let ycg = CGFloat(y)
                 let xcg = CGFloat(x)
@@ -261,6 +262,9 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
                 imageView.alpha = 0
                 y = y + 60.0 + Double(newheight)
                 iViews.append(imageView)
+                print(j)
+                print(i)
+                print(imageView)
                 self.PageScrollView2.addSubview(imageView)
                 let textView = UITextView()
                 let acstr: String = tnames[j][i]
@@ -275,10 +279,16 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
                 self.PageScrollView2.addSubview(textView)
                 i += 1
             }
+            print(iViews.count)
             self.pageIVs2.append(iViews)
             self.capPagTVs2.append(tViews)
+
             j += 1
         }
+        print(self.pageIVs2.count)
+        print(self.pageIVs2[0].count)
+        print(self.pageIVs2[1].count)
+        print(self.pageIVs2[2].count)
     }
     
     func loadActIVs(){
@@ -432,7 +442,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
         self.IView2.hidden = false
         self.PageScrollView.hidden = false
         var flagTransit = false
-
+        
         if self.otherPageActive{
             if self.switchPage{
                 self.PageScrollView2.hidden = false
@@ -456,6 +466,8 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
                 self.PageTextView2.attributedText = result
                 //change alphas on captions and photos for scrollview2 controller
                 i = 0
+                print("Page ID: ")
+                print(self.pageID)
                 for iv: UIImageView in self.pageIVs2[self.pageID]{
                     iv.alpha = 1
                     self.capPagTVs2[self.pageID][i].alpha = 1
@@ -466,13 +478,25 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
             }
             if self.prevpageID == 0{
                 self.anchorageActive = false
+                self.AnchorageButton.hidden = false
             }
             else if self.prevpageID == 1{
                 self.infoActive = false
+                self.InfoButton.hidden = false
             }
             else{
                 self.activitiesActive = false
+                self.ActivitiesButton.hidden = false
             }
+        }
+        if self.pageID == 0{
+            self.AnchorageButton.hidden = true
+        }
+        else if self.pageID == 1{
+            self.InfoButton.hidden = true
+        }
+        else{
+            self.ActivitiesButton.hidden = true
         }
         if self.anchorageActive && !flagTransit{
             self.PageScrollView.contentSize.height = 1900
@@ -655,12 +679,25 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
                     self.anchorageActive = false
                     self.activitiesActive = false
                     self.otherPageActive = false
+                    self.ActivitiesButton.hidden = false
+                    self.AnchorageButton.hidden = false
+                    self.InfoButton.hidden = false
                     self.switchPage = true
                     var i = 0
                     for piv: UIImageView! in self.actpageIVs{
                         piv.alpha = 0
                         self.actpageTVs[i].alpha = 0
                         i+=1
+                    }
+                    var j = 0
+                    for pivs: [UIImageView!] in self.pageIVs2{
+                        i = 0
+                        for piv: UIImageView in pivs{
+                            piv.alpha = 0
+                            self.capPagTVs2[j][i].alpha = 0
+                            i+=1
+                        }
+                        j+=1
                     }
                     
                 }
