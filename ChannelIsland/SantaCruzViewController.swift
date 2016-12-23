@@ -436,6 +436,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
         if self.otherPageActive{
             if self.switchPage{
                 self.PageScrollView2.hidden = false
+                self.PageScrollView2.contentOffset = CGPoint(x: 0, y: 0)
                 let ptextstrings: [[String]] = [self.Anchoragestextstrings, self.Infotextstrings, self.Activitiestextstrings]
                 let pattributes: [[[String: AnyObject]]] = [self.AnchoragesAttributes, self.InfoAttributes, self.ActivitiesAttributes]
                 var i = 0
@@ -455,9 +456,9 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
                 self.PageTextView2.attributedText = result
                 //change alphas on captions and photos for scrollview2 controller
                 i = 0
-                for iv: UIImageView in self.pageIVs2[pageID]{
+                for iv: UIImageView in self.pageIVs2[self.pageID]{
                     iv.alpha = 1
-                    self.capPagTVs2[pageID][i].alpha = 1
+                    self.capPagTVs2[self.pageID][i].alpha = 1
                     i+=1
                 }
                 flagTransit = true
@@ -583,6 +584,9 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
             if self.activitiesActive{
                 self.ActivitiesBar.alpha = 1
             }
+            else{
+                self.ActivitiesBar.alpha = 0
+            }
             if !self.otherPageActive{
                 self.PageScrollView.alpha = 1
             }
@@ -612,9 +616,9 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
                         }
                         else{
                             var i = 0
-                            for iv: UIImageView in self.pageIVs2[self.pageID]{
-                                iv.alpha = 1
-                                self.capPagTVs2[self.pageID][i].alpha = 1
+                            for iv: UIImageView in self.pageIVs2[self.prevpageID]{
+                                iv.alpha = 0
+                                self.capPagTVs2[self.prevpageID][i].alpha = 0
                                 i+=1
                             }
                             
@@ -635,9 +639,9 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
             self.IView.alpha = 1
             self.PageScrollView2.alpha = 0
             self.PageScrollView.alpha = 0
-            if self.activitiesActive{
-                self.ActivitiesBar.alpha = 0
-            }
+            
+            self.ActivitiesBar.alpha = 0
+           
             
             self.CloseTV.alpha = 0
             }, completion: { finished in
