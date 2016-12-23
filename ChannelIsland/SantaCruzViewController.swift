@@ -34,6 +34,8 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
     private var infoActive: Bool = false
     private var anchorageActive: Bool = false
     private var activitiesActive: Bool = false
+    private var otherPageActive: Bool = false
+    private var switchPage: Bool = true
     @IBOutlet weak var PageScrollView: UIScrollView!
     @IBOutlet weak var PageTextView: UITextView!
     @IBOutlet weak var PageIV1: UIImageView!
@@ -46,6 +48,10 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
     private var capPagTVs: [UITextView!] = []
     private var actpageIVs: [UIImageView!] = []
     private var actpageTVs: [UITextView!] = []
+    private var pageIVs2: [[UIImageView!]] = [[]]
+    private var capPagTVs2: [[UITextView!]] = [[]]
+    private var pageID : Int = 0
+    private var prevpageID: Int = 0
     @IBOutlet weak var CapPagTV1: UITextView!
     @IBOutlet weak var CapPagTV2: UITextView!
     @IBOutlet weak var CapPagTV3: UITextView!
@@ -53,6 +59,10 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
     @IBOutlet weak var CapPagTV5: UITextView!
     @IBOutlet weak var CapPagTV6: UITextView!
     @IBOutlet weak var IPageV1: UIImageView!
+    private var PageTextView2: UITextView!
+    private var PageScrollView2: UIScrollView!
+    @IBOutlet var SantaCruzView: UIView!
+    
     private var Activitiestextstrings: [String] = ["ACTIVITIES\n\n","Boating and Kayaking\n\n","With one of the world’s largest sea caves and clear coastal waters, Santa Cruz is a sea kayaker’s paradise. Formal guided tours are offered at both Scorpion Bay and Prisoners Harbor.\n\n","Diving, Snorkeling, and Swimming\n\n","The easiest place for walk-in diving, snorkeling, and swimming is right off the pier at Scorpion Beach. To the east, Smuggler’s Cove offers great diving and snorkeling too. With the exception of Anacapa, these are the warmest waters you’re likely to find in the Channel Islands.\n\n","Wildlife Watching\n\n","With 145 species of life found nowhere else on Earth, the wildlife watcher is in for a treat on Santa Cruz.\n\nSanta Cruz Island is home to the island scrub jay and small island fox. They reveal two evolutionary strategies to adapt to the island’s unique ecosystem. The jay is bigger than its mainland cousins; the fox is much smaller.\n\n","Fishing\n\n","\t·Over 80 percent of the waters near the Channel Islands are open to fishing.\n\t·Sport fishing is allowed outside marine protected areas and requires possession of a valid California state fishing license with an ocean enhancement stamp.\n\t·All California Department of Fish and Game regulations apply.\n\n"," Hiking\n\n","\t·Several roads and trails traverse eastern Santa Cruz Island. Trails near historic Scorpion Ranch are well maintained and of moderate difficulty. Hiking trails in the more rugged Montañon area are generally more strenuous.\n\t·Rangers and naturalists offer guided tours year-round at Scorpion Anchorage and Prisoners Harbor.\n\t·Note that the western side of Santa Cruz requires a permit from the Nature Conservancy to enter.  For more information, please visit: https://www.nps.gov/chis/index.htm.\n\n","Camping\n\n","\t·Of all the five islands, Santa Cruz provides the most accommodations and amenities for campers. Take your pick between developed and well shaded campgrounds at Scorpion Bay and backcountry sites at Del Norte..\n\t·Year-round camping is available; overnight fees apply. Reserve your site well in advance at recreation.gov or call 877-444-6777.  Concession boats fill to capacity more quickly than campground sites are filled, so book your boat transportation for overnight trips first.\n\t·Scorpion Bay campground provides picnic tables, lock boxes for food, drinking water, and pit toilets.\n\t·Remember that you’ll be hauling everything else from the pier to your site, so bring essentials only.\n\t·Be prepared to pack in your own water when utilizing the backcountry campsites."]
     
     private var ActivitiesAttributes : [[String: AnyObject]] = [[NSForegroundColorAttributeName: UIColor.whiteColor(),
@@ -219,6 +229,58 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
         }
     }
     
+    func loadScrollPageTV2(){
+        self.PageTextView2 = UITextView()
+        self.PageTextView2.backgroundColor = UIColor.clearColor()
+        self.PageTextView2.frame = CGRectMake(185, 75, 510.0, 3500.0)
+        self.PageTextView2.alpha = 1
+        self.PageScrollView2 = UIScrollView()
+        self.PageScrollView2.frame = CGRectMake(0, 120, 1024, 565)
+        self.PageScrollView2.alpha = 0
+        self.PageScrollView2.addSubview(self.PageTextView2)
+        self.SantaCruzView.insertSubview(self.PageScrollView2,atIndex: 5)
+        self.PageScrollView2.contentSize.height = 3000
+        let inames: [[String]] = [self.photonames, self.infophotonames, self.activitiesphotonames]
+        let tnames: [[String]] = [self.AnchoragesCaptiontextstrings,self.InfoCaptiontextstrings,self.ActivitiesCaptiontextstrings]
+        var j = 0
+        for iname: [String] in inames{
+            var i = 0
+            var y = 90.0
+            let x = 710.0
+            var iViews: [UIImageView!] = []
+            var tViews: [UITextView!] = []
+            for astr : String in iname{
+                let ycg = CGFloat(y)
+                let xcg = CGFloat(x)
+                let ui = UIImage(imageLiteral: astr)
+                let imageView = UIImageView(image: ui)
+                let newheight = ui.size.height/1.85
+                let newwidth = ui.size.width/1.85
+                imageView.contentMode = .ScaleAspectFit
+                imageView.frame = CGRectMake(xcg, ycg, newwidth, newheight)//(piv.frame.x,piv.frame.y,piv.frame.width,newheight)
+                imageView.alpha = 0
+                y = y + 60.0 + Double(newheight)
+                iViews.append(imageView)
+                self.PageScrollView2.addSubview(imageView)
+                let textView = UITextView()
+                let acstr: String = tnames[j][i]
+                let myAttributes = self.InfoCaptionAttributes[0]
+                let myAttrString1 = NSAttributedString(string: acstr,
+                                                       attributes: myAttributes)
+                textView.attributedText = myAttrString1
+                textView.frame = CGRectMake(xcg, ycg+newheight-10.0, 300.0, 60.0)
+                textView.alpha = 0
+                textView.backgroundColor = UIColor.clearColor()
+                tViews.append(textView)
+                self.PageScrollView2.addSubview(textView)
+                i += 1
+            }
+            self.pageIVs2.append(iViews)
+            self.capPagTVs2.append(tViews)
+            j += 1
+        }
+    }
+    
     func loadActIVs(){
         var y = 90.0
         let x = 710.0
@@ -255,6 +317,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadActIVs()
+        self.loadScrollPageTV2()
         print(self.Activitiestextstrings.count)
         self.PageScrollView.delegate = self
         self.pageIVs = [self.PageIV1, self.PageIV2, self.PageIV3, self.PageIV4, self.PageIV5, self.PageIV6]
@@ -345,16 +408,22 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
     
     func enableActivities(){
         self.activitiesActive = true
+        self.prevpageID = self.pageID
+        self.pageID = 2
         self.enablepageTransition()
     }
     
     func enableAnchorages(){
         self.anchorageActive = true
+        self.prevpageID = self.pageID
+        self.pageID = 0
         self.enablepageTransition()
     }
     
     func enableInfo(){
         self.infoActive = true
+        self.prevpageID = self.pageID
+        self.pageID = 1
         self.enablepageTransition()
     }
     
@@ -362,7 +431,49 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
         self.PageScrollView.contentOffset = CGPoint(x: 0, y: 0)
         self.IView2.hidden = false
         self.PageScrollView.hidden = false
-        if self.anchorageActive{
+        var flagTransit = false
+
+        if self.otherPageActive{
+            if self.switchPage{
+                self.PageScrollView2.hidden = false
+                let ptextstrings: [[String]] = [self.Anchoragestextstrings, self.Infotextstrings, self.Activitiestextstrings]
+                let pattributes: [[[String: AnyObject]]] = [self.AnchoragesAttributes, self.InfoAttributes, self.ActivitiesAttributes]
+                var i = 0
+                let result = NSMutableAttributedString()
+                for textstring: String in ptextstrings[self.pageID]{
+                    
+                    
+                    
+                    let myAttributes = pattributes[pageID][i]
+                    let myAttrString1 = NSAttributedString(string: textstring,
+                                                               attributes: myAttributes)
+                    result.appendAttributedString(myAttrString1)
+                    
+                    
+                    i+=1
+                }
+                self.PageTextView2.attributedText = result
+                //change alphas on captions and photos for scrollview2 controller
+                i = 0
+                for iv: UIImageView in self.pageIVs2[pageID]{
+                    iv.alpha = 1
+                    self.capPagTVs2[pageID][i].alpha = 1
+                    i+=1
+                }
+                flagTransit = true
+                
+            }
+            if self.prevpageID == 0{
+                self.anchorageActive = false
+            }
+            else if self.prevpageID == 1{
+                self.infoActive = false
+            }
+            else{
+                self.activitiesActive = false
+            }
+        }
+        if self.anchorageActive && !flagTransit{
             self.PageScrollView.contentSize.height = 1900
             var i = 0
             let result = NSMutableAttributedString()
@@ -393,7 +504,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
             //self.viewDidLayoutSubviews()
         }
         
-        if self.infoActive{
+        if self.infoActive && !flagTransit{
             self.PageScrollView.contentSize.height = 1900
             var i = 0
             let result = NSMutableAttributedString()
@@ -434,7 +545,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
             self.PageTextView.attributedText = result
         }
         
-        if self.activitiesActive{
+        if self.activitiesActive && !flagTransit{
             self.PageScrollView.contentSize.height = 4000
             var i = 0
             let result = NSMutableAttributedString()
@@ -472,15 +583,47 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
             if self.activitiesActive{
                 self.ActivitiesBar.alpha = 1
             }
-            self.PageScrollView.alpha = 1
-            
+            if !self.otherPageActive{
+                self.PageScrollView.alpha = 1
+            }
+            else{
+                if self.switchPage{
+                    self.PageScrollView.alpha = 0
+                    self.PageScrollView2.alpha = 1
+                }
+                else{
+                    self.PageScrollView.alpha = 1
+                    self.PageScrollView2.alpha = 0
+                }
+            }
             self.CloseTV.alpha = 1
             }, completion: { finished in
                 if (finished){
-                    
+                    if self.otherPageActive{
+                        if self.switchPage{
+                            self.switchPage = false
+                            //clean up 1rst ScrollView for photos and captions
+                            var i = 0
+                            for piv: UIImageView! in self.actpageIVs{
+                                piv.alpha = 0
+                                self.actpageTVs[i].alpha = 0
+                                i+=1
+                            }
+                        }
+                        else{
+                            var i = 0
+                            for iv: UIImageView in self.pageIVs2[self.pageID]{
+                                iv.alpha = 1
+                                self.capPagTVs2[self.pageID][i].alpha = 1
+                                i+=1
+                            }
+                            
+                            self.switchPage = true
+                        }
+                    }
                     self.IView.hidden = true
                     self.DismissPage.hidden = false
-                    
+                    self.otherPageActive = true
                 }
         })
     }
@@ -490,6 +633,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView2.alpha = 0
             self.IView.alpha = 1
+            self.PageScrollView2.alpha = 0
             self.PageScrollView.alpha = 0
             if self.activitiesActive{
                 self.ActivitiesBar.alpha = 0
@@ -500,12 +644,14 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
                 if (finished){
                     self.IPageV1.alpha = 0
                     self.PageScrollView.hidden = true
+                    self.PageScrollView2.hidden = true
                     self.IView2.hidden = true
                     self.DismissPage.hidden = true
                     self.infoActive = false
                     self.anchorageActive = false
                     self.activitiesActive = false
-                    
+                    self.otherPageActive = false
+                    self.switchPage = true
                     var i = 0
                     for piv: UIImageView! in self.actpageIVs{
                         piv.alpha = 0

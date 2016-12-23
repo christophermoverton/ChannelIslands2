@@ -1808,7 +1808,7 @@ Cg
                                 <rect key="frame" x="0.0" y="120" width="1024" height="565"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JWU-1T-Mpx">
-                                        <rect key="frame" x="185" y="75" width="510" height="2500"/>
+                                        <rect key="frame" x="185" y="75" width="510" height="3500"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <attributedString key="attributedText">
                                             <fragment>
@@ -2035,6 +2035,7 @@ Cg
                         <outlet property="PageIV6" destination="Ywk-za-4UJ" id="Ws2-EI-8Zz"/>
                         <outlet property="PageScrollView" destination="NVb-Oy-hDX" id="8Ti-Oj-tZk"/>
                         <outlet property="PageTextView" destination="JWU-1T-Mpx" id="v4a-Of-0EB"/>
+                        <outlet property="SantaCruzView" destination="wKN-Ev-zjR" id="beX-GK-vYu"/>
                         <outlet property="TitleText" destination="HL1-Zz-pgs" id="emQ-G9-Ove"/>
                     </connections>
                 </viewController>

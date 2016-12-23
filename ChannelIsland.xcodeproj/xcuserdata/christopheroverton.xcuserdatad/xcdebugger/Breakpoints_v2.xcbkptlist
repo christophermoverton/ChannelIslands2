@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChannelIsland/SantaCruzViewController.swift"
-            timestampString = "504117481.490503"
+            timestampString = "504224128.344792"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "383"
-            endingLineNumber = "383"
+            startingLineNumber = "494"
+            endingLineNumber = "494"
             landmarkName = "enablepageTransition()"
             landmarkType = "5">
          </BreakpointContent>
