@@ -19,24 +19,28 @@ struct Hike {
 }
 
 class HikeCell: UITableViewCell {
-    private var destinationLabel: UILabel = UILabel()
-    private var distanceLabel: UILabel = UILabel()
-    private var difficultyLabel: UILabel = UILabel()
-    private var briefdescriptionLabel: UILabel = UILabel()
+    //private var destinationLabel: UITextView = UITextView()
+    private var destinationLabel2: UITextView = UITextView()
+    private var distanceLabel: UITextView = UITextView()
+    private var difficultyLabel: UITextView = UITextView()
+    private var briefdescriptionLabel: UITextView = UITextView()
     private var captionAttr: [String: AnyObject] = [NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
         NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 16.0)!]
     init(){
-         super.init(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
-        destinationLabel.frame = CGRect(x: 100,y: 10,width: 100,height: 100)
-        destinationLabel.backgroundColor = UIColor.clearColor()
-        distanceLabel.frame = CGRect(x: 200,y: 10,width: 30,height: 100)
+         super.init(style: UITableViewCellStyle.Value2, reuseIdentifier: "cell")
+        //destinationLabel.frame = CGRect(x: 0,y: 10,width: 20,height: 110)
+        //destinationLabel.backgroundColor = UIColor.clearColor()
+        destinationLabel2.frame = CGRect(x: 0, y: 10, width: 100, height: 110)
+        destinationLabel2.backgroundColor = UIColor.clearColor()
+        //destinationLabel.textAlignment =  .Center
+        distanceLabel.frame = CGRect(x: 110,y: 10,width: 60,height: 110)
         distanceLabel.backgroundColor = UIColor.clearColor()
-        difficultyLabel.frame = CGRect(x: 230,y: 10,width: 150,height: 100)
+        difficultyLabel.frame = CGRect(x: 180,y: 10,width: 90,height: 110)
         difficultyLabel.backgroundColor = UIColor.clearColor()
-        briefdescriptionLabel.frame = CGRect(x: 380,y: 10,width: 200,height: 100)
+        briefdescriptionLabel.frame = CGRect(x: 280,y: 10,width: 200,height: 110)
         briefdescriptionLabel.backgroundColor = UIColor.clearColor()
-        self.addSubview(destinationLabel)
+        self.addSubview(destinationLabel2)
         self.addSubview(distanceLabel)
         self.addSubview(difficultyLabel)
         self.addSubview(briefdescriptionLabel)
@@ -45,10 +49,14 @@ class HikeCell: UITableViewCell {
     var destination: String? {
         didSet {
             //destinationLabel.text = destination
-
+            /*
             let myAttrString1 = NSAttributedString(string: destination!,
                                                    attributes: captionAttr)
             destinationLabel.attributedText = myAttrString1
+            */
+            let myAttrString1 = NSAttributedString(string: destination!,
+                                                   attributes: captionAttr)
+            destinationLabel2.attributedText = myAttrString1
         }
     }
     
@@ -58,7 +66,7 @@ class HikeCell: UITableViewCell {
 
             let myAttrString1 = NSAttributedString(string: distance!,
                                                    attributes: captionAttr)
-            destinationLabel.attributedText = myAttrString1
+            distanceLabel.attributedText = myAttrString1
             
         }
     }
@@ -110,17 +118,21 @@ extension HikesDataSource: UITableViewDataSource {
         let cell = HikeCell()
         let hike = hikes[indexPath.row]
         cell.destination = hike.destination
+        //cell.destination = hike.destination
         cell.distance = hike.distance
         cell.difficulty = hike.difficulty
         cell.briefdescription = hike.briefdescription
         cell.backgroundColor = UIColor.clearColor()
-        cell.frame = CGRectMake(0, 0, 510, 100)
+        cell.autoresizesSubviews = false
+        
+        //cell.frame = CGRectMake(0, 0, 300, 110)
         cell.tintColor = UIColor.clearColor()
+        
         return cell
     }
 }
 
-class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollViewDelegate {
+class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableViewDelegate,UIScrollViewDelegate {
     
     private let revealSequeId = "revealSegue"
     private var swipeState: Bool = true  //right state
@@ -174,7 +186,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
     @IBOutlet weak var CapPagTV6: UITextView!
     @IBOutlet weak var IPageV1: UIImageView!
     private var PageTextView2: UITextView!
-    private var PageScrollView2: UIScrollView!
+    private var PageScrollView2: FadeScrollVIew!
     @IBOutlet var SantaCruzView: UIView!
     private var dataSource: HikesDataSource
     private var actHikes: [Hike] = [Hike(destination: "Historic Ranch",distance: ".5",difficulty: "Easy",briefdescription: "View the historic Scorpion Ranch complex."),Hike(destination: "Cavern Point",distance: "2",difficulty: "Moderate",briefdescription: "Magnificent coastal vistas and whale viewing."),Hike(destination: "Potato Harbor",distance: "4",difficulty: "Moderate",briefdescription: "Spectacular coastal views. No beach access."),Hike(destination: "Scorpion Canyon",distance: "4 (loop)",difficulty: "Moderate to strenuous",briefdescription: "A scenic loop hike that includes steep canyon walls and a chance to see the unique island scrub-jay."), Hike(destination: "Smugglers Cove",distance: "7",difficulty: "Strenuous",briefdescription: "An all-day hike with beach access at Smugglers Cove."),Hike(destination: "Montañon Ridge",distance: "8",difficulty: "Strenuous",briefdescription: "For experienced, off-trail hikers. Great views."),Hike(destination: "Prisoners Harbor",distance: "28",difficulty: "Strenuous",briefdescription: "Arrange a boat pickup for a one-way trip or camp at Del Norte backcountry camp."),Hike(destination: "From Smugglers Cove:",distance: "",difficulty: "",briefdescription: ""),Hike(destination: "Smugglers Canyon",distance: "2",difficulty: "Moderate to strenuous",briefdescription: "Opportunities to view native island vegetation.  Be prepared for uneven terrain and loose rock."),Hike(destination: "Yellowbanks",distance: "3",difficulty: "Moderate",briefdescription: "Off-trail hike to an overlook. No beach access."),Hike(destination: "San Pedro Point",distance: "4",difficulty: "Moderate",briefdescription: "For experienced, off-trail hikers."),Hike(destination: "From Prisoners Harbor:",distance: "",difficulty: "",briefdescription: ""),Hike(destination: "Prisoners Harbor",distance: ".25 -.5",difficulty: "Easy",briefdescription: "View the historic Prisoners Harbor area and search for the island scrub-jay."),Hike(destination: "Del Norte Camp",distance: "7",difficulty: "Strenuous",briefdescription: "Follow the rugged Del Norte trail east to the backcountry camp."),Hike(destination: "Navy Road- Del Norte Loop",distance: "8.5",difficulty: "Strenuous",briefdescription: "Route includes the Navy Road and the Del Norte Trail. Good views."),Hike(destination: "Chinese Harbor",distance: "15.5",difficulty: "Strenuous",briefdescription: "A long hike that ends at the only beach accessible by land on the isthmus."),Hike(destination: "China Pines",distance: "18",difficulty: "Strenuous",briefdescription: "Explore the Santa Cruz Island pine grove."),Hike(destination: "Montañon Ridge",distance: "21",difficulty: "Strenuous",briefdescription: "For experienced, off-trail hikers. Must be able to read topographic maps."),Hike(destination: "Scorpion Anchorage",distance: "28",difficulty: "Strenuous",briefdescription: "Arrange a boat pickup for a one-way trip or camp at Del Norte backcountry camp."),Hike(destination: "Pelican Bay",distance: "4",difficulty: "Moderate to strenuous",briefdescription: "This trail may only be travled by those who have obtained a permit in advance from The Nature Conservancy or are accompanied by Island Packers (a boat concessioner) staff.")]
@@ -344,7 +356,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
         }
     }
     required init?(coder aDecoder: NSCoder) {
-        self.actpageTableView2.registerClass(HikeCell.self, forCellReuseIdentifier: "HikeCell")
+        //self.actpageTableView2.registerClass(HikeCell.self, forCellReuseIdentifier: "HikeCell")
         
         self.dataSource = HikesDataSource(hikes: actHikes)
         super.init(coder: aDecoder)
@@ -354,7 +366,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
         self.PageTextView2.backgroundColor = UIColor.clearColor()
         self.PageTextView2.frame = CGRectMake(185, 75, 510.0, 3500.0)
         self.PageTextView2.alpha = 1
-        self.PageScrollView2 = UIScrollView()
+        self.PageScrollView2 = FadeScrollVIew()
         self.PageScrollView2.frame = CGRectMake(0, 120, 1024, 565)
         self.PageScrollView2.alpha = 0
         self.PageScrollView2.addSubview(self.PageTextView2)
@@ -407,16 +419,22 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
         }
         
         //add tableview
-        self.actpageTableView2.frame = CGRectMake(185, 2500, 510, 1000)
+        self.actpageTableView2.delegate = self
         self.actpageTableView2.alpha = 0
         self.actpageTableView2.backgroundColor = UIColor.clearColor()
         self.actpageTableView2.tintColor = UIColor.clearColor()
         self.actpageTableView2.allowsSelection = false
-        self.actpageTableView2.estimatedRowHeight = 109
-        self.actpageTableView2.rowHeight = UITableViewAutomaticDimension
+        self.actpageTableView2.separatorColor = UIColor.clearColor()
+        self.actpageTableView2.rowHeight = 110
+        self.actpageTableView2.tableFooterView = UIView(frame: CGRectZero)
+        self.actpageTableView2.tableHeaderView = UIView(frame: CGRectZero)
+        //self.actpageTableView2.style = UITableViewStyle.Grouped;
+        //self.actpageTableView2.
+        //self.actpageTableView2.rowHeight = UITableViewAutomaticDimension
         self.actpageTableView2.dataSource = dataSource
         self.actpageTableView2.reloadData()
         self.PageScrollView2.addSubview(self.actpageTableView2)
+        self.actpageTableView2.frame = CGRectMake(185, 2400, 510, 1000)
         print(self.pageIVs2.count)
         print(self.pageIVs2[0].count)
         print(self.pageIVs2[1].count)
