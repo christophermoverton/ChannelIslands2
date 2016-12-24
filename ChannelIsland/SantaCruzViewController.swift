@@ -26,19 +26,19 @@ class HikeCell: UITableViewCell {
     private var briefdescriptionLabel: UITextView = UITextView()
     private var captionAttr: [String: AnyObject] = [NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
-        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 16.0)!]
+        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 15.0)!]
     init(){
          super.init(style: UITableViewCellStyle.Value2, reuseIdentifier: "cell")
         //destinationLabel.frame = CGRect(x: 0,y: 10,width: 20,height: 110)
         //destinationLabel.backgroundColor = UIColor.clearColor()
-        destinationLabel2.frame = CGRect(x: 0, y: 10, width: 100, height: 110)
+        destinationLabel2.frame = CGRect(x: 0, y: 10, width: 150, height: 110)
         destinationLabel2.backgroundColor = UIColor.clearColor()
         //destinationLabel.textAlignment =  .Center
-        distanceLabel.frame = CGRect(x: 110,y: 10,width: 60,height: 110)
+        distanceLabel.frame = CGRect(x: 140,y: 10,width: 60,height: 110)
         distanceLabel.backgroundColor = UIColor.clearColor()
-        difficultyLabel.frame = CGRect(x: 180,y: 10,width: 90,height: 110)
+        difficultyLabel.frame = CGRect(x: 210,y: 10,width: 90,height: 110)
         difficultyLabel.backgroundColor = UIColor.clearColor()
-        briefdescriptionLabel.frame = CGRect(x: 280,y: 10,width: 200,height: 110)
+        briefdescriptionLabel.frame = CGRect(x: 310,y: 10,width: 200,height: 110)
         briefdescriptionLabel.backgroundColor = UIColor.clearColor()
         self.addSubview(destinationLabel2)
         self.addSubview(distanceLabel)
