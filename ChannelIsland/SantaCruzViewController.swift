@@ -27,6 +27,10 @@ class HikeCell: UITableViewCell {
     private var captionAttr: [String: AnyObject] = [NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
         NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 15.0)!]
+    private var captionAttr2: [String: AnyObject] = [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 15.0)!]
+    internal var index = 0
     init(){
          super.init(style: UITableViewCellStyle.Value2, reuseIdentifier: "cell")
         //destinationLabel.frame = CGRect(x: 0,y: 10,width: 20,height: 110)
@@ -34,9 +38,9 @@ class HikeCell: UITableViewCell {
         destinationLabel2.frame = CGRect(x: 0, y: 10, width: 150, height: 110)
         destinationLabel2.backgroundColor = UIColor.clearColor()
         //destinationLabel.textAlignment =  .Center
-        distanceLabel.frame = CGRect(x: 140,y: 10,width: 60,height: 110)
+        distanceLabel.frame = CGRect(x: 130,y: 10,width: 80,height: 110)
         distanceLabel.backgroundColor = UIColor.clearColor()
-        difficultyLabel.frame = CGRect(x: 210,y: 10,width: 90,height: 110)
+        difficultyLabel.frame = CGRect(x: 220,y: 10,width: 90,height: 110)
         difficultyLabel.backgroundColor = UIColor.clearColor()
         briefdescriptionLabel.frame = CGRect(x: 310,y: 10,width: 200,height: 110)
         briefdescriptionLabel.backgroundColor = UIColor.clearColor()
@@ -54,39 +58,65 @@ class HikeCell: UITableViewCell {
                                                    attributes: captionAttr)
             destinationLabel.attributedText = myAttrString1
             */
-            let myAttrString1 = NSAttributedString(string: destination!,
+            if self.index > 0{
+                let myAttrString1 = NSAttributedString(string: destination!,
                                                    attributes: captionAttr)
-            destinationLabel2.attributedText = myAttrString1
+                destinationLabel2.attributedText = myAttrString1
+            }
+            else{
+                let myAttrString1 = NSAttributedString(string: destination!,
+                                                       attributes: captionAttr2)
+                destinationLabel2.attributedText = myAttrString1
+            }
+            
         }
     }
     
     var distance: String? {
         didSet {
             //distanceLabel.text = distance
-
-            let myAttrString1 = NSAttributedString(string: distance!,
+            if self.index > 0{
+                let myAttrString1 = NSAttributedString(string: distance!,
                                                    attributes: captionAttr)
-            distanceLabel.attributedText = myAttrString1
+                distanceLabel.attributedText = myAttrString1
+            }
+            else{
+                let myAttrString1 = NSAttributedString(string: distance!,
+                                                       attributes: captionAttr2)
+                distanceLabel.attributedText = myAttrString1
+            }
             
         }
     }
     var difficulty: String? {
         didSet {
             //difficultyLabel.text = difficulty
-
-            let myAttrString1 = NSAttributedString(string: difficulty!,
-                                                   attributes: captionAttr)
-            difficultyLabel.attributedText = myAttrString1
+            if self.index > 0{
+                let myAttrString1 = NSAttributedString(string: difficulty!,
+                                                       attributes: captionAttr)
+                difficultyLabel.attributedText = myAttrString1
+            }
+            else{
+                let myAttrString1 = NSAttributedString(string: difficulty!,
+                                                       attributes: captionAttr2)
+                difficultyLabel.attributedText = myAttrString1
+            }
         }
     }
     
     var briefdescription: String? {
         didSet {
             //briefdescriptionLabel.text = briefdescription
-
-            let myAttrString1 = NSAttributedString(string: briefdescription!,
-                                                   attributes: captionAttr)
-            briefdescriptionLabel.attributedText = myAttrString1
+            if self.index > 0{
+                let myAttrString1 = NSAttributedString(string: briefdescription!,
+                                                       attributes: captionAttr)
+                briefdescriptionLabel.attributedText = myAttrString1
+            }
+            else{
+                let myAttrString1 = NSAttributedString(string: briefdescription!,
+                                                       attributes: captionAttr2)
+                briefdescriptionLabel.attributedText = myAttrString1
+            }
         }
     }
     
@@ -117,6 +147,7 @@ extension HikesDataSource: UITableViewDataSource {
         //let cell = tableView.dequeueReusableCellWithIdentifier(String(HikeCell)) as! HikeCell
         let cell = HikeCell()
         let hike = hikes[indexPath.row]
+        cell.index = indexPath.row
         cell.destination = hike.destination
         //cell.destination = hike.destination
         cell.distance = hike.distance
@@ -189,8 +220,8 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     private var PageScrollView2: FadeScrollVIew!
     @IBOutlet var SantaCruzView: UIView!
     private var dataSource: HikesDataSource
-    private var actHikes: [Hike] = [Hike(destination: "Historic Ranch",distance: ".5",difficulty: "Easy",briefdescription: "View the historic Scorpion Ranch complex."),Hike(destination: "Cavern Point",distance: "2",difficulty: "Moderate",briefdescription: "Magnificent coastal vistas and whale viewing."),Hike(destination: "Potato Harbor",distance: "4",difficulty: "Moderate",briefdescription: "Spectacular coastal views. No beach access."),Hike(destination: "Scorpion Canyon",distance: "4 (loop)",difficulty: "Moderate to strenuous",briefdescription: "A scenic loop hike that includes steep canyon walls and a chance to see the unique island scrub-jay."), Hike(destination: "Smugglers Cove",distance: "7",difficulty: "Strenuous",briefdescription: "An all-day hike with beach access at Smugglers Cove."),Hike(destination: "Montañon Ridge",distance: "8",difficulty: "Strenuous",briefdescription: "For experienced, off-trail hikers. Great views."),Hike(destination: "Prisoners Harbor",distance: "28",difficulty: "Strenuous",briefdescription: "Arrange a boat pickup for a one-way trip or camp at Del Norte backcountry camp."),Hike(destination: "From Smugglers Cove:",distance: "",difficulty: "",briefdescription: ""),Hike(destination: "Smugglers Canyon",distance: "2",difficulty: "Moderate to strenuous",briefdescription: "Opportunities to view native island vegetation.  Be prepared for uneven terrain and loose rock."),Hike(destination: "Yellowbanks",distance: "3",difficulty: "Moderate",briefdescription: "Off-trail hike to an overlook. No beach access."),Hike(destination: "San Pedro Point",distance: "4",difficulty: "Moderate",briefdescription: "For experienced, off-trail hikers."),Hike(destination: "From Prisoners Harbor:",distance: "",difficulty: "",briefdescription: ""),Hike(destination: "Prisoners Harbor",distance: ".25 -.5",difficulty: "Easy",briefdescription: "View the historic Prisoners Harbor area and search for the island scrub-jay."),Hike(destination: "Del Norte Camp",distance: "7",difficulty: "Strenuous",briefdescription: "Follow the rugged Del Norte trail east to the backcountry camp."),Hike(destination: "Navy Road- Del Norte Loop",distance: "8.5",difficulty: "Strenuous",briefdescription: "Route includes the Navy Road and the Del Norte Trail. Good views."),Hike(destination: "Chinese Harbor",distance: "15.5",difficulty: "Strenuous",briefdescription: "A long hike that ends at the only beach accessible by land on the isthmus."),Hike(destination: "China Pines",distance: "18",difficulty: "Strenuous",briefdescription: "Explore the Santa Cruz Island pine grove."),Hike(destination: "Montañon Ridge",distance: "21",difficulty: "Strenuous",briefdescription: "For experienced, off-trail hikers. Must be able to read topographic maps."),Hike(destination: "Scorpion Anchorage",distance: "28",difficulty: "Strenuous",briefdescription: "Arrange a boat pickup for a one-way trip or camp at Del Norte backcountry camp."),Hike(destination: "Pelican Bay",distance: "4",difficulty: "Moderate to strenuous",briefdescription: "This trail may only be travled by those who have obtained a permit in advance from The Nature Conservancy or are accompanied by Island Packers (a boat concessioner) staff.")]
-    private var Activitiestextstrings: [String] = ["ACTIVITIES\n\n","Boating and Kayaking\n\n","With one of the world’s largest sea caves and clear coastal waters, Santa Cruz is a sea kayaker’s paradise. Formal guided tours are offered at both Scorpion Bay and Prisoners Harbor.\n\n","Diving, Snorkeling, and Swimming\n\n","The easiest place for walk-in diving, snorkeling, and swimming is right off the pier at Scorpion Beach. To the east, Smuggler’s Cove offers great diving and snorkeling too. With the exception of Anacapa, these are the warmest waters you’re likely to find in the Channel Islands.\n\n","Wildlife Watching\n\n","With 145 species of life found nowhere else on Earth, the wildlife watcher is in for a treat on Santa Cruz.\n\nSanta Cruz Island is home to the island scrub jay and small island fox. They reveal two evolutionary strategies to adapt to the island’s unique ecosystem. The jay is bigger than its mainland cousins; the fox is much smaller.\n\n","Fishing\n\n","\t·Over 80 percent of the waters near the Channel Islands are open to fishing.\n\t·Sport fishing is allowed outside marine protected areas and requires possession of a valid California state fishing license with an ocean enhancement stamp.\n\t·All California Department of Fish and Game regulations apply.\n\n"," Hiking\n\n","\t·Several roads and trails traverse eastern Santa Cruz Island. Trails near historic Scorpion Ranch are well maintained and of moderate difficulty. Hiking trails in the more rugged Montañon area are generally more strenuous.\n\t·Rangers and naturalists offer guided tours year-round at Scorpion Anchorage and Prisoners Harbor.\n\t·Note that the western side of Santa Cruz requires a permit from the Nature Conservancy to enter.  For more information, please visit: https://www.nps.gov/chis/index.htm.\n\n","Camping\n\n","\t·Of all the five islands, Santa Cruz provides the most accommodations and amenities for campers. Take your pick between developed and well shaded campgrounds at Scorpion Bay and backcountry sites at Del Norte..\n\t·Year-round camping is available; overnight fees apply. Reserve your site well in advance at recreation.gov or call 877-444-6777.  Concession boats fill to capacity more quickly than campground sites are filled, so book your boat transportation for overnight trips first.\n\t·Scorpion Bay campground provides picnic tables, lock boxes for food, drinking water, and pit toilets.\n\t·Remember that you’ll be hauling everything else from the pier to your site, so bring essentials only.\n\t·Be prepared to pack in your own water when utilizing the backcountry campsites."]
+    private var actHikes: [Hike] = [Hike(destination: "Destination",distance: "Distance",difficulty: "Difficulty",briefdescription: "Brief Description"),Hike(destination: "Historic Ranch",distance: ".5",difficulty: "Easy",briefdescription: "View the historic Scorpion Ranch complex."),Hike(destination: "Cavern Point",distance: "2",difficulty: "Moderate",briefdescription: "Magnificent coastal vistas and whale viewing."),Hike(destination: "Potato Harbor",distance: "4",difficulty: "Moderate",briefdescription: "Spectacular coastal views. No beach access."),Hike(destination: "Scorpion Canyon",distance: "4 (loop)",difficulty: "Moderate to strenuous",briefdescription: "A scenic loop hike that includes steep canyon walls and a chance to see the unique island scrub-jay."), Hike(destination: "Smugglers Cove",distance: "7",difficulty: "Strenuous",briefdescription: "An all-day hike with beach access at Smugglers Cove."),Hike(destination: "Montañon Ridge",distance: "8",difficulty: "Strenuous",briefdescription: "For experienced, off-trail hikers. Great views."),Hike(destination: "Prisoners Harbor",distance: "28",difficulty: "Strenuous",briefdescription: "Arrange a boat pickup for a one-way trip or camp at Del Norte backcountry camp."),Hike(destination: "From Smugglers Cove:",distance: "",difficulty: "",briefdescription: ""),Hike(destination: "Smugglers Canyon",distance: "   2",difficulty: "Moderate to strenuous",briefdescription: "Opportunities to view native island vegetation.  Be prepared for uneven terrain and loose rock."),Hike(destination: "Yellowbanks",distance: "3",difficulty: "Moderate",briefdescription: "Off-trail hike to an overlook. No beach access."),Hike(destination: "San Pedro Point",distance: "4",difficulty: "Moderate",briefdescription: "For experienced, off-trail hikers."),Hike(destination: "From Prisoners Harbor:",distance: "",difficulty: "",briefdescription: ""),Hike(destination: "Prisoners Harbor",distance: ".25 -.5",difficulty: "Easy",briefdescription: "View the historic Prisoners Harbor area and search for the island scrub-jay."),Hike(destination: "Del Norte Camp",distance: "7",difficulty: "Strenuous",briefdescription: "Follow the rugged Del Norte trail east to the backcountry camp."),Hike(destination: "Navy Road- Del Norte Loop",distance: "8.5",difficulty: "Strenuous",briefdescription: "Route includes the Navy Road and the Del Norte Trail. Good views."),Hike(destination: "Chinese Harbor",distance: "15.5",difficulty: "Strenuous",briefdescription: "A long hike that ends at the only beach accessible by land on the isthmus."),Hike(destination: "China Pines",distance: "18",difficulty: "Strenuous",briefdescription: "Explore the Santa Cruz Island pine grove."),Hike(destination: "Montañon Ridge",distance: "21",difficulty: "Strenuous",briefdescription: "For experienced, off-trail hikers. Must be able to read topographic maps."),Hike(destination: "Scorpion Anchorage",distance: "       28",difficulty: "Strenuous",briefdescription: "Arrange a boat pickup for a one-way trip or camp at Del Norte backcountry camp."),Hike(destination: "Pelican Bay",distance: "4",difficulty: "Moderate to strenuous",briefdescription: "This trail may only be travled by those who have obtained a permit in advance from The Nature Conservancy or are accompanied by Island Packers (a boat concessioner) staff.")]
+    private var Activitiestextstrings: [String] = ["ACTIVITIES\n\n","Boating and Kayaking\n\n","With one of the world’s largest sea caves and clear coastal waters, Santa Cruz is a sea kayaker’s paradise. Formal guided tours are offered at both Scorpion Bay and Prisoners Harbor.\n\n","Diving, Snorkeling, and Swimming\n\n","The easiest place for walk-in diving, snorkeling, and swimming is right off the pier at Scorpion Beach. To the east, Smuggler’s Cove offers great diving and snorkeling too. With the exception of Anacapa, these are the warmest waters you’re likely to find in the Channel Islands.\n\n","Wildlife Watching\n\n","With 145 species of life found nowhere else on Earth, the wildlife watcher is in for a treat on Santa Cruz.\n\nSanta Cruz Island is home to the island scrub jay and small island fox. They reveal two evolutionary strategies to adapt to the island’s unique ecosystem. The jay is bigger than its mainland cousins; the fox is much smaller.\n\n","Fishing\n\n","\t·Over 80 percent of the waters near the Channel Islands are open to fishing.\n\t·Sport fishing is allowed outside marine protected areas and requires possession of a valid California state fishing license with an ocean enhancement stamp.\n\t·All California Department of Fish and Game regulations apply.\n\n"," Hiking\n\n","\t·Several roads and trails traverse eastern Santa Cruz Island. Trails near historic Scorpion Ranch are well maintained and of moderate difficulty. Hiking trails in the more rugged Montañon area are generally more strenuous.\n\t·Rangers and naturalists offer guided tours year-round at Scorpion Anchorage and Prisoners Harbor.\n\t·Note that the western side of Santa Cruz requires a permit from the Nature Conservancy to enter.  For more information, please visit: https://www.nps.gov/chis/index.htm.\n\n","Camping\n\n","\t·Of all the five islands, Santa Cruz provides the most accommodations and amenities for campers. Take your pick between developed and well shaded campgrounds at Scorpion Bay and backcountry sites at Del Norte..\n\t·Year-round camping is available; overnight fees apply. Reserve your site well in advance at recreation.gov or call 877-444-6777.  Concession boats fill to capacity more quickly than campground sites are filled, so book your boat transportation for overnight trips first.\n\t·Scorpion Bay campground provides picnic tables, lock boxes for food, drinking water, and pit toilets.\n\t·Remember that you’ll be hauling everything else from the pier to your site, so bring essentials only.\n\t·Be prepared to pack in your own water when utilizing the backcountry campsites.\n\n","Hiking Information\n\n"]
     
     private var ActivitiesAttributes : [[String: AnyObject]] = [[NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
@@ -228,6 +259,9 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
             NSBackgroundColorAttributeName: UIColor.clearColor(),
             NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
             NSBackgroundColorAttributeName: UIColor.clearColor(),
             NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!]]
@@ -371,7 +405,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.PageScrollView2.alpha = 0
         self.PageScrollView2.addSubview(self.PageTextView2)
         self.SantaCruzView.insertSubview(self.PageScrollView2,atIndex: 5)
-        self.PageScrollView2.contentSize.height = 3000
+        self.PageScrollView2.contentSize.height = 6000
         let inames: [[String]] = [self.photonames, self.infophotonames, self.activitiesphotonames]
         let tnames: [[String]] = [self.AnchoragesCaptiontextstrings,self.InfoCaptiontextstrings,self.ActivitiesCaptiontextstrings]
         var j = 0
@@ -425,7 +459,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.actpageTableView2.tintColor = UIColor.clearColor()
         self.actpageTableView2.allowsSelection = false
         self.actpageTableView2.separatorColor = UIColor.clearColor()
-        self.actpageTableView2.rowHeight = 110
+        self.actpageTableView2.rowHeight = 90
         self.actpageTableView2.tableFooterView = UIView(frame: CGRectZero)
         self.actpageTableView2.tableHeaderView = UIView(frame: CGRectZero)
         //self.actpageTableView2.style = UITableViewStyle.Grouped;
@@ -434,7 +468,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.actpageTableView2.dataSource = dataSource
         self.actpageTableView2.reloadData()
         self.PageScrollView2.addSubview(self.actpageTableView2)
-        self.actpageTableView2.frame = CGRectMake(185, 2400, 510, 1000)
+        self.actpageTableView2.frame = CGRectMake(185, 2400, 510, 3000)
         print(self.pageIVs2.count)
         print(self.pageIVs2[0].count)
         print(self.pageIVs2[1].count)
