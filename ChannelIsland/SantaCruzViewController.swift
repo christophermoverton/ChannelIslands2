@@ -28,13 +28,13 @@ class HikeCell: UITableViewCell {
         NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 16.0)!]
     init(){
          super.init(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
-        destinationLabel.frame = CGRect(x: 100,y: 0,width: 100,height: 100)
+        destinationLabel.frame = CGRect(x: 100,y: 10,width: 100,height: 100)
         destinationLabel.backgroundColor = UIColor.clearColor()
-        distanceLabel.frame = CGRect(x: 200,y: 0,width: 30,height: 100)
+        distanceLabel.frame = CGRect(x: 200,y: 10,width: 30,height: 100)
         distanceLabel.backgroundColor = UIColor.clearColor()
-        difficultyLabel.frame = CGRect(x: 230,y: 0,width: 150,height: 100)
+        difficultyLabel.frame = CGRect(x: 230,y: 10,width: 150,height: 100)
         difficultyLabel.backgroundColor = UIColor.clearColor()
-        briefdescriptionLabel.frame = CGRect(x: 380,y: 0,width: 200,height: 100)
+        briefdescriptionLabel.frame = CGRect(x: 380,y: 10,width: 200,height: 100)
         briefdescriptionLabel.backgroundColor = UIColor.clearColor()
         self.addSubview(destinationLabel)
         self.addSubview(distanceLabel)
@@ -114,7 +114,7 @@ extension HikesDataSource: UITableViewDataSource {
         cell.difficulty = hike.difficulty
         cell.briefdescription = hike.briefdescription
         cell.backgroundColor = UIColor.clearColor()
-        cell.frame = CGRectMake(0, 0, 400, 100)
+        cell.frame = CGRectMake(0, 0, 510, 100)
         cell.tintColor = UIColor.clearColor()
         return cell
     }
@@ -410,6 +410,8 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
         self.actpageTableView2.frame = CGRectMake(185, 2500, 510, 1000)
         self.actpageTableView2.alpha = 0
         self.actpageTableView2.backgroundColor = UIColor.clearColor()
+        self.actpageTableView2.tintColor = UIColor.clearColor()
+        self.actpageTableView2.allowsSelection = false
         self.actpageTableView2.estimatedRowHeight = 109
         self.actpageTableView2.rowHeight = UITableViewAutomaticDimension
         self.actpageTableView2.dataSource = dataSource
