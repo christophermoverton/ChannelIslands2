@@ -17,35 +17,80 @@ struct Hike {
     let difficulty: String
     let briefdescription: String
 }
+
 class HikeCell: UITableViewCell {
     private var destinationLabel: UILabel = UILabel()
     private var distanceLabel: UILabel = UILabel()
     private var difficultyLabel: UILabel = UILabel()
     private var briefdescriptionLabel: UILabel = UILabel()
+    private var captionAttr: [String: AnyObject] = [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 16.0)!]
+    init(){
+         super.init(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
+        destinationLabel.frame = CGRect(x: 100,y: 0,width: 100,height: 100)
+        destinationLabel.backgroundColor = UIColor.clearColor()
+        distanceLabel.frame = CGRect(x: 200,y: 0,width: 30,height: 100)
+        distanceLabel.backgroundColor = UIColor.clearColor()
+        difficultyLabel.frame = CGRect(x: 230,y: 0,width: 150,height: 100)
+        difficultyLabel.backgroundColor = UIColor.clearColor()
+        briefdescriptionLabel.frame = CGRect(x: 380,y: 0,width: 200,height: 100)
+        briefdescriptionLabel.backgroundColor = UIColor.clearColor()
+        self.addSubview(destinationLabel)
+        self.addSubview(distanceLabel)
+        self.addSubview(difficultyLabel)
+        self.addSubview(briefdescriptionLabel)
+    }
     
     var destination: String? {
         didSet {
-            destinationLabel.text = destination
+            //destinationLabel.text = destination
+
+            let myAttrString1 = NSAttributedString(string: destination!,
+                                                   attributes: captionAttr)
+            destinationLabel.attributedText = myAttrString1
         }
     }
     
     var distance: String? {
         didSet {
-            distanceLabel.text = distance
+            //distanceLabel.text = distance
+
+            let myAttrString1 = NSAttributedString(string: distance!,
+                                                   attributes: captionAttr)
+            destinationLabel.attributedText = myAttrString1
+            
         }
     }
     var difficulty: String? {
         didSet {
-            difficultyLabel.text = difficulty
+            //difficultyLabel.text = difficulty
+
+            let myAttrString1 = NSAttributedString(string: difficulty!,
+                                                   attributes: captionAttr)
+            difficultyLabel.attributedText = myAttrString1
         }
     }
     
     var briefdescription: String? {
         didSet {
-            briefdescriptionLabel.text = briefdescription
+            //briefdescriptionLabel.text = briefdescription
+
+            let myAttrString1 = NSAttributedString(string: briefdescription!,
+                                                   attributes: captionAttr)
+            briefdescriptionLabel.attributedText = myAttrString1
         }
     }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    }
 }
+
 class HikesDataSource: NSObject {
     let hikes: [Hike]
     
@@ -61,12 +106,16 @@ extension HikesDataSource: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(String(HikeCell)) as! HikeCell
+        //let cell = tableView.dequeueReusableCellWithIdentifier(String(HikeCell)) as! HikeCell
+        let cell = HikeCell()
         let hike = hikes[indexPath.row]
         cell.destination = hike.destination
         cell.distance = hike.distance
         cell.difficulty = hike.difficulty
         cell.briefdescription = hike.briefdescription
+        cell.backgroundColor = UIColor.clearColor()
+        cell.frame = CGRectMake(0, 0, 400, 100)
+        cell.tintColor = UIColor.clearColor()
         return cell
     }
 }
@@ -358,9 +407,9 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UIScrollVie
         }
         
         //add tableview
-        self.actpageTableView2.frame = CGRectMake(185, 1500, 510, 1000)
+        self.actpageTableView2.frame = CGRectMake(185, 2500, 510, 1000)
         self.actpageTableView2.alpha = 0
-
+        self.actpageTableView2.backgroundColor = UIColor.clearColor()
         self.actpageTableView2.estimatedRowHeight = 109
         self.actpageTableView2.rowHeight = UITableViewAutomaticDimension
         self.actpageTableView2.dataSource = dataSource
