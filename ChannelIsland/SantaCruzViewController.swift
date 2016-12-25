@@ -18,6 +18,145 @@ struct Hike {
     let briefdescription: String
 }
 
+struct Campground {
+    let island: String
+    let rreservation: String
+    let distlandtocamp: String
+    let nofcampsites: String
+    let camperspsite: String
+}
+
+class CampgroundCell: UITableViewCell {
+    //private var destinationLabel: UITextView = UITextView()
+    private var islandLabel: UITextView = UITextView()
+    private var rreservationLabel: UITextView = UITextView()
+    private var distlandtocampLabel: UITextView = UITextView()
+    private var nofcampsitesLabel: UITextView = UITextView()
+    private var camperspsiteLabel: UITextView = UITextView()
+    private var captionAttr: [String: AnyObject] = [NSForegroundColorAttributeName: UIColor.whiteColor(),
+                                                    NSBackgroundColorAttributeName: UIColor.clearColor(),
+                                                    NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 15.0)!]
+    private var captionAttr2: [String: AnyObject] = [NSForegroundColorAttributeName: UIColor.whiteColor(),
+                                                     NSBackgroundColorAttributeName: UIColor.clearColor(),
+                                                     NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 15.0)!]
+    internal var index = 0
+    init(){
+        super.init(style: UITableViewCellStyle.Value2, reuseIdentifier: "cell")
+        //destinationLabel.frame = CGRect(x: 0,y: 10,width: 20,height: 110)
+        //destinationLabel.backgroundColor = UIColor.clearColor()
+        islandLabel.frame = CGRect(x: 0, y: 10, width: 150, height: 110)
+        islandLabel.backgroundColor = UIColor.clearColor()
+        //destinationLabel.textAlignment =  .Center
+        rreservationLabel.frame = CGRect(x: 130,y: 10,width: 80,height: 110)
+        rreservationLabel.backgroundColor = UIColor.clearColor()
+        distlandtocampLabel.frame = CGRect(x: 220,y: 10,width: 90,height: 110)
+        distlandtocampLabel.backgroundColor = UIColor.clearColor()
+        nofcampsitesLabel.frame = CGRect(x: 310,y: 10,width: 90,height: 110)
+        nofcampsitesLabel.backgroundColor = UIColor.clearColor()
+        camperspsiteLabel.frame = CGRect(x: 400,y: 10,width: 90,height: 110)
+        camperspsiteLabel.backgroundColor = UIColor.clearColor()
+        self.addSubview(islandLabel)
+        self.addSubview(rreservationLabel)
+        self.addSubview(distlandtocampLabel)
+        self.addSubview(nofcampsitesLabel)
+        self.addSubview(camperspsiteLabel)
+    }
+    
+    var island: String? {
+        didSet {
+            //destinationLabel.text = destination
+            /*
+             let myAttrString1 = NSAttributedString(string: destination!,
+             attributes: captionAttr)
+             destinationLabel.attributedText = myAttrString1
+             */
+            if self.index > 0{
+                let myAttrString1 = NSAttributedString(string: island!,
+                                                       attributes: captionAttr)
+                islandLabel.attributedText = myAttrString1
+            }
+            else{
+                let myAttrString1 = NSAttributedString(string: island!,
+                                                       attributes: captionAttr2)
+                islandLabel.attributedText = myAttrString1
+            }
+            
+        }
+    }
+    
+    var rreservation: String? {
+        didSet {
+            //distanceLabel.text = distance
+            if self.index > 0{
+                let myAttrString1 = NSAttributedString(string: rreservation!,
+                                                       attributes: captionAttr)
+                rreservationLabel.attributedText = myAttrString1
+            }
+            else{
+                let myAttrString1 = NSAttributedString(string: rreservation!,
+                                                       attributes: captionAttr2)
+                rreservationLabel.attributedText = myAttrString1
+            }
+            
+        }
+    }
+    var distlandtocamp: String? {
+        didSet {
+            //difficultyLabel.text = difficulty
+            if self.index > 0{
+                let myAttrString1 = NSAttributedString(string: distlandtocamp!,
+                                                       attributes: captionAttr)
+                distlandtocampLabel.attributedText = myAttrString1
+            }
+            else{
+                let myAttrString1 = NSAttributedString(string: distlandtocamp!,
+                                                       attributes: captionAttr2)
+                distlandtocampLabel.attributedText = myAttrString1
+            }
+        }
+    }
+    
+    var nofcampsites: String? {
+        didSet {
+            //briefdescriptionLabel.text = briefdescription
+            if self.index > 0{
+                let myAttrString1 = NSAttributedString(string: nofcampsites!,
+                                                       attributes: captionAttr)
+                nofcampsitesLabel.attributedText = myAttrString1
+            }
+            else{
+                let myAttrString1 = NSAttributedString(string: nofcampsites!,
+                                                       attributes: captionAttr2)
+                nofcampsitesLabel.attributedText = myAttrString1
+            }
+        }
+    }
+    
+    var camperspsite: String? {
+        didSet {
+            //briefdescriptionLabel.text = briefdescription
+            if self.index > 0{
+                let myAttrString1 = NSAttributedString(string: camperspsite!,
+                                                       attributes: captionAttr)
+                camperspsiteLabel.attributedText = myAttrString1
+            }
+            else{
+                let myAttrString1 = NSAttributedString(string: camperspsite!,
+                                                       attributes: captionAttr2)
+                camperspsiteLabel.attributedText = myAttrString1
+            }
+        }
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    }
+}
+
 class HikeCell: UITableViewCell {
     //private var destinationLabel: UITextView = UITextView()
     private var destinationLabel2: UITextView = UITextView()
@@ -129,6 +268,41 @@ class HikeCell: UITableViewCell {
     }
 }
 
+class CampgroundDataSource: NSObject {
+    let campgrounds: [Campground]
+    
+    init(campgrounds: [Campground]) {
+        self.campgrounds = campgrounds
+    }
+}
+
+extension CampgroundDataSource: UITableViewDataSource {
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return campgrounds.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        //let cell = tableView.dequeueReusableCellWithIdentifier(String(HikeCell)) as! HikeCell
+        let cell = CampgroundCell()
+        let campground = campgrounds[indexPath.row]
+        cell.index = indexPath.row
+        cell.island = campground.island
+        //cell.destination = hike.destination
+        cell.rreservation = campground.rreservation
+        cell.distlandtocamp = campground.distlandtocamp
+        cell.nofcampsites = campground.nofcampsites
+        cell.camperspsite = campground.camperspsite
+        cell.backgroundColor = UIColor.clearColor()
+        cell.autoresizesSubviews = false
+        
+        //cell.frame = CGRectMake(0, 0, 300, 110)
+        cell.tintColor = UIColor.clearColor()
+        
+        return cell
+    }
+}
+
 class HikesDataSource: NSObject {
     let hikes: [Hike]
     
@@ -207,6 +381,8 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     private var capPagTVs2: [[UITextView!]] = [[UITextView!]]()
     private var actpageTableView1: UITableView = UITableView()
     private var actpageTableView2: UITableView = UITableView()
+    private var actpageTableView12: UITableView = UITableView()
+    private var actpageTableView22: UITableView = UITableView()
     private var pageID : Int = 0
     private var prevpageID: Int = 0
     @IBOutlet weak var CapPagTV1: UITextView!
@@ -220,7 +396,9 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     private var PageScrollView2: FadeScrollVIew!
     @IBOutlet var SantaCruzView: UIView!
     private var dataSource: HikesDataSource
+    private var dataSource2: CampgroundDataSource
     private var actHikes: [Hike] = [Hike(destination: "Destination",distance: "Distance",difficulty: "Difficulty",briefdescription: "Brief Description"),Hike(destination: "Historic Ranch",distance: ".5",difficulty: "Easy",briefdescription: "View the historic Scorpion Ranch complex."),Hike(destination: "Cavern Point",distance: "2",difficulty: "Moderate",briefdescription: "Magnificent coastal vistas and whale viewing."),Hike(destination: "Potato Harbor",distance: "4",difficulty: "Moderate",briefdescription: "Spectacular coastal views. No beach access."),Hike(destination: "Scorpion Canyon",distance: "4 (loop)",difficulty: "Moderate to strenuous",briefdescription: "A scenic loop hike that includes steep canyon walls and a chance to see the unique island scrub-jay."), Hike(destination: "Smugglers Cove",distance: "7",difficulty: "Strenuous",briefdescription: "An all-day hike with beach access at Smugglers Cove."),Hike(destination: "Montañon Ridge",distance: "8",difficulty: "Strenuous",briefdescription: "For experienced, off-trail hikers. Great views."),Hike(destination: "Prisoners Harbor",distance: "28",difficulty: "Strenuous",briefdescription: "Arrange a boat pickup for a one-way trip or camp at Del Norte backcountry camp."),Hike(destination: "From Smugglers Cove:",distance: "",difficulty: "",briefdescription: ""),Hike(destination: "Smugglers Canyon",distance: "   2",difficulty: "Moderate to strenuous",briefdescription: "Opportunities to view native island vegetation.  Be prepared for uneven terrain and loose rock."),Hike(destination: "Yellowbanks",distance: "3",difficulty: "Moderate",briefdescription: "Off-trail hike to an overlook. No beach access."),Hike(destination: "San Pedro Point",distance: "4",difficulty: "Moderate",briefdescription: "For experienced, off-trail hikers."),Hike(destination: "From Prisoners Harbor:",distance: "",difficulty: "",briefdescription: ""),Hike(destination: "Prisoners Harbor",distance: ".25 -.5",difficulty: "Easy",briefdescription: "View the historic Prisoners Harbor area and search for the island scrub-jay."),Hike(destination: "Del Norte Camp",distance: "7",difficulty: "Strenuous",briefdescription: "Follow the rugged Del Norte trail east to the backcountry camp."),Hike(destination: "Navy Road- Del Norte Loop",distance: "8.5",difficulty: "Strenuous",briefdescription: "Route includes the Navy Road and the Del Norte Trail. Good views."),Hike(destination: "Chinese Harbor",distance: "15.5",difficulty: "Strenuous",briefdescription: "A long hike that ends at the only beach accessible by land on the isthmus."),Hike(destination: "China Pines",distance: "18",difficulty: "Strenuous",briefdescription: "Explore the Santa Cruz Island pine grove."),Hike(destination: "Montañon Ridge",distance: "21",difficulty: "Strenuous",briefdescription: "For experienced, off-trail hikers. Must be able to read topographic maps."),Hike(destination: "Scorpion Anchorage",distance: "       28",difficulty: "Strenuous",briefdescription: "Arrange a boat pickup for a one-way trip or camp at Del Norte backcountry camp."),Hike(destination: "Pelican Bay",distance: "4",difficulty: "Moderate to strenuous",briefdescription: "This trail may only be travled by those who have obtained a permit in advance from The Nature Conservancy or are accompanied by Island Packers (a boat concessioner) staff.")]
+    private var campgrounds: [Campground] = [Campground(island: "Island", rreservation: "Required Reservation", distlandtocamp: "Distance From Landing To Campground",nofcampsites: "Number Of Campsites",camperspsite: "Campers Per Site"),Campground(island: "Anacapa", rreservation: "Yes", distlandtocamp: "157 stairs, .5 miles",nofcampsites: "7",camperspsite: "4-6"),Campground(island: "Eastern Santa Cruz (Scorpion Ranch)", rreservation: "Yes", distlandtocamp: ".5 miles, flat",nofcampsites: "31",camperspsite: "6-15"),Campground(island: "Western Santa Cruz (The Nature Conservancy)", rreservation: "NO CAMPING ALLOWED", distlandtocamp: "NO CAMPING ALLOWED",nofcampsites: "NO CAMPING ALLOWED",camperspsite: "NO CAMPING ALLOWED"),Campground(island: "Santa Rosa", rreservation: "Yes", distlandtocamp: "1.5 miles from pier, flat; .25 miles from airstrip, flat",nofcampsites: "15",camperspsite: "5"),Campground(island: "San Miguel", rreservation: "Yes", distlandtocamp: "1 mile, steep uphill",nofcampsites: "9",camperspsite: "4"),Campground(island: "Santa Barbara", rreservation: "Yes", distlandtocamp: ".25 miles, steep uphill",nofcampsites: "10",camperspsite: "4")]
     private var Activitiestextstrings: [String] = ["ACTIVITIES\n\n","Boating and Kayaking\n\n","With one of the world’s largest sea caves and clear coastal waters, Santa Cruz is a sea kayaker’s paradise. Formal guided tours are offered at both Scorpion Bay and Prisoners Harbor.\n\n","Diving, Snorkeling, and Swimming\n\n","The easiest place for walk-in diving, snorkeling, and swimming is right off the pier at Scorpion Beach. To the east, Smuggler’s Cove offers great diving and snorkeling too. With the exception of Anacapa, these are the warmest waters you’re likely to find in the Channel Islands.\n\n","Wildlife Watching\n\n","With 145 species of life found nowhere else on Earth, the wildlife watcher is in for a treat on Santa Cruz.\n\nSanta Cruz Island is home to the island scrub jay and small island fox. They reveal two evolutionary strategies to adapt to the island’s unique ecosystem. The jay is bigger than its mainland cousins; the fox is much smaller.\n\n","Fishing\n\n","\t·Over 80 percent of the waters near the Channel Islands are open to fishing.\n\t·Sport fishing is allowed outside marine protected areas and requires possession of a valid California state fishing license with an ocean enhancement stamp.\n\t·All California Department of Fish and Game regulations apply.\n\n"," Hiking\n\n","\t·Several roads and trails traverse eastern Santa Cruz Island. Trails near historic Scorpion Ranch are well maintained and of moderate difficulty. Hiking trails in the more rugged Montañon area are generally more strenuous.\n\t·Rangers and naturalists offer guided tours year-round at Scorpion Anchorage and Prisoners Harbor.\n\t·Note that the western side of Santa Cruz requires a permit from the Nature Conservancy to enter.  For more information, please visit: https://www.nps.gov/chis/index.htm.\n\n","Camping\n\n","\t·Of all the five islands, Santa Cruz provides the most accommodations and amenities for campers. Take your pick between developed and well shaded campgrounds at Scorpion Bay and backcountry sites at Del Norte..\n\t·Year-round camping is available; overnight fees apply. Reserve your site well in advance at recreation.gov or call 877-444-6777.  Concession boats fill to capacity more quickly than campground sites are filled, so book your boat transportation for overnight trips first.\n\t·Scorpion Bay campground provides picnic tables, lock boxes for food, drinking water, and pit toilets.\n\t·Remember that you’ll be hauling everything else from the pier to your site, so bring essentials only.\n\t·Be prepared to pack in your own water when utilizing the backcountry campsites.\n\n","Hiking Information\n\n"]
     
     private var ActivitiesAttributes : [[String: AnyObject]] = [[NSForegroundColorAttributeName: UIColor.whiteColor(),
@@ -393,6 +571,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         //self.actpageTableView2.registerClass(HikeCell.self, forCellReuseIdentifier: "HikeCell")
         
         self.dataSource = HikesDataSource(hikes: actHikes)
+        self.dataSource2 = CampgroundDataSource(campgrounds: self.campgrounds)
         super.init(coder: aDecoder)
     }
     func loadScrollPageTV2(){
@@ -405,7 +584,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.PageScrollView2.alpha = 0
         self.PageScrollView2.addSubview(self.PageTextView2)
         self.SantaCruzView.insertSubview(self.PageScrollView2,atIndex: 5)
-        self.PageScrollView2.contentSize.height = 6000
+        self.PageScrollView2.contentSize.height = 8000
         let inames: [[String]] = [self.photonames, self.infophotonames, self.activitiesphotonames]
         let tnames: [[String]] = [self.AnchoragesCaptiontextstrings,self.InfoCaptiontextstrings,self.ActivitiesCaptiontextstrings]
         var j = 0
@@ -469,6 +648,23 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.actpageTableView2.reloadData()
         self.PageScrollView2.addSubview(self.actpageTableView2)
         self.actpageTableView2.frame = CGRectMake(185, 2400, 510, 3000)
+        
+        self.actpageTableView22.delegate = self
+        self.actpageTableView22.alpha = 0
+        self.actpageTableView22.backgroundColor = UIColor.clearColor()
+        self.actpageTableView22.tintColor = UIColor.clearColor()
+        self.actpageTableView22.allowsSelection = false
+        self.actpageTableView22.separatorColor = UIColor.clearColor()
+        self.actpageTableView22.rowHeight = 90
+        self.actpageTableView22.tableFooterView = UIView(frame: CGRectZero)
+        self.actpageTableView22.tableHeaderView = UIView(frame: CGRectZero)
+        //self.actpageTableView2.style = UITableViewStyle.Grouped;
+        //self.actpageTableView2.
+        //self.actpageTableView2.rowHeight = UITableViewAutomaticDimension
+        self.actpageTableView22.dataSource = dataSource2
+        self.actpageTableView22.reloadData()
+        self.PageScrollView2.addSubview(self.actpageTableView22)
+        self.actpageTableView22.frame = CGRectMake(185, 4500, 510, 2000)
         print(self.pageIVs2.count)
         print(self.pageIVs2[0].count)
         print(self.pageIVs2[1].count)
@@ -659,6 +855,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                 }
                 if (self.pageID == 2){
                     self.actpageTableView2.alpha = 1
+                    self.actpageTableView22.alpha = 1
                 }
                 flagTransit = true
                 
@@ -833,6 +1030,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                                 i+=1
                             }
                             self.actpageTableView2.alpha = 0
+                            self.actpageTableView22.alpha = 0
                             self.switchPage = true
                         }
                     }
@@ -887,6 +1085,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                         j+=1
                     }
                     self.actpageTableView2.alpha = 0
+                    self.actpageTableView22.alpha = 0
                 }
         })
     }
