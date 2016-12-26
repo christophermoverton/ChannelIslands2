@@ -321,7 +321,6 @@ extension CampgroundDataSource: UITableViewDataSource {
         cell.camperspsite = campground.camperspsite
         cell.backgroundColor = UIColor.clearColor()
         cell.autoresizesSubviews = false
-        
         //cell.frame = CGRectMake(0, 0, 300, 110)
         cell.tintColor = UIColor.clearColor()
         
@@ -340,11 +339,12 @@ class HikesDataSource: NSObject {
 extension HikesDataSource: UITableViewDataSource {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
-    }
-    
-    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        if indexPath.row == 20 {
+            return 130
+        } else {
+            return 90
+        }
+        print("called set rowheight")
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -415,6 +415,8 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     private var capPagTVs2: [[UITextView!]] = [[UITextView!]]()
     private var pageIVs3: [[UIImageView!]] = [[UIImageView!]]()
     private var capPagTVs3: [[UITextView!]] = [[UITextView!]]()
+    private var actPagHeaders: [UITextView!] = [UITextView!]()  //beyond main text view
+    private var actPagHeaders2: [UITextView!] = [UITextView!]()// 2nd page text view headers
     private var actpageTableView1: UITableView = UITableView()
     private var actpageTableView2: UITableView = UITableView()
     private var actpageTableView12: UITableView = UITableView()
@@ -613,6 +615,15 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.dataSource2 = CampgroundDataSource(campgrounds: self.campgrounds)
         super.init(coder: aDecoder)
     }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.row == 20 {
+            return 160
+        } else {
+            return 90
+        }
+    }
+    
     func loadScrollPageTV2(){
         self.PageTextView2 = UITextView()
         self.PageTextView2.backgroundColor = UIColor.clearColor()
@@ -643,7 +654,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
             let x = 710.0
             var iViews: [UIImageView!] = []
             var tViews: [UITextView!] = []
-            print(iname)
+            //print(iname)
             for astr : String in iname{
                 let ycg = CGFloat(y)
                 let xcg = CGFloat(x)
@@ -656,9 +667,9 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                 imageView.alpha = 0
                 y = y + 60.0 + Double(newheight)
                 iViews.append(imageView)
-                print(j)
-                print(i)
-                print(imageView)
+                //print(j)
+                //print(i)
+                //print(imageView)
                 self.PageScrollView2.addSubview(imageView)
                 let textView = UITextView()
                 let acstr: String = tnames[j][i]
@@ -673,7 +684,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                 self.PageScrollView2.addSubview(textView)
                 i += 1
             }
-            print(iViews.count)
+            //print(iViews.count)
             self.pageIVs2.append(iViews)
             self.capPagTVs2.append(tViews)
 
@@ -686,7 +697,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
             let x = 710.0
             var iViews: [UIImageView!] = []
             var tViews: [UITextView!] = []
-            print(iname)
+            //print(iname)
             for astr : String in iname{
                 let ycg = CGFloat(y)
                 let xcg = CGFloat(x)
@@ -699,9 +710,9 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                 imageView.alpha = 0
                 y = y + 60.0 + Double(newheight)
                 iViews.append(imageView)
-                print(j)
-                print(i)
-                print(imageView)
+                //print(j)
+                //print(i)
+                //print(imageView)
                 self.PageScrollView3.addSubview(imageView)
                 let textView = UITextView()
                 let acstr: String = tnames[j][i]
@@ -716,7 +727,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                 self.PageScrollView3.addSubview(textView)
                 i += 1
             }
-            print(iViews.count)
+            //print(iViews.count)
             self.pageIVs3.append(iViews)
             self.capPagTVs3.append(tViews)
             
@@ -729,8 +740,8 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.actpageTableView2.backgroundColor = UIColor.clearColor()
         self.actpageTableView2.tintColor = UIColor.clearColor()
         self.actpageTableView2.allowsSelection = false
-        self.actpageTableView2.separatorColor = UIColor.clearColor()
-        self.actpageTableView2.rowHeight = 70
+        self.actpageTableView2.separatorColor = UIColor(white: 1.0,alpha: 0.5)
+        //self.actpageTableView2.rowHeight = 100
         self.actpageTableView2.tableFooterView = UIView(frame: CGRectZero)
         self.actpageTableView2.tableHeaderView = UIView(frame: CGRectZero)
         //self.actpageTableView2.style = UITableViewStyle.Grouped;
@@ -746,8 +757,8 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.actpageTableView1.backgroundColor = UIColor.clearColor()
         self.actpageTableView1.tintColor = UIColor.clearColor()
         self.actpageTableView1.allowsSelection = false
-        self.actpageTableView1.separatorColor = UIColor.clearColor()
-        self.actpageTableView1.rowHeight = 70
+        self.actpageTableView1.separatorColor = UIColor(white: 1.0,alpha: 0.5)
+        //self.actpageTableView1.rowHeight = 100
         self.actpageTableView1.tableFooterView = UIView(frame: CGRectZero)
         self.actpageTableView1.tableHeaderView = UIView(frame: CGRectZero)
         //self.actpageTableView2.style = UITableViewStyle.Grouped;
@@ -763,8 +774,8 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.actpageTableView22.backgroundColor = UIColor.clearColor()
         self.actpageTableView22.tintColor = UIColor.clearColor()
         self.actpageTableView22.allowsSelection = false
-        self.actpageTableView22.separatorColor = UIColor.clearColor()
-        self.actpageTableView22.rowHeight = 80
+        self.actpageTableView22.separatorColor = UIColor(white: 1.0,alpha: 0.5)
+        //self.actpageTableView22.rowHeight = 100
         self.actpageTableView22.tableFooterView = UIView(frame: CGRectZero)
         self.actpageTableView22.tableHeaderView = UIView(frame: CGRectZero)
         //self.actpageTableView2.style = UITableViewStyle.Grouped;
@@ -773,16 +784,16 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.actpageTableView22.dataSource = dataSource2
         self.actpageTableView22.reloadData()
         
-        self.PageScrollView3.addSubview(self.actpageTableView22)
-        self.actpageTableView22.frame = CGRectMake(185, 4000, 510, 2000)
+        self.PageScrollView2.addSubview(self.actpageTableView22)
+        self.actpageTableView22.frame = CGRectMake(185, 4450, 510, 2000)
         
         self.actpageTableView12.delegate = self
         self.actpageTableView12.alpha = 0
         self.actpageTableView12.backgroundColor = UIColor.clearColor()
         self.actpageTableView12.tintColor = UIColor.clearColor()
         self.actpageTableView12.allowsSelection = false
-        self.actpageTableView12.separatorColor = UIColor.clearColor()
-        self.actpageTableView12.rowHeight = 80
+        self.actpageTableView12.separatorColor = UIColor(white: 1.0,alpha: 0.5)
+        //self.actpageTableView12.rowHeight = 100
         self.actpageTableView12.tableFooterView = UIView(frame: CGRectZero)
         self.actpageTableView12.tableHeaderView = UIView(frame: CGRectZero)
         //self.actpageTableView2.style = UITableViewStyle.Grouped;
@@ -792,7 +803,30 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.actpageTableView12.reloadData()
         
         self.PageScrollView3.addSubview(self.actpageTableView12)
-        self.actpageTableView12.frame = CGRectMake(185, 4000, 510, 2000)
+        self.actpageTableView12.frame = CGRectMake(185, 4450, 510, 2000)
+        
+        //add activities Headers beyond hiking
+        let campTV = UITextView()
+        let campTV2 = UITextView()
+        let astr: String = "Campground Information\n\n"
+        let myattr: [String: AnyObject] = [NSForegroundColorAttributeName: UIColor.whiteColor(),
+                                           NSBackgroundColorAttributeName: UIColor.clearColor(),
+                                           NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!]
+        let myAttrString1 = NSAttributedString(string: astr,
+                                               attributes: myattr)
+        campTV.attributedText = myAttrString1
+        campTV2.attributedText = myAttrString1
+        campTV.frame = CGRectMake(185, 4400, 300, 50)
+        campTV.alpha = 0
+        campTV.backgroundColor = UIColor.clearColor()
+        campTV2.frame = CGRectMake(185, 4400, 300, 50)
+        campTV2.alpha = 0
+        campTV2.backgroundColor = UIColor.clearColor()
+        self.PageScrollView2.addSubview(campTV)
+        self.PageScrollView3.addSubview(campTV2)
+        actPagHeaders.append(campTV)
+        actPagHeaders2.append(campTV2)
+        
         print(self.pageIVs2.count)
         print(self.pageIVs2[0].count)
         print(self.pageIVs2[1].count)
@@ -982,6 +1016,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                     i+=1
                 }
                 if (self.pageID == 2){
+                    self.actPagHeaders[0].alpha = 1
                     self.actpageTableView2.alpha = 1
                     self.actpageTableView22.alpha = 1
                 }
@@ -1040,6 +1075,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                 i+=1
             }
             if (self.pageID == 2){
+                self.actPagHeaders2[0].alpha = 1
                 self.actpageTableView1.alpha = 1
                 self.actpageTableView12.alpha = 1
             }
@@ -1194,6 +1230,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                                 self.capPagTVs3[self.prevpageID][i].alpha = 0
                                 i+=1
                             }
+                            
                             self.actpageTableView1.alpha = 0
                             self.actpageTableView12.alpha = 0
                             
@@ -1245,11 +1282,13 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                     self.InfoButton.hidden = false
                     self.switchPage = true
                     var i = 0
+                    /*
                     for piv: UIImageView! in self.actpageIVs{
                         piv.alpha = 0
                         self.actpageTVs[i].alpha = 0
                         i+=1
                     }
+                     */
                     var j = 0
                     for pivs: [UIImageView!] in self.pageIVs2{
                         i = 0
@@ -1260,6 +1299,17 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                         }
                         j+=1
                     }
+                    j = 0
+                    for pivs: [UIImageView!] in self.pageIVs3{
+                        i = 0
+                        for piv: UIImageView in pivs{
+                            piv.alpha = 0
+                            self.capPagTVs3[j][i].alpha = 0
+                            i+=1
+                        }
+                        j+=1
+                    }
+                    self.actPagHeaders[0].alpha = 1
                     self.actpageTableView2.alpha = 0
                     self.actpageTableView22.alpha = 0
                     self.actpageTableView1.alpha = 0
