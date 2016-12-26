@@ -413,6 +413,8 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     private var actpageTVs: [UITextView!] = []
     private var pageIVs2: [[UIImageView!]] = [[UIImageView!]]()
     private var capPagTVs2: [[UITextView!]] = [[UITextView!]]()
+    private var pageIVs3: [[UIImageView!]] = [[UIImageView!]]()
+    private var capPagTVs3: [[UITextView!]] = [[UITextView!]]()
     private var actpageTableView1: UITableView = UITableView()
     private var actpageTableView2: UITableView = UITableView()
     private var actpageTableView12: UITableView = UITableView()
@@ -427,7 +429,10 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     @IBOutlet weak var CapPagTV6: UITextView!
     @IBOutlet weak var IPageV1: UIImageView!
     private var PageTextView2: UITextView!
+    private var PageTextView3: UITextView!
     private var PageScrollView2: FadeScrollVIew!
+    private var PageScrollView3: FadeScrollVIew!
+    
     @IBOutlet var SantaCruzView: UIView!
     private var dataSource: HikesDataSource
     private var dataSource2: CampgroundDataSource
@@ -619,6 +624,16 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.PageScrollView2.addSubview(self.PageTextView2)
         self.SantaCruzView.insertSubview(self.PageScrollView2,atIndex: 5)
         self.PageScrollView2.contentSize.height = 8000
+        self.PageTextView3 = UITextView()
+        self.PageTextView3.backgroundColor = UIColor.clearColor()
+        self.PageTextView3.frame = CGRectMake(185, 75, 510.0, 3500.0)
+        self.PageTextView3.alpha = 1
+        self.PageScrollView3 = FadeScrollVIew()
+        self.PageScrollView3.frame = CGRectMake(0, 120, 1024, 565)
+        self.PageScrollView3.alpha = 0
+        self.PageScrollView3.addSubview(self.PageTextView3)
+        self.SantaCruzView.insertSubview(self.PageScrollView3,atIndex: 5)
+        self.PageScrollView3.contentSize.height = 8000
         let inames: [[String]] = [self.photonames, self.infophotonames, self.activitiesphotonames]
         let tnames: [[String]] = [self.AnchoragesCaptiontextstrings,self.InfoCaptiontextstrings,self.ActivitiesCaptiontextstrings]
         var j = 0
@@ -664,6 +679,49 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
 
             j += 1
         }
+        j = 0
+        for iname: [String] in inames{
+            var i = 0
+            var y = 90.0
+            let x = 710.0
+            var iViews: [UIImageView!] = []
+            var tViews: [UITextView!] = []
+            print(iname)
+            for astr : String in iname{
+                let ycg = CGFloat(y)
+                let xcg = CGFloat(x)
+                let ui = UIImage(imageLiteral: astr)
+                let imageView = UIImageView(image: ui)
+                let newheight = ui.size.height/1.85
+                let newwidth = ui.size.width/1.85
+                imageView.contentMode = .ScaleAspectFit
+                imageView.frame = CGRectMake(xcg, ycg, newwidth, newheight)//(piv.frame.x,piv.frame.y,piv.frame.width,newheight)
+                imageView.alpha = 0
+                y = y + 60.0 + Double(newheight)
+                iViews.append(imageView)
+                print(j)
+                print(i)
+                print(imageView)
+                self.PageScrollView3.addSubview(imageView)
+                let textView = UITextView()
+                let acstr: String = tnames[j][i]
+                let myAttributes = self.InfoCaptionAttributes[0]
+                let myAttrString1 = NSAttributedString(string: acstr,
+                                                       attributes: myAttributes)
+                textView.attributedText = myAttrString1
+                textView.frame = CGRectMake(xcg, ycg+newheight-10.0, 300.0, 60.0)
+                textView.alpha = 0
+                textView.backgroundColor = UIColor.clearColor()
+                tViews.append(textView)
+                self.PageScrollView3.addSubview(textView)
+                i += 1
+            }
+            print(iViews.count)
+            self.pageIVs3.append(iViews)
+            self.capPagTVs3.append(tViews)
+            
+            j += 1
+        }
         
         //add tableview
         self.actpageTableView2.delegate = self
@@ -682,6 +740,23 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.actpageTableView2.reloadData()
         self.PageScrollView2.addSubview(self.actpageTableView2)
         self.actpageTableView2.frame = CGRectMake(185, 2400, 510, 3000)
+    
+        self.actpageTableView1.delegate = self
+        self.actpageTableView1.alpha = 0
+        self.actpageTableView1.backgroundColor = UIColor.clearColor()
+        self.actpageTableView1.tintColor = UIColor.clearColor()
+        self.actpageTableView1.allowsSelection = false
+        self.actpageTableView1.separatorColor = UIColor.clearColor()
+        self.actpageTableView1.rowHeight = 70
+        self.actpageTableView1.tableFooterView = UIView(frame: CGRectZero)
+        self.actpageTableView1.tableHeaderView = UIView(frame: CGRectZero)
+        //self.actpageTableView2.style = UITableViewStyle.Grouped;
+        self.actpageTableView1.estimatedRowHeight = 200
+        //self.actpageTableView2.rowHeight = UITableViewAutomaticDimension
+        self.actpageTableView1.dataSource = dataSource
+        self.actpageTableView1.reloadData()
+        self.PageScrollView3.addSubview(self.actpageTableView1)
+        self.actpageTableView1.frame = CGRectMake(185, 2400, 510, 3000)
         
         self.actpageTableView22.delegate = self
         self.actpageTableView22.alpha = 0
@@ -697,8 +772,27 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         //self.actpageTableView2.rowHeight = UITableViewAutomaticDimension
         self.actpageTableView22.dataSource = dataSource2
         self.actpageTableView22.reloadData()
-        self.PageScrollView2.addSubview(self.actpageTableView22)
+        
+        self.PageScrollView3.addSubview(self.actpageTableView22)
         self.actpageTableView22.frame = CGRectMake(185, 4000, 510, 2000)
+        
+        self.actpageTableView12.delegate = self
+        self.actpageTableView12.alpha = 0
+        self.actpageTableView12.backgroundColor = UIColor.clearColor()
+        self.actpageTableView12.tintColor = UIColor.clearColor()
+        self.actpageTableView12.allowsSelection = false
+        self.actpageTableView12.separatorColor = UIColor.clearColor()
+        self.actpageTableView12.rowHeight = 80
+        self.actpageTableView12.tableFooterView = UIView(frame: CGRectZero)
+        self.actpageTableView12.tableHeaderView = UIView(frame: CGRectZero)
+        //self.actpageTableView2.style = UITableViewStyle.Grouped;
+        //self.actpageTableView2.
+        //self.actpageTableView2.rowHeight = UITableViewAutomaticDimension
+        self.actpageTableView12.dataSource = dataSource2
+        self.actpageTableView12.reloadData()
+        
+        self.PageScrollView3.addSubview(self.actpageTableView12)
+        self.actpageTableView12.frame = CGRectMake(185, 4000, 510, 2000)
         print(self.pageIVs2.count)
         print(self.pageIVs2[0].count)
         print(self.pageIVs2[1].count)
@@ -916,6 +1010,41 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         else{
             self.ActivitiesButton.hidden = true
         }
+        if !flagTransit{
+            self.PageScrollView3.hidden = false
+            self.PageScrollView3.contentOffset = CGPoint(x: 0, y: 0)
+            let ptextstrings: [[String]] = [self.Anchoragestextstrings, self.Infotextstrings, self.Activitiestextstrings]
+            let pattributes: [[[String: AnyObject]]] = [self.AnchoragesAttributes, self.InfoAttributes, self.ActivitiesAttributes]
+            var i = 0
+            let result = NSMutableAttributedString()
+            for textstring: String in ptextstrings[self.pageID]{
+                
+                
+                
+                let myAttributes = pattributes[pageID][i]
+                let myAttrString1 = NSAttributedString(string: textstring,
+                                                       attributes: myAttributes)
+                result.appendAttributedString(myAttrString1)
+                
+                
+                i+=1
+            }
+            self.PageTextView3.attributedText = result
+            //change alphas on captions and photos for scrollview2 controller
+            i = 0
+            print("Page ID: ")
+            print(self.pageID)
+            for iv: UIImageView in self.pageIVs3[self.pageID]{
+                iv.alpha = 1
+                self.capPagTVs3[self.pageID][i].alpha = 1
+                i+=1
+            }
+            if (self.pageID == 2){
+                self.actpageTableView1.alpha = 1
+                self.actpageTableView12.alpha = 1
+            }
+        }
+        /*
         if self.anchorageActive && !flagTransit{
             self.PageScrollView.contentSize.height = 1900
             var i = 0
@@ -1019,6 +1148,8 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
             }
             self.PageTextView.attributedText = result
         }
+       */
+        
         
         UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView.alpha = 0
@@ -1030,15 +1161,15 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                 self.ActivitiesBar.alpha = 0
             }
             if !self.otherPageActive{
-                self.PageScrollView.alpha = 1
+                self.PageScrollView3.alpha = 1
             }
             else{
                 if self.switchPage{
-                    self.PageScrollView.alpha = 0
+                    self.PageScrollView3.alpha = 0
                     self.PageScrollView2.alpha = 1
                 }
                 else{
-                    self.PageScrollView.alpha = 1
+                    self.PageScrollView3.alpha = 1
                     self.PageScrollView2.alpha = 0
                 }
             }
@@ -1048,6 +1179,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                     if self.otherPageActive{
                         if self.switchPage{
                             self.switchPage = false
+                            /*
                             //clean up 1rst ScrollView for photos and captions
                             var i = 0
                             for piv: UIImageView! in self.actpageIVs{
@@ -1055,6 +1187,16 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                                 self.actpageTVs[i].alpha = 0
                                 i+=1
                             }
+                            */
+                            var i = 0
+                            for iv: UIImageView in self.pageIVs3[self.prevpageID]{
+                                iv.alpha = 0
+                                self.capPagTVs3[self.prevpageID][i].alpha = 0
+                                i+=1
+                            }
+                            self.actpageTableView1.alpha = 0
+                            self.actpageTableView12.alpha = 0
+                            
                         }
                         else{
                             var i = 0
@@ -1081,7 +1223,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
             self.IView2.alpha = 0
             self.IView.alpha = 1
             self.PageScrollView2.alpha = 0
-            self.PageScrollView.alpha = 0
+            self.PageScrollView3.alpha = 0
             
             self.ActivitiesBar.alpha = 0
            
@@ -1090,7 +1232,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
             }, completion: { finished in
                 if (finished){
                     self.IPageV1.alpha = 0
-                    self.PageScrollView.hidden = true
+                    self.PageScrollView3.hidden = true
                     self.PageScrollView2.hidden = true
                     self.IView2.hidden = true
                     self.DismissPage.hidden = true
@@ -1120,6 +1262,9 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                     }
                     self.actpageTableView2.alpha = 0
                     self.actpageTableView22.alpha = 0
+                    self.actpageTableView1.alpha = 0
+                    self.actpageTableView12.alpha = 0
+                    
                 }
         })
     }
