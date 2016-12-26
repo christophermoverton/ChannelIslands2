@@ -1986,6 +1986,12 @@ Cg
                                     <action selector="InfoClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="HCa-wu-Wi1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cD-ke-h9H">
+                                <rect key="frame" x="42" y="274" width="47" height="40"/>
+                                <connections>
+                                    <action selector="MapClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="mkv-2e-fzs"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btx-QE-sNl">
                                 <rect key="frame" x="41" y="325" width="47" height="40"/>
                                 <connections>
@@ -2026,6 +2032,7 @@ Cg
                         <outlet property="IView2" destination="Tnh-Hb-UI4" id="OPa-Cy-ytZ"/>
                         <outlet property="InfoButton" destination="O7Y-SW-bQs" id="iii-dG-bSc"/>
                         <outlet property="Logoview" destination="lB1-YX-ojR" id="bkq-Xt-xSi"/>
+                        <outlet property="MapButton" destination="2cD-ke-h9H" id="gdn-qq-vKA"/>
                         <outlet property="NavBar" destination="jsM-DL-9DA" id="XjG-wr-CXV"/>
                         <outlet property="PageIV1" destination="omZ-7B-0Pz" id="G6d-om-zY4"/>
                         <outlet property="PageIV2" destination="7O9-vz-cEJ" id="a7q-Kh-mfT"/>

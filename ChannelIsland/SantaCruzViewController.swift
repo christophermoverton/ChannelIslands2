@@ -411,9 +411,9 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     private var capPagTVs: [UITextView!] = []
     private var actpageIVs: [UIImageView!] = []
     private var actpageTVs: [UITextView!] = []
-    private var pageIVs2: [[UIImageView!]] = [[UIImageView!]]()
+    private var pageIVs2: [[UIImageView!]] = [[UIImageView!]]() // side photos
     private var capPagTVs2: [[UITextView!]] = [[UITextView!]]()
-    private var pageIVs3: [[UIImageView!]] = [[UIImageView!]]()
+    private var pageIVs3: [[UIImageView!]] = [[UIImageView!]]()  //side photos 2nd page
     private var capPagTVs3: [[UITextView!]] = [[UITextView!]]()
     private var actPagHeaders: [UITextView!] = [UITextView!]()  //beyond main text view
     private var actPagHeaders2: [UITextView!] = [UITextView!]()// 2nd page text view headers
@@ -434,6 +434,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     private var PageTextView3: UITextView!
     private var PageScrollView2: FadeScrollVIew!
     private var PageScrollView3: FadeScrollVIew!
+    @IBOutlet weak var MapButton: UIButton!
     
     @IBOutlet var SantaCruzView: UIView!
     private var dataSource: HikesDataSource
@@ -734,6 +735,23 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
             j += 1
         }
         
+        //add map image view
+        let ui = UIImage(imageLiteral: "Santa_Cruz_Island_MAP")
+        let imageView = UIImageView(image: ui)
+        imageView.contentMode = .ScaleAspectFit
+        imageView.frame = CGRectMake(0, 0, 1024, 768)
+        imageView.alpha = 0
+        let imageView2 = UIImageView(image: ui)
+        imageView2.contentMode = .ScaleAspectFit
+        imageView2.frame = CGRectMake(0, 0, 1024, 768)
+        imageView2.alpha = 0
+        self.PageScrollView3.addSubview(imageView2)
+        self.PageScrollView2.addSubview(imageView)
+        self.pageIVs3.append([imageView2])
+        self.pageIVs2.append([imageView])
+        self.capPagTVs2.append([]) //no captions on map page
+        self.capPagTVs3.append([])  // no captions on map page
+        
         //add tableview
         self.actpageTableView2.delegate = self
         self.actpageTableView2.alpha = 0
@@ -957,6 +975,9 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         enableActivities()
     }
     
+    @IBAction func MapClicked(sender: AnyObject) {
+        enableMap()
+    }
     
     func enableActivities(){
         self.activitiesActive = true
@@ -979,6 +1000,13 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.enablepageTransition()
     }
     
+    func enableMap(){
+        //self.infoActive = true
+        self.prevpageID = self.pageID
+        self.pageID = 3
+        self.enablepageTransition()
+    }
+    
     func enablepageTransition(){
         self.PageScrollView.contentOffset = CGPoint(x: 0, y: 0)
         self.IView2.hidden = false
@@ -989,8 +1017,10 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
             if self.switchPage{
                 self.PageScrollView2.hidden = false
                 self.PageScrollView2.contentOffset = CGPoint(x: 0, y: 0)
-                let ptextstrings: [[String]] = [self.Anchoragestextstrings, self.Infotextstrings, self.Activitiestextstrings]
-                let pattributes: [[[String: AnyObject]]] = [self.AnchoragesAttributes, self.InfoAttributes, self.ActivitiesAttributes]
+                let ptextstrings: [[String]] = [self.Anchoragestextstrings, self.Infotextstrings, self.Activitiestextstrings,[""]]
+                let pattributes: [[[String: AnyObject]]] = [self.AnchoragesAttributes, self.InfoAttributes, self.ActivitiesAttributes,[[NSForegroundColorAttributeName: UIColor.whiteColor(),
+                    NSBackgroundColorAttributeName: UIColor.clearColor(),
+                    NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!]]]
                 var i = 0
                 let result = NSMutableAttributedString()
                 for textstring: String in ptextstrings[self.pageID]{
@@ -1012,8 +1042,12 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                 print(self.pageID)
                 for iv: UIImageView in self.pageIVs2[self.pageID]{
                     iv.alpha = 1
-                    self.capPagTVs2[self.pageID][i].alpha = 1
+                    //self.capPagTVs2[self.pageID][i].alpha = 1
                     i+=1
+                }
+                
+                for tv: UITextView in self.capPagTVs2[self.pageID]{
+                    tv.alpha = 1
                 }
                 if (self.pageID == 2){
                     self.actPagHeaders[0].alpha = 1
@@ -1031,9 +1065,12 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                 self.infoActive = false
                 self.InfoButton.hidden = false
             }
-            else{
+            else if self.prevpageID == 2{
                 self.activitiesActive = false
                 self.ActivitiesButton.hidden = false
+            }
+            else if self.prevpageID == 3{
+                self.MapButton.hidden = false
             }
         }
         if self.pageID == 0{
@@ -1042,14 +1079,19 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         else if self.pageID == 1{
             self.InfoButton.hidden = true
         }
-        else{
+        else if self.pageID == 2{
             self.ActivitiesButton.hidden = true
+        }
+        else if self.pageID == 3{
+            self.MapButton.hidden = true
         }
         if !flagTransit{
             self.PageScrollView3.hidden = false
             self.PageScrollView3.contentOffset = CGPoint(x: 0, y: 0)
-            let ptextstrings: [[String]] = [self.Anchoragestextstrings, self.Infotextstrings, self.Activitiestextstrings]
-            let pattributes: [[[String: AnyObject]]] = [self.AnchoragesAttributes, self.InfoAttributes, self.ActivitiesAttributes]
+            let ptextstrings: [[String]] = [self.Anchoragestextstrings, self.Infotextstrings, self.Activitiestextstrings,[""]]
+            let pattributes: [[[String: AnyObject]]] = [self.AnchoragesAttributes, self.InfoAttributes, self.ActivitiesAttributes,[[NSForegroundColorAttributeName: UIColor.whiteColor(),
+                NSBackgroundColorAttributeName: UIColor.clearColor(),
+                NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!]]]
             var i = 0
             let result = NSMutableAttributedString()
             for textstring: String in ptextstrings[self.pageID]{
@@ -1071,8 +1113,11 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
             print(self.pageID)
             for iv: UIImageView in self.pageIVs3[self.pageID]{
                 iv.alpha = 1
-                self.capPagTVs3[self.pageID][i].alpha = 1
+                //self.capPagTVs3[self.pageID][i].alpha = 1
                 i+=1
+            }
+            for tv: UITextView in self.capPagTVs3[self.pageID]{
+                tv.alpha = 1
             }
             if (self.pageID == 2){
                 self.actPagHeaders2[0].alpha = 1
@@ -1227,10 +1272,12 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                             var i = 0
                             for iv: UIImageView in self.pageIVs3[self.prevpageID]{
                                 iv.alpha = 0
-                                self.capPagTVs3[self.prevpageID][i].alpha = 0
+                                //self.capPagTVs3[self.prevpageID][i].alpha = 0
                                 i+=1
                             }
-                            
+                            for tv: UITextView in self.capPagTVs3[self.pageID]{
+                                tv.alpha = 1
+                            }
                             self.actpageTableView1.alpha = 0
                             self.actpageTableView12.alpha = 0
                             
@@ -1239,8 +1286,11 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                             var i = 0
                             for iv: UIImageView in self.pageIVs2[self.prevpageID]{
                                 iv.alpha = 0
-                                self.capPagTVs2[self.prevpageID][i].alpha = 0
+                                //self.capPagTVs2[self.prevpageID][i].alpha = 0
                                 i+=1
+                            }
+                            for tv: UITextView in self.capPagTVs2[self.pageID]{
+                                tv.alpha = 1
                             }
                             self.actpageTableView2.alpha = 0
                             self.actpageTableView22.alpha = 0
@@ -1280,6 +1330,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                     self.ActivitiesButton.hidden = false
                     self.AnchorageButton.hidden = false
                     self.InfoButton.hidden = false
+                    self.MapButton.hidden = false
                     self.switchPage = true
                     var i = 0
                     /*
@@ -1294,21 +1345,39 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                         i = 0
                         for piv: UIImageView in pivs{
                             piv.alpha = 0
-                            self.capPagTVs2[j][i].alpha = 0
+                            //self.capPagTVs2[j][i].alpha = 0
                             i+=1
                         }
                         j+=1
                     }
+                    
+                    for tivs: [UITextView!] in self.capPagTVs2{
+                        
+                        for tiv: UITextView in tivs{
+                            tiv.alpha = 0
+                            //self.capPagTVs2[j][i].alpha = 0
+                        }
+                    }
+                    
                     j = 0
                     for pivs: [UIImageView!] in self.pageIVs3{
                         i = 0
                         for piv: UIImageView in pivs{
                             piv.alpha = 0
-                            self.capPagTVs3[j][i].alpha = 0
+                            //self.capPagTVs3[j][i].alpha = 0
                             i+=1
                         }
                         j+=1
                     }
+                    
+                    for tivs: [UITextView!] in self.capPagTVs3{
+                        
+                        for tiv: UITextView in tivs{
+                            tiv.alpha = 0
+                            //self.capPagTVs2[j][i].alpha = 0
+                        }
+                    }
+                    
                     self.actPagHeaders[0].alpha = 1
                     self.actpageTableView2.alpha = 0
                     self.actpageTableView22.alpha = 0
