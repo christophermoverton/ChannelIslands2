@@ -631,7 +631,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.PageScrollView3 = FadeScrollVIew()
         self.PageScrollView3.frame = CGRectMake(0, 120, 1024, 565)
         self.PageScrollView3.alpha = 0
-        self.PageScrollView3.addSubview(self.PageTextView3)
+        self.PageScrollView3.addSubview(self.PageTextView3 )
         self.SantaCruzView.insertSubview(self.PageScrollView3,atIndex: 5)
         self.PageScrollView3.contentSize.height = 8000
         let inames: [[String]] = [self.photonames, self.infophotonames, self.activitiesphotonames]
