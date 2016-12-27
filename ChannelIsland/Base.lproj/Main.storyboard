@@ -17,6 +17,8 @@
             <string>TrajanPro-Regular</string>
             <string>TrajanPro-Regular</string>
             <string>TrajanPro-Regular</string>
+            <string>TrajanPro-Regular</string>
+            <string>TrajanPro-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -1788,10 +1790,10 @@ Cg
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" editable="NO" text="Santa Cruz Island" translatesAutoresizingMaskIntoConstraints="NO" id="HL1-Zz-pgs">
-                                <rect key="frame" x="46" y="23" width="333" height="43"/>
+                                <rect key="frame" x="384" y="23" width="333" height="43"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="27"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1u2-oe-qZB">
@@ -2367,6 +2369,13 @@ Cg
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" editable="NO" text="Santa Cruz Island" translatesAutoresizingMaskIntoConstraints="NO" id="Ptm-Pg-z42">
+                                <rect key="frame" x="384" y="23" width="333" height="43"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="27"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7AY-ha-b6d">
                                 <rect key="frame" x="42" y="274" width="47" height="40"/>
                                 <connections>
@@ -2456,6 +2465,7 @@ Cg
                         <outlet property="HomeLabel" destination="4G1-VQ-aMe" id="t8J-2h-dRj"/>
                         <outlet property="InfoButton" destination="Kh8-Rl-DhM" id="ypG-KD-CqD"/>
                         <outlet property="InfoLabel" destination="Io0-Hm-uoy" id="beq-wN-CPH"/>
+                        <outlet property="IslandName" destination="Ptm-Pg-z42" id="hHh-My-zJk"/>
                         <outlet property="MainPageButton" destination="iN1-fZ-0gW" id="3FL-j2-54W"/>
                         <outlet property="MapButton" destination="7AY-ha-b6d" id="qWL-Qj-h5b"/>
                         <outlet property="MapLabel" destination="evb-mE-ECm" id="xqg-P9-vDg"/>
@@ -3179,6 +3189,13 @@ Cg
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" editable="NO" text="Santa Cruz Island" translatesAutoresizingMaskIntoConstraints="NO" id="Yvk-Ir-m4m">
+                                <rect key="frame" x="384" y="23" width="333" height="43"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="27"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="582-ms-OSV">
                                 <rect key="frame" x="42" y="274" width="47" height="40"/>
                             </button>
@@ -3256,6 +3273,7 @@ Cg
                         <outlet property="HomeLabel" destination="A6l-bk-AVc" id="GmN-kD-un0"/>
                         <outlet property="InfoButton" destination="aPh-SX-npR" id="lxb-Fo-5rc"/>
                         <outlet property="InfoLabel" destination="if5-6a-C8R" id="M95-wP-60B"/>
+                        <outlet property="IslandName" destination="Yvk-Ir-m4m" id="oUK-ou-F3r"/>
                         <outlet property="MainPageButton" destination="kmJ-lh-BdE" id="IFp-hL-Kd1"/>
                         <outlet property="MapButton" destination="582-ms-OSV" id="unP-ou-6oQ"/>
                         <outlet property="MapLabel" destination="eDs-QO-qnB" id="Oy5-vq-1Oh"/>

@@ -13,7 +13,8 @@ class IslandPhotoCommentViewController2: UIViewController {
     var captions = ["\nSunset in the sanctuary, Channel Islands National Marine Sanctuary","\nArch Point, Santa Cruz Island","\nKayaker at Arch Rock, Anacapa Island, photo by Tim Hauf","\nKelp forest at Scorpion Bay, Santa Cruz Island","\nCalifornia Sea Lions, Channel Islands","Spiny lobsters and other marine species enjoy miles of marine reserves and protected areas within the sanctuary","\nPink-footed Shearwater, a summertime visitor to the Channel Islands","\nAshy storm petrels actively nest in the Channel Islands","Island foxes—about the size of house cats—are among the endemic species found only in the Channel Islands","Island Packers operates ferry service between Channel Islands Harbor and Ventura Harbor and several of the islands","\nFishing while kayaking on the Channel Islands","\nLichen-encrusted rocks on Santa Cruz Island","The National Park Service and NOAA’s National Marine Sanctuary program work together to protect land and sea."]
     internal let islandsPhotos: [[String]] = [["SCimage059","SCimage061","SCimage063","SCimage065","SCimage067","SCimage069","SCimage071","SCimage0730"]]
     private var islandCaptions: [[String]] = [["Santa Cruz Island, sailboats anchored at Smuggler’s Cove","Santa Cruz Island, kayakers at Scorpion Bay","Santa Cruz Island, offloading waste at Prisoner’s Pier","Santa Cruz Island, Potato Harbor","Santa Cruz Island, East Side","Santa Cruz Island, small fish among the eelgrass","Santa Cruz Island, Yellow Banks","Santa Cruz Island, kayakers approach Painted Cave"]]
-    
+    private var islandNames: [String] = ["Santa Cruz Island"]
+    @IBOutlet weak var IslandName: UITextView!
     @IBOutlet weak var PhotoImageView: UIImageView!
     @IBOutlet weak var NavigationBarImageView: UIImageView!
     @IBOutlet weak var PageControl: UIPageControl!
@@ -50,7 +51,7 @@ class IslandPhotoCommentViewController2: UIViewController {
         self.horizontalTransitionController.vname1 = self.captions[abs(photoIndex)]
         //self.horizontalTransitionController.iv13 = self.Clickhere
         self.horizontalTransitionController.pc = self.PageControl
-        //self.horizontalTransitionController.titletf1 = self.TitleText1
+        self.horizontalTransitionController.titletf1 = self.IslandName
         //self.horizontalTransitionController.titletf2 = self.TitleText2
         //self.horizontalTransitionController.titletf3 = self.TitleText3
         self.horizontalTransitionController.tfarr = [MapLabel,AnchoragesLabel,ActivitiesLabel,InfoLabel,PhotoGalleryLabel,HomeLabel]
@@ -91,7 +92,7 @@ class IslandPhotoCommentViewController2: UIViewController {
             self.horizontalTransitionController.swipeDirection = swipeState
             self.horizontalTransitionController.pc2 = destinationViewController.PageControl
             destinationViewController.PageControl.currentPage = abs(dphotoIndex)
-            //self.horizontalTransitionController.titletf12 = destinationViewController.TitleText1
+            self.horizontalTransitionController.titletf12 = destinationViewController.IslandName
             //self.horizontalTransitionController.titletf22 = destinationViewController.TitleText2
             //self.horizontalTransitionController.titletf32 = destinationViewController.TitleText3
             self.horizontalTransitionController.tfarr2 = [destinationViewController.MapLabel,destinationViewController.AnchoragesLabel,destinationViewController.ActivitiesLabel,destinationViewController.InfoLabel,destinationViewController.PhotoGalleryLabel,destinationViewController.HomeLabel]
@@ -138,6 +139,7 @@ class IslandPhotoCommentViewController2: UIViewController {
             //self.TitleText2.font = UIFont(name:"TrajanPro-Regular", size: 55)
             //self.TitleText3.font = UIFont(name:"TrajanPro-Regular", size: 55)
         }
+        self.IslandName.text = self.islandNames[self.islandID]
         // Do any additional setup after loading the view.
     }
     
@@ -153,6 +155,7 @@ class IslandPhotoCommentViewController2: UIViewController {
             //self.TitleText2.font = UIFont(name:"TrajanPro-Regular", size: 55)
             //self.TitleText3.font = UIFont(name:"TrajanPro-Regular", size: 55)
         }
+        self.IslandName.text = self.islandNames[self.islandID]
     }
     
     override func didReceiveMemoryWarning() {

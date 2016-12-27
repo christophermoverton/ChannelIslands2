@@ -21,10 +21,12 @@ class HorizontalTransitionController3: NSObject, UIViewControllerAnimatedTransit
     var vname2: String!
     //var tv1: UITextField!
     //var tv2: UITextField!
-    var titletf1: UITextField!
+    var titletf1: UITextView!
+    var titletf12: UITextView!
+    //var titletf1: UITextField!
     var titletf2: UITextField!
     var titletf3: UITextField!
-    var titletf12: UITextField!
+    //var titletf12: UITextField!
     var titletf22: UITextField!
     var titletf32: UITextField!
     var iv1: UIImageView!
@@ -63,7 +65,7 @@ class HorizontalTransitionController3: NSObject, UIViewControllerAnimatedTransit
         customView2.addTextView(tv2)
         let customView3 = MyCustomView(frame: CGRect(x: 0, y: 0, width: 1024, height: 768))
         customView3.addImageV2("IslandIcons_Photo_Gallery_V02")
-        //customView3.addTitleV(titletf1)
+        customView3.addTitleV2(titletf1)
         //customView3.addTitleV(titletf2)
         //customView3.addTitleV(titletf3)
         for tfi in tfarr{
@@ -87,10 +89,10 @@ class HorizontalTransitionController3: NSObject, UIViewControllerAnimatedTransit
         self.iv22.hidden = true
         self.pc.hidden = true
         self.pc2.hidden = true
-        //self.titletf1.hidden = true
+        self.titletf1.hidden = true
         //self.titletf2.hidden = true
         //self.titletf3.hidden = true
-        //self.titletf12.hidden = true
+        self.titletf12.hidden = true
         //self.titletf22.hidden = true
         //self.titletf32.hidden = true
         for tfi in tfarr{
@@ -165,10 +167,10 @@ class HorizontalTransitionController3: NSObject, UIViewControllerAnimatedTransit
                 self.iv22.hidden = false
                 self.pc.hidden = false
                 self.pc2.hidden = false
-                //self.titletf1.hidden = false
+                self.titletf1.hidden = false
                 //self.titletf2.hidden = false
                 //self.titletf3.hidden = false
-                //self.titletf12.hidden = false
+                self.titletf12.hidden = false
                 //self.titletf22.hidden = false
                 //self.titletf32.hidden = false
                 for tfi in self.tfarr{
