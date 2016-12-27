@@ -438,6 +438,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     @IBOutlet weak var PhotoButton: UIButton!
     
     @IBOutlet var SantaCruzView: UIView!
+    private var MapView: UIView!
     private var dataSource: HikesDataSource
     private var dataSource2: CampgroundDataSource
     private var actHikes: [Hike] = [Hike(destination: "Destination",distance: "Distance",difficulty: "Difficulty",briefdescription: "Brief Description"),Hike(destination: "Historic Ranch",distance: ".5",difficulty: "Easy",briefdescription: "View the historic Scorpion Ranch complex."),Hike(destination: "Cavern Point",distance: "2",difficulty: "Moderate",briefdescription: "Magnificent coastal vistas and whale viewing."),Hike(destination: "Potato Harbor",distance: "4",difficulty: "Moderate",briefdescription: "Spectacular coastal views. No beach access."),Hike(destination: "Scorpion Canyon",distance: "4 (loop)",difficulty: "Moderate to strenuous",briefdescription: "A scenic loop hike that includes steep canyon walls and a chance to see the unique island scrub-jay."), Hike(destination: "Smugglers Cove",distance: "7",difficulty: "Strenuous",briefdescription: "An all-day hike with beach access at Smugglers Cove."),Hike(destination: "Montañon Ridge",distance: "8",difficulty: "Strenuous",briefdescription: "For experienced, off-trail hikers. Great views."),Hike(destination: "Prisoners Harbor",distance: "28",difficulty: "Strenuous",briefdescription: "Arrange a boat pickup for a one-way trip or camp at Del Norte backcountry camp."),Hike(destination: "From Smugglers Cove:",distance: "",difficulty: "",briefdescription: ""),Hike(destination: "Smugglers Canyon",distance: "   2",difficulty: "Moderate to strenuous",briefdescription: "Opportunities to view native island vegetation.  Be prepared for uneven terrain and loose rock."),Hike(destination: "Yellowbanks",distance: "3",difficulty: "Moderate",briefdescription: "Off-trail hike to an overlook. No beach access."),Hike(destination: "San Pedro Point",distance: "4",difficulty: "Moderate",briefdescription: "For experienced, off-trail hikers."),Hike(destination: "From Prisoners Harbor:",distance: "",difficulty: "",briefdescription: ""),Hike(destination: "Prisoners Harbor",distance: ".25 -.5",difficulty: "Easy",briefdescription: "View the historic Prisoners Harbor area and search for the island scrub-jay."),Hike(destination: "Del Norte Camp",distance: "7",difficulty: "Strenuous",briefdescription: "Follow the rugged Del Norte trail east to the backcountry camp."),Hike(destination: "Navy Road- Del Norte Loop",distance: "     8.5",difficulty: "Strenuous",briefdescription: "Route includes the Navy Road and the Del Norte Trail. Good views."),Hike(destination: "Chinese Harbor",distance: "15.5",difficulty: "Strenuous",briefdescription: "A long hike that ends at the only beach accessible by land on the isthmus."),Hike(destination: "China Pines",distance: "18",difficulty: "Strenuous",briefdescription: "Explore the Santa Cruz Island pine grove."),Hike(destination: "Montañon Ridge",distance: "21",difficulty: "Strenuous",briefdescription: "For experienced, off-trail hikers. Must be able to read topographic maps."),Hike(destination: "Scorpion Anchorage",distance: "       28",difficulty: "Strenuous",briefdescription: "Arrange a boat pickup for a one-way trip or camp at Del Norte backcountry camp."),Hike(destination: "Pelican Bay",distance: "4",difficulty: "Moderate to strenuous",briefdescription: "This trail may only be traveled by those who have obtained a permit in advance from The Nature Conservancy or are accompanied by Island Packers (a boat concessioner) staff.")]
@@ -755,12 +756,23 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         imageView2.contentMode = .ScaleAspectFit
         imageView2.frame = CGRectMake(0, 0, 1024, 768)
         imageView2.alpha = 0
+        let imageView3 = UIImageView(image: ui)
+        imageView3.contentMode = .ScaleAspectFit
+        imageView3.frame = CGRectMake(0, 0, 1024, 768)
+        imageView3.alpha = 1
         self.PageScrollView3.addSubview(imageView2)
         self.PageScrollView2.addSubview(imageView)
         self.pageIVs3.append([imageView2])
         self.pageIVs2.append([imageView])
         self.capPagTVs2.append([]) //no captions on map page
         self.capPagTVs3.append([])  // no captions on map page
+        self.MapView = UIView()
+        self.MapView.frame = CGRect(x: 0 ,y: 0 ,width:1024,height: 768)
+        self.MapView.backgroundColor = UIColor.clearColor()
+        self.MapView.alpha = 0
+        self.MapView.addSubview(imageView3)
+        self.SantaCruzView.insertSubview(self.MapView, atIndex: 7)
+        
         
         //add tableview
         self.actpageTableView2.delegate = self
@@ -1165,111 +1177,10 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
             }
             
         }
-        /*
-        if self.anchorageActive && !flagTransit{
-            self.PageScrollView.contentSize.height = 1900
-            var i = 0
-            let result = NSMutableAttributedString()
-            for astr: String in self.Anchoragestextstrings{
-                let myAttributes = self.AnchoragesAttributes[i]
-                let myAttrString1 = NSAttributedString(string: astr,
-                                                       attributes: myAttributes)
-                result.appendAttributedString(myAttrString1)
-                i+=1
-            }
-            i = 0
-            for piv: UIImageView in self.pageIVs{
-                piv.alpha = 1
-                self.capPagTVs[i].alpha = 1
-                let ui = UIImage(imageLiteral: self.photonames[i])
-                let newheight = ui.size.height/1.85
-                print(newheight)
-                //piv.frame = CGRectMake(piv.frame.origin.x, piv.frame.origin.y, piv.frame.size.width, newheight)//(piv.frame.x,piv.frame.y,piv.frame.width,newheight)
-                piv.image = ui
-                let mystring = self.AnchoragesCaptiontextstrings[i]
-                let myAttributes = self.AnchoragesCaptionAttributes[i]
-                let myAttrString1 = NSAttributedString(string: mystring,
-                                                       attributes: myAttributes)
-                self.capPagTVs[i].attributedText = myAttrString1
-                i+=1
-            }
-            self.PageTextView.attributedText = result
-            //self.viewDidLayoutSubviews()
-        }
-        
-        if self.infoActive && !flagTransit{
-            self.PageScrollView.contentSize.height = 1900
-            var i = 0
-            let result = NSMutableAttributedString()
-            for astr: String in self.Infotextstrings{
-                let myAttributes = self.InfoAttributes[i]
-                let myAttrString1 = NSAttributedString(string: astr,
-                                                       attributes: myAttributes)
-                result.appendAttributedString(myAttrString1)
-                i+=1
-            }
-            i = 0
-            for piv: UIImageView in self.pageIVs{
-                piv.alpha = 1
-                if (i > 2){
-                    piv.alpha = 0
-                    self.capPagTVs[i].alpha = 0
-                    i+=1
-                    continue
-                }
-
-                let ui = UIImage(imageLiteral: self.infophotonames[i])
-                let newheight = ui.size.height/1.85
-                print(newheight)
-                //piv.frame = CGRectMake(piv.frame.origin.x, piv.frame.origin.y, piv.frame.size.width, newheight)//(piv.frame.x,piv.frame.y,piv.frame.width,newheight)
-                piv.image = ui
-                if (i == 0){
-                    piv.alpha = 0
-                    IPageV1.alpha = 1
-                    IPageV1.image = ui
-                }
-                let mystring = self.AnchoragesCaptiontextstrings[i]
-                let myAttributes = self.AnchoragesCaptionAttributes[i]
-                let myAttrString1 = NSAttributedString(string: mystring,
-                                                       attributes: myAttributes)
-                self.capPagTVs[i].attributedText = myAttrString1
-                i+=1
-            }
-            self.PageTextView.attributedText = result
-        }
-        
-        if self.activitiesActive && !flagTransit{
-            self.PageScrollView.contentSize.height = 4000
-            var i = 0
-            let result = NSMutableAttributedString()
-            for astr: String in self.Activitiestextstrings{
-                let myAttributes = self.ActivitiesAttributes[i]
-                let myAttrString1 = NSAttributedString(string: astr,
-                                                       attributes: myAttributes)
-                result.appendAttributedString(myAttrString1)
-                i+=1
-            }
-            i = 0
+        if self.pageID == 3{
+            self.MapView.hidden = false
             
-             for piv: UIImageView in self.pageIVs{
-
-             
-
-             //piv.frame = CGRectMake(piv.frame.origin.x, piv.frame.origin.y, piv.frame.size.width, newheight)//(piv.frame.x,piv.frame.y,piv.frame.width,newheight)
-             piv.alpha = 0
-             self.capPagTVs[i].alpha = 0
-
-             i+=1
-             }
-             i = 0
-            for piv: UIImageView! in self.actpageIVs{
-                piv.alpha = 1
-                self.actpageTVs[i].alpha = 1
-                i+=1
-            }
-            self.PageTextView.attributedText = result
         }
-       */
         
         if withAnim{
             UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
@@ -1294,6 +1205,13 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                         self.PageScrollView2.alpha = 0
                     }
                 }
+                if self.pageID == 3{
+                    self.MapView.alpha = 1
+
+                }
+                if self.prevpageID == 3{
+                    self.MapView.alpha = 0
+                }
                 self.CloseTV.alpha = 1
                 }, completion: { finished in
                     if (finished){
@@ -1315,8 +1233,8 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                                     //self.capPagTVs3[self.prevpageID][i].alpha = 0
                                     i+=1
                                 }
-                                for tv: UITextView in self.capPagTVs3[self.pageID]{
-                                    tv.alpha = 1
+                                for tv: UITextView in self.capPagTVs3[self.prevpageID]{
+                                    tv.alpha = 0
                                 }
                                 self.actpageTableView1.alpha = 0
                                 self.actpageTableView12.alpha = 0
@@ -1329,8 +1247,8 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                                     //self.capPagTVs2[self.prevpageID][i].alpha = 0
                                     i+=1
                                 }
-                                for tv: UITextView in self.capPagTVs2[self.pageID]{
-                                    tv.alpha = 1
+                                for tv: UITextView in self.capPagTVs2[self.prevpageID]{
+                                    tv.alpha = 0
                                 }
                                 self.actpageTableView2.alpha = 0
                                 self.actpageTableView22.alpha = 0
@@ -1339,6 +1257,9 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                         }
                         self.IView.hidden = true
                         self.otherPageActive = true
+                        if self.prevpageID == 3{
+                            self.MapView.hidden = true
+                        }
                     }
             })
         }
@@ -1364,6 +1285,13 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                     self.PageScrollView2.alpha = 0
                 }
             }
+            if self.pageID == 3{
+                self.MapView.alpha = 1
+                
+            }
+            if self.prevpageID == 3{
+                self.MapView.alpha = 0
+            }
             self.CloseTV.alpha = 1
             if self.otherPageActive{
                 if self.switchPage{
@@ -1383,8 +1311,8 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                         //self.capPagTVs3[self.prevpageID][i].alpha = 0
                         i+=1
                     }
-                    for tv: UITextView in self.capPagTVs3[self.pageID]{
-                        tv.alpha = 1
+                    for tv: UITextView in self.capPagTVs3[self.prevpageID]{
+                        tv.alpha = 0
                     }
                     self.actpageTableView1.alpha = 0
                     self.actpageTableView12.alpha = 0
@@ -1397,8 +1325,8 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                         //self.capPagTVs2[self.prevpageID][i].alpha = 0
                         i+=1
                     }
-                    for tv: UITextView in self.capPagTVs2[self.pageID]{
-                        tv.alpha = 1
+                    for tv: UITextView in self.capPagTVs2[self.prevpageID]{
+                        tv.alpha = 0
                     }
                     self.actpageTableView2.alpha = 0
                     self.actpageTableView22.alpha = 0
@@ -1417,7 +1345,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
             self.IView.alpha = 1
             self.PageScrollView2.alpha = 0
             self.PageScrollView3.alpha = 0
-            
+            self.MapView.alpha = 0
             self.ActivitiesBar.alpha = 0
            
             
@@ -1427,6 +1355,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                     self.IPageV1.alpha = 0
                     self.PageScrollView3.hidden = true
                     self.PageScrollView2.hidden = true
+                    self.MapView.hidden = true
                     self.IView2.hidden = true
                     self.DismissPage.hidden = true
                     self.infoActive = false
