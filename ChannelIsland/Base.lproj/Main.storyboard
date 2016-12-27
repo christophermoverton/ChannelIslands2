@@ -2012,6 +2012,47 @@ Cg
                                     <action selector="ActivitiesClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="P3b-J9-Z3e"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Map" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pb2-xw-AIG">
+                                <rect key="frame" x="93" y="280" width="50" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Activities" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nCs-5b-btp">
+                                <rect key="frame" x="93" y="380" width="50" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Anchorages" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BPh-VY-BLv">
+                                <rect key="frame" x="93" y="330" width="70" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Photo Gallery" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wZs-Fc-2By">
+                                <rect key="frame" x="93" y="427" width="70" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.99287670850753784" green="0.99700695276260376" blue="0.99637609720230103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Info" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J3F-tM-07q">
+                                <rect key="frame" x="93" y="230" width="50" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Home" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cYo-3v-JFD">
+                                <rect key="frame" x="93" y="501" width="70" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar3" translatesAutoresizingMaskIntoConstraints="NO" id="zaR-pt-QQD">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
@@ -2024,7 +2065,9 @@ Cg
                     <connections>
                         <outlet property="ActivitiesBar" destination="DWr-pe-hra" id="tfr-YL-lCR"/>
                         <outlet property="ActivitiesButton" destination="gcu-VE-QSc" id="Y0p-a9-htc"/>
+                        <outlet property="ActivitiesLabel" destination="nCs-5b-btp" id="Htw-ln-wKD"/>
                         <outlet property="AnchorageButton" destination="btx-QE-sNl" id="BZd-Jp-GZ4"/>
+                        <outlet property="AnchoragesLabel" destination="BPh-VY-BLv" id="ntD-Eq-FM3"/>
                         <outlet property="Barview" destination="zaR-pt-QQD" id="SdW-hT-Onm"/>
                         <outlet property="CapPagTV1" destination="ej5-vO-mO9" id="lCW-74-vnC"/>
                         <outlet property="CapPagTV2" destination="hkv-T9-LB9" id="39a-Ge-Aac"/>
@@ -2035,12 +2078,15 @@ Cg
                         <outlet property="Clickhere" destination="fqE-iy-knw" id="C0h-bY-rNJ"/>
                         <outlet property="CloseTV" destination="Ygp-pl-f59" id="Bof-FF-9YL"/>
                         <outlet property="DismissPage" destination="1u2-oe-qZB" id="wxU-Lf-Dy3"/>
+                        <outlet property="HomeLabel" destination="cYo-3v-JFD" id="aRt-NC-S0c"/>
                         <outlet property="IPageV1" destination="TD8-0L-2fQ" id="8J1-FR-gIy"/>
                         <outlet property="IView" destination="rlw-Of-cjs" id="XgG-bQ-YLN"/>
                         <outlet property="IView2" destination="Tnh-Hb-UI4" id="OPa-Cy-ytZ"/>
                         <outlet property="InfoButton" destination="O7Y-SW-bQs" id="iii-dG-bSc"/>
+                        <outlet property="InfoLabel" destination="J3F-tM-07q" id="d0x-Mm-nll"/>
                         <outlet property="Logoview" destination="lB1-YX-ojR" id="bkq-Xt-xSi"/>
                         <outlet property="MapButton" destination="2cD-ke-h9H" id="gdn-qq-vKA"/>
+                        <outlet property="MapLabel" destination="Pb2-xw-AIG" id="2du-oC-tMN"/>
                         <outlet property="NavBar" destination="jsM-DL-9DA" id="XjG-wr-CXV"/>
                         <outlet property="PageIV1" destination="omZ-7B-0Pz" id="G6d-om-zY4"/>
                         <outlet property="PageIV2" destination="7O9-vz-cEJ" id="a7q-Kh-mfT"/>
@@ -2051,6 +2097,7 @@ Cg
                         <outlet property="PageScrollView" destination="NVb-Oy-hDX" id="8Ti-Oj-tZk"/>
                         <outlet property="PageTextView" destination="JWU-1T-Mpx" id="v4a-Of-0EB"/>
                         <outlet property="PhotoButton" destination="ICn-hE-eaN" id="U9r-jQ-1CK"/>
+                        <outlet property="PhotoGalleryLabel" destination="wZs-Fc-2By" id="M4g-8u-zJS"/>
                         <outlet property="SantaCruzView" destination="wKN-Ev-zjR" id="beX-GK-vYu"/>
                         <outlet property="TitleText" destination="HL1-Zz-pgs" id="emQ-G9-Ove"/>
                     </connections>

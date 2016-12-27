@@ -438,6 +438,13 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     @IBOutlet weak var PhotoButton: UIButton!
     
     @IBOutlet var SantaCruzView: UIView!
+    @IBOutlet weak var MapLabel: UITextField!
+    @IBOutlet weak var ActivitiesLabel: UITextField!
+    @IBOutlet weak var AnchoragesLabel: UITextField!
+    @IBOutlet weak var PhotoGalleryLabel: UITextField!
+    @IBOutlet weak var InfoLabel: UITextField!
+    @IBOutlet weak var HomeLabel: UITextField!
+    
     private var MapView: UIView!
     private var dataSource: HikesDataSource
     private var dataSource2: CampgroundDataSource
@@ -1063,7 +1070,19 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.PageScrollView.hidden = false
         self.DismissPage.hidden = false
         var flagTransit = false
+        let pageToIcon: [Int: String] = [0: "IslandIcons_ANCHORAGES_V02", 1: "IslandIcons_INFO_V02",
+            2: "IslandIcons_ACTIVITIES_V02", 3: "IslandIcons_MAP_V02"]
+        let pageToILabel: [Int: UITextField] = [0: self.AnchoragesLabel, 1: self.InfoLabel, 2: self.ActivitiesLabel, 3: self.MapLabel]
+        let ui = UIImage(imageLiteral: pageToIcon[self.pageID]!)
+        self.NavBar.image = ui
         
+        pageToILabel[self.pageID]!.textColor = UIColor.blackColor()
+        if self.otherPageActive{
+            pageToILabel[self.prevpageID]!.textColor = UIColor.whiteColor()
+        }
+        else{
+            self.HomeLabel.textColor = UIColor.whiteColor()
+        }
         if self.otherPageActive{
             if self.switchPage{
                 self.PageScrollView2.hidden = false
@@ -1340,6 +1359,13 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     
     func enablemainpageTransition(){
         self.IView.hidden = false
+
+        let pageToILabel: [Int: UITextField] = [0: self.AnchoragesLabel, 1: self.InfoLabel, 2: self.ActivitiesLabel, 3: self.MapLabel]
+        let ui = UIImage(imageLiteral: "IslandIcons_HOME")
+        self.NavBar.image = ui
+        pageToILabel[self.pageID]!.textColor = UIColor.whiteColor()
+        self.HomeLabel.textColor = UIColor.blackColor()
+        
         UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView2.alpha = 0
             self.IView.alpha = 1
