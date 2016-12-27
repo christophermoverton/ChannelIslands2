@@ -372,7 +372,7 @@ extension HikesDataSource: UITableViewDataSource {
 }
 
 class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableViewDelegate,UIScrollViewDelegate {
-    
+    private let photoSequeId = "Photography"
     private let revealSequeId = "revealSegue"
     private var swipeState: Bool = true  //right state
     private let horizontalTransitionController = HorizontalTransitionController()
@@ -435,6 +435,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     private var PageScrollView2: FadeScrollVIew!
     private var PageScrollView3: FadeScrollVIew!
     @IBOutlet weak var MapButton: UIButton!
+    @IBOutlet weak var PhotoButton: UIButton!
     
     @IBOutlet var SantaCruzView: UIView!
     private var dataSource: HikesDataSource
@@ -583,6 +584,15 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
             self.horizontalTransitionController.swipeDirection = true
             self.horizontalTransitionController.iname1 = iname1
             self.horizontalTransitionController.iname2 = iname2
+        }
+        
+        if segue.identifier == photoSequeId, let photographyPageViewController = segue.destinationViewController as? IslandPhotoCommentViewController {
+            print("Hit Photography Page View Seque")
+            //photographyPageViewController.photos = photos
+            photographyPageViewController.islandID = 0
+            photographyPageViewController.photoIndex = 0
+            photographyPageViewController.photoName = photographyPageViewController.islandsPhotos[0][0]
+            
         }
         if checkString.rangeOfString("revealSegue") != nil, let destinationViewController = segue.destinationViewController as? SantaRosaViewController {
             print("Got this far again")

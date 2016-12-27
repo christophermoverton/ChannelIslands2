@@ -33,6 +33,9 @@
 		B0999B571E024AC500349AB3 /* FadeScrollVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0999B551E024AC500349AB3 /* FadeScrollVIew.swift */; };
 		B0999B581E024AC500349AB3 /* FadeScrollVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0999B551E024AC500349AB3 /* FadeScrollVIew.swift */; };
 		B0BB43C11D51719F0042CF5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB43C01D51719F0042CF5E /* ViewController.swift */; };
+		B0E397731E11C7170059DE1A /* IslandPhotoCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E397721E11C7170059DE1A /* IslandPhotoCommentViewController.swift */; };
+		B0E397751E11D5260059DE1A /* HorizontalTransitionController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E397741E11D5260059DE1A /* HorizontalTransitionController3.swift */; };
+		B0E397771E11E8DC0059DE1A /* IslandPhotoCommentViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E397761E11E8DC0059DE1A /* IslandPhotoCommentViewController2.swift */; };
 		B0E758691D75020700212694 /* HorizontalTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E758681D75020600212694 /* HorizontalTransitionController.swift */; };
 		B0E7586A1D75020700212694 /* HorizontalTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E758681D75020600212694 /* HorizontalTransitionController.swift */; };
 		B0E7586B1D75020700212694 /* HorizontalTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E758681D75020600212694 /* HorizontalTransitionController.swift */; };
@@ -109,6 +112,9 @@
 		B03151EF1D4E69B60038FBA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0999B551E024AC500349AB3 /* FadeScrollVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeScrollVIew.swift; sourceTree = "<group>"; };
 		B0BB43C01D51719F0042CF5E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B0E397721E11C7170059DE1A /* IslandPhotoCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IslandPhotoCommentViewController.swift; sourceTree = "<group>"; };
+		B0E397741E11D5260059DE1A /* HorizontalTransitionController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalTransitionController3.swift; sourceTree = "<group>"; };
+		B0E397761E11E8DC0059DE1A /* IslandPhotoCommentViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IslandPhotoCommentViewController2.swift; sourceTree = "<group>"; };
 		B0E758681D75020600212694 /* HorizontalTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalTransitionController.swift; sourceTree = "<group>"; };
 		B0E7586C1D7576A200212694 /* SantaRosaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SantaRosaViewController.swift; sourceTree = "<group>"; };
 		B0E758741D762AF300212694 /* SanMiguelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SanMiguelViewController.swift; sourceTree = "<group>"; };
@@ -185,12 +191,15 @@
 				B0EFD54C1D5AC7ED00ED2F9A /* FlipPresentAnimationController.swift */,
 				B0E758681D75020600212694 /* HorizontalTransitionController.swift */,
 				B0FB21BB1D82B92100041DD8 /* HorizontalTransitionController2.swift */,
+				B0E397741E11D5260059DE1A /* HorizontalTransitionController3.swift */,
 				B0E758841D77C94A00212694 /* MyCustomView.swift */,
 				B03151C91D4E69B60038FBA5 /* AppDelegate.swift */,
 				B03151CB1D4E69B60038FBA5 /* RootViewController.swift */,
 				B03151CD1D4E69B60038FBA5 /* DataViewController.swift */,
 				B03151CF1D4E69B60038FBA5 /* ModelController.swift */,
 				B03151D11D4E69B60038FBA5 /* Main.storyboard */,
+				B0E397721E11C7170059DE1A /* IslandPhotoCommentViewController.swift */,
+				B0E397761E11E8DC0059DE1A /* IslandPhotoCommentViewController2.swift */,
 				B0999B551E024AC500349AB3 /* FadeScrollVIew.swift */,
 				B0FB21BF1D83922800041DD8 /* PhotoCommentViewController2.swift */,
 				B0FB21B31D82099F00041DD8 /* PhotoCommentViewController.swift */,
@@ -365,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0E397731E11C7170059DE1A /* IslandPhotoCommentViewController.swift in Sources */,
 				B0E758691D75020700212694 /* HorizontalTransitionController.swift in Sources */,
 				B0BB43C11D51719F0042CF5E /* ViewController.swift in Sources */,
 				B0999B561E024AC500349AB3 /* FadeScrollVIew.swift in Sources */,
@@ -378,8 +388,10 @@
 				B0E7587D1D7630FF00212694 /* AnacapaViewController.swift in Sources */,
 				B0FB21BC1D82B92100041DD8 /* HorizontalTransitionController2.swift in Sources */,
 				B0E7586D1D7576A200212694 /* SantaRosaViewController.swift in Sources */,
+				B0E397751E11D5260059DE1A /* HorizontalTransitionController3.swift in Sources */,
 				B0E758791D762FAB00212694 /* SantaCruzViewController.swift in Sources */,
 				B0211E211D630742008208CC /* MapCard.swift in Sources */,
+				B0E397771E11E8DC0059DE1A /* IslandPhotoCommentViewController2.swift in Sources */,
 				B01669EF1D8A52CC006CDAB3 /* CCrossDissolveAnimationController.swift in Sources */,
 				B0E758751D762AF600212694 /* SanMiguelViewController.swift in Sources */,
 				B0FB21B41D82099F00041DD8 /* PhotoCommentViewController.swift in Sources */,
