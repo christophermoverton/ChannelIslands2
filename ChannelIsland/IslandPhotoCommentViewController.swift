@@ -16,6 +16,7 @@ class IslandPhotoCommentViewController: UIViewController {
     private var islandCaptions: [[String]] = [["Santa Cruz Island, sailboats anchored at Smuggler’s Cove","Santa Cruz Island, kayakers at Scorpion Bay","Santa Cruz Island, offloading waste at Prisoner’s Pier","Santa Cruz Island, Potato Harbor","Santa Cruz Island, East Side","Santa Cruz Island, small fish among the eelgrass","Santa Cruz Island, Yellow Banks","Santa Cruz Island, kayakers approach Painted Cave"]]
     private var islandNames: [String] = ["Santa Cruz Island"]
     
+    @IBOutlet weak var HomeButton: UIButton!
     @IBOutlet weak var IslandName: UITextView!
     @IBOutlet weak var NavigationBarImageView: UIImageView!
     @IBOutlet weak var Caption: UITextView!
@@ -222,6 +223,18 @@ class IslandPhotoCommentViewController: UIViewController {
         
     }
     
+    @IBAction func HomeClicked(sender: AnyObject) {
+        if islandID == 0{
+            
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sc") as! SantaCruzViewController
+            vc.transitioningDelegate = self
+            vc.loadView()
+            vc.viewDidLoad()
+            //vc.enableActivitieswA()
+            self.crossDissolveState = true
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

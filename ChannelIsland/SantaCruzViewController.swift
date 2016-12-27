@@ -394,6 +394,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     @IBOutlet weak var ActivitiesButton: UIButton!
     @IBOutlet weak var DismissPage: UIButton!
     @IBOutlet weak var ActivitiesBar: UIImageView!
+    
     private var infoActive: Bool = false
     private var anchorageActive: Bool = false
     private var activitiesActive: Bool = false
@@ -652,7 +653,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.PageScrollView2.frame = CGRectMake(0, 120, 1024, 565)
         self.PageScrollView2.alpha = 0
         self.PageScrollView2.addSubview(self.PageTextView2)
-        self.SantaCruzView.insertSubview(self.PageScrollView2,atIndex: 5)
+        self.SantaCruzView.insertSubview(self.PageScrollView2,atIndex: 7)
         self.PageScrollView2.contentSize.height = 8000
         self.PageTextView3 = UITextView()
         self.PageTextView3.backgroundColor = UIColor.clearColor()
@@ -662,7 +663,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.PageScrollView3.frame = CGRectMake(0, 120, 1024, 565)
         self.PageScrollView3.alpha = 0
         self.PageScrollView3.addSubview(self.PageTextView3 )
-        self.SantaCruzView.insertSubview(self.PageScrollView3,atIndex: 5)
+        self.SantaCruzView.insertSubview(self.PageScrollView3,atIndex: 7)
         self.PageScrollView3.contentSize.height = 8000
         let inames: [[String]] = [self.photonames, self.infophotonames, self.activitiesphotonames]
         let tnames: [[String]] = [self.AnchoragesCaptiontextstrings,self.InfoCaptiontextstrings,self.ActivitiesCaptiontextstrings]
@@ -778,7 +779,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.MapView.backgroundColor = UIColor.clearColor()
         self.MapView.alpha = 0
         self.MapView.addSubview(imageView3)
-        self.SantaCruzView.insertSubview(self.MapView, atIndex: 7)
+        self.SantaCruzView.insertSubview(self.MapView, atIndex: 9)
         
         
         //add tableview

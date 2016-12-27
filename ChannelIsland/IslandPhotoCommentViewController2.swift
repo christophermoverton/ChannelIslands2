@@ -30,6 +30,8 @@ class IslandPhotoCommentViewController2: UIViewController {
     @IBOutlet weak var AnchoragesButton: UIButton!
     @IBOutlet weak var InfoButton: UIButton!
     @IBOutlet weak var MapButton: UIButton!
+    @IBOutlet weak var HomeButton: UIButton!
+    
     internal var islandID: Int = 0
     private var swipeState: Bool = true  //right state
     internal var photoName: String!
@@ -229,6 +231,15 @@ class IslandPhotoCommentViewController2: UIViewController {
         }
     }
     
+    @IBAction func HomeClicked(sender: AnyObject) {
+        let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sc") as! SantaCruzViewController
+        vc.transitioningDelegate = self
+        vc.loadView()
+        vc.viewDidLoad()
+        //vc.enableActivitieswA()
+        self.crossDissolveState = true
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
     
 }
 

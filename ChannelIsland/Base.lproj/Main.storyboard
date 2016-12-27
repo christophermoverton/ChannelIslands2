@@ -1796,6 +1796,36 @@ Cg
                                 <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="27"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.85000002384185791" contentMode="scaleAspectFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygp-pl-f59">
+                                <rect key="frame" x="890" y="6" width="81" height="86"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="x">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="56" name="HelveticaNeue-UltraLight"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Close">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="11" name="Helvetica-Light"/>
+                                            <font key="NSOriginalFont" size="11" name="Helvetica-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1u2-oe-qZB">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="12"/>
@@ -1937,6 +1967,9 @@ Cg
                                     </textView>
                                 </subviews>
                             </scrollView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar3" translatesAutoresizingMaskIntoConstraints="NO" id="zaR-pt-QQD">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ACTVITIES_SUBMENU_V01" translatesAutoresizingMaskIntoConstraints="NO" id="DWr-pe-hra">
                                 <rect key="frame" x="100" y="222" width="64" height="328"/>
                             </imageView>
@@ -1944,7 +1977,7 @@ Cg
                                 <rect key="frame" x="450" y="321" width="125" height="125"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tw1-Cb-IMe">
-                                <rect key="frame" x="741" y="703" width="46" height="57"/>
+                                <rect key="frame" x="907" y="35" width="46" height="57"/>
                                 <connections>
                                     <segue destination="S4R-Ja-viH" kind="presentation" identifier="BackToMain" modalTransitionStyle="crossDissolve" id="zES-DJ-Qvu"/>
                                 </connections>
@@ -1952,36 +1985,6 @@ Cg
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IslandIcons_HOME" translatesAutoresizingMaskIntoConstraints="NO" id="jsM-DL-9DA">
                                 <rect key="frame" x="36" y="220" width="55" height="330"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.85000002384185791" contentMode="scaleAspectFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygp-pl-f59">
-                                <rect key="frame" x="890" y="6" width="81" height="86"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="x">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="56" name="HelveticaNeue-UltraLight"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="Helvetica-Light"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Close">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="11" name="Helvetica-Light"/>
-                                            <font key="NSOriginalFont" size="11" name="Helvetica-Light"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7Y-SW-bQs">
                                 <rect key="frame" x="42" y="225" width="47" height="40"/>
                                 <connections>
@@ -2053,9 +2056,6 @@ Cg
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar3" translatesAutoresizingMaskIntoConstraints="NO" id="zaR-pt-QQD">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -2351,6 +2351,7 @@ Cg
                     <connections>
                         <outlet property="ActivitiesBar" destination="nDZ-6s-oZ3" id="ZkV-u6-r8N"/>
                         <outlet property="ActivitiesButton" destination="eb2-Uk-0td" id="ubQ-OO-hUE"/>
+                        <outlet property="AnacapaView" destination="GSi-kc-UHp" id="8AW-fK-cdx"/>
                         <outlet property="AnchorageButton" destination="RTP-JD-VrL" id="u9q-sy-5k9"/>
                         <outlet property="Barview" destination="D3S-nf-P11" id="xww-Nw-IaI"/>
                         <outlet property="CapPagTV1" destination="yXK-WY-b17" id="SCh-FH-lyi"/>
@@ -2437,6 +2438,12 @@ Cg
                                     <action selector="InfoClicked:" destination="vlQ-Sj-w1e" eventType="touchUpInside" id="E8A-Oa-pnR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Azq-bw-8fL">
+                                <rect key="frame" x="42" y="500" width="47" height="40"/>
+                                <connections>
+                                    <action selector="HomeClicked:" destination="vlQ-Sj-w1e" eventType="touchUpInside" id="mLC-VN-Inh"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJQ-Gy-4Ls">
                                 <rect key="frame" x="42" y="325" width="47" height="40"/>
                                 <connections>
@@ -2513,6 +2520,7 @@ Cg
                         <outlet property="AnchoragesButton" destination="AJQ-Gy-4Ls" id="4rL-5y-6gy"/>
                         <outlet property="AnchoragesLabel" destination="oyH-Uw-imZ" id="s8H-Ke-hvg"/>
                         <outlet property="Caption" destination="QT0-HW-nkg" id="B4k-wl-Tf9"/>
+                        <outlet property="HomeButton" destination="Azq-bw-8fL" id="E8E-MA-qDC"/>
                         <outlet property="HomeLabel" destination="4G1-VQ-aMe" id="t8J-2h-dRj"/>
                         <outlet property="InfoButton" destination="Kh8-Rl-DhM" id="ypG-KD-CqD"/>
                         <outlet property="InfoLabel" destination="Io0-Hm-uoy" id="beq-wN-CPH"/>
@@ -3316,6 +3324,12 @@ Cg
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42W-3o-pJO">
+                                <rect key="frame" x="42" y="500" width="47" height="40"/>
+                                <connections>
+                                    <action selector="HomeClicked:" destination="lmi-60-G2u" eventType="touchUpInside" id="BW3-LY-73l"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -3331,6 +3345,7 @@ Cg
                         <outlet property="AnchoragesButton" destination="nb3-Yb-Gv1" id="aOp-hv-TEg"/>
                         <outlet property="AnchoragesLabel" destination="jY4-jR-2Cv" id="3KR-cD-r1G"/>
                         <outlet property="Caption" destination="Uwd-BE-yqi" id="HI8-xB-opH"/>
+                        <outlet property="HomeButton" destination="42W-3o-pJO" id="BXs-ti-WUO"/>
                         <outlet property="HomeLabel" destination="A6l-bk-AVc" id="GmN-kD-un0"/>
                         <outlet property="InfoButton" destination="aPh-SX-npR" id="lxb-Fo-5rc"/>
                         <outlet property="InfoLabel" destination="if5-6a-C8R" id="M95-wP-60B"/>
@@ -3420,9 +3435,9 @@ Cg
         <image name="upper_campsite" width="530" height="268"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zES-DJ-Qvu"/>
-        <segue reference="Vqv-IX-MSN"/>
+        <segue reference="UxM-fJ-qBO"/>
         <segue reference="jew-Ho-UNx"/>
+        <segue reference="Vqv-IX-MSN"/>
         <segue reference="Yb7-rz-hzO"/>
         <segue reference="2Hc-a5-MTB"/>
         <segue reference="cXW-Yx-Jng"/>
