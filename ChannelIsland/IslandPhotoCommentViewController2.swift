@@ -175,6 +175,60 @@ class IslandPhotoCommentViewController2: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
+    @IBAction func MapClicked(sender: AnyObject) {
+        if islandID == 0{
+            
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sc") as! SantaCruzViewController
+            vc.transitioningDelegate = self
+            vc.loadView()
+            vc.viewDidLoad()
+            vc.enableMap()
+            self.crossDissolveState = true
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
+    
+    }
+    
+    @IBAction func InfoClicked(sender: AnyObject) {
+        if islandID == 0{
+            
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sc") as! SantaCruzViewController
+            vc.transitioningDelegate = self
+            vc.loadView()
+            vc.viewDidLoad()
+            vc.enableInfo()
+            self.crossDissolveState = true
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func AnchoragesClicked(sender: AnyObject) {
+        if islandID == 0{
+            
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sc") as! SantaCruzViewController
+            vc.transitioningDelegate = self
+            vc.loadView()
+            vc.viewDidLoad()
+            vc.enableAnchorages()
+            self.crossDissolveState = true
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
+    }
+    
+    
+    @IBAction func ActivitiesClicked(sender: AnyObject) {
+        if islandID == 0{
+            
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sc") as! SantaCruzViewController
+            vc.transitioningDelegate = self
+            vc.loadView()
+            vc.viewDidLoad()
+            vc.enableActivities()
+            self.crossDissolveState = true
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
+    }
+    
     
 }
 

@@ -100,7 +100,7 @@ class IslandPhotoCommentViewController: UIViewController {
             //self.horizontalTransitionController.titletf32 = destinationViewController.TitleText3
             self.horizontalTransitionController.tfarr2 = [destinationViewController.MapLabel,destinationViewController.AnchoragesLabel,destinationViewController.ActivitiesLabel,destinationViewController.InfoLabel,destinationViewController.PhotoGalleryLabel,destinationViewController.HomeLabel]
         }
-        
+        /*
         if segue.identifier == "Highlightsseque", let destinationViewController = segue.destinationViewController as? DataViewController {
             
             destinationViewController.transitioningDelegate = self
@@ -126,9 +126,10 @@ class IslandPhotoCommentViewController: UIViewController {
             
             destinationViewController.transitioningDelegate = self
             destinationViewController.loadView()
+            enableMap()
             self.crossDissolveState = true
         }
-        
+        */
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -160,6 +161,67 @@ class IslandPhotoCommentViewController: UIViewController {
         }
         self.IslandName.text = self.islandNames[self.islandID]
     }
+    
+    @IBAction func MapClicked(sender: AnyObject) {
+        if islandID == 0{
+            let window = UIWindow(frame: UIScreen.mainScreen().bounds)
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sc") as! SantaCruzViewController
+            vc.transitioningDelegate = self
+            vc.loadView()
+            vc.viewDidLoad()
+            vc.enableMap()
+            self.crossDissolveState = true
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
+        //vc.resultsArray = self.resultsArray
+           //let navigat = UINavigationController()
+            ///navigat.pushViewController(vc, animated: false)
+            //window.rootViewController = navigat
+            //window.makeKeyAndVisible()
+            //self.navigationController?.pushViewController(vc, animated:true)
+        
+    }
+    
+    @IBAction func InfoClicked(sender: AnyObject) {
+        if islandID == 0{
+            
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sc") as! SantaCruzViewController
+            vc.transitioningDelegate = self
+            vc.loadView()
+            vc.viewDidLoad()
+            vc.enableInfo()
+            self.crossDissolveState = true
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func AnchoragesClicked(sender: AnyObject) {
+        if islandID == 0{
+            
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sc") as! SantaCruzViewController
+            vc.transitioningDelegate = self
+            vc.loadView()
+            vc.viewDidLoad()
+            vc.enableAnchorages()
+            self.crossDissolveState = true
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func ActivitiesClicked(sender: AnyObject) {
+        if islandID == 0{
+            
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sc") as! SantaCruzViewController
+            vc.transitioningDelegate = self
+            vc.loadView()
+            vc.viewDidLoad()
+            vc.enableActivities()
+            self.crossDissolveState = true
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
+        
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

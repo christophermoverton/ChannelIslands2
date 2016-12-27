@@ -1770,7 +1770,7 @@ Cg
         <!--Santa Cruz View Controller-->
         <scene sceneID="D1S-wc-LGx">
             <objects>
-                <viewController id="xOZ-75-fK5" customClass="SantaCruzViewController" customModule="ChannelIsland" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sc" id="xOZ-75-fK5" customClass="SantaCruzViewController" customModule="ChannelIsland" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lby-XJ-jB3"/>
                         <viewControllerLayoutGuide type="bottom" id="oTL-TQ-1qx"/>
@@ -2379,6 +2379,7 @@ Cg
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7AY-ha-b6d">
                                 <rect key="frame" x="42" y="274" width="47" height="40"/>
                                 <connections>
+                                    <action selector="MapClicked:" destination="vlQ-Sj-w1e" eventType="touchUpInside" id="5Qf-Tm-r2f"/>
                                     <action selector="MapClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="zuZ-44-Zgf"/>
                                 </connections>
                             </button>
@@ -2386,18 +2387,21 @@ Cg
                                 <rect key="frame" x="42" y="225" width="47" height="40"/>
                                 <connections>
                                     <action selector="InfoClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="9pZ-yg-BkH"/>
+                                    <action selector="InfoClicked:" destination="vlQ-Sj-w1e" eventType="touchUpInside" id="E8A-Oa-pnR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJQ-Gy-4Ls">
                                 <rect key="frame" x="42" y="325" width="47" height="40"/>
                                 <connections>
                                     <action selector="AnchorageClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="72Z-X5-41K"/>
+                                    <action selector="AnchoragesClicked:" destination="vlQ-Sj-w1e" eventType="touchUpInside" id="OUV-t9-8Ve"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0M-no-vXv">
                                 <rect key="frame" x="42" y="373" width="47" height="40"/>
                                 <connections>
                                     <action selector="ActivitiesClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="JuE-It-dIQ"/>
+                                    <action selector="ActivitiesClicked:" destination="vlQ-Sj-w1e" eventType="touchUpInside" id="v8x-B9-XB3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iN1-fZ-0gW">
@@ -3198,18 +3202,28 @@ Cg
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="582-ms-OSV">
                                 <rect key="frame" x="42" y="274" width="47" height="40"/>
+                                <connections>
+                                    <action selector="MapClicked:" destination="lmi-60-G2u" eventType="touchUpInside" id="ozD-0M-rPz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPh-SX-npR">
                                 <rect key="frame" x="42" y="225" width="47" height="40"/>
+                                <connections>
+                                    <action selector="InfoClicked:" destination="lmi-60-G2u" eventType="touchUpInside" id="ePE-kx-Ioa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nb3-Yb-Gv1">
                                 <rect key="frame" x="42" y="325" width="47" height="40"/>
                                 <connections>
                                     <action selector="AnchorageClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="Gg0-4Z-dBG"/>
+                                    <action selector="AnchoragesClicked:" destination="lmi-60-G2u" eventType="touchUpInside" id="6cF-Bv-aba"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4G-nL-NGB">
                                 <rect key="frame" x="42" y="373" width="47" height="40"/>
+                                <connections>
+                                    <action selector="ActivitiesClicked:" destination="lmi-60-G2u" eventType="touchUpInside" id="uUa-YA-m96"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmJ-lh-BdE">
                                 <rect key="frame" x="42" y="500" width="47" height="40"/>
@@ -3359,11 +3373,11 @@ Cg
         <image name="upper_campsite" width="530" height="268"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oRO-kb-75R"/>
-        <segue reference="2Hc-a5-MTB"/>
-        <segue reference="cXW-Yx-Jng"/>
+        <segue reference="zES-DJ-Qvu"/>
+        <segue reference="Vqv-IX-MSN"/>
         <segue reference="jew-Ho-UNx"/>
         <segue reference="Yb7-rz-hzO"/>
-        <segue reference="RLV-9e-jga"/>
+        <segue reference="2Hc-a5-MTB"/>
+        <segue reference="cXW-Yx-Jng"/>
     </inferredMetricsTieBreakers>
 </document>

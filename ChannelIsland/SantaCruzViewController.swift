@@ -1242,7 +1242,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
        */
         
         
-        UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
+        UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView.alpha = 0
             self.IView2.alpha = 1
             if self.activitiesActive{
@@ -1316,7 +1316,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     
     func enablemainpageTransition(){
         self.IView.hidden = false
-        UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
+        UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView2.alpha = 0
             self.IView.alpha = 1
             self.PageScrollView2.alpha = 0
