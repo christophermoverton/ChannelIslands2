@@ -169,7 +169,7 @@ class IslandPhotoCommentViewController: UIViewController {
             vc.transitioningDelegate = self
             vc.loadView()
             vc.viewDidLoad()
-            vc.enableMap()
+            vc.enableMapwA()
             self.crossDissolveState = true
             self.presentViewController(vc, animated: true, completion: nil)
         }
@@ -189,7 +189,7 @@ class IslandPhotoCommentViewController: UIViewController {
             vc.transitioningDelegate = self
             vc.loadView()
             vc.viewDidLoad()
-            vc.enableInfo()
+            vc.enableInfowA()
             self.crossDissolveState = true
             self.presentViewController(vc, animated: true, completion: nil)
         }
@@ -202,7 +202,7 @@ class IslandPhotoCommentViewController: UIViewController {
             vc.transitioningDelegate = self
             vc.loadView()
             vc.viewDidLoad()
-            vc.enableAnchorages()
+            vc.enableAnchorageswA()
             self.crossDissolveState = true
             self.presentViewController(vc, animated: true, completion: nil)
         }
@@ -215,7 +215,7 @@ class IslandPhotoCommentViewController: UIViewController {
             vc.transitioningDelegate = self
             vc.loadView()
             vc.viewDidLoad()
-            vc.enableActivities()
+            vc.enableActivitieswA()
             self.crossDissolveState = true
             self.presentViewController(vc, animated: true, completion: nil)
         }

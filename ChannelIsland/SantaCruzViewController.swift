@@ -993,34 +993,63 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.activitiesActive = true
         self.prevpageID = self.pageID
         self.pageID = 2
-        self.enablepageTransition()
+        self.enablepageTransition(true)
     }
     
     func enableAnchorages(){
         self.anchorageActive = true
         self.prevpageID = self.pageID
         self.pageID = 0
-        self.enablepageTransition()
+        self.enablepageTransition(true)
     }
     
     func enableInfo(){
         self.infoActive = true
         self.prevpageID = self.pageID
         self.pageID = 1
-        self.enablepageTransition()
+        self.enablepageTransition(true)
     }
     
     func enableMap(){
         //self.infoActive = true
         self.prevpageID = self.pageID
         self.pageID = 3
-        self.enablepageTransition()
+        self.enablepageTransition(true)
     }
     
-    func enablepageTransition(){
+    func enableActivitieswA(){
+        self.activitiesActive = true
+        self.prevpageID = self.pageID
+        self.pageID = 2
+        self.enablepageTransition(false)
+    }
+    
+    func enableAnchorageswA(){
+        self.anchorageActive = true
+        self.prevpageID = self.pageID
+        self.pageID = 0
+        self.enablepageTransition(false)
+    }
+    
+    func enableInfowA(){
+        self.infoActive = true
+        self.prevpageID = self.pageID
+        self.pageID = 1
+        self.enablepageTransition(false)
+    }
+    
+    func enableMapwA(){
+        //self.infoActive = true
+        self.prevpageID = self.pageID
+        self.pageID = 3
+        self.enablepageTransition(false)
+    }
+    
+    func enablepageTransition(withAnim:  Bool){
         self.PageScrollView.contentOffset = CGPoint(x: 0, y: 0)
         self.IView2.hidden = false
         self.PageScrollView.hidden = false
+        self.DismissPage.hidden = false
         var flagTransit = false
         
         if self.otherPageActive{
@@ -1134,6 +1163,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                 self.actpageTableView1.alpha = 1
                 self.actpageTableView12.alpha = 1
             }
+            
         }
         /*
         if self.anchorageActive && !flagTransit{
@@ -1241,8 +1271,78 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         }
        */
         
-        
-        UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+        if withAnim{
+            UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+                self.IView.alpha = 0
+                self.IView2.alpha = 1
+                if self.activitiesActive{
+                    self.ActivitiesBar.alpha = 1
+                }
+                else{
+                    self.ActivitiesBar.alpha = 0
+                }
+                if !self.otherPageActive{
+                    self.PageScrollView3.alpha = 1
+                }
+                else{
+                    if self.switchPage{
+                        self.PageScrollView3.alpha = 0
+                        self.PageScrollView2.alpha = 1
+                    }
+                    else{
+                        self.PageScrollView3.alpha = 1
+                        self.PageScrollView2.alpha = 0
+                    }
+                }
+                self.CloseTV.alpha = 1
+                }, completion: { finished in
+                    if (finished){
+                        if self.otherPageActive{
+                            if self.switchPage{
+                                self.switchPage = false
+                                /*
+                                //clean up 1rst ScrollView for photos and captions
+                                var i = 0
+                                for piv: UIImageView! in self.actpageIVs{
+                                    piv.alpha = 0
+                                    self.actpageTVs[i].alpha = 0
+                                    i+=1
+                                }
+                                */
+                                var i = 0
+                                for iv: UIImageView in self.pageIVs3[self.prevpageID]{
+                                    iv.alpha = 0
+                                    //self.capPagTVs3[self.prevpageID][i].alpha = 0
+                                    i+=1
+                                }
+                                for tv: UITextView in self.capPagTVs3[self.pageID]{
+                                    tv.alpha = 1
+                                }
+                                self.actpageTableView1.alpha = 0
+                                self.actpageTableView12.alpha = 0
+                                
+                            }
+                            else{
+                                var i = 0
+                                for iv: UIImageView in self.pageIVs2[self.prevpageID]{
+                                    iv.alpha = 0
+                                    //self.capPagTVs2[self.prevpageID][i].alpha = 0
+                                    i+=1
+                                }
+                                for tv: UITextView in self.capPagTVs2[self.pageID]{
+                                    tv.alpha = 1
+                                }
+                                self.actpageTableView2.alpha = 0
+                                self.actpageTableView22.alpha = 0
+                                self.switchPage = true
+                            }
+                        }
+                        self.IView.hidden = true
+                        self.otherPageActive = true
+                    }
+            })
+        }
+        else{
             self.IView.alpha = 0
             self.IView2.alpha = 1
             if self.activitiesActive{
@@ -1265,53 +1365,49 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                 }
             }
             self.CloseTV.alpha = 1
-            }, completion: { finished in
-                if (finished){
-                    if self.otherPageActive{
-                        if self.switchPage{
-                            self.switchPage = false
-                            /*
-                            //clean up 1rst ScrollView for photos and captions
-                            var i = 0
-                            for piv: UIImageView! in self.actpageIVs{
-                                piv.alpha = 0
-                                self.actpageTVs[i].alpha = 0
-                                i+=1
-                            }
-                            */
-                            var i = 0
-                            for iv: UIImageView in self.pageIVs3[self.prevpageID]{
-                                iv.alpha = 0
-                                //self.capPagTVs3[self.prevpageID][i].alpha = 0
-                                i+=1
-                            }
-                            for tv: UITextView in self.capPagTVs3[self.pageID]{
-                                tv.alpha = 1
-                            }
-                            self.actpageTableView1.alpha = 0
-                            self.actpageTableView12.alpha = 0
-                            
-                        }
-                        else{
-                            var i = 0
-                            for iv: UIImageView in self.pageIVs2[self.prevpageID]{
-                                iv.alpha = 0
-                                //self.capPagTVs2[self.prevpageID][i].alpha = 0
-                                i+=1
-                            }
-                            for tv: UITextView in self.capPagTVs2[self.pageID]{
-                                tv.alpha = 1
-                            }
-                            self.actpageTableView2.alpha = 0
-                            self.actpageTableView22.alpha = 0
-                            self.switchPage = true
-                        }
+            if self.otherPageActive{
+                if self.switchPage{
+                    self.switchPage = false
+                    /*
+                     //clean up 1rst ScrollView for photos and captions
+                     var i = 0
+                     for piv: UIImageView! in self.actpageIVs{
+                     piv.alpha = 0
+                     self.actpageTVs[i].alpha = 0
+                     i+=1
+                     }
+                     */
+                    var i = 0
+                    for iv: UIImageView in self.pageIVs3[self.prevpageID]{
+                        iv.alpha = 0
+                        //self.capPagTVs3[self.prevpageID][i].alpha = 0
+                        i+=1
                     }
-                    self.IView.hidden = true
-                    self.DismissPage.hidden = false
-                    self.otherPageActive = true
+                    for tv: UITextView in self.capPagTVs3[self.pageID]{
+                        tv.alpha = 1
+                    }
+                    self.actpageTableView1.alpha = 0
+                    self.actpageTableView12.alpha = 0
+                    
                 }
-        })
+                else{
+                    var i = 0
+                    for iv: UIImageView in self.pageIVs2[self.prevpageID]{
+                        iv.alpha = 0
+                        //self.capPagTVs2[self.prevpageID][i].alpha = 0
+                        i+=1
+                    }
+                    for tv: UITextView in self.capPagTVs2[self.pageID]{
+                        tv.alpha = 1
+                    }
+                    self.actpageTableView2.alpha = 0
+                    self.actpageTableView22.alpha = 0
+                    self.switchPage = true
+                }
+            }
+            self.IView.hidden = true
+            self.otherPageActive = true
+        }
     }
     
     func enablemainpageTransition(){
@@ -1401,6 +1497,8 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+    
+    
 }
 
 extension SantaCruzViewController: UIViewControllerTransitioningDelegate {
