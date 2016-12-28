@@ -1986,31 +1986,31 @@ Cg
                                 <rect key="frame" x="19" y="220" width="80" height="330"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7Y-SW-bQs">
-                                <rect key="frame" x="42" y="225" width="47" height="40"/>
+                                <rect key="frame" x="25" y="225" width="67" height="40"/>
                                 <connections>
                                     <action selector="InfoClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="HCa-wu-Wi1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cD-ke-h9H">
-                                <rect key="frame" x="42" y="274" width="47" height="40"/>
+                                <rect key="frame" x="25" y="274" width="67" height="40"/>
                                 <connections>
                                     <action selector="MapClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="mkv-2e-fzs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICn-hE-eaN">
-                                <rect key="frame" x="42" y="422" width="47" height="40"/>
+                                <rect key="frame" x="25" y="422" width="67" height="40"/>
                                 <connections>
                                     <segue destination="vlQ-Sj-w1e" kind="presentation" identifier="Photography" modalTransitionStyle="crossDissolve" id="Vqv-IX-MSN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btx-QE-sNl">
-                                <rect key="frame" x="41" y="325" width="47" height="40"/>
+                                <rect key="frame" x="25" y="325" width="67" height="40"/>
                                 <connections>
                                     <action selector="AnchorageClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="vgj-mO-rgJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcu-VE-QSc">
-                                <rect key="frame" x="41" y="373" width="47" height="40"/>
+                                <rect key="frame" x="25" y="373" width="67" height="40"/>
                                 <connections>
                                     <action selector="ActivitiesClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="P3b-J9-Z3e"/>
                                 </connections>
@@ -2194,32 +2194,70 @@ Cg
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DWF-eu-YOR">
+                                <rect key="frame" x="95" y="222" width="96" height="328"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaI-jk-qhF">
+                                        <rect key="frame" x="25" y="23" width="67" height="40"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdd-6T-bn8">
+                                        <rect key="frame" x="25" y="72" width="67" height="40"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDv-LG-qfw">
+                                        <rect key="frame" x="25" y="124" width="67" height="40"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWR-7U-Emq">
+                                        <rect key="frame" x="25" y="175" width="67" height="40"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cn6-4Y-d40">
+                                        <rect key="frame" x="25" y="225" width="67" height="40"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZX-KH-UHN">
+                                        <rect key="frame" x="25" y="275" width="67" height="40"/>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Activities" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="45K-jR-Tt3">
+                                        <rect key="frame" x="35" y="-5" width="50" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Boating And Kayaking" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="24n-J6-ae2">
+                                        <rect key="frame" x="23" y="50" width="70" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="6.8000001907348633"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4e-P1-pFA">
-                                <rect key="frame" x="42" y="225" width="67" height="40"/>
+                                <rect key="frame" x="25" y="225" width="67" height="40"/>
                                 <connections>
                                     <action selector="InfoClicked:" destination="gfQ-kY-mDd" eventType="touchUpInside" id="s4l-qM-I2Z"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOr-uB-bLg">
-                                <rect key="frame" x="42" y="424" width="67" height="40"/>
+                                <rect key="frame" x="25" y="424" width="67" height="40"/>
                                 <connections>
                                     <segue destination="vlQ-Sj-w1e" kind="presentation" identifier="Photography" modalTransitionStyle="crossDissolve" id="Fx6-gk-auX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLl-No-O1K">
-                                <rect key="frame" x="42" y="274" width="67" height="40"/>
+                                <rect key="frame" x="25" y="274" width="67" height="40"/>
                                 <connections>
                                     <action selector="MapClicked:" destination="gfQ-kY-mDd" eventType="touchUpInside" id="i5r-P8-4wR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTP-JD-VrL">
-                                <rect key="frame" x="41" y="325" width="67" height="40"/>
+                                <rect key="frame" x="25" y="325" width="67" height="40"/>
                                 <connections>
                                     <action selector="AnchorageClicked:" destination="gfQ-kY-mDd" eventType="touchUpInside" id="oCX-3b-YiJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eb2-Uk-0td">
-                                <rect key="frame" x="41" y="376" width="67" height="40"/>
+                                <rect key="frame" x="25" y="376" width="67" height="40"/>
                                 <connections>
                                     <action selector="ActivitiesClicked:" destination="gfQ-kY-mDd" eventType="touchUpInside" id="tIz-10-ZYR"/>
                                 </connections>
@@ -2404,6 +2442,7 @@ Cg
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="ActButView" destination="DWF-eu-YOR" id="Aij-wq-bj8"/>
                         <outlet property="ActivitiesBar" destination="nDZ-6s-oZ3" id="ZkV-u6-r8N"/>
                         <outlet property="ActivitiesButton" destination="eb2-Uk-0td" id="ubQ-OO-hUE"/>
                         <outlet property="ActivitiesLabel" destination="gnz-6c-oOc" id="lVA-W2-ay6"/>
@@ -2411,6 +2450,8 @@ Cg
                         <outlet property="AnchorageButton" destination="RTP-JD-VrL" id="u9q-sy-5k9"/>
                         <outlet property="AnchoragesLabel" destination="yQb-oQ-bJS" id="BkG-9N-VMf"/>
                         <outlet property="Barview" destination="D3S-nf-P11" id="xww-Nw-IaI"/>
+                        <outlet property="BoatingButton" destination="LaI-jk-qhF" id="oZc-iD-Rrx"/>
+                        <outlet property="CampingButton" destination="pZX-KH-UHN" id="bj7-Wr-hC9"/>
                         <outlet property="CapPagTV1" destination="yXK-WY-b17" id="SCh-FH-lyi"/>
                         <outlet property="CapPagTV2" destination="qW2-nm-SIF" id="Xll-UD-yQl"/>
                         <outlet property="CapPagTV3" destination="C3a-Zr-J6x" id="M1c-NF-wjQ"/>
@@ -2420,6 +2461,8 @@ Cg
                         <outlet property="Clickhere" destination="yfF-KO-E2J" id="r8j-HP-6NY"/>
                         <outlet property="CloseTV" destination="ZTe-Hk-Exv" id="A1J-uW-yh4"/>
                         <outlet property="DismissPage" destination="aPp-hX-0TK" id="hTL-5R-1sw"/>
+                        <outlet property="FishingButton" destination="gDv-LG-qfw" id="EY0-FG-6XP"/>
+                        <outlet property="HikingButton" destination="cn6-4Y-d40" id="qBX-tb-SHt"/>
                         <outlet property="HomeLabel" destination="ZMr-8k-pd1" id="reb-bF-JiK"/>
                         <outlet property="IPageV1" destination="kUh-9X-zbx" id="10j-lP-MGs"/>
                         <outlet property="IView" destination="6Na-Uf-alT" id="JCg-Vm-TIk"/>
@@ -2440,7 +2483,9 @@ Cg
                         <outlet property="PageTextView" destination="AOa-bi-tq4" id="tCq-Dx-Det"/>
                         <outlet property="PhotoButton" destination="vOr-uB-bLg" id="1Zh-6g-cBm"/>
                         <outlet property="PhotoGalleryLabel" destination="4jS-RR-qP2" id="68l-Fr-olt"/>
+                        <outlet property="SwimmingButton" destination="HWR-7U-Emq" id="NEb-5Q-gfH"/>
                         <outlet property="TitleText" destination="voK-V2-BR2" id="IC2-Tu-2hb"/>
+                        <outlet property="WildlifeButton" destination="mdd-6T-bn8" id="HLv-1o-1SN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ufb-Wk-5i9" userLabel="First Responder" sceneMemberID="firstResponder"/>

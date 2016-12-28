@@ -35,6 +35,14 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
     @IBOutlet weak var ActivitiesButton: UIButton!
     @IBOutlet weak var MapButton: UIButton!
     @IBOutlet weak var PhotoButton: UIButton!
+    @IBOutlet weak var ActButView: UIView!
+    @IBOutlet weak var BoatingButton: UIButton!
+    @IBOutlet weak var WildlifeButton: UIButton!
+    @IBOutlet weak var FishingButton: UIButton!
+    @IBOutlet weak var SwimmingButton: UIButton!
+    @IBOutlet weak var HikingButton: UIButton!
+    @IBOutlet weak var CampingButton: UIButton!
+   
     
     @IBOutlet weak var ActivitiesBar: UIImageView!
     private var infoActive: Bool = false

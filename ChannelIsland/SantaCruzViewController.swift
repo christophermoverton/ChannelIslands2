@@ -451,7 +451,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     private var dataSource2: CampgroundDataSource
     private var actHikes: [Hike] = [Hike(destination: "Destination",distance: "Distance",difficulty: "Difficulty",briefdescription: "Brief Description"),Hike(destination: "Historic Ranch",distance: ".5",difficulty: "Easy",briefdescription: "View the historic Scorpion Ranch complex."),Hike(destination: "Cavern Point",distance: "2",difficulty: "Moderate",briefdescription: "Magnificent coastal vistas and whale viewing."),Hike(destination: "Potato Harbor",distance: "4",difficulty: "Moderate",briefdescription: "Spectacular coastal views. No beach access."),Hike(destination: "Scorpion Canyon",distance: "4 (loop)",difficulty: "Moderate to strenuous",briefdescription: "A scenic loop hike that includes steep canyon walls and a chance to see the unique island scrub-jay."), Hike(destination: "Smugglers Cove",distance: "7",difficulty: "Strenuous",briefdescription: "An all-day hike with beach access at Smugglers Cove."),Hike(destination: "Montañon Ridge",distance: "8",difficulty: "Strenuous",briefdescription: "For experienced, off-trail hikers. Great views."),Hike(destination: "Prisoners Harbor",distance: "28",difficulty: "Strenuous",briefdescription: "Arrange a boat pickup for a one-way trip or camp at Del Norte backcountry camp."),Hike(destination: "From Smugglers Cove:",distance: "",difficulty: "",briefdescription: ""),Hike(destination: "Smugglers Canyon",distance: "   2",difficulty: "Moderate to strenuous",briefdescription: "Opportunities to view native island vegetation.  Be prepared for uneven terrain and loose rock."),Hike(destination: "Yellowbanks",distance: "3",difficulty: "Moderate",briefdescription: "Off-trail hike to an overlook. No beach access."),Hike(destination: "San Pedro Point",distance: "4",difficulty: "Moderate",briefdescription: "For experienced, off-trail hikers."),Hike(destination: "From Prisoners Harbor:",distance: "",difficulty: "",briefdescription: ""),Hike(destination: "Prisoners Harbor",distance: ".25 -.5",difficulty: "Easy",briefdescription: "View the historic Prisoners Harbor area and search for the island scrub-jay."),Hike(destination: "Del Norte Camp",distance: "7",difficulty: "Strenuous",briefdescription: "Follow the rugged Del Norte trail east to the backcountry camp."),Hike(destination: "Navy Road- Del Norte Loop",distance: "     8.5",difficulty: "Strenuous",briefdescription: "Route includes the Navy Road and the Del Norte Trail. Good views."),Hike(destination: "Chinese Harbor",distance: "15.5",difficulty: "Strenuous",briefdescription: "A long hike that ends at the only beach accessible by land on the isthmus."),Hike(destination: "China Pines",distance: "18",difficulty: "Strenuous",briefdescription: "Explore the Santa Cruz Island pine grove."),Hike(destination: "Montañon Ridge",distance: "21",difficulty: "Strenuous",briefdescription: "For experienced, off-trail hikers. Must be able to read topographic maps."),Hike(destination: "Scorpion Anchorage",distance: "       28",difficulty: "Strenuous",briefdescription: "Arrange a boat pickup for a one-way trip or camp at Del Norte backcountry camp."),Hike(destination: "Pelican Bay",distance: "4",difficulty: "Moderate to strenuous",briefdescription: "This trail may only be traveled by those who have obtained a permit in advance from The Nature Conservancy or are accompanied by Island Packers (a boat concessioner) staff.")]
     private var campgrounds: [Campground] = [Campground(island: "Island", rreservation: "Required Reservation", distlandtocamp: "Distance From Landing To Campground",nofcampsites: "Number Of Campsites",camperspsite: "Campers Per Site"),Campground(island: "Anacapa", rreservation: "Yes", distlandtocamp: "157 stairs, .5 miles",nofcampsites: "7",camperspsite: "4-6"),Campground(island: "Eastern Santa Cruz (Scorpion Ranch)", rreservation: "          Yes", distlandtocamp: ".5 miles, flat",nofcampsites: "31",camperspsite: "6-15"),Campground(island: "Western Santa Cruz (The Nature Conservancy)", rreservation: "NO CAMPING ALLOWED", distlandtocamp: "NO CAMPING ALLOWED",nofcampsites: "NO CAMPING ALLOWED",camperspsite: "NO CAMPING ALLOWED"),Campground(island: "Santa Rosa", rreservation: "Yes", distlandtocamp: "1.5 miles from pier, flat; .25 miles from airstrip, flat",nofcampsites: "15",camperspsite: "5"),Campground(island: "San Miguel", rreservation: "Yes", distlandtocamp: "1 mile, steep uphill",nofcampsites: "9",camperspsite: "4"),Campground(island: "Santa Barbara", rreservation: "Yes", distlandtocamp: ".25 miles, steep uphill",nofcampsites: "10",camperspsite: "4")]
-    private var Activitiestextstrings: [String] = ["ACTIVITIES\n\n","Boating and Kayaking\n\n","With one of the world’s largest sea caves and clear coastal waters, Santa Cruz is a sea kayaker’s paradise. Formal guided tours are offered at both Scorpion Bay and Prisoners Harbor.\n\n","Diving, Snorkeling, and Swimming\n\n","The easiest place for walk-in diving, snorkeling, and swimming is right off the pier at Scorpion Beach. To the east, Smuggler’s Cove offers great diving and snorkeling too. With the exception of Anacapa, these are the warmest waters you’re likely to find in the Channel Islands.\n\n","Wildlife Watching\n\n","With 145 species of life found nowhere else on Earth, the wildlife watcher is in for a treat on Santa Cruz.\n\nSanta Cruz Island is home to the island scrub jay and small island fox. They reveal two evolutionary strategies to adapt to the island’s unique ecosystem. The jay is bigger than its mainland cousins; the fox is much smaller.\n\n","Fishing\n\n","\t·Over 80 percent of the waters near the Channel Islands are open to fishing.\n\t·Sport fishing is allowed outside marine protected areas and requires possession of a valid California state fishing license with an ocean enhancement stamp.\n\t·All California Department of Fish and Game regulations apply.\n\n"," Hiking\n\n","\t·Several roads and trails traverse eastern Santa Cruz Island. Trails near historic Scorpion Ranch are well maintained and of moderate difficulty. Hiking trails in the more rugged Montañon area are generally more strenuous.\n\t·Rangers and naturalists offer guided tours year-round at Scorpion Anchorage and Prisoners Harbor.\n\t·Note that the western side of Santa Cruz requires a permit from the Nature Conservancy to enter.  For more information, please visit: https://www.nps.gov/chis/index.htm.\n\n","Camping\n\n","\t·Of all the five islands, Santa Cruz provides the most accommodations and amenities for campers. Take your pick between developed and well shaded campgrounds at Scorpion Bay and backcountry sites at Del Norte..\n\t·Year-round camping is available; overnight fees apply. Reserve your site well in advance at recreation.gov or call 877-444-6777.  Concession boats fill to capacity more quickly than campground sites are filled, so book your boat transportation for overnight trips first.\n\t·Scorpion Bay campground provides picnic tables, lock boxes for food, drinking water, and pit toilets.\n\t·Remember that you’ll be hauling everything else from the pier to your site, so bring essentials only.\n\t·Be prepared to pack in your own water when utilizing the backcountry campsites.\n\n","Hiking Information\n\n"]
+    private var Activitiestextstrings: [String] = ["ACTIVITIES\n\n","Boating and Kayaking\n\n","With one of the world’s largest sea caves and clear coastal waters, Santa Cruz is a sea kayaker’s paradise. Formal guided tours are offered at both Scorpion Bay and Prisoners Harbor.\n\n","Diving, Snorkeling, and Swimming\n\n","The easiest place for walk-in diving, snorkeling, and swimming is right off the pier at Scorpion Beach. To the east, Smuggler’s Cove offers great diving and snorkeling too. With the exception of Anacapa, these are the warmest waters you’re likely to find in the Channel Islands.\n\n","Wildlife Watching\n\n","With 145 species of life found nowhere else on Earth, the wildlife watcher is in for a treat on Santa Cruz.\n\nSanta Cruz Island is home to the island scrub jay and small island fox. They reveal two evolutionary strategies to adapt to the island’s unique ecosystem. The jay is bigger than its mainland cousins; the fox is much smaller.\n\n","Fishing\n\n","\t·Over 80 percent of the waters near the Channel Islands are open to fishing.\n\t·Sport fishing is allowed outside marine protected areas and requires possession of a valid California state fishing license with an ocean enhancement stamp.\n\t·All California Department of Fish and Game regulations apply.\n\n"," Hiking\n\n","\t·Several roads and trails traverse eastern Santa Cruz Island. Trails near historic Scorpion Ranch are well maintained and of moderate difficulty. Hiking trails in the more rugged Montañon area are generally more strenuous.\n\t·Rangers and naturalists offer guided tours year-round at Scorpion Anchorage and Prisoners Harbor.\n\t·Note that the western side of Santa Cruz requires a permit from the Nature Conservancy to enter.  For more information, please visit: https://www.nps.gov/chis/index.htm.\n\n","Camping\n\n","\t·Of all the five islands, Santa Cruz provides the most accommodations and amenities for campers. Take your pick between developed and well shaded campgrounds at Scorpion Bay and backcountry sites at Del Norte..\n\t·Year-round camping is available; overnight fees apply. Reserve your site well in advance at recreation.gov or call 877-444-6777.  Concession boats fill to capacity more quickly than campground sites are filled, so book your boat transportation for overnight trips first.\n\t·Scorpion Bay campground provides picnic tables, lock boxes for food, drinking water, and pit toilets.\n\t·Remember that you’ll be hauling everything else from the pier to your site, so bring essentials only.\n\t·Be prepared to pack in your own water when utilizing the backcountry campsites.\n\n","","Activities (More Info Level)\n\n","Boating and Kayaking (more info)\n\n","Weather\n\n","• Visitors can boat to the islands on their own, or with the park’s approved ferry operators. Strong currents, shifting swells, dense fog, strong winds and choppy seas can appear suddenly. Come prepared.\n\n","Anchorages\n","\t• Scorpion’s Bay has two anchorages. Little Scorpion Anchorage is the primary overnight anchorage. Scorpion Anchorage is the one ferry operators use in the daytime. Boat owners often drop guests off here and then anchor in the bay. There is rarely any breaking surf, so this is one of the few easy places to come ashore on Santa Cruz.\n\t• Smuggler’s Cove and Pelican Bay are the other most popular anchorages.  You need a permit from the Nature Conservancy to come ashore at Pelican Bay.\n\t• Wherever you anchor, there are no all-weather anchorages around the islands.  Therefore, it is recommended that a capable person stay on board at all times.\n\n","Weather Forecasts\n\n","\t•Monitor VHFG Weather Channel 3 (WX3), VHF-FM 162.475 mhz for marine forecasts. On the web, channelislands.noaa.gov or nwsla.noaa.gov have current weather. There are interactive weather kiosks in Santa Barbara and Channel Islands harbors.\n\n","Wildlife Watching (more info)\n\n","What to Look For\n","\t• January/February: enjoy great tidepooling in the afternoons. See gray whales heading to Baja California.\n\n\t•March/April: Island flowers are in full bloom through April. The giant coreopsis are in full bloom. Gray whales are visible through May. Brant geese are on the same schedule. Western gulls begin nesting. Scripps’s Murrelets are nesting through July. Grunions leave the water to spawn on the beach, now through May. Island Fox pups are born March and April.\n\n\t•May/June: Dense fog is common. Blue and humpback whales arrive to feed on krill. Red-Necked Phalaropes can be seen in the Santa Barbara Channel.  Grunion beach spawning continues after high tides and continues for several hours. Endangered Least Terns, Pink-Footed Shearwaters and Ashy Storm Petrels can be seen in the channel at these times. California sea lion breeding and pupping runs from May through July. Scripps’s Murrelets nest March thru July. Grunion spawning peaks around this time.\n\n\t• July/August: Fog diminishes and underwater visibility increases. More of the same as blue and humpback whales feed on krill. Sooty and Pink-Footed Shearwaters visit the channel. Red-Necked Phalaropes and Ashy and Black Storm Petrels do the same. Endangered Least Terns and Scripps’s Murrelets can be seen on the islands.\n\n\t• September/October: Warm weather, calm winds and seas are common.  Jellies are abundant in the coastal waters. Fin whales, Sei whales and blue whales can be observed feeding. Sooty and Pink-Footed shearwaters visit the channel. Red-necked Phalaropes, and Ashy and Black Storm Petrels do the same. Endangered least terns and Scripps’s Murrelets can be seen on the islands.\n\n\t• November/December: Winter storms appear. Best tidepooling months are now, as afternoon low tides expose invertebrates. Jellies are in abundance.\n\n\t• Island foxes can be seen year round, but are more active in the summer.\n\n","Fishing (more info)\n\n","\t• Close to the island, bonito, and barracuda, as well as white sea bass and yellowtail are often caught.\n\n\t• Trolling for gamefish along the Santa Cruz escarpment often brings results.  Dorado, marlin, shark and tuna can all be found there in the deep waters offshore.\n\n\t• Calico Bass are caught close to shore, around the rocks and surge. Autumn is typically the best weather for fishing, with plenty of calm days. Many charters are available to book for a day, if you don’t have your own boat.\n\n\t• Check out daily marine forecasts: http://www.usps.org/ventura/currentconditions.html\n\n\t• California Ocean Sport fishing regulations: http://www.dfg.ca.gov/marine/oceansportregs.asp\n\n\t","Diving, Snorkeling, and Swimming (more info)\n\n","Diving\n\n","\t• Santa Cruz probably offers the most diverse diving of all the Channel Islands. In general the western side of the island has the best diving.\n\n\t• When diving in marine protected areas, please leave only bubbles and take only memories!\n\n\t• Seals, sea lions, bat rays, and schools of fish are common sights.\n\n\t• The northwest section of the island generally has steep faces, and large sea caves. The southeast section has large plateaus and thick kelp beds. Diablo Anchorage has a nice cave dive at Diablo Point Cave.\n\n\t• At Scorpion Anchorage you can wreck dive the USS Peacock (aka Spirit of America), a WWII-era minesweeper, at 60 feet depths.\n\n\t• Other good dive sites are Yellowbanks, Potato Rocks, Valdez, Fraser Cover, Forney’s Cove and Gull Island. Yellowbanks is a good intermediate diver site, at 40-80 foot depths and 25-50 foot visibility. Watch for currents and drifting you as you dive.\n\n\t• Gull Island, on the southwest side of Santa Cruz is a small rock a mile offshore, with excellent diving all around it. Check out the purple hydro coral at the shallow depths. The wreck of the WWII-era Guardian plane is not far away.\n\n\t• Painted Cave is one of the deepest sea caves in the world. The walls are barren inside, so diving is not good, but outside the cave are some good dives on the steep slopes. Currents make this spot for intermediate divers and above.\n\n","Hiking (more info)\n\n","\t• Most hikes on Santa Cruz are challenging, but the Scorpion Canyon Loop is a 4.5-mile hike that can be moderate or strenuous, depending on which trailhead you select. To avoid a steep climb, hike clockwise at Smuggler’s Road toward the oil well, then down into Scorpion Canyon and back to the beach.\n\n\t• Leaving Scorpion Beach on the east side of the island, you can take the 7-mile strenuous hike up Smuggler’s Road to the pristine and often empty beach at Smuggler’s Cove.\n\n\t• If you take the 2-mile Smuggler’s Cove hike to Smuggler’s Canyon, be prepared for loose rocks.\n\n\t• Check out the NPS Santa Cruz hiking map: http://www.nps.gov/chis/planyourvisit/upload/scihiking2013v2.pdf\n\n","Hiking Information\n\n"]
     
     private var ActivitiesAttributes : [[String: AnyObject]] = [[NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
@@ -494,7 +494,64 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
             NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
             NSBackgroundColorAttributeName: UIColor.clearColor(),
-            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!]]
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!]]
     
     private var Infotextstrings: [String] = ["INFO\n\n","With relatively easy boat access, amazing kayaking, and great kelp beds near popular campsites, Santa Cruz offers an all-in-one destination. Located in the transition zone between warm southern currents and colder northern currents, Santa Cruz supports diverse marine life. Fishing is permitted outside reserves and protected areas. Land management is shared by the National Park Service and Nature Conservancy. Going ashore on the Nature Conservancy property requires a permit."]
     
@@ -647,24 +704,24 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     func loadScrollPageTV2(){
         self.PageTextView2 = UITextView()
         self.PageTextView2.backgroundColor = UIColor.clearColor()
-        self.PageTextView2.frame = CGRectMake(200, 75, 500, 3500.0)
+        self.PageTextView2.frame = CGRectMake(200, 75, 500, 8000)
         self.PageTextView2.alpha = 1
         self.PageScrollView2 = FadeScrollVIew()
         self.PageScrollView2.frame = CGRectMake(0, 120, 1024, 565)
         self.PageScrollView2.alpha = 0
         self.PageScrollView2.addSubview(self.PageTextView2)
         self.SantaCruzView.insertSubview(self.PageScrollView2,atIndex: 7)
-        self.PageScrollView2.contentSize.height = 8000
+        self.PageScrollView2.contentSize.height = 11000
         self.PageTextView3 = UITextView()
         self.PageTextView3.backgroundColor = UIColor.clearColor()
-        self.PageTextView3.frame = CGRectMake(200, 75, 500, 3500.0)
+        self.PageTextView3.frame = CGRectMake(200, 75, 500, 8000)
         self.PageTextView3.alpha = 1
         self.PageScrollView3 = FadeScrollVIew()
         self.PageScrollView3.frame = CGRectMake(0, 120, 1024, 565)
         self.PageScrollView3.alpha = 0
         self.PageScrollView3.addSubview(self.PageTextView3 )
         self.SantaCruzView.insertSubview(self.PageScrollView3,atIndex: 7)
-        self.PageScrollView3.contentSize.height = 8000
+        self.PageScrollView3.contentSize.height = 11000
         let inames: [[String]] = [self.photonames, self.infophotonames, self.activitiesphotonames]
         let tnames: [[String]] = [self.AnchoragesCaptiontextstrings,self.InfoCaptiontextstrings,self.ActivitiesCaptiontextstrings]
         var j = 0
@@ -685,7 +742,12 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                 imageView.contentMode = .ScaleAspectFit
                 imageView.frame = CGRectMake(xcg, ycg, newwidth, newheight)//(piv.frame.x,piv.frame.y,piv.frame.width,newheight)
                 imageView.alpha = 0
-                y = y + 60.0 + Double(newheight)
+                if j == 2 {
+                    y = y + 200.0 + Double(newheight)
+                }
+                else{
+                    y = y + 60.0 + Double(newheight)
+                }
                 iViews.append(imageView)
                 //print(j)
                 //print(i)
@@ -728,7 +790,12 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                 imageView.contentMode = .ScaleAspectFit
                 imageView.frame = CGRectMake(xcg, ycg, newwidth, newheight)//(piv.frame.x,piv.frame.y,piv.frame.width,newheight)
                 imageView.alpha = 0
-                y = y + 60.0 + Double(newheight)
+                if j == 2 {
+                    y = y + 200.0 + Double(newheight)
+                }
+                else{
+                    y = y + 60.0 + Double(newheight)
+                }
                 iViews.append(imageView)
                 //print(j)
                 //print(i)
@@ -798,7 +865,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.actpageTableView2.dataSource = dataSource
         self.actpageTableView2.reloadData()
         self.PageScrollView2.addSubview(self.actpageTableView2)
-        self.actpageTableView2.frame = CGRectMake(200, 2400, 500, 3000)
+        self.actpageTableView2.frame = CGRectMake(200, 7900, 500, 3000)
     
         self.actpageTableView1.delegate = self
         self.actpageTableView1.alpha = 0
@@ -815,7 +882,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.actpageTableView1.dataSource = dataSource
         self.actpageTableView1.reloadData()
         self.PageScrollView3.addSubview(self.actpageTableView1)
-        self.actpageTableView1.frame = CGRectMake(200, 2400, 500, 3000)
+        self.actpageTableView1.frame = CGRectMake(200, 7900, 500, 3000)
         
         self.actpageTableView22.delegate = self
         self.actpageTableView22.alpha = 0
@@ -833,7 +900,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.actpageTableView22.reloadData()
         
         self.PageScrollView2.addSubview(self.actpageTableView22)
-        self.actpageTableView22.frame = CGRectMake(200, 4450, 500, 2000)
+        self.actpageTableView22.frame = CGRectMake(200, 9950, 500, 2000)
         
         self.actpageTableView12.delegate = self
         self.actpageTableView12.alpha = 0
@@ -851,7 +918,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.actpageTableView12.reloadData()
         
         self.PageScrollView3.addSubview(self.actpageTableView12)
-        self.actpageTableView12.frame = CGRectMake(200, 4450, 500, 2000)
+        self.actpageTableView12.frame = CGRectMake(200, 9950, 500, 2000)
         
         //add activities Headers beyond hiking
         let campTV = UITextView()
@@ -864,10 +931,10 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                                                attributes: myattr)
         campTV.attributedText = myAttrString1
         campTV2.attributedText = myAttrString1
-        campTV.frame = CGRectMake(200, 4400, 300, 50)
+        campTV.frame = CGRectMake(200, 9900, 300, 50)
         campTV.alpha = 0
         campTV.backgroundColor = UIColor.clearColor()
-        campTV2.frame = CGRectMake(200, 4400, 300, 50)
+        campTV2.frame = CGRectMake(200, 9900, 300, 50)
         campTV2.alpha = 0
         campTV2.backgroundColor = UIColor.clearColor()
         self.PageScrollView2.addSubview(campTV)
@@ -916,6 +983,8 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //print("Add info string count")
+        //print(self.abcstring.count)
         self.loadActIVs()
         self.loadScrollPageTV2()
         print(self.Activitiestextstrings.count)
@@ -923,21 +992,23 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.pageIVs = [self.PageIV1, self.PageIV2, self.PageIV3, self.PageIV4, self.PageIV5, self.PageIV6]
         self.capPagTVs = [self.CapPagTV1, self.CapPagTV2, self.CapPagTV3, self.CapPagTV4, self.CapPagTV5, self.CapPagTV6]
         self.PageScrollView.contentSize.height = 1900
+        /*
         var imageArr : [UIImage] = []
         for i in 0...58{
             let str : String = "TAP_HERE_V01_LOOP_"+String(format: "%05d", i)+".png"
             //print(str)
             imageArr.append(UIImage(named:str)!)
         }
+        */
         print("Loaded SantaCruz animation")
         /*
          ClickHere.animationImages = [
          UIImage(named:"TAP_HERE_V01_LOOP_00000.png")!
          ]
          */
-        Clickhere.animationImages = imageArr
-        Clickhere.animationDuration = 2.0
-        Clickhere.startAnimating()
+        //Clickhere.animationImages = imageArr
+        //Clickhere.animationDuration = 2.0
+        //Clickhere.startAnimating()
     }
     
     

@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChannelIsland/AnacapaViewController.swift"
-            timestampString = "504577305.690879"
+            timestampString = "504640107.496949"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "InfoAttributes"
             landmarkType = "19">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChannelIsland/SantaCruzViewController.swift"
-            timestampString = "504552823.142158"
+            timestampString = "504642397.913497"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1080"
-            endingLineNumber = "1080"
+            startingLineNumber = "1151"
+            endingLineNumber = "1151"
             landmarkName = "enablepageTransition(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChannelIsland/AnacapaViewController.swift"
-            timestampString = "504577305.690879"
+            timestampString = "504640107.496949"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "AnacapaViewController"
             landmarkType = "3">
          </BreakpointContent>
