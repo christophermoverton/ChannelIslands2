@@ -1970,8 +1970,8 @@ Cg
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar3" translatesAutoresizingMaskIntoConstraints="NO" id="zaR-pt-QQD">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ACTVITIES_SUBMENU_V01" translatesAutoresizingMaskIntoConstraints="NO" id="DWr-pe-hra">
-                                <rect key="frame" x="100" y="222" width="64" height="328"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ACTIVITIES_SUB_OVERVIEW_V03" translatesAutoresizingMaskIntoConstraints="NO" id="DWr-pe-hra">
+                                <rect key="frame" x="95" y="222" width="96" height="328"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fqE-iy-knw">
                                 <rect key="frame" x="450" y="321" width="125" height="125"/>
@@ -1982,8 +1982,8 @@ Cg
                                     <segue destination="S4R-Ja-viH" kind="presentation" identifier="BackToMain" modalTransitionStyle="crossDissolve" id="zES-DJ-Qvu"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IslandIcons_HOME" translatesAutoresizingMaskIntoConstraints="NO" id="jsM-DL-9DA">
-                                <rect key="frame" x="36" y="220" width="55" height="330"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IslandIcons_ALL_WHITE_V03" translatesAutoresizingMaskIntoConstraints="NO" id="jsM-DL-9DA">
+                                <rect key="frame" x="19" y="220" width="80" height="330"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7Y-SW-bQs">
                                 <rect key="frame" x="42" y="225" width="47" height="40"/>
@@ -2016,43 +2016,44 @@ Cg
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Map" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pb2-xw-AIG">
-                                <rect key="frame" x="93" y="280" width="50" height="30"/>
+                                <rect key="frame" x="49" y="303" width="50" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Activities" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nCs-5b-btp">
-                                <rect key="frame" x="93" y="380" width="50" height="30"/>
+                                <rect key="frame" x="37" y="403" width="50" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Anchorages" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BPh-VY-BLv">
-                                <rect key="frame" x="93" y="330" width="70" height="30"/>
+                                <rect key="frame" x="30" y="354" width="70" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Photo Gallery" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wZs-Fc-2By">
-                                <rect key="frame" x="93" y="427" width="70" height="30"/>
+                                <rect key="frame" x="26" y="448" width="70" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.99287670850753784" green="0.99700695276260376" blue="0.99637609720230103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Info" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J3F-tM-07q">
-                                <rect key="frame" x="93" y="230" width="50" height="30"/>
+                                <rect key="frame" x="50" y="253" width="50" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Home" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cYo-3v-JFD">
-                                <rect key="frame" x="93" y="501" width="70" height="30"/>
+                                <rect key="frame" x="45" y="525" width="70" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.99287670850753784" green="0.99700695276260376" blue="0.99637609720230103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -2135,8 +2136,8 @@ Cg
                                 <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ACTVITIES_SUBMENU_V01" translatesAutoresizingMaskIntoConstraints="NO" id="nDZ-6s-oZ3">
-                                <rect key="frame" x="100" y="222" width="64" height="328"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ACTIVITIES_SUB_OVERVIEW_V03" translatesAutoresizingMaskIntoConstraints="NO" id="nDZ-6s-oZ3">
+                                <rect key="frame" x="95" y="222" width="96" height="328"/>
                             </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPp-hX-0TK">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -2160,8 +2161,8 @@ Cg
                                     <segue destination="S4R-Ja-viH" kind="presentation" identifier="BackToMain" modalTransitionStyle="crossDissolve" id="UxM-fJ-qBO"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IslandIcons_HOME" translatesAutoresizingMaskIntoConstraints="NO" id="Pdn-sW-QqL">
-                                <rect key="frame" x="36" y="220" width="55" height="330"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IslandIcons_ALL_WHITE_V03" translatesAutoresizingMaskIntoConstraints="NO" id="Pdn-sW-QqL">
+                                <rect key="frame" x="19" y="220" width="80" height="330"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.85000002384185791" contentMode="scaleAspectFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTe-Hk-Exv">
                                 <rect key="frame" x="890" y="6" width="81" height="86"/>
@@ -2194,31 +2195,31 @@ Cg
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4e-P1-pFA">
-                                <rect key="frame" x="42" y="225" width="47" height="40"/>
+                                <rect key="frame" x="42" y="225" width="67" height="40"/>
                                 <connections>
                                     <action selector="InfoClicked:" destination="gfQ-kY-mDd" eventType="touchUpInside" id="s4l-qM-I2Z"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOr-uB-bLg">
-                                <rect key="frame" x="42" y="422" width="47" height="40"/>
+                                <rect key="frame" x="42" y="424" width="67" height="40"/>
                                 <connections>
                                     <segue destination="vlQ-Sj-w1e" kind="presentation" identifier="Photography" modalTransitionStyle="crossDissolve" id="Fx6-gk-auX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLl-No-O1K">
-                                <rect key="frame" x="42" y="274" width="47" height="40"/>
+                                <rect key="frame" x="42" y="274" width="67" height="40"/>
                                 <connections>
                                     <action selector="MapClicked:" destination="gfQ-kY-mDd" eventType="touchUpInside" id="i5r-P8-4wR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTP-JD-VrL">
-                                <rect key="frame" x="41" y="325" width="47" height="40"/>
+                                <rect key="frame" x="41" y="325" width="67" height="40"/>
                                 <connections>
                                     <action selector="AnchorageClicked:" destination="gfQ-kY-mDd" eventType="touchUpInside" id="oCX-3b-YiJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eb2-Uk-0td">
-                                <rect key="frame" x="41" y="373" width="47" height="40"/>
+                                <rect key="frame" x="41" y="376" width="67" height="40"/>
                                 <connections>
                                     <action selector="ActivitiesClicked:" destination="gfQ-kY-mDd" eventType="touchUpInside" id="tIz-10-ZYR"/>
                                 </connections>
@@ -2355,41 +2356,42 @@ Cg
                                 </subviews>
                             </scrollView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Home" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZMr-8k-pd1">
-                                <rect key="frame" x="93" y="501" width="70" height="30"/>
+                                <rect key="frame" x="45" y="525" width="70" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.99287670850753784" green="0.99700695276260376" blue="0.99637609720230103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Info" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RhK-ye-Sra">
-                                <rect key="frame" x="93" y="230" width="50" height="30"/>
+                                <rect key="frame" x="50" y="253" width="50" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Map" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A4F-Z6-ixb">
-                                <rect key="frame" x="93" y="280" width="50" height="30"/>
+                                <rect key="frame" x="49" y="303" width="50" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Activities" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gnz-6c-oOc">
-                                <rect key="frame" x="93" y="380" width="50" height="30"/>
+                                <rect key="frame" x="37" y="403" width="50" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Anchorages" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yQb-oQ-bJS">
-                                <rect key="frame" x="93" y="330" width="70" height="30"/>
+                                <rect key="frame" x="30" y="354" width="70" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Photo Gallery" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4jS-RR-qP2">
-                                <rect key="frame" x="93" y="427" width="70" height="30"/>
+                                <rect key="frame" x="26" y="448" width="70" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.99287670850753784" green="0.99700695276260376" blue="0.99637609720230103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
@@ -3437,6 +3439,7 @@ Cg
     </scenes>
     <resources>
         <image name="1_DISSOLVE_SUNSET" width="2048" height="1536"/>
+        <image name="ACTIVITIES_SUB_OVERVIEW_V03" width="191" height="655"/>
         <image name="ACTVITIES_SUBMENU_V01" width="128" height="655"/>
         <image name="ANACAPA_CLEAN" width="2048" height="1536"/>
         <image name="ANACAPA_CLEANBLUR" width="2048" height="1536"/>
@@ -3458,6 +3461,7 @@ Cg
         <image name="HIGHLIGHT_REFERENCE" width="2048" height="1536"/>
         <image name="Image-1" width="2048" height="1536"/>
         <image name="Image-3" width="2048" height="1536"/>
+        <image name="IslandIcons_ALL_WHITE_V03" width="160" height="660"/>
         <image name="IslandIcons_HOME" width="110" height="660"/>
         <image name="IslandIcons_Photo_Gallery_V02" width="110" height="660"/>
         <image name="LOGOS_PARTA" width="530" height="280"/>
@@ -3496,8 +3500,8 @@ Cg
         <image name="upper_campsite" width="530" height="268"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UxM-fJ-qBO"/>
-        <segue reference="Fx6-gk-auX"/>
+        <segue reference="zES-DJ-Qvu"/>
+        <segue reference="Vqv-IX-MSN"/>
         <segue reference="jew-Ho-UNx"/>
         <segue reference="OjJ-ZP-iCm"/>
         <segue reference="Yb7-rz-hzO"/>

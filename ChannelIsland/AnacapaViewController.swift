@@ -334,7 +334,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
     func loadScrollPageTV2(){
         self.PageTextView2 = UITextView()
         self.PageTextView2.backgroundColor = UIColor.clearColor()
-        self.PageTextView2.frame = CGRectMake(185, 75, 510.0, 8000)
+        self.PageTextView2.frame = CGRectMake(200, 75, 500, 8000)
         self.PageTextView2.alpha = 1
         self.PageScrollView2 = FadeScrollVIew()
         self.PageScrollView2.frame = CGRectMake(0, 120, 1024, 565)
@@ -344,7 +344,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         self.PageScrollView2.contentSize.height = 8000
         self.PageTextView3 = UITextView()
         self.PageTextView3.backgroundColor = UIColor.clearColor()
-        self.PageTextView3.frame = CGRectMake(185, 75, 510.0, 8000)
+        self.PageTextView3.frame = CGRectMake(200, 75, 500, 8000)
         self.PageTextView3.alpha = 1
         self.PageScrollView3 = FadeScrollVIew()
         self.PageScrollView3.frame = CGRectMake(0, 120, 1024, 565)
@@ -500,7 +500,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         self.actpageTableView2.dataSource = dataSource
         self.actpageTableView2.reloadData()
         self.PageScrollView2.addSubview(self.actpageTableView2)
-        self.actpageTableView2.frame = CGRectMake(185, 7500, 510, 3000)
+        self.actpageTableView2.frame = CGRectMake(200, 7500, 500, 3000)
         
         self.actpageTableView1.delegate = self
         self.actpageTableView1.alpha = 0
@@ -517,7 +517,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         self.actpageTableView1.dataSource = dataSource
         self.actpageTableView1.reloadData()
         self.PageScrollView3.addSubview(self.actpageTableView1)
-        self.actpageTableView1.frame = CGRectMake(185, 7500, 510, 3000)
+        self.actpageTableView1.frame = CGRectMake(200, 7500, 500, 3000)
         
         self.actpageTableView22.delegate = self
         self.actpageTableView22.alpha = 0
@@ -553,7 +553,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         self.actpageTableView12.reloadData()
         
         self.PageScrollView3.addSubview(self.actpageTableView12)
-        self.actpageTableView12.frame = CGRectMake(185, 9550, 510, 2000)
+        self.actpageTableView12.frame = CGRectMake(200, 9550, 500, 2000)
         
         //add activities Headers beyond hiking
         let campTV = UITextView()
@@ -726,8 +726,8 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         self.PageScrollView.hidden = false
         self.DismissPage.hidden = false
         var flagTransit = false
-        let pageToIcon: [Int: String] = [0: "IslandIcons_ANCHORAGES_V02", 1: "IslandIcons_INFO_V02",
-                                         2: "IslandIcons_ACTIVITIES_V02", 3: "IslandIcons_MAP_V02"]
+        let pageToIcon: [Int: String] = [0: "IslandIcons_ANCHORAGES_V03", 1: "IslandIcons_INFO_V03",
+                                         2: "IslandIcons_ACTIVITIES_V03", 3: "IslandIcons_MAP_V03"]
         let pageToILabel: [Int: UITextField] = [0: self.AnchoragesLabel, 1: self.InfoLabel, 2: self.ActivitiesLabel, 3: self.MapLabel]
         let ui = UIImage(imageLiteral: pageToIcon[self.pageID]!)
         self.NavBar.image = ui
@@ -1017,10 +1017,10 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         self.IView.hidden = false
         
         let pageToILabel: [Int: UITextField] = [0: self.AnchoragesLabel, 1: self.InfoLabel, 2: self.ActivitiesLabel, 3: self.MapLabel]
-        let ui = UIImage(imageLiteral: "IslandIcons_HOME")
+        let ui = UIImage(imageLiteral: "IslandIcons_ALL_WHITE_V03")
         self.NavBar.image = ui
         pageToILabel[self.pageID]!.textColor = UIColor.whiteColor()
-        self.HomeLabel.textColor = UIColor.blackColor()
+        //self.HomeLabel.textColor = UIColor.blackColor()
         
         UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView2.alpha = 0

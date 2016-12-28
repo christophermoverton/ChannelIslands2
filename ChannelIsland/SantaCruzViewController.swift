@@ -647,7 +647,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     func loadScrollPageTV2(){
         self.PageTextView2 = UITextView()
         self.PageTextView2.backgroundColor = UIColor.clearColor()
-        self.PageTextView2.frame = CGRectMake(185, 75, 510.0, 3500.0)
+        self.PageTextView2.frame = CGRectMake(200, 75, 500, 3500.0)
         self.PageTextView2.alpha = 1
         self.PageScrollView2 = FadeScrollVIew()
         self.PageScrollView2.frame = CGRectMake(0, 120, 1024, 565)
@@ -657,7 +657,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.PageScrollView2.contentSize.height = 8000
         self.PageTextView3 = UITextView()
         self.PageTextView3.backgroundColor = UIColor.clearColor()
-        self.PageTextView3.frame = CGRectMake(185, 75, 510.0, 3500.0)
+        self.PageTextView3.frame = CGRectMake(200, 75, 500, 3500.0)
         self.PageTextView3.alpha = 1
         self.PageScrollView3 = FadeScrollVIew()
         self.PageScrollView3.frame = CGRectMake(0, 120, 1024, 565)
@@ -798,7 +798,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.actpageTableView2.dataSource = dataSource
         self.actpageTableView2.reloadData()
         self.PageScrollView2.addSubview(self.actpageTableView2)
-        self.actpageTableView2.frame = CGRectMake(185, 2400, 510, 3000)
+        self.actpageTableView2.frame = CGRectMake(200, 2400, 500, 3000)
     
         self.actpageTableView1.delegate = self
         self.actpageTableView1.alpha = 0
@@ -815,7 +815,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.actpageTableView1.dataSource = dataSource
         self.actpageTableView1.reloadData()
         self.PageScrollView3.addSubview(self.actpageTableView1)
-        self.actpageTableView1.frame = CGRectMake(185, 2400, 510, 3000)
+        self.actpageTableView1.frame = CGRectMake(200, 2400, 500, 3000)
         
         self.actpageTableView22.delegate = self
         self.actpageTableView22.alpha = 0
@@ -833,7 +833,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.actpageTableView22.reloadData()
         
         self.PageScrollView2.addSubview(self.actpageTableView22)
-        self.actpageTableView22.frame = CGRectMake(185, 4450, 510, 2000)
+        self.actpageTableView22.frame = CGRectMake(200, 4450, 500, 2000)
         
         self.actpageTableView12.delegate = self
         self.actpageTableView12.alpha = 0
@@ -851,7 +851,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.actpageTableView12.reloadData()
         
         self.PageScrollView3.addSubview(self.actpageTableView12)
-        self.actpageTableView12.frame = CGRectMake(185, 4450, 510, 2000)
+        self.actpageTableView12.frame = CGRectMake(200, 4450, 500, 2000)
         
         //add activities Headers beyond hiking
         let campTV = UITextView()
@@ -864,10 +864,10 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                                                attributes: myattr)
         campTV.attributedText = myAttrString1
         campTV2.attributedText = myAttrString1
-        campTV.frame = CGRectMake(185, 4400, 300, 50)
+        campTV.frame = CGRectMake(200, 4400, 300, 50)
         campTV.alpha = 0
         campTV.backgroundColor = UIColor.clearColor()
-        campTV2.frame = CGRectMake(185, 4400, 300, 50)
+        campTV2.frame = CGRectMake(200, 4400, 300, 50)
         campTV2.alpha = 0
         campTV2.backgroundColor = UIColor.clearColor()
         self.PageScrollView2.addSubview(campTV)
@@ -1071,8 +1071,8 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.PageScrollView.hidden = false
         self.DismissPage.hidden = false
         var flagTransit = false
-        let pageToIcon: [Int: String] = [0: "IslandIcons_ANCHORAGES_V02", 1: "IslandIcons_INFO_V02",
-            2: "IslandIcons_ACTIVITIES_V02", 3: "IslandIcons_MAP_V02"]
+        let pageToIcon: [Int: String] = [0: "IslandIcons_ANCHORAGES_V03", 1: "IslandIcons_INFO_V03",
+            2: "IslandIcons_ACTIVITIES_V03", 3: "IslandIcons_MAP_V03"]
         let pageToILabel: [Int: UITextField] = [0: self.AnchoragesLabel, 1: self.InfoLabel, 2: self.ActivitiesLabel, 3: self.MapLabel]
         let ui = UIImage(imageLiteral: pageToIcon[self.pageID]!)
         self.NavBar.image = ui
@@ -1362,10 +1362,10 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.IView.hidden = false
 
         let pageToILabel: [Int: UITextField] = [0: self.AnchoragesLabel, 1: self.InfoLabel, 2: self.ActivitiesLabel, 3: self.MapLabel]
-        let ui = UIImage(imageLiteral: "IslandIcons_HOME")
+        let ui = UIImage(imageLiteral: "IslandIcons_ALL_WHITE_V03")
         self.NavBar.image = ui
         pageToILabel[self.pageID]!.textColor = UIColor.whiteColor()
-        self.HomeLabel.textColor = UIColor.blackColor()
+        //self.HomeLabel.textColor = UIColor.blackColor()
         
         UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView2.alpha = 0
