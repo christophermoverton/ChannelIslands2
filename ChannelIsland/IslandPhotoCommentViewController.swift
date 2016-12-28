@@ -12,9 +12,9 @@ import UIKit
 class IslandPhotoCommentViewController: UIViewController {
     var photos = ["Photogallery_Crop_0011_Photography1", "Photogallery_Crop_0010_Photography2", "Photogallery_Crop_0009_Photography3", "Photogallery_Crop_0008_Photography4", "Photogallery_Crop_0007_Photography5", "Photogallery_Crop_0006_Photography6", "Photogallery_Crop_0005_Photography7", "Photogallery_Crop_0004_Photography8","Photogallery_Crop_0003_Photography9", "Photogallery_Crop_0002_Photography10", "Photogallery_Crop_0001_Photography11", "Photogallery_Crop_0000_Photography12"]
     var captions = ["\nSunset in the sanctuary, Channel Islands National Marine Sanctuary","\nArch Point, Santa Cruz Island","\nKayaker at Arch Rock, Anacapa Island, photo by Tim Hauf","\nKelp forest at Scorpion Bay, Santa Cruz Island","\nCalifornia Sea Lions, Channel Islands","Spiny lobsters and other marine species enjoy miles of marine reserves and protected areas within the sanctuary","\nPink-footed Shearwater, a summertime visitor to the Channel Islands","\nAshy storm petrels actively nest in the Channel Islands","Island foxes—about the size of house cats—are among the endemic species found only in the Channel Islands","Island Packers operates ferry service between Channel Islands Harbor and Ventura Harbor and several of the islands","\nFishing while kayaking on the Channel Islands","\nLichen-encrusted rocks on Santa Cruz Island","The National Park Service and NOAA’s National Marine Sanctuary program work together to protect land and sea."]
-    internal let islandsPhotos: [[String]] = [["SCimage059","SCimage061","SCimage063","SCimage065","SCimage067","SCimage069","SCimage071","SCimage073"]]
-    private var islandCaptions: [[String]] = [["Santa Cruz Island, sailboats anchored at Smuggler’s Cove","Santa Cruz Island, kayakers at Scorpion Bay","Santa Cruz Island, offloading waste at Prisoner’s Pier","Santa Cruz Island, Potato Harbor","Santa Cruz Island, East Side","Santa Cruz Island, small fish among the eelgrass","Santa Cruz Island, Yellow Banks","Santa Cruz Island, kayakers approach Painted Cave"]]
-    private var islandNames: [String] = ["Santa Cruz Island"]
+    internal let islandsPhotos: [[String]] = [["SCimage059","SCimage061","SCimage063","SCimage065","SCimage067","SCimage069","SCimage071","SCimage073"],["EXPLORING_TIDEPOOLS","ANACAPA_VISITOR_CENTER_INFO","ANACAPA_LOTS_OF_CAVES","ANACAPA_ISALNDS_TIDEPOOL","ANACAPA_CATHEDRAL_COVE1"]]
+    private var islandCaptions: [[String]] = [["Santa Cruz Island, sailboats anchored at Smuggler’s Cove","Santa Cruz Island, kayakers at Scorpion Bay","Santa Cruz Island, offloading waste at Prisoner’s Pier","Santa Cruz Island, Potato Harbor","Santa Cruz Island, East Side","Santa Cruz Island, small fish among the eelgrass","Santa Cruz Island, Yellow Banks","Santa Cruz Island, kayakers approach Painted Cave"],["Exploring the Anacapa tidepools; NPS","Anacapa Visitor Center has information on activities; NPS","Anacapa Island has lots of caves for kayakers; photo by Tim Hauf.","Anacapa Island tidepools; photo by Tim Hauf.","Anacapa, Cathedral Cove; photo by Tim Hauf."]]
+    private var islandNames: [String] = ["Santa Cruz Island","Anacapa Island"]
     
     @IBOutlet weak var HomeButton: UIButton!
     @IBOutlet weak var IslandName: UITextView!
@@ -165,7 +165,7 @@ class IslandPhotoCommentViewController: UIViewController {
     
     @IBAction func MapClicked(sender: AnyObject) {
         if islandID == 0{
-            let window = UIWindow(frame: UIScreen.mainScreen().bounds)
+            //let window = UIWindow(frame: UIScreen.mainScreen().bounds)
             let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sc") as! SantaCruzViewController
             vc.transitioningDelegate = self
             vc.loadView()
@@ -173,6 +173,16 @@ class IslandPhotoCommentViewController: UIViewController {
             vc.enableMapwA()
             self.crossDissolveState = true
             self.presentViewController(vc, animated: true, completion: nil)
+        }
+        else if islandID == 1{
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sc") as! AnacapaViewController
+            vc.transitioningDelegate = self
+            vc.loadView()
+            vc.viewDidLoad()
+            vc.enableMapwA()
+            self.crossDissolveState = true
+            self.presentViewController(vc, animated: true, completion: nil)
+            
         }
         //vc.resultsArray = self.resultsArray
            //let navigat = UINavigationController()
@@ -194,6 +204,17 @@ class IslandPhotoCommentViewController: UIViewController {
             self.crossDissolveState = true
             self.presentViewController(vc, animated: true, completion: nil)
         }
+        
+        else if islandID == 1{
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sc") as! AnacapaViewController
+            vc.transitioningDelegate = self
+            vc.loadView()
+            vc.viewDidLoad()
+            vc.enableInfowA()
+            self.crossDissolveState = true
+            self.presentViewController(vc, animated: true, completion: nil)
+            
+        }
     }
     
     @IBAction func AnchoragesClicked(sender: AnyObject) {
@@ -206,6 +227,16 @@ class IslandPhotoCommentViewController: UIViewController {
             vc.enableAnchorageswA()
             self.crossDissolveState = true
             self.presentViewController(vc, animated: true, completion: nil)
+        }
+        else if islandID == 1{
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sc") as! AnacapaViewController
+            vc.transitioningDelegate = self
+            vc.loadView()
+            vc.viewDidLoad()
+            vc.enableAnchorageswA()
+            self.crossDissolveState = true
+            self.presentViewController(vc, animated: true, completion: nil)
+            
         }
     }
     
@@ -220,6 +251,16 @@ class IslandPhotoCommentViewController: UIViewController {
             self.crossDissolveState = true
             self.presentViewController(vc, animated: true, completion: nil)
         }
+        else if islandID == 1{
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sc") as! AnacapaViewController
+            vc.transitioningDelegate = self
+            vc.loadView()
+            vc.viewDidLoad()
+            vc.enableActivitieswA()
+            self.crossDissolveState = true
+            self.presentViewController(vc, animated: true, completion: nil)
+            
+        }
         
     }
     
@@ -233,6 +274,16 @@ class IslandPhotoCommentViewController: UIViewController {
             //vc.enableActivitieswA()
             self.crossDissolveState = true
             self.presentViewController(vc, animated: true, completion: nil)
+        }
+        else if islandID == 1{
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sc") as! AnacapaViewController
+            vc.transitioningDelegate = self
+            vc.loadView()
+            vc.viewDidLoad()
+            //vc.enableInfowA()
+            self.crossDissolveState = true
+            self.presentViewController(vc, animated: true, completion: nil)
+            
         }
     }
     

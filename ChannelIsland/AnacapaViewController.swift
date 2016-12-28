@@ -12,7 +12,7 @@ import UIKit
 
 
 class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDelegate {
-    
+    private let photoSequeId = "Photography"
     private let revealSequeId = "revealSegue"
     private var swipeState: Bool = true  //right state
     private let horizontalTransitionController = HorizontalTransitionController()
@@ -33,10 +33,15 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
     @IBOutlet weak var InfoButton: UIButton!
     @IBOutlet weak var AnchorageButton: UIButton!
     @IBOutlet weak var ActivitiesButton: UIButton!
+    @IBOutlet weak var MapButton: UIButton!
+    @IBOutlet weak var PhotoButton: UIButton!
+    
     @IBOutlet weak var ActivitiesBar: UIImageView!
     private var infoActive: Bool = false
     private var anchorageActive: Bool = false
     private var activitiesActive: Bool = false
+    private var otherPageActive: Bool = false
+    private var switchPage: Bool = true
     @IBOutlet weak var PageScrollView: FadeScrollVIew!
     @IBOutlet weak var PageTextView: UITextView!
     @IBOutlet weak var PageIV1: UIImageView!
@@ -52,6 +57,13 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
     @IBOutlet weak var CapPagTV4: UITextView!
     @IBOutlet weak var CapPagTV5: UITextView!
     @IBOutlet weak var CapPagTV6: UITextView!
+    @IBOutlet weak var HomeLabel: UITextField!
+    @IBOutlet weak var InfoLabel: UITextField!
+    @IBOutlet weak var MapLabel: UITextField!
+    @IBOutlet weak var ActivitiesLabel: UITextField!
+    @IBOutlet weak var AnchoragesLabel: UITextField!
+    @IBOutlet weak var PhotoGalleryLabel: UITextField!
+    
     private var MapView: UIView!
     private var pageIVs2: [[UIImageView!]] = [[UIImageView!]]() // side photos
     private var capPagTVs2: [[UITextView!]] = [[UITextView!]]()
@@ -109,12 +121,52 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
     
     private var Activitiestextstrings: [String] = ["ACTIVITIES\n\n","Boating and Kayaking\n\n","Boating Safety\n","\t•Don’t be tempted to cross through the gap between East and Middle Anacapa. It’s too shallow and has too much surge to cross, even for kayaks. Please don’t try it!\n\t• Please be aware no personal watercraft (i.e. Waverunner tm) are allowed within the National Park.\n\n","Kayaking\n\n","East Anacapa\n\n","\t• Not far from Landing Cove, the small sea cave called Frenchy’s Secret is a popular destination for kayakers.\n\t• Many kayakers paddle out to the easternmost point of Anacapa to visit the iconic Arch Rock. This open-water area is recommended for expert kayakers only.\n\n","Middle Anacapa\n\n,","\t Kayakers exploring beautiful Cathedral Cove on Middle Anacapa have a chance to paddle next to stunning spires such as the iconic Witch’s Hat and several sea caves.\n\n","Diving, Snorkeling, and Swimming\n\n","Marine Protected Areas\n\n","\t• When diving in all marine protected areas, please remember: \"Leave only bubbles, take only memories.\"\n\n","East Anacapa\n\n","\t• Some of East Anacapa’s best diving may be found at Landing Cove and Cathedral Cove. Both areas are within the marine protected area and offer divers the chance to see lots of fish on any given day.\n\n","West Anacapa\n\n","\t• Goldfish Bowl and Cat Rock on West Anacapa offer good diving as conditions permit.\n\n","Wildlife Watching\n\n","\t• With miles of both marine protected and conservation areas, Anacapa offers refuge to diverse marine life: rookeries for the endangered California Brown Pelican dot the rocks; California sea lions and harbor seals rest and breed along the shores; and Scripps’s Murrelets wheel in the sky.\n\n\t• Kayakers will likely see sea lions, seal pups, pelicans, and cormorants; bright orange Garibaldi flitting through the water, and blowholes spewing in the rocks.\n\n\t•  Please maintain a distance of 100 meters offshore so as not to disturb nesting and pupping sites.\n\n","Fishing\n\n","\t• Over 80 percent of the waters near the Channel Islands is open to fishing.\n\n\t• Anacapa’s south side is open to fishing. The north side is within a protected Marine Reserve.\n\n\t• Sport fishing outside marine protected areas requires possession of a valid State of California fishing license with an ocean enhancement stamp.\n\n\t• All California Department of Fish and Game regulations apply.\n\n\t• Rockfish, White Sea Bass, Halibut, Barracuda, Calico Bass, and Yellowtail are all caught in these rich waters.\n\n","Hiking\n\n","\t• East Anacapa’s hiking trails are short (around 2 miles) but utterly spectacular.\n\n\t•  Please note that disembarking and ascending 157 steps to the plateau can be moderately strenuous.\n\n\t•  Rangers and naturalists offer guided tours year-round at Middle Anacapa.\n\n\t• Note that West Anacapa is a Natural Research area and is closed on the eastern tip, with the exception of Frenchy’s Cove. Frenchy’s is a popular anchorage for boaters and offers fabulous tide-pooling.\n\n","Camping\n\n","\t• The campground on Anacapa is on an open plateau with ocean views. It is a half-mile trek from the landing and has 7 campsites.\n\n\t• Year-round camping is available; overnight fees apply. Reserve your site well in advance at recreation.gov or call 877-444-6777. Concession boats fill to capacity more quickly than campground sites are filled, so book your boat transportation for overnight trips first. There is no water or shade, so pack what you need.\n\n\t• The park provides picnic tables, lock boxes for food, and pit toilets.\n\n\t• Remember that you’ll be hauling everything else from the pier to your site, so bring essentials only.\n\n\t• The campsite can be noisy: expect to have nesting gulls nearby.\n\n","Activities (More Info Level)\n\n","Boating and Kayaking (more info)\n\n","Weather\n","\t• Visitors can boat to the islands on their own or with the park’s approved ferry operators. Strong currents, shifting swells, dense fog, strong winds and choppy seas can appear suddenly. Come prepared.\n\n","Anchorages\n\n","\t• Anacapa’s main anchorages are at Landing Cove and Frenchy’s Cove. On the south side, East Fish Camp or Cat Rock provide shelter and additional anchorage sites, although they are exposed to southerly swells.\n\n\t• Wherever you anchor, there are no all-weather anchorages around the islands.  Therefore, it is recommended that a person stay on board at all times.\n\n","Forecasts\n","\t• Monitor VHFG Weather Channel 3 (WX3), VHF-FM 162.475 mhz for marine forecasts. On the web, channelislands.noaa.gov or nwsla.noaa.gov have current weather. There are electronic weather kiosks in Santa Barbara and Channel Islands harbors.\n\n","Wildlife Watching (more info)\n\n","What to Look For\n,","\t• January/February: enjoy great tidepooling in the afternoons. See gray whales heading to Baja California.\n\n\t• March/April: Island flowers are in full bloom through April. The giant coreopsis are in full bloom. Gray whales are visible through May. Brant geese are on the same schedule. Western Gulls begin nesting. Scripps’s Murrelets are nesting through July. Grunions leave the water to spawn on the beach, now through May.\n\n\t• May/June: Dense fog is common. Blue and humpback whales arrive to feed on krill. Red-Necked Phalaropes can be seen in the Santa Barbara Channel.  Grunion beach spawning continues after high tides and continues for several hours. Endangered Least Terns, Pink-footed Shearwaters and Ashy Storm Petrels can be seen in the channel at these times. California sea lion breeding and pupping runs from May through July. Scripps’s Murrelets nest March thru July. Grunion spawning peaks around this time.\n\n\t• July/August: Fog diminishes and underwater visibility increases. More of the same as blue and humpback whales feed on krill. Sooty and Pink-footed Shearwaters visit the channel. Red-necked Phalaropes and Ashy and Black Storm petrels do the same. Endangered Least Terns and Scripps’s Murrelets can be seen on the islands.\n\n\t• September/October: Warm weather, calm winds and seas are common.  Jellies are abundant in the coastal waters. Fin whales, Sei whales and blue whales can be observed feeding. Sooty and Pink-footed Shearwaters visit the channel. Red-necked Phalaropes, and Ashy and Black Storm Petrels do the same. Endangered Least Terns and Scripps’s Murrelets can be seen on the islands.\n\n\t• November/December: Winter storms appear. Best tidepooling months are now, as afternoon low tides expose invertebrates. Jellies are in abundance.\n\n","Fishing (more info)\n\n","\t• Check out daily marine forecasts: http://www.usps.org/ventura/currentconditions.html\n\n\t•  California Ocean Sport fishing regulations: http://www.dfg.ca.gov/marine/oceansportregs.asp\n\n\t","Diving, Snorkeling, and Swimming (more info)\n\n","Diving\n","• Even in August the water is rather cold, so a wet suit is recommended for snorkeling and swimming.\n\n\t• Anacapa’s trails don’t provide shore access, as the island is ringed by steep cliffs.\n\n\t• Cathedral Cove and Frenchy’s Cove are accessible only by boat or kayak.\n\n\t","Hiking (more info)\n","\t• After climbing the steep stairs at Landing Cove, the trails are a figure-8 shaped system that meanders over gentle slopes to dramatic overlooks and coastal views.\n\t• The trails are all easy and range from .5 and 1.5 miles, round trip.\n\t• Please walk only on established trails. This protects the fragile bird nests on the ground.\n\t•  An interpretive trail guide is available at the visitor center.\n\n\t"]
     
-    private var ActivitiesAttributes : [[String: AnyObject]] = [[NSForegroundColorAttributeName: UIColor.whiteColor(),
+    private var ActivitiesAttributes : [[String: AnyObject]] = [
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
         NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
         NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
         NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
@@ -141,16 +193,75 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
-        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
-        [NSForegroundColorAttributeName: UIColor.whiteColor(),
-        NSBackgroundColorAttributeName: UIColor.clearColor(),
         NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
         NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
-        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!]]
+        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!]]
+    
+        private let photonames: [String] = ["Anacapa_Landing_Cove"]
+        private let infophotonames: [String] = ["Inspiration_point"]
+        private let activitiesphotonames: [String] = ["anacapaimage009","anacapaimage011","anacapaimage013","anacapaimage015","anacapaimage017","anacapaimage019","anacapaimage021","anacapaimage023","anacapaimage025","anacapaimage027","anacapaimage029","anacapaimage031","anacapaimage033","anacapaimage035","anacapaimage037","anacapaimage039","anacapaimage041","anacapaimage043"]
+    private var InfoCaptiontextstrings: [String] = ["Anacapa Island, Inspiration point."]
+    private var AnchoragesCaptiontextstrings: [String] = ["Anacapa’s Landing Cove; NPS"]
+    private var ActivitiesCaptiontextstrings: [String] = ["Kayaking Anacapa’s Arch Rock, the easternmost point; photo by Tim Hauf","Arch Rock, Anacapa. Photographer; How Cheng","Anacapa Island, Cathedral Cove; photo by Tim Hauf","Anacapa Aerial View of Arch Point, Bob Schwemmer/NPS","NOAA fish survey at Anacapa; Bob Schwemmer","Anacapa’s western shore, wreck diving the Del Rio; Bob Schwemmer","Anacapa kelp beds; Claire Fackler","Diver at Anacapa; Clark Anderson/wikimedia","California Brown Pelican; NPS","Harbor seal and pup at Anacapa; photo by Jeff Foote ","Humbpack Whale; Bob Schwemmer","Wildflowers (giant coreopsis) and the Anacapa lighthouse in the background; NPS","Anacapa Arch, Shauna Bingham/NOAA","Lighthouse seen from the trail. Public Domain photo.","Inspiration Point, Anacapa; Claire Fackler/NPS","Anacapa Campground; Tim Hauf","Middle Anacapa, giant coreopsis in bloom; Bob Schwemmer","Anacapa, Western Gull; Claire Fackler",""]
+    private var InfoCaptionAttributes : [[String: AnyObject]] =
+        [[NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 16.0)!]]
     /*
     private var Activitiestextstrings2: [String] = ["ACTIVITIES\n\n","Boating and Kayaking\n\n","Boating Safety\n","\t•Don’t be tempted to cross through the gap between East and Middle Anacapa. It’s too shallow and has too much surge to cross, even for kayaks. Please don’t try it!\n\t• Please be aware no personal watercraft (i.e. Waverunner tm) are allowed within the National Park.\n\n","Kayaking\n\n","East Anacapa\n\n","\t Not far from Landing Cove, the small sea cave called Frenchy’s Secret is a popular destination for kayakers.\n\t• Many kayakers paddle out to the easternmost point of Anacapa to visit the iconic Arch Rock. This open-water area is recommended for expert kayakers only.\n\n","Middle Anacapa\n\n,","\t	Kayakers exploring beautiful Cathedral Cove on Middle Anacapa have a chance to paddle next to stunning spires such as the iconic Witch’s Hat and several sea caves.\n\n","Diving, Snorkeling, and Swimming\n\n","Marine Protected Areas\n\n","\t•	When diving in all marine protected areas, please remember: \"Leave only bubbles, take only memories.\"\n\n","East Anacapa\n\n","\t•	Some of East Anacapa’s best diving may be found at Landing Cove and Cathedral Cove. Both areas are within the marine protected area and offer divers the chance to see lots of fish on any given day.\n\n","West Anacapa\n\n","\t• Goldfish Bowl and Cat Rock on West Anacapa offer good diving as conditions permit.\n\n","Wildlife Watching\n\n","\t• With miles of both marine protected and conservation areas, Anacapa offers refuge to diverse marine life: rookeries for the endangered California Brown Pelican dot the rocks; California sea lions and harbor seals rest and breed along the shores; and Scripps’s Murrelets wheel in the sky.\n\n\t• Kayakers will likely see sea lions, seal pups, pelicans, and cormorants; bright orange Garibaldi flitting through the water, and blowholes spewing in the rocks.\n\n\t•  Please maintain a distance of 100 meters offshore so as not to disturb nesting and pupping sites.\n\n","Fishing\n\n","\t• Over 80 percent of the waters near the Channel Islands is open to fishing.\n\n\t• Anacapa’s south side is open to fishing. The north side is within a protected Marine Reserve.\n\n\t• Sport fishing outside marine protected areas requires possession of a valid State of California fishing license with an ocean enhancement stamp.\n\n\t• All California Department of Fish and Game regulations apply.\n\n\t• Rockfish, White Sea Bass, Halibut, Barracuda, Calico Bass, and Yellowtail are all caught in these rich waters.\n\n","Hiking\n\n","\t• East Anacapa’s hiking trails are short (around 2 miles) but utterly spectacular.\n\n\t•  Please note that disembarking and ascending 157 steps to the plateau can be moderately strenuous.\n\n\t•  Rangers and naturalists offer guided tours year-round at Middle Anacapa.\n\n\t• Note that West Anacapa is a Natural Research area and is closed on the eastern tip, with the exception of Frenchy’s Cove. Frenchy’s is a popular anchorage for boaters and offers fabulous tide-pooling.\n\n","Camping\n\n","\t• The campground on Anacapa is on an open plateau with ocean views. It is a half-mile trek from the landing and has 7 campsites.\n\n\t• Year-round camping is available; overnight fees apply. Reserve your site well in advance at recreation.gov or call 877-444-6777. Concession boats fill to capacity more quickly than campground sites are filled, so book your boat transportation for overnight trips first. There is no water or shade, so pack what you need.\n\n\t• The park provides picnic tables, lock boxes for food, and pit toilets.\n\n\t• Remember that you’ll be hauling everything else from the pier to your site, so bring essentials only.\n\n\t• The campsite can be noisy: expect to have nesting gulls nearby.\n\n","Activities (More Info Level)\n\n","Boating and Kayaking (more info)\n\n","Weather\n","\t• Visitors can boat to the islands on their own or with the park’s approved ferry operators. Strong currents, shifting swells, dense fog, strong winds and choppy seas can appear suddenly. Come prepared.\n\n","Anchorages\n\n","\t• Anacapa’s main anchorages are at Landing Cove and Frenchy’s Cove. On the south side, East Fish Camp or Cat Rock provide shelter and additional anchorage sites, although they are exposed to southerly swells.\n\n\t• Wherever you anchor, there are no all-weather anchorages around the islands.  Therefore, it is recommended that a person stay on board at all times.\n\n","Forecasts\n","\t• Monitor VHFG Weather Channel 3 (WX3), VHF-FM 162.475 mhz for marine forecasts. On the web, channelislands.noaa.gov or nwsla.noaa.gov have current weather. There are electronic weather kiosks in Santa Barbara and Channel Islands harbors.\n\n","Wildlife Watching (more info)\n\n","What to Look For\n,","\t•	January/February: enjoy great tidepooling in the afternoons. See gray whales heading to Baja California.\n\n\t•	March/April: Island flowers are in full bloom through April. The giant coreopsis are in full bloom. Gray whales are visible through May. Brant geese are on the same schedule. Western Gulls begin nesting. Scripps’s Murrelets are nesting through July. Grunions leave the water to spawn on the beach, now through May.\n\n\t• May/June: Dense fog is common. Blue and humpback whales arrive to feed on krill. Red-Necked Phalaropes can be seen in the Santa Barbara Channel.  Grunion beach spawning continues after high tides and continues for several hours. Endangered Least Terns, Pink-footed Shearwaters and Ashy Storm Petrels can be seen in the channel at these times. California sea lion breeding and pupping runs from May through July. Scripps’s Murrelets nest March thru July. Grunion spawning peaks around this time.\n\n\t• July/August: Fog diminishes and underwater visibility increases. More of the same as blue and humpback whales feed on krill. Sooty and Pink-footed Shearwaters visit the channel. Red-necked Phalaropes and Ashy and Black Storm petrels do the same. Endangered Least Terns and Scripps’s Murrelets can be seen on the islands.\n\n\t• September/October: Warm weather, calm winds and seas are common.  Jellies are abundant in the coastal waters. Fin whales, Sei whales and blue whales can be observed feeding. Sooty and Pink-footed Shearwaters visit the channel. Red-necked Phalaropes, and Ashy and Black Storm Petrels do the same. Endangered Least Terns and Scripps’s Murrelets can be seen on the islands.\n\n\t• November/December: Winter storms appear. Best tidepooling months are now, as afternoon low tides expose invertebrates. Jellies are in abundance.\n\n","Fishing (more info)\n\n","\t• Check out daily marine forecasts: http://www.usps.org/ventura/currentconditions.html\n\n\t•  California Ocean Sport fishing regulations: http://www.dfg.ca.gov/marine/oceansportregs.asp\n\n\t","Diving, Snorkeling, and Swimming (more info)\n\n","Diving\n","• Even in August the water is rather cold, so a wet suit is recommended for snorkeling and swimming.\n\n\t• Anacapa’s trails don’t provide shore access, as the island is ringed by steep cliffs.\n\n\t• Cathedral Cove and Frenchy’s Cove are accessible only by boat or kayak.\n\n\t","Hiking (more info)\n","\t• After climbing the steep stairs at Landing Cove, the trails are a figure-8 shaped system that meanders over gentle slopes to dramatic overlooks and coastal views.\n\t• The trails are all easy and range from .5 and 1.5 miles, round trip.\n\t• Please walk only on established trails. This protects the fragile bird nests on the ground.\n\t•  An interpretive trail guide is available at the visitor center.\n\n\t"]
     */
@@ -176,6 +287,14 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
             self.horizontalTransitionController.swipeDirection = true
             self.horizontalTransitionController.iname1 = iname1
             self.horizontalTransitionController.iname2 = iname2
+            
+        }
+        if segue.identifier == photoSequeId, let photographyPageViewController = segue.destinationViewController as? IslandPhotoCommentViewController {
+            print("Hit Photography Page View Seque")
+            //photographyPageViewController.photos = photos
+            photographyPageViewController.islandID = 1
+            photographyPageViewController.photoIndex = 0
+            photographyPageViewController.photoName = photographyPageViewController.islandsPhotos[1][0]
             
         }
         if checkString.rangeOfString("revealSegue") != nil, let destinationViewController = segue.destinationViewController as? SantaCruzViewController {
@@ -215,7 +334,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
     func loadScrollPageTV2(){
         self.PageTextView2 = UITextView()
         self.PageTextView2.backgroundColor = UIColor.clearColor()
-        self.PageTextView2.frame = CGRectMake(185, 75, 510.0, 3500.0)
+        self.PageTextView2.frame = CGRectMake(185, 75, 510.0, 6000)
         self.PageTextView2.alpha = 1
         self.PageScrollView2 = FadeScrollVIew()
         self.PageScrollView2.frame = CGRectMake(0, 120, 1024, 565)
@@ -225,7 +344,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         self.PageScrollView2.contentSize.height = 8000
         self.PageTextView3 = UITextView()
         self.PageTextView3.backgroundColor = UIColor.clearColor()
-        self.PageTextView3.frame = CGRectMake(185, 75, 510.0, 3500.0)
+        self.PageTextView3.frame = CGRectMake(185, 75, 510.0, 6000)
         self.PageTextView3.alpha = 1
         self.PageScrollView3 = FadeScrollVIew()
         self.PageScrollView3.frame = CGRectMake(0, 120, 1024, 565)
@@ -233,10 +352,10 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         self.PageScrollView3.addSubview(self.PageTextView3 )
         self.AnacapaView.insertSubview(self.PageScrollView3,atIndex: 7)
         self.PageScrollView3.contentSize.height = 8000
-        //let inames: [[String]] = [self.photonames, self.infophotonames, self.activitiesphotonames]
-        //let tnames: [[String]] = [self.AnchoragesCaptiontextstrings,self.InfoCaptiontextstrings,self.ActivitiesCaptiontextstrings]
+        let inames: [[String]] = [self.photonames, self.infophotonames, self.activitiesphotonames]
+        let tnames: [[String]] = [self.AnchoragesCaptiontextstrings,self.InfoCaptiontextstrings,self.ActivitiesCaptiontextstrings]
         var j = 0
-        /*
+        
         for iname: [String] in inames{
             var i = 0
             var y = 90.0
@@ -254,7 +373,12 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
                 imageView.contentMode = .ScaleAspectFit
                 imageView.frame = CGRectMake(xcg, ycg, newwidth, newheight)//(piv.frame.x,piv.frame.y,piv.frame.width,newheight)
                 imageView.alpha = 0
-                y = y + 60.0 + Double(newheight)
+                if j == 2 {
+                     y = y + 110.0 + Double(newheight)
+                }
+                else{
+                    y = y + 60.0 + Double(newheight)
+                }
                 iViews.append(imageView)
                 //print(j)
                 //print(i)
@@ -297,7 +421,12 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
                 imageView.contentMode = .ScaleAspectFit
                 imageView.frame = CGRectMake(xcg, ycg, newwidth, newheight)//(piv.frame.x,piv.frame.y,piv.frame.width,newheight)
                 imageView.alpha = 0
-                y = y + 60.0 + Double(newheight)
+                if j == 2 {
+                    y = y + 110.0 + Double(newheight)
+                }
+                else{
+                    y = y + 60.0 + Double(newheight)
+                }
                 iViews.append(imageView)
                 //print(j)
                 //print(i)
@@ -309,7 +438,11 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
                 let myAttrString1 = NSAttributedString(string: acstr,
                                                        attributes: myAttributes)
                 textView.attributedText = myAttrString1
-                textView.frame = CGRectMake(xcg, ycg+newheight-10.0, 300.0, 60.0)
+                var tvy = ycg+newheight-10.0
+                if j == 3{
+                    tvy = ycg+newheight
+                }
+                textView.frame = CGRectMake(xcg, tvy, 300.0, 60.0)
                 textView.alpha = 0
                 textView.backgroundColor = UIColor.clearColor()
                 tViews.append(textView)
@@ -322,9 +455,9 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
             
             j += 1
         }
-        */
+        
         //add map image view
-        let ui = UIImage(imageLiteral: "Santa_Cruz_Island_MAP")
+        let ui = UIImage(imageLiteral: "ANACAPA_MAP")
         let imageView = UIImageView(image: ui)
         imageView.contentMode = .ScaleAspectFit
         imageView.frame = CGRectMake(0, 0, 1024, 768)
@@ -367,7 +500,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         self.actpageTableView2.dataSource = dataSource
         self.actpageTableView2.reloadData()
         self.PageScrollView2.addSubview(self.actpageTableView2)
-        self.actpageTableView2.frame = CGRectMake(185, 2400, 510, 3000)
+        self.actpageTableView2.frame = CGRectMake(185, 6000, 510, 3000)
         
         self.actpageTableView1.delegate = self
         self.actpageTableView1.alpha = 0
@@ -384,7 +517,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         self.actpageTableView1.dataSource = dataSource
         self.actpageTableView1.reloadData()
         self.PageScrollView3.addSubview(self.actpageTableView1)
-        self.actpageTableView1.frame = CGRectMake(185, 2400, 510, 3000)
+        self.actpageTableView1.frame = CGRectMake(185, 6000, 510, 3000)
         
         self.actpageTableView22.delegate = self
         self.actpageTableView22.alpha = 0
@@ -402,7 +535,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         self.actpageTableView22.reloadData()
         
         self.PageScrollView2.addSubview(self.actpageTableView22)
-        self.actpageTableView22.frame = CGRectMake(185, 4450, 510, 2000)
+        self.actpageTableView22.frame = CGRectMake(185, 8050, 510, 2000)
         
         self.actpageTableView12.delegate = self
         self.actpageTableView12.alpha = 0
@@ -420,7 +553,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         self.actpageTableView12.reloadData()
         
         self.PageScrollView3.addSubview(self.actpageTableView12)
-        self.actpageTableView12.frame = CGRectMake(185, 4450, 510, 2000)
+        self.actpageTableView12.frame = CGRectMake(185, 8050, 510, 2000)
         
         //add activities Headers beyond hiking
         let campTV = UITextView()
@@ -433,10 +566,10 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
                                                attributes: myattr)
         campTV.attributedText = myAttrString1
         campTV2.attributedText = myAttrString1
-        campTV.frame = CGRectMake(185, 4400, 300, 50)
+        campTV.frame = CGRectMake(185, 8000, 300, 50)
         campTV.alpha = 0
         campTV.backgroundColor = UIColor.clearColor()
-        campTV2.frame = CGRectMake(185, 4400, 300, 50)
+        campTV2.frame = CGRectMake(185, 8000, 300, 50)
         campTV2.alpha = 0
         campTV2.backgroundColor = UIColor.clearColor()
         self.PageScrollView2.addSubview(campTV)
@@ -452,22 +585,29 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadScrollPageTV2()
+        print("Number of Activities strings")
+        print("Number of Activities attributes")
+        print(self.Activitiestextstrings.count)
+        print(self.ActivitiesAttributes.count)
         self.PageScrollView.contentSize.height = 1900
+        /*
         var imageArr : [UIImage] = []
         for i in 0...58{
             let str : String = "TAP_HERE_V01_LOOP_"+String(format: "%05d", i)+".png"
             //print(str)
             imageArr.append(UIImage(named:str)!)
         }
+        */
         print("Loaded Anacapa animation")
         /*
          ClickHere.animationImages = [
          UIImage(named:"TAP_HERE_V01_LOOP_00000.png")!
          ]
          */
-        Clickhere.animationImages = imageArr
-        Clickhere.animationDuration = 2.0
-        Clickhere.startAnimating()
+        //Clickhere.animationImages = imageArr
+        //Clickhere.animationDuration = 2.0
+        //Clickhere.startAnimating()
     
     }
     
@@ -481,21 +621,23 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         //self.dataLabel!.text = dataObject
+        /*
         var imageArr : [UIImage] = []
         for i in 0...58{
             let str : String = "TAP_HERE_V01_LOOP_"+String(format: "%05d", i)+".png"
             //print(str)
             imageArr.append(UIImage(named:str)!)
         }
+         */
         print("Loaded Anacapa animation")
         /*
          ClickHere.animationImages = [
          UIImage(named:"TAP_HERE_V01_LOOP_00000.png")!
          ]
          */
-        Clickhere.animationImages = imageArr
-        Clickhere.animationDuration = 2.0
-        Clickhere.startAnimating()
+        //Clickhere.animationImages = imageArr
+        //Clickhere.animationDuration = 2.0
+        //Clickhere.startAnimating()
     
     }
     
@@ -516,135 +658,447 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         enableActivities()
     }
     
+    @IBAction func MapClicked(sender: AnyObject) {
+    }
+    
+
+    
     func enableActivities(){
         self.activitiesActive = true
-        self.enablepageTransition()
+        self.prevpageID = self.pageID
+        self.pageID = 2
+        self.enablepageTransition(true)
     }
     
     func enableAnchorages(){
         self.anchorageActive = true
-        self.enablepageTransition()
+        self.prevpageID = self.pageID
+        self.pageID = 0
+        self.enablepageTransition(true)
     }
     
     func enableInfo(){
         self.infoActive = true
-        self.enablepageTransition()
+        self.prevpageID = self.pageID
+        self.pageID = 1
+        self.enablepageTransition(true)
     }
     
-    func enablepageTransition(){
+    func enableMap(){
+        //self.infoActive = true
+        self.prevpageID = self.pageID
+        self.pageID = 3
+        self.enablepageTransition(true)
+    }
+    
+    func enableActivitieswA(){
+        self.activitiesActive = true
+        self.prevpageID = self.pageID
+        self.pageID = 2
+        self.enablepageTransition(false)
+    }
+    
+    func enableAnchorageswA(){
+        self.anchorageActive = true
+        self.prevpageID = self.pageID
+        self.pageID = 0
+        self.enablepageTransition(false)
+    }
+    
+    func enableInfowA(){
+        self.infoActive = true
+        self.prevpageID = self.pageID
+        self.pageID = 1
+        self.enablepageTransition(false)
+    }
+    
+    func enableMapwA(){
+        //self.infoActive = true
+        self.prevpageID = self.pageID
+        self.pageID = 3
+        self.enablepageTransition(false)
+    }
+    
+    func enablepageTransition(withAnim:  Bool){
         self.PageScrollView.contentOffset = CGPoint(x: 0, y: 0)
         self.IView2.hidden = false
         self.PageScrollView.hidden = false
-        if self.anchorageActive{
+        self.DismissPage.hidden = false
+        var flagTransit = false
+        let pageToIcon: [Int: String] = [0: "IslandIcons_ANCHORAGES_V02", 1: "IslandIcons_INFO_V02",
+                                         2: "IslandIcons_ACTIVITIES_V02", 3: "IslandIcons_MAP_V02"]
+        let pageToILabel: [Int: UITextField] = [0: self.AnchoragesLabel, 1: self.InfoLabel, 2: self.ActivitiesLabel, 3: self.MapLabel]
+        let ui = UIImage(imageLiteral: pageToIcon[self.pageID]!)
+        self.NavBar.image = ui
+        
+        pageToILabel[self.pageID]!.textColor = UIColor.blackColor()
+        if self.otherPageActive{
+            pageToILabel[self.prevpageID]!.textColor = UIColor.whiteColor()
+        }
+        else{
+            self.HomeLabel.textColor = UIColor.whiteColor()
+        }
+        if self.otherPageActive{
+            if self.switchPage{
+                self.PageScrollView2.hidden = false
+                self.PageScrollView2.contentOffset = CGPoint(x: 0, y: 0)
+                let ptextstrings: [[String]] = [self.Anchoragestextstrings, self.Infotextstrings, self.Activitiestextstrings,[""]]
+                let pattributes: [[[String: AnyObject]]] = [self.AnchoragesAttributes, self.InfoAttributes, self.ActivitiesAttributes,[[NSForegroundColorAttributeName: UIColor.whiteColor(),
+                    NSBackgroundColorAttributeName: UIColor.clearColor(),
+                    NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!]]]
+                var i = 0
+                let result = NSMutableAttributedString()
+                for textstring: String in ptextstrings[self.pageID]{
+                    
+                    
+                    
+                    let myAttributes = pattributes[pageID][i]
+                    let myAttrString1 = NSAttributedString(string: textstring,
+                                                           attributes: myAttributes)
+                    result.appendAttributedString(myAttrString1)
+                    
+                    
+                    i+=1
+                }
+                self.PageTextView2.attributedText = result
+                //change alphas on captions and photos for scrollview2 controller
+                i = 0
+                print("Page ID: ")
+                print(self.pageID)
+                for iv: UIImageView in self.pageIVs2[self.pageID]{
+                    iv.alpha = 1
+                    //self.capPagTVs2[self.pageID][i].alpha = 1
+                    i+=1
+                }
+                
+                for tv: UITextView in self.capPagTVs2[self.pageID]{
+                    tv.alpha = 1
+                }
+                if (self.pageID == 2){
+                    self.actPagHeaders[0].alpha = 1
+                    self.actpageTableView2.alpha = 1
+                    self.actpageTableView22.alpha = 1
+                }
+                flagTransit = true
+                
+            }
+            if self.prevpageID == 0{
+                self.anchorageActive = false
+                self.AnchorageButton.hidden = false
+            }
+            else if self.prevpageID == 1{
+                self.infoActive = false
+                self.InfoButton.hidden = false
+            }
+            else if self.prevpageID == 2{
+                self.activitiesActive = false
+                self.ActivitiesButton.hidden = false
+            }
+            else if self.prevpageID == 3{
+                self.MapButton.hidden = false
+            }
+        }
+        if self.pageID == 0{
+            self.AnchorageButton.hidden = true
+        }
+        else if self.pageID == 1{
+            self.InfoButton.hidden = true
+        }
+        else if self.pageID == 2{
+            self.ActivitiesButton.hidden = true
+        }
+        else if self.pageID == 3{
+            self.MapButton.hidden = true
+        }
+        if !flagTransit{
+            self.PageScrollView3.hidden = false
+            self.PageScrollView3.contentOffset = CGPoint(x: 0, y: 0)
+            let ptextstrings: [[String]] = [self.Anchoragestextstrings, self.Infotextstrings, self.Activitiestextstrings,[""]]
+            let pattributes: [[[String: AnyObject]]] = [self.AnchoragesAttributes, self.InfoAttributes, self.ActivitiesAttributes,[[NSForegroundColorAttributeName: UIColor.whiteColor(),
+                NSBackgroundColorAttributeName: UIColor.clearColor(),
+                NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!]]]
             var i = 0
             let result = NSMutableAttributedString()
-            for astr: String in self.Anchoragestextstrings{
-                let myAttributes = self.AnchoragesAttributes[i]
-                let myAttrString1 = NSAttributedString(string: astr,
+            for textstring: String in ptextstrings[self.pageID]{
+                
+                
+                
+                let myAttributes = pattributes[pageID][i]
+                let myAttrString1 = NSAttributedString(string: textstring,
                                                        attributes: myAttributes)
                 result.appendAttributedString(myAttrString1)
+                
+                
                 i+=1
             }
+            self.PageTextView3.attributedText = result
+            //change alphas on captions and photos for scrollview2 controller
             i = 0
-            /*
-             for piv: UIImageView in self.pageIVs{
-             piv.alpha = 1
-             self.capPagTVs[i].alpha = 1
-             let ui = UIImage(imageLiteral: self.photonames[i])
-             let newheight = ui.size.height/1.85
-             print(newheight)
-             //piv.frame = CGRectMake(piv.frame.origin.x, piv.frame.origin.y, piv.frame.size.width, newheight)//(piv.frame.x,piv.frame.y,piv.frame.width,newheight)
-             piv.image = ui
-             let mystring = self.AnchoragesCaptiontextstrings[i]
-             let myAttributes = self.AnchoragesCaptionAttributes[i]
-             let myAttrString1 = NSAttributedString(string: mystring,
-             attributes: myAttributes)
-             self.capPagTVs[i].attributedText = myAttrString1
-             i+=1
-             }
-             */
-            self.PageTextView.attributedText = result
-            //self.viewDidLayoutSubviews()
+            print("Page ID: ")
+            print(self.pageID)
+            for iv: UIImageView in self.pageIVs3[self.pageID]{
+                iv.alpha = 1
+                //self.capPagTVs3[self.pageID][i].alpha = 1
+                i+=1
+            }
+            for tv: UITextView in self.capPagTVs3[self.pageID]{
+                tv.alpha = 1
+            }
+            if (self.pageID == 2){
+                self.actPagHeaders2[0].alpha = 1
+                self.actpageTableView1.alpha = 1
+                self.actpageTableView12.alpha = 1
+            }
+            
+        }
+        if self.pageID == 3{
+            self.MapView.hidden = false
+            
         }
         
-        if self.infoActive{
-            var i = 0
-            let result = NSMutableAttributedString()
-            for astr: String in self.Infotextstrings{
-                let myAttributes = self.InfoAttributes[i]
-                let myAttrString1 = NSAttributedString(string: astr,
-                                                       attributes: myAttributes)
-                result.appendAttributedString(myAttrString1)
-                i+=1
-            }
-            i = 0
-            /*
-             for piv: UIImageView in self.pageIVs{
-             if (i > 2){
-             piv.alpha = 0
-             self.capPagTVs[i].alpha = 0
-             i+=1
-             continue
-             }
-             
-             let ui = UIImage(imageLiteral: self.infophotonames[i])
-             let newheight = ui.size.height/1.85
-             print(newheight)
-             //piv.frame = CGRectMake(piv.frame.origin.x, piv.frame.origin.y, piv.frame.size.width, newheight)//(piv.frame.x,piv.frame.y,piv.frame.width,newheight)
-             piv.image = ui
-             if (i == 0){
-             piv.alpha = 0
-             IPageV1.alpha = 1
-             IPageV1.image = ui
-             }
-             let mystring = self.AnchoragesCaptiontextstrings[i]
-             let myAttributes = self.AnchoragesCaptionAttributes[i]
-             let myAttrString1 = NSAttributedString(string: mystring,
-             attributes: myAttributes)
-             self.capPagTVs[i].attributedText = myAttrString1
-             i+=1
-             } */
-            self.PageTextView.attributedText = result
+        if withAnim{
+            UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+                self.IView.alpha = 0
+                self.IView2.alpha = 1
+                if self.activitiesActive{
+                    self.ActivitiesBar.alpha = 1
+                }
+                else{
+                    self.ActivitiesBar.alpha = 0
+                }
+                if !self.otherPageActive{
+                    self.PageScrollView3.alpha = 1
+                }
+                else{
+                    if self.switchPage{
+                        self.PageScrollView3.alpha = 0
+                        self.PageScrollView2.alpha = 1
+                    }
+                    else{
+                        self.PageScrollView3.alpha = 1
+                        self.PageScrollView2.alpha = 0
+                    }
+                }
+                if self.pageID == 3{
+                    self.MapView.alpha = 1
+                    
+                }
+                if self.prevpageID == 3{
+                    self.MapView.alpha = 0
+                }
+                self.CloseTV.alpha = 1
+                }, completion: { finished in
+                    if (finished){
+                        if self.otherPageActive{
+                            if self.switchPage{
+                                self.switchPage = false
+                                /*
+                                 //clean up 1rst ScrollView for photos and captions
+                                 var i = 0
+                                 for piv: UIImageView! in self.actpageIVs{
+                                 piv.alpha = 0
+                                 self.actpageTVs[i].alpha = 0
+                                 i+=1
+                                 }
+                                 */
+                                var i = 0
+                                for iv: UIImageView in self.pageIVs3[self.prevpageID]{
+                                    iv.alpha = 0
+                                    //self.capPagTVs3[self.prevpageID][i].alpha = 0
+                                    i+=1
+                                }
+                                for tv: UITextView in self.capPagTVs3[self.prevpageID]{
+                                    tv.alpha = 0
+                                }
+                                self.actpageTableView1.alpha = 0
+                                self.actpageTableView12.alpha = 0
+                                
+                            }
+                            else{
+                                var i = 0
+                                for iv: UIImageView in self.pageIVs2[self.prevpageID]{
+                                    iv.alpha = 0
+                                    //self.capPagTVs2[self.prevpageID][i].alpha = 0
+                                    i+=1
+                                }
+                                for tv: UITextView in self.capPagTVs2[self.prevpageID]{
+                                    tv.alpha = 0
+                                }
+                                self.actpageTableView2.alpha = 0
+                                self.actpageTableView22.alpha = 0
+                                self.switchPage = true
+                            }
+                        }
+                        self.IView.hidden = true
+                        self.otherPageActive = true
+                        if self.prevpageID == 3{
+                            self.MapView.hidden = true
+                        }
+                    }
+            })
         }
-        UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
+        else{
             self.IView.alpha = 0
             self.IView2.alpha = 1
             if self.activitiesActive{
                 self.ActivitiesBar.alpha = 1
             }
-            self.PageScrollView.alpha = 1
+            else{
+                self.ActivitiesBar.alpha = 0
+            }
+            if !self.otherPageActive{
+                self.PageScrollView3.alpha = 1
+            }
+            else{
+                if self.switchPage{
+                    self.PageScrollView3.alpha = 0
+                    self.PageScrollView2.alpha = 1
+                }
+                else{
+                    self.PageScrollView3.alpha = 1
+                    self.PageScrollView2.alpha = 0
+                }
+            }
+            if self.pageID == 3{
+                self.MapView.alpha = 1
+                
+            }
+            if self.prevpageID == 3{
+                self.MapView.alpha = 0
+            }
             self.CloseTV.alpha = 1
-            }, completion: { finished in
-                if (finished){
-                    
-                    self.IView.hidden = true
-                    self.DismissPage.hidden = false
+            if self.otherPageActive{
+                if self.switchPage{
+                    self.switchPage = false
+                    /*
+                     //clean up 1rst ScrollView for photos and captions
+                     var i = 0
+                     for piv: UIImageView! in self.actpageIVs{
+                     piv.alpha = 0
+                     self.actpageTVs[i].alpha = 0
+                     i+=1
+                     }
+                     */
+                    var i = 0
+                    for iv: UIImageView in self.pageIVs3[self.prevpageID]{
+                        iv.alpha = 0
+                        //self.capPagTVs3[self.prevpageID][i].alpha = 0
+                        i+=1
+                    }
+                    for tv: UITextView in self.capPagTVs3[self.prevpageID]{
+                        tv.alpha = 0
+                    }
+                    self.actpageTableView1.alpha = 0
+                    self.actpageTableView12.alpha = 0
                     
                 }
-        })
+                else{
+                    var i = 0
+                    for iv: UIImageView in self.pageIVs2[self.prevpageID]{
+                        iv.alpha = 0
+                        //self.capPagTVs2[self.prevpageID][i].alpha = 0
+                        i+=1
+                    }
+                    for tv: UITextView in self.capPagTVs2[self.prevpageID]{
+                        tv.alpha = 0
+                    }
+                    self.actpageTableView2.alpha = 0
+                    self.actpageTableView22.alpha = 0
+                    self.switchPage = true
+                }
+            }
+            self.IView.hidden = true
+            self.otherPageActive = true
+        }
     }
     
     func enablemainpageTransition(){
         self.IView.hidden = false
-        UIView.animateWithDuration(2.0, delay: 0.0, options: .CurveEaseOut, animations: {
+        
+        let pageToILabel: [Int: UITextField] = [0: self.AnchoragesLabel, 1: self.InfoLabel, 2: self.ActivitiesLabel, 3: self.MapLabel]
+        let ui = UIImage(imageLiteral: "IslandIcons_HOME")
+        self.NavBar.image = ui
+        pageToILabel[self.pageID]!.textColor = UIColor.whiteColor()
+        self.HomeLabel.textColor = UIColor.blackColor()
+        
+        UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
             self.IView2.alpha = 0
             self.IView.alpha = 1
-            self.PageScrollView.alpha = 0
-            if self.activitiesActive{
-                self.ActivitiesBar.alpha = 0
-            }
+            self.PageScrollView2.alpha = 0
+            self.PageScrollView3.alpha = 0
+            self.MapView.alpha = 0
+            self.ActivitiesBar.alpha = 0
+            
             
             self.CloseTV.alpha = 0
             }, completion: { finished in
                 if (finished){
-                    
                     self.IPageV1.alpha = 0
-                    self.PageScrollView.hidden = true
+                    self.PageScrollView3.hidden = true
+                    self.PageScrollView2.hidden = true
+                    self.MapView.hidden = true
                     self.IView2.hidden = true
                     self.DismissPage.hidden = true
                     self.infoActive = false
                     self.anchorageActive = false
                     self.activitiesActive = false
+                    self.otherPageActive = false
+                    self.ActivitiesButton.hidden = false
+                    self.AnchorageButton.hidden = false
+                    self.InfoButton.hidden = false
+                    self.MapButton.hidden = false
+                    self.switchPage = true
+                    var i = 0
+                    /*
+                     for piv: UIImageView! in self.actpageIVs{
+                     piv.alpha = 0
+                     self.actpageTVs[i].alpha = 0
+                     i+=1
+                     }
+                     */
+                    var j = 0
+                    for pivs: [UIImageView!] in self.pageIVs2{
+                        i = 0
+                        for piv: UIImageView in pivs{
+                            piv.alpha = 0
+                            //self.capPagTVs2[j][i].alpha = 0
+                            i+=1
+                        }
+                        j+=1
+                    }
+                    
+                    for tivs: [UITextView!] in self.capPagTVs2{
+                        
+                        for tiv: UITextView in tivs{
+                            tiv.alpha = 0
+                            //self.capPagTVs2[j][i].alpha = 0
+                        }
+                    }
+                    
+                    j = 0
+                    for pivs: [UIImageView!] in self.pageIVs3{
+                        i = 0
+                        for piv: UIImageView in pivs{
+                            piv.alpha = 0
+                            //self.capPagTVs3[j][i].alpha = 0
+                            i+=1
+                        }
+                        j+=1
+                    }
+                    
+                    for tivs: [UITextView!] in self.capPagTVs3{
+                        
+                        for tiv: UITextView in tivs{
+                            tiv.alpha = 0
+                            //self.capPagTVs2[j][i].alpha = 0
+                        }
+                    }
+                    
+                    self.actPagHeaders[0].alpha = 1
+                    self.actpageTableView2.alpha = 0
+                    self.actpageTableView22.alpha = 0
+                    self.actpageTableView1.alpha = 0
+                    self.actpageTableView12.alpha = 0
                     
                 }
         })

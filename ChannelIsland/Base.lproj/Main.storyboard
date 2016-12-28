@@ -2199,6 +2199,18 @@ Cg
                                     <action selector="InfoClicked:" destination="gfQ-kY-mDd" eventType="touchUpInside" id="s4l-qM-I2Z"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOr-uB-bLg">
+                                <rect key="frame" x="42" y="422" width="47" height="40"/>
+                                <connections>
+                                    <segue destination="vlQ-Sj-w1e" kind="presentation" identifier="Photography" modalTransitionStyle="crossDissolve" id="Fx6-gk-auX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLl-No-O1K">
+                                <rect key="frame" x="42" y="274" width="47" height="40"/>
+                                <connections>
+                                    <action selector="MapClicked:" destination="gfQ-kY-mDd" eventType="touchUpInside" id="i5r-P8-4wR"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTP-JD-VrL">
                                 <rect key="frame" x="41" y="325" width="47" height="40"/>
                                 <connections>
@@ -2342,6 +2354,47 @@ Cg
                                     </textView>
                                 </subviews>
                             </scrollView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Home" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZMr-8k-pd1">
+                                <rect key="frame" x="93" y="501" width="70" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Info" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RhK-ye-Sra">
+                                <rect key="frame" x="93" y="230" width="50" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Map" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A4F-Z6-ixb">
+                                <rect key="frame" x="93" y="280" width="50" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Activities" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gnz-6c-oOc">
+                                <rect key="frame" x="93" y="380" width="50" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Anchorages" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yQb-oQ-bJS">
+                                <rect key="frame" x="93" y="330" width="70" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Photo Gallery" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4jS-RR-qP2">
+                                <rect key="frame" x="93" y="427" width="70" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.99287670850753784" green="0.99700695276260376" blue="0.99637609720230103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -2351,8 +2404,10 @@ Cg
                     <connections>
                         <outlet property="ActivitiesBar" destination="nDZ-6s-oZ3" id="ZkV-u6-r8N"/>
                         <outlet property="ActivitiesButton" destination="eb2-Uk-0td" id="ubQ-OO-hUE"/>
+                        <outlet property="ActivitiesLabel" destination="gnz-6c-oOc" id="lVA-W2-ay6"/>
                         <outlet property="AnacapaView" destination="GSi-kc-UHp" id="8AW-fK-cdx"/>
                         <outlet property="AnchorageButton" destination="RTP-JD-VrL" id="u9q-sy-5k9"/>
+                        <outlet property="AnchoragesLabel" destination="yQb-oQ-bJS" id="BkG-9N-VMf"/>
                         <outlet property="Barview" destination="D3S-nf-P11" id="xww-Nw-IaI"/>
                         <outlet property="CapPagTV1" destination="yXK-WY-b17" id="SCh-FH-lyi"/>
                         <outlet property="CapPagTV2" destination="qW2-nm-SIF" id="Xll-UD-yQl"/>
@@ -2363,11 +2418,15 @@ Cg
                         <outlet property="Clickhere" destination="yfF-KO-E2J" id="r8j-HP-6NY"/>
                         <outlet property="CloseTV" destination="ZTe-Hk-Exv" id="A1J-uW-yh4"/>
                         <outlet property="DismissPage" destination="aPp-hX-0TK" id="hTL-5R-1sw"/>
+                        <outlet property="HomeLabel" destination="ZMr-8k-pd1" id="reb-bF-JiK"/>
                         <outlet property="IPageV1" destination="kUh-9X-zbx" id="10j-lP-MGs"/>
                         <outlet property="IView" destination="6Na-Uf-alT" id="JCg-Vm-TIk"/>
                         <outlet property="IView2" destination="BYy-J7-mep" id="PAO-Dg-SWa"/>
                         <outlet property="InfoButton" destination="b4e-P1-pFA" id="rgT-qQ-PbE"/>
+                        <outlet property="InfoLabel" destination="RhK-ye-Sra" id="60e-df-AL4"/>
                         <outlet property="Logoview" destination="cQD-yi-M3g" id="TsI-kc-Po9"/>
+                        <outlet property="MapButton" destination="RLl-No-O1K" id="CRi-Di-Ovi"/>
+                        <outlet property="MapLabel" destination="A4F-Z6-ixb" id="6kS-36-wVk"/>
                         <outlet property="NavBar" destination="Pdn-sW-QqL" id="AcM-ZJ-GtO"/>
                         <outlet property="PageIV1" destination="4uW-e4-PuD" id="Tq1-cg-JjG"/>
                         <outlet property="PageIV2" destination="as8-Yh-YNh" id="igX-l1-7Ct"/>
@@ -2377,6 +2436,8 @@ Cg
                         <outlet property="PageIV6" destination="Pve-Fb-8Lu" id="3lq-Vq-nXk"/>
                         <outlet property="PageScrollView" destination="nl2-md-KOW" id="nEy-kP-oOY"/>
                         <outlet property="PageTextView" destination="AOa-bi-tq4" id="tCq-Dx-Det"/>
+                        <outlet property="PhotoButton" destination="vOr-uB-bLg" id="1Zh-6g-cBm"/>
+                        <outlet property="PhotoGalleryLabel" destination="4jS-RR-qP2" id="68l-Fr-olt"/>
                         <outlet property="TitleText" destination="voK-V2-BR2" id="IC2-Tu-2hb"/>
                     </connections>
                 </viewController>
@@ -3436,10 +3497,10 @@ Cg
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UxM-fJ-qBO"/>
+        <segue reference="Fx6-gk-auX"/>
         <segue reference="jew-Ho-UNx"/>
-        <segue reference="Vqv-IX-MSN"/>
+        <segue reference="OjJ-ZP-iCm"/>
         <segue reference="Yb7-rz-hzO"/>
-        <segue reference="2Hc-a5-MTB"/>
         <segue reference="cXW-Yx-Jng"/>
     </inferredMetricsTieBreakers>
 </document>
