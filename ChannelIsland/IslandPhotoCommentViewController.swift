@@ -175,7 +175,7 @@ class IslandPhotoCommentViewController: UIViewController {
             self.presentViewController(vc, animated: true, completion: nil)
         }
         else if islandID == 1{
-            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sc") as! AnacapaViewController
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("ac") as! AnacapaViewController
             vc.transitioningDelegate = self
             vc.loadView()
             vc.viewDidLoad()
@@ -206,7 +206,7 @@ class IslandPhotoCommentViewController: UIViewController {
         }
         
         else if islandID == 1{
-            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sc") as! AnacapaViewController
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("ac") as! AnacapaViewController
             vc.transitioningDelegate = self
             vc.loadView()
             vc.viewDidLoad()
@@ -229,7 +229,7 @@ class IslandPhotoCommentViewController: UIViewController {
             self.presentViewController(vc, animated: true, completion: nil)
         }
         else if islandID == 1{
-            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sc") as! AnacapaViewController
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("ac") as! AnacapaViewController
             vc.transitioningDelegate = self
             vc.loadView()
             vc.viewDidLoad()
@@ -252,7 +252,7 @@ class IslandPhotoCommentViewController: UIViewController {
             self.presentViewController(vc, animated: true, completion: nil)
         }
         else if islandID == 1{
-            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sc") as! AnacapaViewController
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("ac") as! AnacapaViewController
             vc.transitioningDelegate = self
             vc.loadView()
             vc.viewDidLoad()
@@ -276,7 +276,7 @@ class IslandPhotoCommentViewController: UIViewController {
             self.presentViewController(vc, animated: true, completion: nil)
         }
         else if islandID == 1{
-            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sc") as! AnacapaViewController
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("ac") as! AnacapaViewController
             vc.transitioningDelegate = self
             vc.loadView()
             vc.viewDidLoad()

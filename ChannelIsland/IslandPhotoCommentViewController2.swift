@@ -188,6 +188,16 @@ class IslandPhotoCommentViewController2: UIViewController {
             self.crossDissolveState = true
             self.presentViewController(vc, animated: true, completion: nil)
         }
+        else if islandID == 1{
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("ac") as! AnacapaViewController
+            vc.transitioningDelegate = self
+            vc.loadView()
+            vc.viewDidLoad()
+            vc.enableMapwA()
+            self.crossDissolveState = true
+            self.presentViewController(vc, animated: true, completion: nil)
+            
+        }
     
     }
     
@@ -202,6 +212,16 @@ class IslandPhotoCommentViewController2: UIViewController {
             self.crossDissolveState = true
             self.presentViewController(vc, animated: true, completion: nil)
         }
+        else if islandID == 1{
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("ac") as! AnacapaViewController
+            vc.transitioningDelegate = self
+            vc.loadView()
+            vc.viewDidLoad()
+            vc.enableInfowA()
+            self.crossDissolveState = true
+            self.presentViewController(vc, animated: true, completion: nil)
+            
+        }
     }
     
     @IBAction func AnchoragesClicked(sender: AnyObject) {
@@ -214,6 +234,16 @@ class IslandPhotoCommentViewController2: UIViewController {
             vc.enableAnchorageswA()
             self.crossDissolveState = true
             self.presentViewController(vc, animated: true, completion: nil)
+        }
+        else if islandID == 1{
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("ac") as! AnacapaViewController
+            vc.transitioningDelegate = self
+            vc.loadView()
+            vc.viewDidLoad()
+            vc.enableAnchorageswA()
+            self.crossDissolveState = true
+            self.presentViewController(vc, animated: true, completion: nil)
+            
         }
     }
     
@@ -229,16 +259,39 @@ class IslandPhotoCommentViewController2: UIViewController {
             self.crossDissolveState = true
             self.presentViewController(vc, animated: true, completion: nil)
         }
+        else if islandID == 1{
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("ac") as! AnacapaViewController
+            vc.transitioningDelegate = self
+            vc.loadView()
+            vc.viewDidLoad()
+            vc.enableActivitieswA()
+            self.crossDissolveState = true
+            self.presentViewController(vc, animated: true, completion: nil)
+            
+        }
     }
     
     @IBAction func HomeClicked(sender: AnyObject) {
-        let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sc") as! SantaCruzViewController
-        vc.transitioningDelegate = self
-        vc.loadView()
-        vc.viewDidLoad()
-        //vc.enableActivitieswA()
-        self.crossDissolveState = true
-        self.presentViewController(vc, animated: true, completion: nil)
+        if islandID == 0{
+            
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sc") as! SantaCruzViewController
+            vc.transitioningDelegate = self
+            vc.loadView()
+            vc.viewDidLoad()
+            //vc.enableActivitieswA()
+            self.crossDissolveState = true
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
+        else if islandID == 1{
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("ac") as! AnacapaViewController
+            vc.transitioningDelegate = self
+            vc.loadView()
+            vc.viewDidLoad()
+            //vc.enableInfowA()
+            self.crossDissolveState = true
+            self.presentViewController(vc, animated: true, completion: nil)
+            
+        }
     }
     
 }

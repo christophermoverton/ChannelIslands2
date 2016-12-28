@@ -659,6 +659,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
     }
     
     @IBAction func MapClicked(sender: AnyObject) {
+        enableMap()
     }
     
 
