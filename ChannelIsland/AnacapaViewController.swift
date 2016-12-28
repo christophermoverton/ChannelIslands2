@@ -119,7 +119,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
             NSBackgroundColorAttributeName: UIColor.clearColor(),
             NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!]]
     
-    private var Activitiestextstrings: [String] = ["ACTIVITIES\n\n","Boating and Kayaking\n\n","Boating Safety\n","\t•Don’t be tempted to cross through the gap between East and Middle Anacapa. It’s too shallow and has too much surge to cross, even for kayaks. Please don’t try it!\n\t• Please be aware no personal watercraft (i.e. Waverunner tm) are allowed within the National Park.\n\n","Kayaking\n\n","East Anacapa\n\n","\t• Not far from Landing Cove, the small sea cave called Frenchy’s Secret is a popular destination for kayakers.\n\t• Many kayakers paddle out to the easternmost point of Anacapa to visit the iconic Arch Rock. This open-water area is recommended for expert kayakers only.\n\n","Middle Anacapa\n\n,","\t Kayakers exploring beautiful Cathedral Cove on Middle Anacapa have a chance to paddle next to stunning spires such as the iconic Witch’s Hat and several sea caves.\n\n","Diving, Snorkeling, and Swimming\n\n","Marine Protected Areas\n\n","\t• When diving in all marine protected areas, please remember: \"Leave only bubbles, take only memories.\"\n\n","East Anacapa\n\n","\t• Some of East Anacapa’s best diving may be found at Landing Cove and Cathedral Cove. Both areas are within the marine protected area and offer divers the chance to see lots of fish on any given day.\n\n","West Anacapa\n\n","\t• Goldfish Bowl and Cat Rock on West Anacapa offer good diving as conditions permit.\n\n","Wildlife Watching\n\n","\t• With miles of both marine protected and conservation areas, Anacapa offers refuge to diverse marine life: rookeries for the endangered California Brown Pelican dot the rocks; California sea lions and harbor seals rest and breed along the shores; and Scripps’s Murrelets wheel in the sky.\n\n\t• Kayakers will likely see sea lions, seal pups, pelicans, and cormorants; bright orange Garibaldi flitting through the water, and blowholes spewing in the rocks.\n\n\t•  Please maintain a distance of 100 meters offshore so as not to disturb nesting and pupping sites.\n\n","Fishing\n\n","\t• Over 80 percent of the waters near the Channel Islands is open to fishing.\n\n\t• Anacapa’s south side is open to fishing. The north side is within a protected Marine Reserve.\n\n\t• Sport fishing outside marine protected areas requires possession of a valid State of California fishing license with an ocean enhancement stamp.\n\n\t• All California Department of Fish and Game regulations apply.\n\n\t• Rockfish, White Sea Bass, Halibut, Barracuda, Calico Bass, and Yellowtail are all caught in these rich waters.\n\n","Hiking\n\n","\t• East Anacapa’s hiking trails are short (around 2 miles) but utterly spectacular.\n\n\t•  Please note that disembarking and ascending 157 steps to the plateau can be moderately strenuous.\n\n\t•  Rangers and naturalists offer guided tours year-round at Middle Anacapa.\n\n\t• Note that West Anacapa is a Natural Research area and is closed on the eastern tip, with the exception of Frenchy’s Cove. Frenchy’s is a popular anchorage for boaters and offers fabulous tide-pooling.\n\n","Camping\n\n","\t• The campground on Anacapa is on an open plateau with ocean views. It is a half-mile trek from the landing and has 7 campsites.\n\n\t• Year-round camping is available; overnight fees apply. Reserve your site well in advance at recreation.gov or call 877-444-6777. Concession boats fill to capacity more quickly than campground sites are filled, so book your boat transportation for overnight trips first. There is no water or shade, so pack what you need.\n\n\t• The park provides picnic tables, lock boxes for food, and pit toilets.\n\n\t• Remember that you’ll be hauling everything else from the pier to your site, so bring essentials only.\n\n\t• The campsite can be noisy: expect to have nesting gulls nearby.\n\n","Activities (More Info Level)\n\n","Boating and Kayaking (more info)\n\n","Weather\n","\t• Visitors can boat to the islands on their own or with the park’s approved ferry operators. Strong currents, shifting swells, dense fog, strong winds and choppy seas can appear suddenly. Come prepared.\n\n","Anchorages\n\n","\t• Anacapa’s main anchorages are at Landing Cove and Frenchy’s Cove. On the south side, East Fish Camp or Cat Rock provide shelter and additional anchorage sites, although they are exposed to southerly swells.\n\n\t• Wherever you anchor, there are no all-weather anchorages around the islands.  Therefore, it is recommended that a person stay on board at all times.\n\n","Forecasts\n","\t• Monitor VHFG Weather Channel 3 (WX3), VHF-FM 162.475 mhz for marine forecasts. On the web, channelislands.noaa.gov or nwsla.noaa.gov have current weather. There are electronic weather kiosks in Santa Barbara and Channel Islands harbors.\n\n","Wildlife Watching (more info)\n\n","What to Look For\n,","\t• January/February: enjoy great tidepooling in the afternoons. See gray whales heading to Baja California.\n\n\t• March/April: Island flowers are in full bloom through April. The giant coreopsis are in full bloom. Gray whales are visible through May. Brant geese are on the same schedule. Western Gulls begin nesting. Scripps’s Murrelets are nesting through July. Grunions leave the water to spawn on the beach, now through May.\n\n\t• May/June: Dense fog is common. Blue and humpback whales arrive to feed on krill. Red-Necked Phalaropes can be seen in the Santa Barbara Channel.  Grunion beach spawning continues after high tides and continues for several hours. Endangered Least Terns, Pink-footed Shearwaters and Ashy Storm Petrels can be seen in the channel at these times. California sea lion breeding and pupping runs from May through July. Scripps’s Murrelets nest March thru July. Grunion spawning peaks around this time.\n\n\t• July/August: Fog diminishes and underwater visibility increases. More of the same as blue and humpback whales feed on krill. Sooty and Pink-footed Shearwaters visit the channel. Red-necked Phalaropes and Ashy and Black Storm petrels do the same. Endangered Least Terns and Scripps’s Murrelets can be seen on the islands.\n\n\t• September/October: Warm weather, calm winds and seas are common.  Jellies are abundant in the coastal waters. Fin whales, Sei whales and blue whales can be observed feeding. Sooty and Pink-footed Shearwaters visit the channel. Red-necked Phalaropes, and Ashy and Black Storm Petrels do the same. Endangered Least Terns and Scripps’s Murrelets can be seen on the islands.\n\n\t• November/December: Winter storms appear. Best tidepooling months are now, as afternoon low tides expose invertebrates. Jellies are in abundance.\n\n","Fishing (more info)\n\n","\t• Check out daily marine forecasts: http://www.usps.org/ventura/currentconditions.html\n\n\t•  California Ocean Sport fishing regulations: http://www.dfg.ca.gov/marine/oceansportregs.asp\n\n\t","Diving, Snorkeling, and Swimming (more info)\n\n","Diving\n","• Even in August the water is rather cold, so a wet suit is recommended for snorkeling and swimming.\n\n\t• Anacapa’s trails don’t provide shore access, as the island is ringed by steep cliffs.\n\n\t• Cathedral Cove and Frenchy’s Cove are accessible only by boat or kayak.\n\n\t","Hiking (more info)\n","\t• After climbing the steep stairs at Landing Cove, the trails are a figure-8 shaped system that meanders over gentle slopes to dramatic overlooks and coastal views.\n\t• The trails are all easy and range from .5 and 1.5 miles, round trip.\n\t• Please walk only on established trails. This protects the fragile bird nests on the ground.\n\t•  An interpretive trail guide is available at the visitor center.\n\n\t"]
+    private var Activitiestextstrings: [String] = ["ACTIVITIES\n\n","Boating and Kayaking\n\n","Boating Safety\n","\t•Don’t be tempted to cross through the gap between East and Middle Anacapa. It’s too shallow and has too much surge to cross, even for kayaks. Please don’t try it!\n\t• Please be aware no personal watercraft (i.e. Waverunner tm) are allowed within the National Park.\n\n","Kayaking\n\n","East Anacapa\n\n","\t• Not far from Landing Cove, the small sea cave called Frenchy’s Secret is a popular destination for kayakers.\n\t• Many kayakers paddle out to the easternmost point of Anacapa to visit the iconic Arch Rock. This open-water area is recommended for expert kayakers only.\n\n","Middle Anacapa\n\n,","\t Kayakers exploring beautiful Cathedral Cove on Middle Anacapa have a chance to paddle next to stunning spires such as the iconic Witch’s Hat and several sea caves.\n\n","Diving, Snorkeling, and Swimming\n\n","Marine Protected Areas\n\n","\t• When diving in all marine protected areas, please remember: \"Leave only bubbles, take only memories.\"\n\n","East Anacapa\n\n","\t• Some of East Anacapa’s best diving may be found at Landing Cove and Cathedral Cove. Both areas are within the marine protected area and offer divers the chance to see lots of fish on any given day.\n\n","West Anacapa\n\n","\t• Goldfish Bowl and Cat Rock on West Anacapa offer good diving as conditions permit.\n\n","Wildlife Watching\n\n","\t• With miles of both marine protected and conservation areas, Anacapa offers refuge to diverse marine life: rookeries for the endangered California Brown Pelican dot the rocks; California sea lions and harbor seals rest and breed along the shores; and Scripps’s Murrelets wheel in the sky.\n\n\t• Kayakers will likely see sea lions, seal pups, pelicans, and cormorants; bright orange Garibaldi flitting through the water, and blowholes spewing in the rocks.\n\n\t•  Please maintain a distance of 100 meters offshore so as not to disturb nesting and pupping sites.\n\n","Fishing\n\n","\t• Over 80 percent of the waters near the Channel Islands is open to fishing.\n\n\t• Anacapa’s south side is open to fishing. The north side is within a protected Marine Reserve.\n\n\t• Sport fishing outside marine protected areas requires possession of a valid State of California fishing license with an ocean enhancement stamp.\n\n\t• All California Department of Fish and Game regulations apply.\n\n\t• Rockfish, White Sea Bass, Halibut, Barracuda, Calico Bass, and Yellowtail are all caught in these rich waters.\n\n","Hiking\n\n","\t• East Anacapa’s hiking trails are short (around 2 miles) but utterly spectacular.\n\n\t•  Please note that disembarking and ascending 157 steps to the plateau can be moderately strenuous.\n\n\t•  Rangers and naturalists offer guided tours year-round at Middle Anacapa.\n\n\t• Note that West Anacapa is a Natural Research area and is closed on the eastern tip, with the exception of Frenchy’s Cove. Frenchy’s is a popular anchorage for boaters and offers fabulous tide-pooling.\n\n","Camping\n\n","\t• The campground on Anacapa is on an open plateau with ocean views. It is a half-mile trek from the landing and has 7 campsites.\n\n\t• Year-round camping is available; overnight fees apply. Reserve your site well in advance at recreation.gov or call 877-444-6777. Concession boats fill to capacity more quickly than campground sites are filled, so book your boat transportation for overnight trips first. There is no water or shade, so pack what you need.\n\n\t• The park provides picnic tables, lock boxes for food, and pit toilets.\n\n\t• Remember that you’ll be hauling everything else from the pier to your site, so bring essentials only.\n\n\t• The campsite can be noisy: expect to have nesting gulls nearby.\n\n","Activities (More Info Level)\n\n","Boating and Kayaking (more info)\n\n","Weather\n","\t• Visitors can boat to the islands on their own or with the park’s approved ferry operators. Strong currents, shifting swells, dense fog, strong winds and choppy seas can appear suddenly. Come prepared.\n\n","Anchorages\n\n","\t• Anacapa’s main anchorages are at Landing Cove and Frenchy’s Cove. On the south side, East Fish Camp or Cat Rock provide shelter and additional anchorage sites, although they are exposed to southerly swells.\n\n\t• Wherever you anchor, there are no all-weather anchorages around the islands.  Therefore, it is recommended that a person stay on board at all times.\n\n","Forecasts\n","\t• Monitor VHFG Weather Channel 3 (WX3), VHF-FM 162.475 mhz for marine forecasts. On the web, channelislands.noaa.gov or nwsla.noaa.gov have current weather. There are electronic weather kiosks in Santa Barbara and Channel Islands harbors.\n\n","Wildlife Watching (more info)\n\n","What to Look For\n","\t• January/February: enjoy great tidepooling in the afternoons. See gray whales heading to Baja California.\n\n\t• March/April: Island flowers are in full bloom through April. The giant coreopsis are in full bloom. Gray whales are visible through May. Brant geese are on the same schedule. Western Gulls begin nesting. Scripps’s Murrelets are nesting through July. Grunions leave the water to spawn on the beach, now through May.\n\n\t• May/June: Dense fog is common. Blue and humpback whales arrive to feed on krill. Red-Necked Phalaropes can be seen in the Santa Barbara Channel.  Grunion beach spawning continues after high tides and continues for several hours. Endangered Least Terns, Pink-footed Shearwaters and Ashy Storm Petrels can be seen in the channel at these times. California sea lion breeding and pupping runs from May through July. Scripps’s Murrelets nest March thru July. Grunion spawning peaks around this time.\n\n\t• July/August: Fog diminishes and underwater visibility increases. More of the same as blue and humpback whales feed on krill. Sooty and Pink-footed Shearwaters visit the channel. Red-necked Phalaropes and Ashy and Black Storm petrels do the same. Endangered Least Terns and Scripps’s Murrelets can be seen on the islands.\n\n\t• September/October: Warm weather, calm winds and seas are common.  Jellies are abundant in the coastal waters. Fin whales, Sei whales and blue whales can be observed feeding. Sooty and Pink-footed Shearwaters visit the channel. Red-necked Phalaropes, and Ashy and Black Storm Petrels do the same. Endangered Least Terns and Scripps’s Murrelets can be seen on the islands.\n\n\t• November/December: Winter storms appear. Best tidepooling months are now, as afternoon low tides expose invertebrates. Jellies are in abundance.\n\n","Fishing (more info)\n\n","\t• Check out daily marine forecasts: http://www.usps.org/ventura/currentconditions.html\n\n\t•  California Ocean Sport fishing regulations: http://www.dfg.ca.gov/marine/oceansportregs.asp\n\n\t","Diving, Snorkeling, and Swimming (more info)\n\n","Diving\n","• Even in August the water is rather cold, so a wet suit is recommended for snorkeling and swimming.\n\n\t• Anacapa’s trails don’t provide shore access, as the island is ringed by steep cliffs.\n\n\t• Cathedral Cove and Frenchy’s Cove are accessible only by boat or kayak.\n\n\t","Hiking (more info)\n","\t• After climbing the steep stairs at Landing Cove, the trails are a figure-8 shaped system that meanders over gentle slopes to dramatic overlooks and coastal views.\n\t• The trails are all easy and range from .5 and 1.5 miles, round trip.\n\t• Please walk only on established trails. This protects the fragile bird nests on the ground.\n\t•  An interpretive trail guide is available at the visitor center.\n\n\t"]
     
     private var ActivitiesAttributes : [[String: AnyObject]] = [
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
@@ -139,28 +139,28 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
-        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
         NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
-        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
         NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
-        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
         NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
-        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
-        [NSForegroundColorAttributeName: UIColor.whiteColor(),
-        NSBackgroundColorAttributeName: UIColor.clearColor(),
-        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
         NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
@@ -193,22 +193,43 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
+        NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSBackgroundColorAttributeName: UIColor.clearColor(),
         NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
         NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSBackgroundColorAttributeName: UIColor.clearColor(),
-        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
-        NSBackgroundColorAttributeName: UIColor.clearColor(),
-        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
-        NSBackgroundColorAttributeName: UIColor.clearColor(),
-        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
-        NSBackgroundColorAttributeName: UIColor.clearColor(),
-        NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
+        [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.clearColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
             NSBackgroundColorAttributeName: UIColor.clearColor(),
             NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
@@ -224,27 +245,6 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
             NSBackgroundColorAttributeName: UIColor.clearColor(),
             NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
-        [NSForegroundColorAttributeName: UIColor.whiteColor(),
-            NSBackgroundColorAttributeName: UIColor.clearColor(),
-            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
-        [NSForegroundColorAttributeName: UIColor.whiteColor(),
-            NSBackgroundColorAttributeName: UIColor.clearColor(),
-            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
-        [NSForegroundColorAttributeName: UIColor.whiteColor(),
-            NSBackgroundColorAttributeName: UIColor.clearColor(),
-            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
-        [NSForegroundColorAttributeName: UIColor.whiteColor(),
-            NSBackgroundColorAttributeName: UIColor.clearColor(),
-            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
-        [NSForegroundColorAttributeName: UIColor.whiteColor(),
-            NSBackgroundColorAttributeName: UIColor.clearColor(),
-            NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 24.0)!],
-        [NSForegroundColorAttributeName: UIColor.whiteColor(),
-            NSBackgroundColorAttributeName: UIColor.clearColor(),
-            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
-        [NSForegroundColorAttributeName: UIColor.whiteColor(),
-            NSBackgroundColorAttributeName: UIColor.clearColor(),
-            NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
         [NSForegroundColorAttributeName: UIColor.whiteColor(),
             NSBackgroundColorAttributeName: UIColor.clearColor(),
             NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 24.0)!],
@@ -334,7 +334,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
     func loadScrollPageTV2(){
         self.PageTextView2 = UITextView()
         self.PageTextView2.backgroundColor = UIColor.clearColor()
-        self.PageTextView2.frame = CGRectMake(185, 75, 510.0, 6000)
+        self.PageTextView2.frame = CGRectMake(185, 75, 510.0, 8000)
         self.PageTextView2.alpha = 1
         self.PageScrollView2 = FadeScrollVIew()
         self.PageScrollView2.frame = CGRectMake(0, 120, 1024, 565)
@@ -344,7 +344,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         self.PageScrollView2.contentSize.height = 8000
         self.PageTextView3 = UITextView()
         self.PageTextView3.backgroundColor = UIColor.clearColor()
-        self.PageTextView3.frame = CGRectMake(185, 75, 510.0, 6000)
+        self.PageTextView3.frame = CGRectMake(185, 75, 510.0, 8000)
         self.PageTextView3.alpha = 1
         self.PageScrollView3 = FadeScrollVIew()
         self.PageScrollView3.frame = CGRectMake(0, 120, 1024, 565)
@@ -439,7 +439,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
                                                        attributes: myAttributes)
                 textView.attributedText = myAttrString1
                 var tvy = ycg+newheight-10.0
-                if j == 3{
+                if j == 2{
                     tvy = ycg+newheight
                 }
                 textView.frame = CGRectMake(xcg, tvy, 300.0, 60.0)
@@ -500,7 +500,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         self.actpageTableView2.dataSource = dataSource
         self.actpageTableView2.reloadData()
         self.PageScrollView2.addSubview(self.actpageTableView2)
-        self.actpageTableView2.frame = CGRectMake(185, 6000, 510, 3000)
+        self.actpageTableView2.frame = CGRectMake(185, 7500, 510, 3000)
         
         self.actpageTableView1.delegate = self
         self.actpageTableView1.alpha = 0
@@ -517,7 +517,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         self.actpageTableView1.dataSource = dataSource
         self.actpageTableView1.reloadData()
         self.PageScrollView3.addSubview(self.actpageTableView1)
-        self.actpageTableView1.frame = CGRectMake(185, 6000, 510, 3000)
+        self.actpageTableView1.frame = CGRectMake(185, 7500, 510, 3000)
         
         self.actpageTableView22.delegate = self
         self.actpageTableView22.alpha = 0
@@ -535,7 +535,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         self.actpageTableView22.reloadData()
         
         self.PageScrollView2.addSubview(self.actpageTableView22)
-        self.actpageTableView22.frame = CGRectMake(185, 8050, 510, 2000)
+        self.actpageTableView22.frame = CGRectMake(185, 9550, 510, 2000)
         
         self.actpageTableView12.delegate = self
         self.actpageTableView12.alpha = 0
@@ -553,7 +553,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         self.actpageTableView12.reloadData()
         
         self.PageScrollView3.addSubview(self.actpageTableView12)
-        self.actpageTableView12.frame = CGRectMake(185, 8050, 510, 2000)
+        self.actpageTableView12.frame = CGRectMake(185, 9550, 510, 2000)
         
         //add activities Headers beyond hiking
         let campTV = UITextView()
@@ -566,10 +566,10 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
                                                attributes: myattr)
         campTV.attributedText = myAttrString1
         campTV2.attributedText = myAttrString1
-        campTV.frame = CGRectMake(185, 8000, 300, 50)
+        campTV.frame = CGRectMake(185, 9500, 300, 50)
         campTV.alpha = 0
         campTV.backgroundColor = UIColor.clearColor()
-        campTV2.frame = CGRectMake(185, 8000, 300, 50)
+        campTV2.frame = CGRectMake(185, 9500, 300, 50)
         campTV2.alpha = 0
         campTV2.backgroundColor = UIColor.clearColor()
         self.PageScrollView2.addSubview(campTV)
