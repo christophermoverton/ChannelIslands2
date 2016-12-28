@@ -71,6 +71,11 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
     @IBOutlet weak var ActivitiesLabel: UITextField!
     @IBOutlet weak var AnchoragesLabel: UITextField!
     @IBOutlet weak var PhotoGalleryLabel: UITextField!
+    @IBOutlet weak var BoatingLabel: UITextView!
+    @IBOutlet weak var WildlifeLabel: UITextView!
+    @IBOutlet weak var FishingLabel: UITextView!
+    @IBOutlet weak var DivingLabel: UITextView!
+    @IBOutlet weak var HikingLabel: UITextView!
     
     private var MapView: UIView!
     private var pageIVs2: [[UIImageView!]] = [[UIImageView!]]() // side photos
@@ -734,8 +739,8 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         self.PageScrollView.hidden = false
         self.DismissPage.hidden = false
         var flagTransit = false
-        let pageToIcon: [Int: String] = [0: "IslandIcons_ANCHORAGES_V03", 1: "IslandIcons_INFO_V03",
-                                         2: "IslandIcons_ACTIVITIES_V03", 3: "IslandIcons_MAP_V03"]
+        let pageToIcon: [Int: String] = [0: "IslandIcons_ANCHORAGES_V04", 1: "IslandIcons_INFO_V04",
+                                         2: "IslandIcons_ACTIVITIES_V04", 3: "IslandIcons_MAP_V04"]
         let pageToILabel: [Int: UITextField] = [0: self.AnchoragesLabel, 1: self.InfoLabel, 2: self.ActivitiesLabel, 3: self.MapLabel]
         let ui = UIImage(imageLiteral: pageToIcon[self.pageID]!)
         self.NavBar.image = ui
@@ -787,6 +792,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
                     self.actPagHeaders[0].alpha = 1
                     self.actpageTableView2.alpha = 1
                     self.actpageTableView22.alpha = 1
+                    self.ActButView.hidden = false
                 }
                 flagTransit = true
                 
@@ -802,6 +808,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
             else if self.prevpageID == 2{
                 self.activitiesActive = false
                 self.ActivitiesButton.hidden = false
+                self.ActButView.hidden = true
             }
             else if self.prevpageID == 3{
                 self.MapButton.hidden = false
@@ -857,6 +864,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
                 self.actPagHeaders2[0].alpha = 1
                 self.actpageTableView1.alpha = 1
                 self.actpageTableView12.alpha = 1
+                self.ActButView.hidden = false
             }
             
         }
@@ -871,9 +879,11 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
                 self.IView2.alpha = 1
                 if self.activitiesActive{
                     self.ActivitiesBar.alpha = 1
+                    self.ActButView.alpha = 1
                 }
                 else{
                     self.ActivitiesBar.alpha = 0
+                    self.ActButView.alpha = 0
                 }
                 if !self.otherPageActive{
                     self.PageScrollView3.alpha = 1
@@ -944,6 +954,9 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
                             self.MapView.hidden = true
                         }
                     }
+                    if !self.activitiesActive{
+                        self.ActButView.hidden = true
+                    }
             })
         }
         else{
@@ -951,9 +964,13 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
             self.IView2.alpha = 1
             if self.activitiesActive{
                 self.ActivitiesBar.alpha = 1
+                self.ActButView.hidden = false
+                self.ActButView.alpha = 1
             }
             else{
                 self.ActivitiesBar.alpha = 0
+                self.ActButView.alpha = 0
+                self.ActButView.hidden = true
             }
             if !self.otherPageActive{
                 self.PageScrollView3.alpha = 1
@@ -1025,7 +1042,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         self.IView.hidden = false
         
         let pageToILabel: [Int: UITextField] = [0: self.AnchoragesLabel, 1: self.InfoLabel, 2: self.ActivitiesLabel, 3: self.MapLabel]
-        let ui = UIImage(imageLiteral: "IslandIcons_ALL_WHITE_V03")
+        let ui = UIImage(imageLiteral: "IslandIcons_ALL_WHITE_V04")
         self.NavBar.image = ui
         pageToILabel[self.pageID]!.textColor = UIColor.whiteColor()
         //self.HomeLabel.textColor = UIColor.blackColor()
@@ -1037,11 +1054,12 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
             self.PageScrollView3.alpha = 0
             self.MapView.alpha = 0
             self.ActivitiesBar.alpha = 0
-            
+            self.ActButView.alpha = 0
             
             self.CloseTV.alpha = 0
             }, completion: { finished in
                 if (finished){
+                    self.ActButView.hidden = true
                     self.IPageV1.alpha = 0
                     self.PageScrollView3.hidden = true
                     self.PageScrollView2.hidden = true
