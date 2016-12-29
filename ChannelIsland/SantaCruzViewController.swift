@@ -929,7 +929,20 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.MapView.backgroundColor = UIColor.blackColor()
         self.MapView.alpha = 0
         self.MapView.addSubview(imageView3)
+        let tv = UITextView()
+        tv.backgroundColor = UIColor.clearColor()
+        let mmyattr = [NSForegroundColorAttributeName: UIColor.blackColor(),
+                       NSBackgroundColorAttributeName: UIColor.clearColor(),
+                       NSFontAttributeName: UIFont(name: "Trajan Pro", size: 25.0)!]
+        
+        let mmystr = "Santa Cruz Island"
+        let mmyAttrString1 = NSAttributedString(string: mmystr,
+                                                attributes: mmyattr)
+        tv.attributedText = mmyAttrString1
+        tv.frame = CGRectMake(384, 23, 333, 43)
+        self.MapView.addSubview(tv)
         self.SantaCruzView.insertSubview(self.MapView, atIndex: 9)
+        
         
         
         //add tableview

@@ -2576,6 +2576,7 @@ Cg
                         <outlet property="BoatingButton" destination="LaI-jk-qhF" id="oZc-iD-Rrx"/>
                         <outlet property="BoatingLabel" destination="LTc-dr-GuW" id="ukk-xP-D6V"/>
                         <outlet property="CampingButton" destination="pZX-KH-UHN" id="bj7-Wr-hC9"/>
+                        <outlet property="CampingLabel" destination="ldd-FD-nrl" id="M62-lk-uOf"/>
                         <outlet property="CapPagTV1" destination="yXK-WY-b17" id="SCh-FH-lyi"/>
                         <outlet property="CapPagTV2" destination="qW2-nm-SIF" id="Xll-UD-yQl"/>
                         <outlet property="CapPagTV3" destination="C3a-Zr-J6x" id="M1c-NF-wjQ"/>
@@ -2585,7 +2586,6 @@ Cg
                         <outlet property="Clickhere" destination="yfF-KO-E2J" id="r8j-HP-6NY"/>
                         <outlet property="CloseTV" destination="ZTe-Hk-Exv" id="A1J-uW-yh4"/>
                         <outlet property="DismissPage" destination="aPp-hX-0TK" id="hTL-5R-1sw"/>
-                        <outlet property="DivingLabel" destination="cV2-SY-70p" id="IOn-OV-6Pc"/>
                         <outlet property="FishingButton" destination="gDv-LG-qfw" id="EY0-FG-6XP"/>
                         <outlet property="FishingLabel" destination="Q1V-GL-Vlz" id="eaF-oW-8oj"/>
                         <outlet property="HikingButton" destination="cn6-4Y-d40" id="qBX-tb-SHt"/>
@@ -2611,6 +2611,7 @@ Cg
                         <outlet property="PhotoButton" destination="vOr-uB-bLg" id="1Zh-6g-cBm"/>
                         <outlet property="PhotoGalleryLabel" destination="4jS-RR-qP2" id="68l-Fr-olt"/>
                         <outlet property="SwimmingButton" destination="HWR-7U-Emq" id="NEb-5Q-gfH"/>
+                        <outlet property="SwimmingLabel" destination="cV2-SY-70p" id="izc-eR-DEL"/>
                         <outlet property="TitleText" destination="voK-V2-BR2" id="IC2-Tu-2hb"/>
                         <outlet property="WildlifeButton" destination="mdd-6T-bn8" id="HLv-1o-1SN"/>
                         <outlet property="WildlifeLabel" destination="7ok-xh-wX3" id="xZH-jn-IiD"/>
