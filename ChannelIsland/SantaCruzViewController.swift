@@ -905,7 +905,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         }
         
         //add map image view
-        let ui = UIImage(imageLiteral: "Santa_Cruz_Island_MAP")
+        let ui = UIImage(imageLiteral: "Santa_Cruz_Island_MAP2")
         let imageView = UIImageView(image: ui)
         imageView.contentMode = .ScaleAspectFit
         imageView.frame = CGRectMake(0, 0, 1024, 768)
@@ -926,7 +926,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.capPagTVs3.append([])  // no captions on map page
         self.MapView = UIView()
         self.MapView.frame = CGRect(x: 0 ,y: 0 ,width:1024,height: 768)
-        self.MapView.backgroundColor = UIColor.clearColor()
+        self.MapView.backgroundColor = UIColor.blackColor()
         self.MapView.alpha = 0
         self.MapView.addSubview(imageView3)
         self.SantaCruzView.insertSubview(self.MapView, atIndex: 9)
