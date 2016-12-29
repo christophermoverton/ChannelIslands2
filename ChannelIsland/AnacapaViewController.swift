@@ -630,7 +630,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         button.alpha = 1
         button.hidden = true
         button.setTitle("", forState: .Normal)
-        button.addTarget(self, action: #selector(bA2), forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(bA4), forControlEvents: .TouchUpInside)
         actPagMInfoB.append(button)
         self.PageScrollView2.addSubview(button)
         button = UIButton(frame: CGRect(x: 615, y: 1587, width: 78, height: 19))
@@ -638,7 +638,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         button.alpha = 1
         button.hidden = true
         button.setTitle("", forState: .Normal)
-        button.addTarget(self, action: #selector(bA3), forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(bA2), forControlEvents: .TouchUpInside)
         actPagMInfoB.append(button)
         self.PageScrollView2.addSubview(button)
         button = UIButton(frame: CGRect(x: 615, y: 2109, width: 78, height: 19))
@@ -646,7 +646,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         button.alpha = 1
         button.hidden = true
         button.setTitle("", forState: .Normal)
-        button.addTarget(self, action: #selector(bA4), forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(bA3), forControlEvents: .TouchUpInside)
         actPagMInfoB.append(button)
         self.PageScrollView2.addSubview(button)
         button = UIButton(frame: CGRect(x: 615, y: 2688, width: 78, height: 19))
@@ -670,7 +670,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         button.alpha = 1
         button.hidden = true
         button.setTitle("", forState: .Normal)
-        button.addTarget(self, action: #selector(bA2), forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(bA4), forControlEvents: .TouchUpInside)
         actPagMInfoB2.append(button)
         self.PageScrollView3.addSubview(button)
         button = UIButton(frame: CGRect(x: 615, y: 1587, width: 78, height: 19))
@@ -678,7 +678,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         button.alpha = 1
         button.hidden = true
         button.setTitle("", forState: .Normal)
-        button.addTarget(self, action: #selector(bA3), forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(bA2), forControlEvents: .TouchUpInside)
         actPagMInfoB2.append(button)
         self.PageScrollView3.addSubview(button)
         button = UIButton(frame: CGRect(x: 615, y: 2109, width: 78, height: 19))
@@ -686,7 +686,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         button.alpha = 1
         button.hidden = true
         button.setTitle("", forState: .Normal)
-        button.addTarget(self, action: #selector(bA4), forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(bA3), forControlEvents: .TouchUpInside)
         actPagMInfoB2.append(button)
         self.PageScrollView3.addSubview(button)
         button = UIButton(frame: CGRect(x: 615, y: 2688, width: 78, height: 19))
