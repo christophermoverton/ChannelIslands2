@@ -987,7 +987,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         button.alpha = 1
         button.hidden = true
         button.setTitle("", forState: .Normal)
-        button.addTarget(self, action: #selector(bA2), forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(bA4), forControlEvents: .TouchUpInside)
         actPagMInfoB.append(button)
         self.PageScrollView2.addSubview(button)
         button = UIButton(frame: CGRect(x: 615, y: 648, width: 78, height: 19))
@@ -995,7 +995,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         button.alpha = 1
         button.hidden = true
         button.setTitle("", forState: .Normal)
-        button.addTarget(self, action: #selector(bA3), forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(bA2), forControlEvents: .TouchUpInside)
         actPagMInfoB.append(button)
         self.PageScrollView2.addSubview(button)
         button = UIButton(frame: CGRect(x: 615, y: 1007, width: 78, height: 19))
@@ -1003,7 +1003,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         button.alpha = 1
         button.hidden = true
         button.setTitle("", forState: .Normal)
-        button.addTarget(self, action: #selector(bA4), forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(bA3), forControlEvents: .TouchUpInside)
         actPagMInfoB.append(button)
         self.PageScrollView2.addSubview(button)
         button = UIButton(frame: CGRect(x: 615, y: 1309, width: 78, height: 19))
@@ -1035,7 +1035,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         button.alpha = 1
         button.hidden = true
         button.setTitle("", forState: .Normal)
-        button.addTarget(self, action: #selector(bA2), forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(bA4), forControlEvents: .TouchUpInside)
         actPagMInfoB2.append(button)
         self.PageScrollView3.addSubview(button)
         button = UIButton(frame: CGRect(x: 615, y: 648, width: 78, height: 19))
@@ -1043,7 +1043,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         button.alpha = 1
         button.hidden = true
         button.setTitle("", forState: .Normal)
-        button.addTarget(self, action: #selector(bA3), forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(bA2), forControlEvents: .TouchUpInside)
         actPagMInfoB2.append(button)
         self.PageScrollView3.addSubview(button)
         button = UIButton(frame: CGRect(x: 615, y: 1007, width: 78, height: 19))
@@ -1051,7 +1051,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         button.alpha = 1
         button.hidden = true
         button.setTitle("", forState: .Normal)
-        button.addTarget(self, action: #selector(bA4), forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(bA3), forControlEvents: .TouchUpInside)
         actPagMInfoB2.append(button)
         self.PageScrollView3.addSubview(button)
         button = UIButton(frame: CGRect(x: 615, y: 1309, width: 78, height: 19))
