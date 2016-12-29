@@ -88,6 +88,8 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
     private var actPagHeaders2: [UITextView!] = [UITextView!]()//
     private var actPagMInfo: [UIImageView] = [UIImageView]()
     private var actPagMInfo2: [UIImageView] = [UIImageView]()
+    private var actPagMInfoB: [UIButton] = [UIButton]()
+    private var actPagMInfoB2: [UIButton] = [UIButton]()
     private var PageTextView2: UITextView!
     private var PageTextView3: UITextView!
     private var PageScrollView2: FadeScrollVIew!
@@ -423,6 +425,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         self.PageTextView2 = UITextView()
         self.PageTextView2.backgroundColor = UIColor.clearColor()
         self.PageTextView2.frame = CGRectMake(200, 75, 500, 8000)
+        self.PageTextView2.editable = false
         self.PageTextView2.alpha = 1
         self.PageScrollView2 = FadeScrollVIew()
         self.PageScrollView2.frame = CGRectMake(0, 120, 1024, 565)
@@ -434,6 +437,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         self.PageTextView3 = UITextView()
         self.PageTextView3.backgroundColor = UIColor.clearColor()
         self.PageTextView3.frame = CGRectMake(200, 75, 500, 8000)
+        self.PageTextView3.editable = false
         self.PageTextView3.alpha = 1
         self.PageScrollView3 = FadeScrollVIew()
         self.PageScrollView3.frame = CGRectMake(0, 120, 1024, 565)
@@ -447,7 +451,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         var j = 0
         
         //load more info buttons 
-        let fms = [CGRectMake(350,144,78,19),CGRectMake(350,583,78,19), CGRectMake(350,635,78,19),CGRectMake(350,995,78,19),CGRectMake(350,1307,78,19),CGRectMake(350,1773,78,19)]
+        let fms = [CGRectMake(615,150,78,19),CGRectMake(615,980,78,19), CGRectMake(615,1587,78,19),CGRectMake(615,2109,78,19),CGRectMake(615,2688,78,19),CGRectMake(615,3191,78,19)]
         
         var ui = UIImage(imageLiteral: "MORE_INFO")
         for frm: CGRect in fms{
@@ -471,6 +475,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
             self.PageScrollView3.addSubview(imgv)
             actPagMInfo2.append(imgv)
         }
+
         
         for iname: [String] in inames{
             var i = 0
@@ -610,7 +615,88 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         tv.frame = CGRectMake(384, 23, 333, 43)
         self.MapView.addSubview(tv)
         self.AnacapaView.insertSubview(self.MapView, atIndex: 9)
+
         
+        var button = UIButton(frame: CGRect(x: 615, y: 150, width: 78, height: 19))
+        button.backgroundColor = .clearColor()
+        button.alpha = 1
+        button.hidden = true
+        button.setTitle("", forState: .Normal)
+        button.addTarget(self, action: #selector(bA1), forControlEvents: .TouchUpInside)
+        actPagMInfoB.append(button)
+        self.PageScrollView2.addSubview(button)
+        button = UIButton(frame: CGRect(x: 615, y: 980, width: 78, height: 19))
+        button.backgroundColor = .clearColor()
+        button.alpha = 1
+        button.hidden = true
+        button.setTitle("", forState: .Normal)
+        button.addTarget(self, action: #selector(bA2), forControlEvents: .TouchUpInside)
+        actPagMInfoB.append(button)
+        self.PageScrollView2.addSubview(button)
+        button = UIButton(frame: CGRect(x: 615, y: 1587, width: 78, height: 19))
+        button.backgroundColor = .clearColor()
+        button.alpha = 1
+        button.hidden = true
+        button.setTitle("", forState: .Normal)
+        button.addTarget(self, action: #selector(bA3), forControlEvents: .TouchUpInside)
+        actPagMInfoB.append(button)
+        self.PageScrollView2.addSubview(button)
+        button = UIButton(frame: CGRect(x: 615, y: 2109, width: 78, height: 19))
+        button.backgroundColor = .clearColor()
+        button.alpha = 1
+        button.hidden = true
+        button.setTitle("", forState: .Normal)
+        button.addTarget(self, action: #selector(bA4), forControlEvents: .TouchUpInside)
+        actPagMInfoB.append(button)
+        self.PageScrollView2.addSubview(button)
+        button = UIButton(frame: CGRect(x: 615, y: 2688, width: 78, height: 19))
+        button.backgroundColor = .clearColor()
+        button.alpha = 1
+        button.hidden = true
+        button.setTitle("", forState: .Normal)
+        button.addTarget(self, action: #selector(bA5), forControlEvents: .TouchUpInside)
+        actPagMInfoB.append(button)
+        self.PageScrollView2.addSubview(button)
+        button = UIButton(frame: CGRect(x: 615, y: 150, width: 78, height: 19))
+        button.backgroundColor = .clearColor()
+        button.alpha = 1
+        button.hidden = true
+        button.setTitle("", forState: .Normal)
+        button.addTarget(self, action: #selector(bA1), forControlEvents: .TouchUpInside)
+        actPagMInfoB2.append(button)
+        self.PageScrollView3.addSubview(button)
+        button = UIButton(frame: CGRect(x: 615, y: 980, width: 78, height: 19))
+        button.backgroundColor = .clearColor()
+        button.alpha = 1
+        button.hidden = true
+        button.setTitle("", forState: .Normal)
+        button.addTarget(self, action: #selector(bA2), forControlEvents: .TouchUpInside)
+        actPagMInfoB2.append(button)
+        self.PageScrollView3.addSubview(button)
+        button = UIButton(frame: CGRect(x: 615, y: 1587, width: 78, height: 19))
+        button.backgroundColor = .clearColor()
+        button.alpha = 1
+        button.hidden = true
+        button.setTitle("", forState: .Normal)
+        button.addTarget(self, action: #selector(bA3), forControlEvents: .TouchUpInside)
+        actPagMInfoB2.append(button)
+        self.PageScrollView3.addSubview(button)
+        button = UIButton(frame: CGRect(x: 615, y: 2109, width: 78, height: 19))
+        button.backgroundColor = .clearColor()
+        button.alpha = 1
+        button.hidden = true
+        button.setTitle("", forState: .Normal)
+        button.addTarget(self, action: #selector(bA4), forControlEvents: .TouchUpInside)
+        actPagMInfoB2.append(button)
+        self.PageScrollView3.addSubview(button)
+        button = UIButton(frame: CGRect(x: 615, y: 2688, width: 78, height: 19))
+        button.backgroundColor = .clearColor()
+        button.alpha = 1
+        button.hidden = true
+        button.setTitle("", forState: .Normal)
+        button.addTarget(self, action: #selector(bA5), forControlEvents: .TouchUpInside)
+        actPagMInfoB2.append(button)
+        self.PageScrollView3.addSubview(button)
         
         //add tableview
         self.actpageTableView2.delegate = self
@@ -768,11 +854,26 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         //Clickhere.startAnimating()
     
     }
+    func bA1(sender: UIButton!) {
+        UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.PageScrollView2.contentOffset.y = 3920.0
+            self.PageScrollView3.contentOffset.y = 3920.0
+            }, completion: { finished in
+                if (finished){}})
+    }
     
     @IBAction func BoatingClicked(sender: AnyObject) {
         UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
             self.PageScrollView2.contentOffset.y = 3920.0
             self.PageScrollView3.contentOffset.y = 3920.0
+            }, completion: { finished in
+                if (finished){}})
+    }
+    
+    func bA2(sender: UIButton!) {
+        UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.PageScrollView2.contentOffset.y = 4884.0
+            self.PageScrollView3.contentOffset.y = 4884.0
             }, completion: { finished in
                 if (finished){}})
     }
@@ -785,6 +886,14 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
                 if (finished){}})
     }
     
+    func bA3(sender: UIButton!) {
+        UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.PageScrollView2.contentOffset.y = 6459.0
+            self.PageScrollView3.contentOffset.y = 6459.0
+            }, completion: { finished in
+                if (finished){}})
+    }
+    
     @IBAction func FishingClicked(sender: AnyObject) {
         UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
             self.PageScrollView2.contentOffset.y = 6459.0
@@ -793,10 +902,26 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
                 if (finished){}})
     }
     
+    func bA4(sender: UIButton!) {
+        UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.PageScrollView2.contentOffset.y = 6825.0
+            self.PageScrollView3.contentOffset.y = 6825.0
+            }, completion: { finished in
+                if (finished){}})
+    }
+    
     @IBAction func SwimmingClicked(sender: AnyObject) {
         UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
             self.PageScrollView2.contentOffset.y = 6825.0
             self.PageScrollView3.contentOffset.y = 6825.0
+            }, completion: { finished in
+                if (finished){}})
+    }
+    
+    func bA5(sender: UIButton!) {
+        UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.PageScrollView2.contentOffset.y = 7282.0
+            self.PageScrollView3.contentOffset.y = 7282.0
             }, completion: { finished in
                 if (finished){}})
     }
@@ -952,6 +1077,9 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
                     for iv: UIImageView in actPagMInfo{
                         iv.alpha = 1
                     }
+                    for bt: UIButton in self.actPagMInfoB{
+                        bt.hidden = false
+                    }
                 }
                 flagTransit = true
                 
@@ -1027,6 +1155,9 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
                 for iv: UIImageView in actPagMInfo2{
                     iv.alpha = 1
                 }
+                for bt: UIButton in self.actPagMInfoB2{
+                    bt.hidden = false
+                }
             }
             
         }
@@ -1094,6 +1225,9 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
                                 for iv: UIImageView in self.actPagMInfo{
                                     iv.alpha = 0
                                 }
+                                for bt: UIButton in self.actPagMInfoB{
+                                    bt.hidden = true
+                                }
                                 self.actpageTableView1.alpha = 0
                                 self.actpageTableView12.alpha = 0
                                 
@@ -1110,6 +1244,9 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
                                 }
                                 for iv: UIImageView in self.actPagMInfo2{
                                     iv.alpha = 1
+                                }
+                                for bt: UIButton in self.actPagMInfoB2{
+                                    bt.hidden = true
                                 }
                                 self.actpageTableView2.alpha = 0
                                 self.actpageTableView22.alpha = 0
@@ -1185,6 +1322,9 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
                     for iv: UIImageView in actPagMInfo{
                         iv.alpha = 0
                     }
+                    for bt: UIButton in self.actPagMInfoB{
+                        bt.hidden = true
+                    }
                     self.actpageTableView1.alpha = 0
                     self.actpageTableView12.alpha = 0
                     
@@ -1201,6 +1341,9 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
                     }
                     for iv: UIImageView in actPagMInfo2{
                         iv.alpha = 0
+                    }
+                    for bt: UIButton in self.actPagMInfoB2{
+                        bt.hidden = true
                     }
                     self.actpageTableView2.alpha = 0
                     self.actpageTableView22.alpha = 0
@@ -1299,6 +1442,12 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
                     }
                     for iv: UIImageView in self.actPagMInfo2{
                         iv.alpha = 0
+                    }
+                    for bt: UIButton in self.actPagMInfoB{
+                        bt.hidden = true
+                    }
+                    for bt: UIButton in self.actPagMInfoB2{
+                        bt.hidden = true
                     }
                     self.actPagHeaders[0].alpha = 1
                     self.actpageTableView2.alpha = 0

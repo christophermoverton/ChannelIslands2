@@ -434,6 +434,10 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     private var capPagTVs3: [[UITextView!]] = [[UITextView!]]()
     private var actPagHeaders: [UITextView!] = [UITextView!]()  //beyond main text view
     private var actPagHeaders2: [UITextView!] = [UITextView!]()// 2nd page text view headers
+    private var actPagMInfo: [UIImageView] = [UIImageView]()
+    private var actPagMInfo2: [UIImageView] = [UIImageView]()
+    private var actPagMInfoB: [UIButton] = [UIButton]()
+    private var actPagMInfoB2: [UIButton] = [UIButton]()
     private var actpageTableView1: UITableView = UITableView()
     private var actpageTableView2: UITableView = UITableView()
     private var actpageTableView12: UITableView = UITableView()
@@ -809,6 +813,32 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         let inames: [[String]] = [self.photonames, self.infophotonames, self.activitiesphotonames]
         let tnames: [[String]] = [self.AnchoragesCaptiontextstrings,self.InfoCaptiontextstrings,self.ActivitiesCaptiontextstrings]
         var j = 0
+        
+        let fms = [CGRectMake(615,152,78,19),CGRectMake(615,374,78,19), CGRectMake(615,648,78,19),CGRectMake(615,1007,78,19),CGRectMake(615,1309,78,19),CGRectMake(615,1780,78,19)]
+        
+        let mui = UIImage(imageLiteral: "MORE_INFO")
+        for frm: CGRect in fms{
+            
+            let imgv = UIImageView()
+            imgv.image = mui
+            imgv.frame = frm
+            imgv.alpha = 0
+            imgv.contentMode = .ScaleAspectFit
+            self.PageScrollView2.addSubview(imgv)
+            actPagMInfo.append(imgv)
+        }
+        
+        for frm: CGRect in fms{
+            
+            let imgv = UIImageView()
+            imgv.image = mui
+            imgv.frame = frm
+            imgv.alpha = 0
+            imgv.contentMode = .ScaleAspectFit
+            self.PageScrollView3.addSubview(imgv)
+            actPagMInfo2.append(imgv)
+        }
+        
         for iname: [String] in inames{
             var i = 0
             var y = 90.0
@@ -944,7 +974,102 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.MapView.addSubview(tv)
         self.SantaCruzView.insertSubview(self.MapView, atIndex: 9)
         
-        
+        var button = UIButton(frame: CGRect(x: 615, y: 152, width: 78, height: 19))
+        button.backgroundColor = .clearColor()
+        button.alpha = 1
+        button.hidden = true
+        button.setTitle("", forState: .Normal)
+        button.addTarget(self, action: #selector(bA1), forControlEvents: .TouchUpInside)
+        actPagMInfoB.append(button)
+        self.PageScrollView2.addSubview(button)
+        button = UIButton(frame: CGRect(x: 615, y: 374, width: 78, height: 19))
+        button.backgroundColor = .clearColor()
+        button.alpha = 1
+        button.hidden = true
+        button.setTitle("", forState: .Normal)
+        button.addTarget(self, action: #selector(bA2), forControlEvents: .TouchUpInside)
+        actPagMInfoB.append(button)
+        self.PageScrollView2.addSubview(button)
+        button = UIButton(frame: CGRect(x: 615, y: 648, width: 78, height: 19))
+        button.backgroundColor = .clearColor()
+        button.alpha = 1
+        button.hidden = true
+        button.setTitle("", forState: .Normal)
+        button.addTarget(self, action: #selector(bA3), forControlEvents: .TouchUpInside)
+        actPagMInfoB.append(button)
+        self.PageScrollView2.addSubview(button)
+        button = UIButton(frame: CGRect(x: 615, y: 1007, width: 78, height: 19))
+        button.backgroundColor = .clearColor()
+        button.alpha = 1
+        button.hidden = true
+        button.setTitle("", forState: .Normal)
+        button.addTarget(self, action: #selector(bA4), forControlEvents: .TouchUpInside)
+        actPagMInfoB.append(button)
+        self.PageScrollView2.addSubview(button)
+        button = UIButton(frame: CGRect(x: 615, y: 1309, width: 78, height: 19))
+        button.backgroundColor = .clearColor()
+        button.alpha = 1
+        button.hidden = true
+        button.setTitle("", forState: .Normal)
+        button.addTarget(self, action: #selector(bA5), forControlEvents: .TouchUpInside)
+        actPagMInfoB.append(button)
+        self.PageScrollView2.addSubview(button)
+        button = UIButton(frame: CGRect(x: 615, y: 1780, width: 78, height: 19))
+        button.backgroundColor = .clearColor()
+        button.alpha = 1
+        button.hidden = true
+        button.setTitle("", forState: .Normal)
+        button.addTarget(self, action: #selector(bA6), forControlEvents: .TouchUpInside)
+        actPagMInfoB.append(button)
+        self.PageScrollView2.addSubview(button)
+        button = UIButton(frame: CGRect(x: 615, y: 152, width: 78, height: 19))
+        button.backgroundColor = .clearColor()
+        button.alpha = 1
+        button.hidden = true
+        button.setTitle("", forState: .Normal)
+        button.addTarget(self, action: #selector(bA1), forControlEvents: .TouchUpInside)
+        actPagMInfoB2.append(button)
+        self.PageScrollView3.addSubview(button)
+        button = UIButton(frame: CGRect(x: 615, y: 374, width: 78, height: 19))
+        button.backgroundColor = .clearColor()
+        button.alpha = 1
+        button.hidden = true
+        button.setTitle("", forState: .Normal)
+        button.addTarget(self, action: #selector(bA2), forControlEvents: .TouchUpInside)
+        actPagMInfoB2.append(button)
+        self.PageScrollView3.addSubview(button)
+        button = UIButton(frame: CGRect(x: 615, y: 648, width: 78, height: 19))
+        button.backgroundColor = .clearColor()
+        button.alpha = 1
+        button.hidden = true
+        button.setTitle("", forState: .Normal)
+        button.addTarget(self, action: #selector(bA3), forControlEvents: .TouchUpInside)
+        actPagMInfoB2.append(button)
+        self.PageScrollView3.addSubview(button)
+        button = UIButton(frame: CGRect(x: 615, y: 1007, width: 78, height: 19))
+        button.backgroundColor = .clearColor()
+        button.alpha = 1
+        button.hidden = true
+        button.setTitle("", forState: .Normal)
+        button.addTarget(self, action: #selector(bA4), forControlEvents: .TouchUpInside)
+        actPagMInfoB2.append(button)
+        self.PageScrollView3.addSubview(button)
+        button = UIButton(frame: CGRect(x: 615, y: 1309, width: 78, height: 19))
+        button.backgroundColor = .clearColor()
+        button.alpha = 1
+        button.hidden = true
+        button.setTitle("", forState: .Normal)
+        button.addTarget(self, action: #selector(bA5), forControlEvents: .TouchUpInside)
+        actPagMInfoB2.append(button)
+        self.PageScrollView3.addSubview(button)
+        button = UIButton(frame: CGRect(x: 615, y: 1780, width: 78, height: 19))
+        button.backgroundColor = .clearColor()
+        button.alpha = 1
+        button.hidden = true
+        button.setTitle("", forState: .Normal)
+        button.addTarget(self, action: #selector(bA6), forControlEvents: .TouchUpInside)
+        actPagMInfoB2.append(button)
+        self.PageScrollView3.addSubview(button)
         
         //add tableview
         self.actpageTableView2.delegate = self
@@ -1135,11 +1260,26 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         Clickhere.startAnimating()
     
     }
+    func bA1(sender: UIButton!) {
+        UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.PageScrollView2.contentOffset.y = 2457.0
+            self.PageScrollView3.contentOffset.y = 2457.0
+            }, completion: { finished in
+                if (finished){}})
+    }
     
     @IBAction func BoatingClicked(sender: AnyObject) {
         UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
         self.PageScrollView2.contentOffset.y = 2457.0
         self.PageScrollView3.contentOffset.y = 2457.0
+            }, completion: { finished in
+                if (finished){}})
+    }
+    
+    func bA2(sender: UIButton!) {
+        UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.PageScrollView2.contentOffset.y = 3554.0
+            self.PageScrollView3.contentOffset.y = 3554.0
             }, completion: { finished in
                 if (finished){}})
     }
@@ -1152,11 +1292,26 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                 if (finished){}})
     }
     
+    func bA3(sender: UIButton!) {
+        UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.PageScrollView2.contentOffset.y = 5259.0
+            self.PageScrollView3.contentOffset.y = 5259.0
+            }, completion: { finished in
+                if (finished){}})
+    }
     
     @IBAction func FishingClicked(sender: AnyObject) {
         UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
             self.PageScrollView2.contentOffset.y = 5259.0
             self.PageScrollView3.contentOffset.y = 5259.0
+            }, completion: { finished in
+                if (finished){}})
+    }
+    
+    func bA4(sender: UIButton!) {
+        UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.PageScrollView2.contentOffset.y = 6094.0
+            self.PageScrollView3.contentOffset.y = 6094.0
             }, completion: { finished in
                 if (finished){}})
     }
@@ -1169,11 +1324,26 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                 if (finished){}})
     }
     
+    func bA5(sender: UIButton!) {
+        UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.PageScrollView2.contentOffset.y = 7512.0
+            self.PageScrollView3.contentOffset.y = 7512.0
+            }, completion: { finished in
+                if (finished){}})
+    }
     
     @IBAction func HikingClicked(sender: AnyObject) {
         UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
             self.PageScrollView2.contentOffset.y = 7512.0
             self.PageScrollView3.contentOffset.y = 7512.0
+            }, completion: { finished in
+                if (finished){}})
+    }
+    
+    func bA6(sender: UIButton!) {
+        UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.PageScrollView2.contentOffset.y = 10271.0
+            self.PageScrollView3.contentOffset.y = 10271.0
             }, completion: { finished in
                 if (finished){}})
     }
@@ -1323,6 +1493,12 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                     self.actpageTableView2.alpha = 1
                     self.actpageTableView22.alpha = 1
                     self.ActButView.hidden = false
+                    for iv: UIImageView in actPagMInfo{
+                        iv.alpha = 1
+                    }
+                    for bt: UIButton in self.actPagMInfoB{
+                        bt.hidden = false
+                    }
                 }
                 flagTransit = true
                 
@@ -1394,6 +1570,12 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                 self.actpageTableView1.alpha = 1
                 self.actpageTableView12.alpha = 1
                 self.ActButView.hidden = false
+                for iv: UIImageView in actPagMInfo2{
+                    iv.alpha = 1
+                }
+                for bt: UIButton in self.actPagMInfoB2{
+                    bt.hidden = false
+                }
             }
             
         }
@@ -1458,6 +1640,12 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                                 for tv: UITextView in self.capPagTVs3[self.prevpageID]{
                                     tv.alpha = 0
                                 }
+                                for iv: UIImageView in self.actPagMInfo{
+                                    iv.alpha = 0
+                                }
+                                for bt: UIButton in self.actPagMInfoB{
+                                    bt.hidden = true
+                                }
                                 self.actpageTableView1.alpha = 0
                                 self.actpageTableView12.alpha = 0
                                 
@@ -1471,6 +1659,12 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                                 }
                                 for tv: UITextView in self.capPagTVs2[self.prevpageID]{
                                     tv.alpha = 0
+                                }
+                                for iv: UIImageView in self.actPagMInfo2{
+                                    iv.alpha = 1
+                                }
+                                for bt: UIButton in self.actPagMInfoB2{
+                                    bt.hidden = true
                                 }
                                 self.actpageTableView2.alpha = 0
                                 self.actpageTableView22.alpha = 0
@@ -1543,6 +1737,12 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                     for tv: UITextView in self.capPagTVs3[self.prevpageID]{
                         tv.alpha = 0
                     }
+                    for iv: UIImageView in actPagMInfo{
+                        iv.alpha = 0
+                    }
+                    for bt: UIButton in self.actPagMInfoB{
+                        bt.hidden = true
+                    }
                     self.actpageTableView1.alpha = 0
                     self.actpageTableView12.alpha = 0
                     
@@ -1556,6 +1756,12 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                     }
                     for tv: UITextView in self.capPagTVs2[self.prevpageID]{
                         tv.alpha = 0
+                    }
+                    for iv: UIImageView in actPagMInfo2{
+                        iv.alpha = 0
+                    }
+                    for bt: UIButton in self.actPagMInfoB2{
+                        bt.hidden = true
                     }
                     self.actpageTableView2.alpha = 0
                     self.actpageTableView22.alpha = 0
@@ -1649,7 +1855,18 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                             //self.capPagTVs2[j][i].alpha = 0
                         }
                     }
-                    
+                    for iv: UIImageView in self.actPagMInfo{
+                        iv.alpha = 0
+                    }
+                    for iv: UIImageView in self.actPagMInfo2{
+                        iv.alpha = 0
+                    }
+                    for bt: UIButton in self.actPagMInfoB{
+                        bt.hidden = true
+                    }
+                    for bt: UIButton in self.actPagMInfoB2{
+                        bt.hidden = true
+                    }
                     self.actPagHeaders[0].alpha = 1
                     self.actpageTableView2.alpha = 0
                     self.actpageTableView22.alpha = 0
