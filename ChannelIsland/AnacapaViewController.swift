@@ -741,6 +741,47 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
     
     }
     
+    @IBAction func BoatingClicked(sender: AnyObject) {
+        UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.PageScrollView2.contentOffset.y = 3920.0
+            self.PageScrollView3.contentOffset.y = 3920.0
+            }, completion: { finished in
+                if (finished){}})
+    }
+    
+    @IBAction func WildlifeClicked(sender: AnyObject) {
+        UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.PageScrollView2.contentOffset.y = 4884.0
+            self.PageScrollView3.contentOffset.y = 4884.0
+            }, completion: { finished in
+                if (finished){}})
+    }
+    
+    @IBAction func FishingClicked(sender: AnyObject) {
+        UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.PageScrollView2.contentOffset.y = 6459.0
+            self.PageScrollView3.contentOffset.y = 6459.0
+            }, completion: { finished in
+                if (finished){}})
+    }
+    
+    @IBAction func SwimmingClicked(sender: AnyObject) {
+        UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.PageScrollView2.contentOffset.y = 6825.0
+            self.PageScrollView3.contentOffset.y = 6825.0
+            }, completion: { finished in
+                if (finished){}})
+    }
+    
+    @IBAction func HikingClicked(sender: AnyObject) {
+        UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.PageScrollView2.contentOffset.y = 7282.0
+            self.PageScrollView3.contentOffset.y = 7282.0
+            }, completion: { finished in
+                if (finished){}})
+    }
+
+    
     @IBAction func DismissPageClicked(sender: AnyObject) {
         enablemainpageTransition()
     }
