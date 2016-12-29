@@ -1970,7 +1970,7 @@ Cg
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar3" translatesAutoresizingMaskIntoConstraints="NO" id="zaR-pt-QQD">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ACTIVITIES_SUB_OVERVIEW_V04" translatesAutoresizingMaskIntoConstraints="NO" id="DWr-pe-hra">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ACTIVITIES_SUB_OVERVIEW_V05" translatesAutoresizingMaskIntoConstraints="NO" id="DWr-pe-hra">
                                 <rect key="frame" x="95" y="199" width="96" height="375"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fqE-iy-knw">
@@ -1982,86 +1982,86 @@ Cg
                                     <segue destination="S4R-Ja-viH" kind="presentation" identifier="BackToMain" modalTransitionStyle="crossDissolve" id="zES-DJ-Qvu"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IslandIcons_ALL_WHITE_V04" translatesAutoresizingMaskIntoConstraints="NO" id="jsM-DL-9DA">
-                                <rect key="frame" x="19" y="197" width="80" height="375"/>
-                            </imageView>
-                            <view hidden="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z8S-hZ-WUO">
+                            <view hidden="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="phk-jD-z0c">
                                 <rect key="frame" x="95" y="199" width="96" height="375"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4q-Dc-ieb">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owh-hf-Olq">
                                         <rect key="frame" x="25" y="23" width="67" height="40"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjq-rY-DAG">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6y-LV-FmJ">
                                         <rect key="frame" x="25" y="72" width="67" height="40"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhN-6M-6DS">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZ2-1Z-oHK">
                                         <rect key="frame" x="25" y="124" width="67" height="40"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fx0-5z-vMJ">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIk-hq-rcu">
                                         <rect key="frame" x="25" y="175" width="67" height="40"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIT-dC-nOM">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QhP-Ao-QG0">
                                         <rect key="frame" x="25" y="225" width="67" height="40"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2N-Jj-dF1">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFE-8p-CJF">
                                         <rect key="frame" x="25" y="275" width="67" height="40"/>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Activities" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ABQ-bc-BPM">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Activities" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xSY-0L-x3A">
                                         <rect key="frame" x="35" y="-5" width="50" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="H6c-V2-QlU">
-                                        <rect key="frame" x="27" y="53" width="86" height="36"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d2T-Me-C5B">
+                                        <rect key="frame" x="22" y="54" width="86" height="36"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <string key="text">Boating And 
    Kayaking</string>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="9"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Wildlife Watching" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="c2s-4u-J2E">
-                                        <rect key="frame" x="18" y="118" width="86" height="36"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="  Wildlife Watching" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cyj-tr-F8o">
+                                        <rect key="frame" x="28" y="118" width="86" height="36"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="9"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Fishing" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1I6-Fh-0X5">
-                                        <rect key="frame" x="38" y="175" width="86" height="36"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Fishing" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cVM-a0-Ywu">
+                                        <rect key="frame" x="35" y="180" width="86" height="36"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="9"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xer-Zw-OjV">
-                                        <rect key="frame" x="17" y="230" width="86" height="36"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KeN-oV-aql">
+                                        <rect key="frame" x="16" y="226" width="86" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <string key="text">Diving, Snorkeling 
-  And Swimming</string>
+                                        <string key="text">       Diving, Snorkeling And
+   Swimming</string>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="9"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Hiking" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="y29-u5-fg8">
-                                        <rect key="frame" x="38" y="292" width="86" height="36"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Hiking" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GPL-Zg-QPP">
+                                        <rect key="frame" x="36" y="297" width="86" height="36"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="9"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Camping" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YRS-2F-trD">
-                                        <rect key="frame" x="34" y="348" width="86" height="36"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Camping" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0dW-Mg-Vv0">
+                                        <rect key="frame" x="29" y="347" width="86" height="36"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="9"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IslandIcons_ALL_WHITE_V04" translatesAutoresizingMaskIntoConstraints="NO" id="jsM-DL-9DA">
+                                <rect key="frame" x="19" y="197" width="80" height="375"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7Y-SW-bQs">
                                 <rect key="frame" x="25" y="202" width="67" height="40"/>
                                 <connections>
@@ -2141,17 +2141,13 @@ Cg
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
-                        <outlet property="ActButView" destination="z8S-hZ-WUO" id="xyh-na-byq"/>
+                        <outlet property="ActButView" destination="phk-jD-z0c" id="v99-TQ-8QX"/>
                         <outlet property="ActivitiesBar" destination="DWr-pe-hra" id="tfr-YL-lCR"/>
                         <outlet property="ActivitiesButton" destination="gcu-VE-QSc" id="Y0p-a9-htc"/>
                         <outlet property="ActivitiesLabel" destination="nCs-5b-btp" id="Htw-ln-wKD"/>
                         <outlet property="AnchorageButton" destination="btx-QE-sNl" id="BZd-Jp-GZ4"/>
                         <outlet property="AnchoragesLabel" destination="BPh-VY-BLv" id="ntD-Eq-FM3"/>
                         <outlet property="Barview" destination="zaR-pt-QQD" id="SdW-hT-Onm"/>
-                        <outlet property="BoatingButton" destination="T4q-Dc-ieb" id="HU8-um-z9H"/>
-                        <outlet property="BoatingLabel" destination="H6c-V2-QlU" id="ZmK-B9-AoW"/>
-                        <outlet property="CampingButton" destination="b2N-Jj-dF1" id="zNH-1z-1jU"/>
-                        <outlet property="CampingLabel" destination="YRS-2F-trD" id="vGc-hE-JTN"/>
                         <outlet property="CapPagTV1" destination="ej5-vO-mO9" id="lCW-74-vnC"/>
                         <outlet property="CapPagTV2" destination="hkv-T9-LB9" id="39a-Ge-Aac"/>
                         <outlet property="CapPagTV3" destination="UYL-hf-rv2" id="u0t-0C-PV1"/>
@@ -2161,10 +2157,6 @@ Cg
                         <outlet property="Clickhere" destination="fqE-iy-knw" id="C0h-bY-rNJ"/>
                         <outlet property="CloseTV" destination="Ygp-pl-f59" id="Bof-FF-9YL"/>
                         <outlet property="DismissPage" destination="1u2-oe-qZB" id="wxU-Lf-Dy3"/>
-                        <outlet property="FishingButton" destination="WhN-6M-6DS" id="k3K-q6-fPb"/>
-                        <outlet property="FishingLabel" destination="1I6-Fh-0X5" id="A49-mQ-BAG"/>
-                        <outlet property="HikingButton" destination="lIT-dC-nOM" id="Ft9-kf-rjy"/>
-                        <outlet property="HikingLabel" destination="y29-u5-fg8" id="sVY-1m-pOL"/>
                         <outlet property="HomeLabel" destination="cYo-3v-JFD" id="aRt-NC-S0c"/>
                         <outlet property="IPageV1" destination="TD8-0L-2fQ" id="8J1-FR-gIy"/>
                         <outlet property="IView" destination="rlw-Of-cjs" id="XgG-bQ-YLN"/>
@@ -2186,11 +2178,7 @@ Cg
                         <outlet property="PhotoButton" destination="ICn-hE-eaN" id="U9r-jQ-1CK"/>
                         <outlet property="PhotoGalleryLabel" destination="wZs-Fc-2By" id="M4g-8u-zJS"/>
                         <outlet property="SantaCruzView" destination="wKN-Ev-zjR" id="beX-GK-vYu"/>
-                        <outlet property="SwimmingButton" destination="Fx0-5z-vMJ" id="C43-zu-Y5k"/>
-                        <outlet property="SwimmingLabel" destination="Xer-Zw-OjV" id="wQ7-nc-9TQ"/>
                         <outlet property="TitleText" destination="HL1-Zz-pgs" id="emQ-G9-Ove"/>
-                        <outlet property="WildlifeButton" destination="gjq-rY-DAG" id="Ycz-ur-3mU"/>
-                        <outlet property="WildlifeLabel" destination="c2s-4u-J2E" id="3A3-UQ-hTm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ass-9b-Ej7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2269,7 +2257,7 @@ Cg
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar4" translatesAutoresizingMaskIntoConstraints="NO" id="D3S-nf-P11">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ACTIVITIES_SUB_OVERVIEW_V04" translatesAutoresizingMaskIntoConstraints="NO" id="nDZ-6s-oZ3">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ACTIVITIES_SUB_OVERVIEW_V05" translatesAutoresizingMaskIntoConstraints="NO" id="nDZ-6s-oZ3">
                                 <rect key="frame" x="95" y="199" width="96" height="375"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yfF-KO-E2J">
@@ -2313,49 +2301,49 @@ Cg
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LTc-dr-GuW">
-                                        <rect key="frame" x="27" y="53" width="86" height="36"/>
+                                        <rect key="frame" x="22" y="54" width="86" height="36"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <string key="text">Boating And 
    Kayaking</string>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="9"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Wildlife Watching" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7ok-xh-wX3">
-                                        <rect key="frame" x="18" y="118" width="86" height="36"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="  Wildlife Watching" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7ok-xh-wX3">
+                                        <rect key="frame" x="28" y="118" width="86" height="36"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="9"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Fishing" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Q1V-GL-Vlz">
-                                        <rect key="frame" x="38" y="175" width="86" height="36"/>
+                                        <rect key="frame" x="35" y="180" width="86" height="36"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="9"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cV2-SY-70p">
-                                        <rect key="frame" x="17" y="230" width="86" height="36"/>
+                                        <rect key="frame" x="16" y="226" width="86" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <string key="text">Diving, Snorkeling 
-  And Swimming</string>
+                                        <string key="text">       Diving, Snorkeling And
+   Swimming</string>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="9"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Hiking" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uYp-Nw-7P5">
-                                        <rect key="frame" x="38" y="292" width="86" height="36"/>
+                                        <rect key="frame" x="36" y="297" width="86" height="36"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="9"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Camping" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ldd-FD-nrl">
-                                        <rect key="frame" x="34" y="348" width="86" height="36"/>
+                                        <rect key="frame" x="29" y="347" width="86" height="36"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="9"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
@@ -3618,7 +3606,7 @@ Cg
     </scenes>
     <resources>
         <image name="1_DISSOLVE_SUNSET" width="2048" height="1536"/>
-        <image name="ACTIVITIES_SUB_OVERVIEW_V04" width="188" height="750"/>
+        <image name="ACTIVITIES_SUB_OVERVIEW_V05" width="188" height="750"/>
         <image name="ACTVITIES_SUBMENU_V01" width="128" height="655"/>
         <image name="ANACAPA_CLEAN" width="2048" height="1536"/>
         <image name="ANACAPA_CLEANBLUR" width="2048" height="1536"/>
