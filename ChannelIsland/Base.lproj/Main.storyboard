@@ -1970,7 +1970,7 @@ Cg
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar3" translatesAutoresizingMaskIntoConstraints="NO" id="zaR-pt-QQD">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ACTIVITIES_SUB_OVERVIEW_V05" translatesAutoresizingMaskIntoConstraints="NO" id="DWr-pe-hra">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ACTIVITIES_SUB_OVERVIEW_V06" translatesAutoresizingMaskIntoConstraints="NO" id="DWr-pe-hra">
                                 <rect key="frame" x="95" y="199" width="96" height="375"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fqE-iy-knw">
@@ -1992,19 +1992,19 @@ Cg
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6y-LV-FmJ">
-                                        <rect key="frame" x="25" y="92" width="67" height="40"/>
+                                        <rect key="frame" x="25" y="86" width="67" height="40"/>
                                         <connections>
                                             <action selector="WildlifeClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="L3K-Wt-mvh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZ2-1Z-oHK">
-                                        <rect key="frame" x="25" y="154" width="67" height="40"/>
+                                        <rect key="frame" x="25" y="148" width="67" height="40"/>
                                         <connections>
                                             <action selector="FishingClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="3Na-xs-qhV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIk-hq-rcu">
-                                        <rect key="frame" x="25" y="200" width="67" height="40"/>
+                                        <rect key="frame" x="25" y="195" width="67" height="40"/>
                                         <connections>
                                             <action selector="SwimmingClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="oyQ-kS-mha"/>
                                         </connections>
@@ -2029,7 +2029,7 @@ Cg
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d2T-Me-C5B">
-                                        <rect key="frame" x="22" y="54" width="86" height="36"/>
+                                        <rect key="frame" x="22" y="50" width="86" height="36"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <string key="text">   Boating &amp; 
    Kayaking</string>
@@ -2038,21 +2038,21 @@ Cg
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="  Wildlife Watching" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cyj-tr-F8o">
-                                        <rect key="frame" x="28" y="118" width="86" height="36"/>
+                                        <rect key="frame" x="28" y="114" width="86" height="36"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Fishing" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cVM-a0-Ywu">
-                                        <rect key="frame" x="35" y="180" width="86" height="36"/>
+                                        <rect key="frame" x="35" y="176" width="86" height="36"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KeN-oV-aql">
-                                        <rect key="frame" x="16" y="227" width="86" height="50"/>
+                                        <rect key="frame" x="16" y="224" width="86" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <string key="text">       Diving,   
   Snorkeling &amp;
@@ -2288,7 +2288,7 @@ Cg
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar4" translatesAutoresizingMaskIntoConstraints="NO" id="D3S-nf-P11">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ACTIVITIES_SUB_OVERVIEW_V05" translatesAutoresizingMaskIntoConstraints="NO" id="nDZ-6s-oZ3">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ACTIVITIES_SUB_OVERVIEW_V06" translatesAutoresizingMaskIntoConstraints="NO" id="nDZ-6s-oZ3">
                                 <rect key="frame" x="95" y="199" width="96" height="375"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yfF-KO-E2J">
@@ -2313,19 +2313,19 @@ Cg
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdd-6T-bn8">
-                                        <rect key="frame" x="25" y="92" width="67" height="40"/>
+                                        <rect key="frame" x="25" y="86" width="67" height="40"/>
                                         <connections>
                                             <action selector="WildlifeClicked:" destination="gfQ-kY-mDd" eventType="touchUpInside" id="DL9-VI-oKV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDv-LG-qfw">
-                                        <rect key="frame" x="25" y="154" width="67" height="40"/>
+                                        <rect key="frame" x="25" y="148" width="67" height="40"/>
                                         <connections>
                                             <action selector="FishingClicked:" destination="gfQ-kY-mDd" eventType="touchUpInside" id="nW3-zV-dff"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWR-7U-Emq">
-                                        <rect key="frame" x="25" y="200" width="67" height="40"/>
+                                        <rect key="frame" x="25" y="195" width="67" height="40"/>
                                         <connections>
                                             <action selector="SwimmingClicked:" destination="gfQ-kY-mDd" eventType="touchUpInside" id="4dS-KR-hZ1"/>
                                         </connections>
@@ -2347,7 +2347,7 @@ Cg
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LTc-dr-GuW">
-                                        <rect key="frame" x="22" y="54" width="86" height="36"/>
+                                        <rect key="frame" x="22" y="50" width="86" height="36"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <string key="text">   Boating &amp; 
    Kayaking</string>
@@ -2356,21 +2356,21 @@ Cg
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="  Wildlife Watching" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7ok-xh-wX3">
-                                        <rect key="frame" x="28" y="118" width="86" height="36"/>
+                                        <rect key="frame" x="28" y="114" width="86" height="36"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Fishing" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Q1V-GL-Vlz">
-                                        <rect key="frame" x="35" y="180" width="86" height="36"/>
+                                        <rect key="frame" x="35" y="176" width="86" height="36"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cV2-SY-70p">
-                                        <rect key="frame" x="16" y="227" width="86" height="50"/>
+                                        <rect key="frame" x="16" y="224" width="86" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <string key="text">       Diving,   
   Snorkeling &amp;
@@ -3662,7 +3662,7 @@ Cg
     </scenes>
     <resources>
         <image name="1_DISSOLVE_SUNSET" width="2048" height="1536"/>
-        <image name="ACTIVITIES_SUB_OVERVIEW_V05" width="188" height="750"/>
+        <image name="ACTIVITIES_SUB_OVERVIEW_V06" width="188" height="750"/>
         <image name="ACTVITIES_SUBMENU_V01" width="128" height="655"/>
         <image name="ANACAPA_CLEAN" width="2048" height="1536"/>
         <image name="ANACAPA_CLEANBLUR" width="2048" height="1536"/>
