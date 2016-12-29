@@ -142,6 +142,7 @@ class IslandPhotoCommentViewController2: UIViewController {
             //self.TitleText3.font = UIFont(name:"TrajanPro-Regular", size: 55)
         }
         self.IslandName.text = self.islandNames[self.islandID]
+        self.PageControl.numberOfPages = islandCaptions[islandID].count
         // Do any additional setup after loading the view.
     }
     
@@ -158,6 +159,7 @@ class IslandPhotoCommentViewController2: UIViewController {
             //self.TitleText3.font = UIFont(name:"TrajanPro-Regular", size: 55)
         }
         self.IslandName.text = self.islandNames[self.islandID]
+        self.PageControl.numberOfPages = islandCaptions[islandID].count
     }
     
     override func didReceiveMemoryWarning() {

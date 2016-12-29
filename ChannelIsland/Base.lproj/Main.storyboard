@@ -2397,25 +2397,25 @@ Cg
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4e-P1-pFA">
-                                <rect key="frame" x="25" y="225" width="67" height="40"/>
+                                <rect key="frame" x="25" y="200" width="67" height="40"/>
                                 <connections>
                                     <action selector="InfoClicked:" destination="gfQ-kY-mDd" eventType="touchUpInside" id="s4l-qM-I2Z"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOr-uB-bLg">
-                                <rect key="frame" x="25" y="450" width="67" height="40"/>
+                                <rect key="frame" x="25" y="425" width="67" height="40"/>
                                 <connections>
                                     <segue destination="vlQ-Sj-w1e" kind="presentation" identifier="Photography" modalTransitionStyle="crossDissolve" id="Fx6-gk-auX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLl-No-O1K">
-                                <rect key="frame" x="25" y="282" width="67" height="40"/>
+                                <rect key="frame" x="25" y="262" width="67" height="40"/>
                                 <connections>
                                     <action selector="MapClicked:" destination="gfQ-kY-mDd" eventType="touchUpInside" id="i5r-P8-4wR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTP-JD-VrL">
-                                <rect key="frame" x="25" y="338" width="67" height="40"/>
+                                <rect key="frame" x="25" y="320" width="67" height="40"/>
                                 <connections>
                                     <action selector="AnchorageClicked:" destination="gfQ-kY-mDd" eventType="touchUpInside" id="oCX-3b-YiJ"/>
                                 </connections>
@@ -2682,8 +2682,12 @@ Cg
                                     <outletCollection property="gestureRecognizers" destination="OZW-1g-Bdj" appends="YES" id="ret-2M-wu0"/>
                                 </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IslandIcons_Photo_Gallery_V02" translatesAutoresizingMaskIntoConstraints="NO" id="B7d-R2-LP4">
-                                <rect key="frame" x="36" y="220" width="55" height="330"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.34999999403953552" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cOz-QW-jPX">
+                                <rect key="frame" x="0.0" y="626" width="1024" height="142"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IslandIcons_PHOTO_GALLERY_V04" translatesAutoresizingMaskIntoConstraints="NO" id="B7d-R2-LP4">
+                                <rect key="frame" x="19" y="199" width="75" height="375"/>
                             </imageView>
                             <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="12" translatesAutoresizingMaskIntoConstraints="NO" id="s2U-Sd-TwS">
                                 <rect key="frame" x="414" y="668" width="196" height="37"/>
@@ -2703,14 +2707,14 @@ Cg
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7AY-ha-b6d">
-                                <rect key="frame" x="42" y="274" width="47" height="40"/>
+                                <rect key="frame" x="25" y="262" width="67" height="40"/>
                                 <connections>
                                     <action selector="MapClicked:" destination="vlQ-Sj-w1e" eventType="touchUpInside" id="5Qf-Tm-r2f"/>
                                     <action selector="MapClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="zuZ-44-Zgf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kh8-Rl-DhM">
-                                <rect key="frame" x="42" y="225" width="47" height="40"/>
+                                <rect key="frame" x="25" y="200" width="67" height="40"/>
                                 <connections>
                                     <action selector="InfoClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="9pZ-yg-BkH"/>
                                     <action selector="InfoClicked:" destination="vlQ-Sj-w1e" eventType="touchUpInside" id="E8A-Oa-pnR"/>
@@ -2723,14 +2727,14 @@ Cg
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJQ-Gy-4Ls">
-                                <rect key="frame" x="42" y="325" width="47" height="40"/>
+                                <rect key="frame" x="25" y="320" width="67" height="40"/>
                                 <connections>
                                     <action selector="AnchorageClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="72Z-X5-41K"/>
                                     <action selector="AnchoragesClicked:" destination="vlQ-Sj-w1e" eventType="touchUpInside" id="OUV-t9-8Ve"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0M-no-vXv">
-                                <rect key="frame" x="42" y="373" width="47" height="40"/>
+                                <rect key="frame" x="25" y="373" width="67" height="40"/>
                                 <connections>
                                     <action selector="ActivitiesClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="JuE-It-dIQ"/>
                                     <action selector="ActivitiesClicked:" destination="vlQ-Sj-w1e" eventType="touchUpInside" id="v8x-B9-XB3"/>
@@ -2743,41 +2747,41 @@ Cg
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Map" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="evb-mE-ECm">
-                                <rect key="frame" x="93" y="280" width="50" height="30"/>
+                                <rect key="frame" x="46" y="289" width="50" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Info" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Io0-Hm-uoy">
-                                <rect key="frame" x="93" y="230" width="50" height="30"/>
+                                <rect key="frame" x="47" y="233" width="50" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Activities" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zbj-Xv-DuN">
-                                <rect key="frame" x="93" y="380" width="50" height="30"/>
+                                <rect key="frame" x="35" y="400" width="50" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Anchorages" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oyH-Uw-imZ">
-                                <rect key="frame" x="93" y="330" width="70" height="30"/>
+                                <rect key="frame" x="27" y="346" width="70" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Photo Gallery" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OyL-Xz-Vj8">
-                                <rect key="frame" x="93" y="427" width="70" height="30"/>
+                                <rect key="frame" x="24" y="450" width="70" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Home" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4G1-VQ-aMe">
-                                <rect key="frame" x="93" y="501" width="70" height="30"/>
+                                <rect key="frame" x="43" y="544" width="70" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
@@ -3513,8 +3517,12 @@ Cg
                                     <outletCollection property="gestureRecognizers" destination="bhy-JY-Zbp" appends="YES" id="Niq-fN-wW2"/>
                                 </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IslandIcons_Photo_Gallery_V02" translatesAutoresizingMaskIntoConstraints="NO" id="f48-E9-bOm">
-                                <rect key="frame" x="36" y="220" width="55" height="330"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.34999999403953552" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p4N-9W-LRi">
+                                <rect key="frame" x="0.0" y="626" width="1024" height="142"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IslandIcons_PHOTO_GALLERY_V04" translatesAutoresizingMaskIntoConstraints="NO" id="f48-E9-bOm">
+                                <rect key="frame" x="19" y="199" width="75" height="375"/>
                             </imageView>
                             <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="12" translatesAutoresizingMaskIntoConstraints="NO" id="k12-ih-4Nr">
                                 <rect key="frame" x="414" y="668" width="196" height="37"/>
@@ -3534,26 +3542,26 @@ Cg
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="582-ms-OSV">
-                                <rect key="frame" x="42" y="274" width="47" height="40"/>
+                                <rect key="frame" x="25" y="262" width="67" height="40"/>
                                 <connections>
                                     <action selector="MapClicked:" destination="lmi-60-G2u" eventType="touchUpInside" id="ozD-0M-rPz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPh-SX-npR">
-                                <rect key="frame" x="42" y="225" width="47" height="40"/>
+                                <rect key="frame" x="25" y="200" width="67" height="40"/>
                                 <connections>
                                     <action selector="InfoClicked:" destination="lmi-60-G2u" eventType="touchUpInside" id="ePE-kx-Ioa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nb3-Yb-Gv1">
-                                <rect key="frame" x="42" y="325" width="47" height="40"/>
+                                <rect key="frame" x="25" y="320" width="67" height="40"/>
                                 <connections>
                                     <action selector="AnchorageClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="Gg0-4Z-dBG"/>
                                     <action selector="AnchoragesClicked:" destination="lmi-60-G2u" eventType="touchUpInside" id="6cF-Bv-aba"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4G-nL-NGB">
-                                <rect key="frame" x="42" y="373" width="47" height="40"/>
+                                <rect key="frame" x="25" y="373" width="67" height="40"/>
                                 <connections>
                                     <action selector="ActivitiesClicked:" destination="lmi-60-G2u" eventType="touchUpInside" id="uUa-YA-m96"/>
                                 </connections>
@@ -3562,41 +3570,41 @@ Cg
                                 <rect key="frame" x="42" y="500" width="47" height="40"/>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Map" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eDs-QO-qnB">
-                                <rect key="frame" x="93" y="280" width="50" height="30"/>
+                                <rect key="frame" x="46" y="289" width="50" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Info" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="if5-6a-C8R">
-                                <rect key="frame" x="93" y="230" width="50" height="30"/>
+                                <rect key="frame" x="47" y="233" width="50" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Activities" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oOI-cf-XeQ">
-                                <rect key="frame" x="93" y="380" width="50" height="30"/>
+                                <rect key="frame" x="35" y="400" width="50" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Anchorages" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jY4-jR-2Cv">
-                                <rect key="frame" x="93" y="330" width="70" height="30"/>
+                                <rect key="frame" x="27" y="346" width="70" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Photo Gallery" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lak-7c-4LF">
-                                <rect key="frame" x="93" y="427" width="70" height="30"/>
+                                <rect key="frame" x="24" y="450" width="70" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Home" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A6l-bk-AVc">
-                                <rect key="frame" x="93" y="501" width="70" height="30"/>
+                                <rect key="frame" x="43" y="544" width="70" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
@@ -3678,7 +3686,7 @@ Cg
         <image name="Image-3" width="2048" height="1536"/>
         <image name="IslandIcons_ALL_WHITE_V04" width="150" height="750"/>
         <image name="IslandIcons_HOME" width="110" height="660"/>
-        <image name="IslandIcons_Photo_Gallery_V02" width="110" height="660"/>
+        <image name="IslandIcons_PHOTO_GALLERY_V04" width="150" height="750"/>
         <image name="LOGOS_PARTA" width="530" height="280"/>
         <image name="LOGOS_PARTB" width="530" height="280"/>
         <image name="MAIN_NAV_SINGL_GREEN_DOT_00000" width="40" height="40"/>
@@ -3716,10 +3724,10 @@ Cg
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="jew-Ho-UNx"/>
-        <segue reference="zES-DJ-Qvu"/>
-        <segue reference="Vqv-IX-MSN"/>
+        <segue reference="zOU-1R-PoP"/>
         <segue reference="OjJ-ZP-iCm"/>
-        <segue reference="cXW-Yx-Jng"/>
+        <segue reference="RYF-ra-32l"/>
         <segue reference="Yb7-rz-hzO"/>
+        <segue reference="cXW-Yx-Jng"/>
     </inferredMetricsTieBreakers>
 </document>

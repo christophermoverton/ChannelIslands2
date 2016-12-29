@@ -145,6 +145,7 @@ class IslandPhotoCommentViewController: UIViewController {
             //self.TitleText3.font = UIFont(name:"TrajanPro-Regular", size: 55)
         }
         self.IslandName.text = self.islandNames[self.islandID]
+        self.PageControl.numberOfPages = islandCaptions[islandID].count
         // Do any additional setup after loading the view.
     }
     
@@ -161,6 +162,7 @@ class IslandPhotoCommentViewController: UIViewController {
             //self.TitleText3.font = UIFont(name:"TrajanPro-Regular", size: 55)
         }
         self.IslandName.text = self.islandNames[self.islandID]
+        self.PageControl.numberOfPages = islandCaptions[islandID].count
     }
     
     @IBAction func MapClicked(sender: AnyObject) {

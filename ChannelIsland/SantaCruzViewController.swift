@@ -843,7 +843,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                 let myAttrString1 = NSAttributedString(string: acstr,
                                                        attributes: myAttributes)
                 textView.attributedText = myAttrString1
-                textView.frame = CGRectMake(xcg, ycg+newheight-10.0, 300.0, 60.0)
+                textView.frame = CGRectMake(xcg, ycg+newheight, 300.0, 60.0)
                 textView.alpha = 0
                 textView.backgroundColor = UIColor.clearColor()
                 tViews.append(textView)
@@ -891,7 +891,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
                 let myAttrString1 = NSAttributedString(string: acstr,
                                                        attributes: myAttributes)
                 textView.attributedText = myAttrString1
-                textView.frame = CGRectMake(xcg, ycg+newheight-10.0, 300.0, 60.0)
+                textView.frame = CGRectMake(xcg, ycg+newheight, 300.0, 60.0)
                 textView.alpha = 0
                 textView.backgroundColor = UIColor.clearColor()
                 tViews.append(textView)
@@ -1138,16 +1138,16 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     
     @IBAction func BoatingClicked(sender: AnyObject) {
         UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
-        self.PageScrollView2.contentOffset.y = 2456.0
-        self.PageScrollView3.contentOffset.y = 2456.0
+        self.PageScrollView2.contentOffset.y = 2457.0
+        self.PageScrollView3.contentOffset.y = 2457.0
             }, completion: { finished in
                 if (finished){}})
     }
 
     @IBAction func WildlifeClicked(sender: AnyObject) {
         UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
-            self.PageScrollView2.contentOffset.y = 3553.0
-            self.PageScrollView3.contentOffset.y = 3553.0
+            self.PageScrollView2.contentOffset.y = 3554.0
+            self.PageScrollView3.contentOffset.y = 3554.0
             }, completion: { finished in
                 if (finished){}})
     }
@@ -1155,16 +1155,16 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     
     @IBAction func FishingClicked(sender: AnyObject) {
         UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
-            self.PageScrollView2.contentOffset.y = 5258.0
-            self.PageScrollView3.contentOffset.y = 5258.0
+            self.PageScrollView2.contentOffset.y = 5259.0
+            self.PageScrollView3.contentOffset.y = 5259.0
             }, completion: { finished in
                 if (finished){}})
     }
 
     @IBAction func SwimmingClicked(sender: AnyObject) {
         UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
-            self.PageScrollView2.contentOffset.y = 6093.0
-            self.PageScrollView3.contentOffset.y = 6093.0
+            self.PageScrollView2.contentOffset.y = 6094.0
+            self.PageScrollView3.contentOffset.y = 6094.0
             }, completion: { finished in
                 if (finished){}})
     }
@@ -1172,16 +1172,16 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     
     @IBAction func HikingClicked(sender: AnyObject) {
         UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
-            self.PageScrollView2.contentOffset.y = 7511.0
-            self.PageScrollView3.contentOffset.y = 7511.0
+            self.PageScrollView2.contentOffset.y = 7512.0
+            self.PageScrollView3.contentOffset.y = 7512.0
             }, completion: { finished in
                 if (finished){}})
     }
     
     @IBAction func CampingClicked(sender: AnyObject) {
         UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
-            self.PageScrollView2.contentOffset.y = 10270.0
-            self.PageScrollView3.contentOffset.y = 10270.0
+            self.PageScrollView2.contentOffset.y = 10271.0
+            self.PageScrollView3.contentOffset.y = 10271.0
             }, completion: { finished in
                 if (finished){}})
     }

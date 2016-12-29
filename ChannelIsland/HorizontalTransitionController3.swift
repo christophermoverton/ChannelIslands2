@@ -64,7 +64,7 @@ class HorizontalTransitionController3: NSObject, UIViewControllerAnimatedTransit
         //customView2.addTitleV(f2, title: vname2)
         customView2.addTextView(tv2)
         let customView3 = MyCustomView(frame: CGRect(x: 0, y: 0, width: 1024, height: 768))
-        customView3.addImageV2("IslandIcons_Photo_Gallery_V02")
+        customView3.addImageV3("IslandIcons_PHOTO_GALLERY_V04")
         customView3.addTitleV2(titletf1)
         //customView3.addTitleV(titletf2)
         //customView3.addTitleV(titletf3)
