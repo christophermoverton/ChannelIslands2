@@ -402,8 +402,9 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     @IBOutlet weak var SwimmingButton: UIButton!
     @IBOutlet weak var HikingButton: UIButton!
     @IBOutlet weak var CampingButton: UIButton!
-    @IBOutlet weak var BoatingLabel: UITextView!
+    
     @IBOutlet weak var WildlifeLabel: UITextView!
+    @IBOutlet weak var BoatingLabel: UITextView!
     @IBOutlet weak var FishingLabel: UITextView!
     @IBOutlet weak var SwimmingLabel: UITextView!
     @IBOutlet weak var HikingLabel: UITextView!
@@ -713,6 +714,66 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         super.init(coder: aDecoder)
     }
     
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let contentOffset = scrollView.contentOffset.y
+        print(contentOffset)
+        let t1: Bool = contentOffset > 2456.0
+        let t2: Bool = contentOffset > 3553.0
+        let t3: Bool = contentOffset > 5258.0
+        let t4: Bool = contentOffset > 6093.0
+        let t5: Bool = contentOffset > 7511.0
+        let t6: Bool = contentOffset > 10270.0
+        let t7: Bool = self.pageID == 2
+        
+        if t1 && t7{
+            let ui = UIImage(imageLiteral: "ACTIVITIES_SUB_BOATING_KAYAKING_V05")
+            self.ActivitiesBar.image = ui
+            self.BoatingLabel.textColor = UIColor.blackColor()
+            self.WildlifeLabel.textColor = UIColor.whiteColor()
+        }
+        else{
+            let ui = UIImage(imageLiteral: "ACTIVITIES_SUB_OVERVIEW_V05")
+            self.ActivitiesBar.image = ui
+            self.BoatingLabel.textColor = UIColor.whiteColor()
+            
+        }
+        if t2 && t7{
+            let ui = UIImage(imageLiteral: "ACTIVITIES_SUB_WILDLIFE_WATCHING_V05")
+            self.ActivitiesBar.image = ui
+            self.BoatingLabel.textColor = UIColor.whiteColor()
+            self.WildlifeLabel.textColor = UIColor.blackColor()
+            self.FishingLabel.textColor = UIColor.whiteColor()
+        }
+        if t3 && t7{
+            let ui = UIImage(imageLiteral: "ACTIVITIES_SUB_FISHING_V05")
+            self.ActivitiesBar.image = ui
+            self.WildlifeLabel.textColor = UIColor.whiteColor()
+            self.FishingLabel.textColor = UIColor.blackColor()
+            self.SwimmingLabel.textColor = UIColor.whiteColor()
+        }
+        if t4 && t7{
+            let ui = UIImage(imageLiteral: "ACTIVITIES_SUB_DIVING_SWIMMING_V05")
+            self.ActivitiesBar.image = ui
+            self.FishingLabel.textColor = UIColor.whiteColor()
+            self.SwimmingLabel.textColor = UIColor.blackColor()
+            self.HikingLabel.textColor = UIColor.whiteColor()
+        }
+        if t5 && t7{
+            let ui = UIImage(imageLiteral: "ACTIVITIES_SUB_HIKING_V05")
+            self.ActivitiesBar.image = ui
+            self.SwimmingLabel.textColor = UIColor.whiteColor()
+            self.HikingLabel.textColor = UIColor.blackColor()
+            self.CampingLabel.textColor = UIColor.whiteColor()
+        }
+        if t6 && t7{
+            let ui = UIImage(imageLiteral: "ACTIVITIES_SUB_CAMPING_V05")
+            self.ActivitiesBar.image = ui
+            self.HikingLabel.textColor = UIColor.whiteColor()
+            self.CampingLabel.textColor = UIColor.blackColor()
+        }
+        
+    }
+    
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.row == 20 {
             return 160
@@ -730,6 +791,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.PageScrollView2.frame = CGRectMake(0, 120, 1024, 565)
         self.PageScrollView2.alpha = 0
         self.PageScrollView2.addSubview(self.PageTextView2)
+        self.PageScrollView2.delegate = self
         self.SantaCruzView.insertSubview(self.PageScrollView2,atIndex: 7)
         self.PageScrollView2.contentSize.height = 12000
         self.PageTextView3 = UITextView()
@@ -740,6 +802,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
         self.PageScrollView3.frame = CGRectMake(0, 120, 1024, 565)
         self.PageScrollView3.alpha = 0
         self.PageScrollView3.addSubview(self.PageTextView3 )
+        self.PageScrollView3.delegate = self
         self.SantaCruzView.insertSubview(self.PageScrollView3,atIndex: 7)
         self.PageScrollView3.contentSize.height = 12000
         let inames: [[String]] = [self.photonames, self.infophotonames, self.activitiesphotonames]
@@ -1059,26 +1122,7 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     
     }
     
-    func scrollViewDidScroll(PageScrollView: UIScrollView) {
-        /*
-        if self.infoActive{
-            var i = 0
-            for piv: UIImageView in self.pageIVs{
-                if (i > 2){
-                    piv.alpha = 0
-                    self.capPagTVs[i].alpha = 0
-                    i+=1
-                    continue
-                }
-                let ui = UIImage(imageLiteral: self.infophotonames[i])
-                let newheight = ui.size.height/1.85
-                print(newheight)
-                piv.frame = CGRectMake(piv.frame.origin.x, piv.frame.origin.y, piv.frame.size.width, newheight)
-                i+=1
-            }
-        }
-       */
-    }
+
     
     @IBAction func DismissPageClicked(sender: AnyObject) {
         enablemainpageTransition()

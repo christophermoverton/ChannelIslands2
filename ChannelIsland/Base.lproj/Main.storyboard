@@ -2148,6 +2148,8 @@ Cg
                         <outlet property="AnchorageButton" destination="btx-QE-sNl" id="BZd-Jp-GZ4"/>
                         <outlet property="AnchoragesLabel" destination="BPh-VY-BLv" id="ntD-Eq-FM3"/>
                         <outlet property="Barview" destination="zaR-pt-QQD" id="SdW-hT-Onm"/>
+                        <outlet property="BoatingLabel" destination="d2T-Me-C5B" id="5ap-P4-E2b"/>
+                        <outlet property="CampingLabel" destination="0dW-Mg-Vv0" id="SkI-Lp-nQD"/>
                         <outlet property="CapPagTV1" destination="ej5-vO-mO9" id="lCW-74-vnC"/>
                         <outlet property="CapPagTV2" destination="hkv-T9-LB9" id="39a-Ge-Aac"/>
                         <outlet property="CapPagTV3" destination="UYL-hf-rv2" id="u0t-0C-PV1"/>
@@ -2157,6 +2159,8 @@ Cg
                         <outlet property="Clickhere" destination="fqE-iy-knw" id="C0h-bY-rNJ"/>
                         <outlet property="CloseTV" destination="Ygp-pl-f59" id="Bof-FF-9YL"/>
                         <outlet property="DismissPage" destination="1u2-oe-qZB" id="wxU-Lf-Dy3"/>
+                        <outlet property="FishingLabel" destination="cVM-a0-Ywu" id="j1c-Q2-c96"/>
+                        <outlet property="HikingLabel" destination="GPL-Zg-QPP" id="Zmc-fq-bLa"/>
                         <outlet property="HomeLabel" destination="cYo-3v-JFD" id="aRt-NC-S0c"/>
                         <outlet property="IPageV1" destination="TD8-0L-2fQ" id="8J1-FR-gIy"/>
                         <outlet property="IView" destination="rlw-Of-cjs" id="XgG-bQ-YLN"/>
@@ -2178,7 +2182,9 @@ Cg
                         <outlet property="PhotoButton" destination="ICn-hE-eaN" id="U9r-jQ-1CK"/>
                         <outlet property="PhotoGalleryLabel" destination="wZs-Fc-2By" id="M4g-8u-zJS"/>
                         <outlet property="SantaCruzView" destination="wKN-Ev-zjR" id="beX-GK-vYu"/>
+                        <outlet property="SwimmingLabel" destination="KeN-oV-aql" id="OVn-c0-apM"/>
                         <outlet property="TitleText" destination="HL1-Zz-pgs" id="emQ-G9-Ove"/>
+                        <outlet property="WildlifeLabel" destination="Cyj-tr-F8o" id="yCR-Zz-fXt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ass-9b-Ej7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3667,8 +3673,8 @@ Cg
         <image name="upper_campsite" width="530" height="268"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UxM-fJ-qBO"/>
-        <segue reference="Fx6-gk-auX"/>
+        <segue reference="zES-DJ-Qvu"/>
+        <segue reference="Vqv-IX-MSN"/>
         <segue reference="jew-Ho-UNx"/>
         <segue reference="OjJ-ZP-iCm"/>
         <segue reference="Yb7-rz-hzO"/>
