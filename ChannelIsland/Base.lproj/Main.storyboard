@@ -1987,21 +1987,39 @@ Cg
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owh-hf-Olq">
                                         <rect key="frame" x="25" y="23" width="67" height="40"/>
+                                        <connections>
+                                            <action selector="BoatingClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="f8Z-5w-AwR"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6y-LV-FmJ">
-                                        <rect key="frame" x="25" y="72" width="67" height="40"/>
+                                        <rect key="frame" x="25" y="92" width="67" height="40"/>
+                                        <connections>
+                                            <action selector="WildlifeClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="L3K-Wt-mvh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZ2-1Z-oHK">
-                                        <rect key="frame" x="25" y="124" width="67" height="40"/>
+                                        <rect key="frame" x="25" y="154" width="67" height="40"/>
+                                        <connections>
+                                            <action selector="FishingClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="3Na-xs-qhV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIk-hq-rcu">
-                                        <rect key="frame" x="25" y="175" width="67" height="40"/>
+                                        <rect key="frame" x="25" y="200" width="67" height="40"/>
+                                        <connections>
+                                            <action selector="SwimmingClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="oyQ-kS-mha"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QhP-Ao-QG0">
-                                        <rect key="frame" x="25" y="225" width="67" height="40"/>
+                                        <rect key="frame" x="25" y="270" width="67" height="40"/>
+                                        <connections>
+                                            <action selector="HikingClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="Dlr-0w-cL5"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFE-8p-CJF">
-                                        <rect key="frame" x="25" y="275" width="67" height="40"/>
+                                        <rect key="frame" x="25" y="320" width="67" height="40"/>
+                                        <connections>
+                                            <action selector="CampingClicked:" destination="xOZ-75-fK5" eventType="touchUpInside" id="1Mp-iz-8uj"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Activities" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xSY-0L-x3A">
                                         <rect key="frame" x="35" y="-5" width="50" height="30"/>
@@ -2013,7 +2031,7 @@ Cg
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d2T-Me-C5B">
                                         <rect key="frame" x="22" y="54" width="86" height="36"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <string key="text">Boating And 
+                                        <string key="text">   Boating &amp; 
    Kayaking</string>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
@@ -2034,9 +2052,10 @@ Cg
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KeN-oV-aql">
-                                        <rect key="frame" x="16" y="226" width="86" height="50"/>
+                                        <rect key="frame" x="16" y="227" width="86" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <string key="text">       Diving, Snorkeling And
+                                        <string key="text">       Diving,   
+  Snorkeling &amp;
    Swimming</string>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
@@ -2060,7 +2079,7 @@ Cg
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IslandIcons_ALL_WHITE_V04" translatesAutoresizingMaskIntoConstraints="NO" id="jsM-DL-9DA">
-                                <rect key="frame" x="19" y="197" width="80" height="375"/>
+                                <rect key="frame" x="19" y="197" width="75" height="375"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7Y-SW-bQs">
                                 <rect key="frame" x="25" y="202" width="67" height="40"/>
@@ -2148,7 +2167,9 @@ Cg
                         <outlet property="AnchorageButton" destination="btx-QE-sNl" id="BZd-Jp-GZ4"/>
                         <outlet property="AnchoragesLabel" destination="BPh-VY-BLv" id="ntD-Eq-FM3"/>
                         <outlet property="Barview" destination="zaR-pt-QQD" id="SdW-hT-Onm"/>
+                        <outlet property="BoatingButton" destination="owh-hf-Olq" id="SWy-4S-ls9"/>
                         <outlet property="BoatingLabel" destination="d2T-Me-C5B" id="5ap-P4-E2b"/>
+                        <outlet property="CampingButton" destination="sFE-8p-CJF" id="4j3-X7-kfW"/>
                         <outlet property="CampingLabel" destination="0dW-Mg-Vv0" id="SkI-Lp-nQD"/>
                         <outlet property="CapPagTV1" destination="ej5-vO-mO9" id="lCW-74-vnC"/>
                         <outlet property="CapPagTV2" destination="hkv-T9-LB9" id="39a-Ge-Aac"/>
@@ -2159,7 +2180,9 @@ Cg
                         <outlet property="Clickhere" destination="fqE-iy-knw" id="C0h-bY-rNJ"/>
                         <outlet property="CloseTV" destination="Ygp-pl-f59" id="Bof-FF-9YL"/>
                         <outlet property="DismissPage" destination="1u2-oe-qZB" id="wxU-Lf-Dy3"/>
+                        <outlet property="FishingButton" destination="IZ2-1Z-oHK" id="bi4-ir-aSg"/>
                         <outlet property="FishingLabel" destination="cVM-a0-Ywu" id="j1c-Q2-c96"/>
+                        <outlet property="HikingButton" destination="QhP-Ao-QG0" id="3TJ-1o-up9"/>
                         <outlet property="HikingLabel" destination="GPL-Zg-QPP" id="Zmc-fq-bLa"/>
                         <outlet property="HomeLabel" destination="cYo-3v-JFD" id="aRt-NC-S0c"/>
                         <outlet property="IPageV1" destination="TD8-0L-2fQ" id="8J1-FR-gIy"/>
@@ -2182,8 +2205,10 @@ Cg
                         <outlet property="PhotoButton" destination="ICn-hE-eaN" id="U9r-jQ-1CK"/>
                         <outlet property="PhotoGalleryLabel" destination="wZs-Fc-2By" id="M4g-8u-zJS"/>
                         <outlet property="SantaCruzView" destination="wKN-Ev-zjR" id="beX-GK-vYu"/>
+                        <outlet property="SwimmingButton" destination="nIk-hq-rcu" id="4SV-2R-cmf"/>
                         <outlet property="SwimmingLabel" destination="KeN-oV-aql" id="OVn-c0-apM"/>
                         <outlet property="TitleText" destination="HL1-Zz-pgs" id="emQ-G9-Ove"/>
+                        <outlet property="WildlifeButton" destination="D6y-LV-FmJ" id="3Fz-K0-Fe1"/>
                         <outlet property="WildlifeLabel" destination="Cyj-tr-F8o" id="yCR-Zz-fXt"/>
                     </connections>
                 </viewController>
@@ -2309,7 +2334,7 @@ Cg
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LTc-dr-GuW">
                                         <rect key="frame" x="22" y="54" width="86" height="36"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <string key="text">Boating And 
+                                        <string key="text">   Boating &amp; 
    Kayaking</string>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
@@ -2330,9 +2355,10 @@ Cg
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cV2-SY-70p">
-                                        <rect key="frame" x="16" y="226" width="86" height="50"/>
+                                        <rect key="frame" x="16" y="227" width="86" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <string key="text">       Diving, Snorkeling And
+                                        <string key="text">       Diving,   
+  Snorkeling &amp;
    Swimming</string>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
@@ -3674,11 +3700,11 @@ Cg
         <image name="upper_campsite" width="530" height="268"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="jew-Ho-UNx"/>
         <segue reference="zES-DJ-Qvu"/>
         <segue reference="Vqv-IX-MSN"/>
-        <segue reference="jew-Ho-UNx"/>
         <segue reference="OjJ-ZP-iCm"/>
-        <segue reference="Yb7-rz-hzO"/>
         <segue reference="cXW-Yx-Jng"/>
+        <segue reference="Yb7-rz-hzO"/>
     </inferredMetricsTieBreakers>
 </document>

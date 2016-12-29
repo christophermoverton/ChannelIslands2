@@ -395,13 +395,14 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     @IBOutlet weak var DismissPage: UIButton!
     @IBOutlet weak var ActivitiesBar: UIImageView!
     @IBOutlet weak var ActButView: UIView!
-
     @IBOutlet weak var BoatingButton: UIButton!
     @IBOutlet weak var WildlifeButton: UIButton!
     @IBOutlet weak var FishingButton: UIButton!
     @IBOutlet weak var SwimmingButton: UIButton!
     @IBOutlet weak var HikingButton: UIButton!
     @IBOutlet weak var CampingButton: UIButton!
+
+ 
     
     @IBOutlet weak var WildlifeLabel: UITextView!
     @IBOutlet weak var BoatingLabel: UITextView!
@@ -1135,7 +1136,56 @@ class SantaCruzViewController: UIViewController, UITextViewDelegate, UITableView
     
     }
     
+    @IBAction func BoatingClicked(sender: AnyObject) {
+        UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
+        self.PageScrollView2.contentOffset.y = 2456.0
+        self.PageScrollView3.contentOffset.y = 2456.0
+            }, completion: { finished in
+                if (finished){}})
+    }
 
+    @IBAction func WildlifeClicked(sender: AnyObject) {
+        UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.PageScrollView2.contentOffset.y = 3553.0
+            self.PageScrollView3.contentOffset.y = 3553.0
+            }, completion: { finished in
+                if (finished){}})
+    }
+    
+    
+    @IBAction func FishingClicked(sender: AnyObject) {
+        UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.PageScrollView2.contentOffset.y = 5258.0
+            self.PageScrollView3.contentOffset.y = 5258.0
+            }, completion: { finished in
+                if (finished){}})
+    }
+
+    @IBAction func SwimmingClicked(sender: AnyObject) {
+        UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.PageScrollView2.contentOffset.y = 6093.0
+            self.PageScrollView3.contentOffset.y = 6093.0
+            }, completion: { finished in
+                if (finished){}})
+    }
+    
+    
+    @IBAction func HikingClicked(sender: AnyObject) {
+        UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.PageScrollView2.contentOffset.y = 7511.0
+            self.PageScrollView3.contentOffset.y = 7511.0
+            }, completion: { finished in
+                if (finished){}})
+    }
+    
+    @IBAction func CampingClicked(sender: AnyObject) {
+        UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.PageScrollView2.contentOffset.y = 10270.0
+            self.PageScrollView3.contentOffset.y = 10270.0
+            }, completion: { finished in
+                if (finished){}})
+    }
+    
     
     @IBAction func DismissPageClicked(sender: AnyObject) {
         enablemainpageTransition()

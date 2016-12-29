@@ -352,11 +352,11 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
     func scrollViewDidScroll(scrollView: UIScrollView) {
         let contentOffset = scrollView.contentOffset.y
         print(contentOffset)
-        let t1: Bool = contentOffset > 2456.0
-        let t2: Bool = contentOffset > 3553.0
-        let t3: Bool = contentOffset > 5258.0
-        let t4: Bool = contentOffset > 6093.0
-        let t5: Bool = contentOffset > 7511.0
+        let t1: Bool = contentOffset > 3919.0
+        let t2: Bool = contentOffset > 4883.0
+        let t3: Bool = contentOffset > 6458.0
+        let t4: Bool = contentOffset > 6824.0
+        let t5: Bool = contentOffset > 7281.0
         let t6: Bool = contentOffset > 10270.0
         let t7: Bool = self.pageID == 2
         
