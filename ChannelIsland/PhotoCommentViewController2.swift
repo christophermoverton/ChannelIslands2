@@ -57,7 +57,7 @@ class PhotoCommentViewController2: UIViewController {
         self.horizontalTransitionController.titletf1 = self.TitleText1
         self.horizontalTransitionController.titletf2 = self.TitleText2
         self.horizontalTransitionController.titletf3 = self.TitleText3
-        self.horizontalTransitionController.tfarr = [Mapslabel,Backlabel,Highlightslabel,Infolabel,Photographylabel,Planninglabel]
+        self.horizontalTransitionController.tfarr = [Mapslabel,Highlightslabel,Infolabel,Photographylabel,Planninglabel]
         var dphotoIndex: Int = 0
         if checkString.rangeOfString("reveal") != nil, let destinationViewController = segue.destinationViewController as? PhotoCommentViewController {
             print("Got this far again")
@@ -122,6 +122,7 @@ class PhotoCommentViewController2: UIViewController {
             
             destinationViewController.transitioningDelegate = self
             destinationViewController.loadView()
+            destinationViewController.viewDidLoad()
             self.crossDissolveState = true
         }
     }

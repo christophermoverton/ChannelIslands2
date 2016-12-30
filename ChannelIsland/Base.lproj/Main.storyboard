@@ -229,7 +229,7 @@ by people for at least 13,000 years.</string>
                                 <rect key="frame" x="236" y="695" width="450" height="45"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Map" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J6i-Um-ZQE">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Home" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J6i-Um-ZQE">
                                 <rect key="frame" x="249" y="735" width="50" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
@@ -3028,8 +3028,8 @@ Cg
                                 <rect key="frame" x="0.0" y="626" width="1024" height="142"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_Main_Icon_PHOTOGRAPHY" translatesAutoresizingMaskIntoConstraints="NO" id="7qP-as-2OM">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_Main_Icon_PHOTOGRAPHY_V02" translatesAutoresizingMaskIntoConstraints="NO" id="7qP-as-2OM">
+                                <rect key="frame" x="236" y="695" width="450" height="45"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" text="\nTest" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="U2m-JG-ZZE">
                                 <rect key="frame" x="201" y="625" width="623" height="103"/>
@@ -3077,7 +3077,7 @@ Cg
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Back" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nKc-cX-WvE">
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Back" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nKc-cX-WvE">
                                 <rect key="frame" x="751" y="735" width="50" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3212,8 +3212,8 @@ Cg
                                 <rect key="frame" x="0.0" y="626" width="1024" height="142"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_Main_Icon_PHOTOGRAPHY" translatesAutoresizingMaskIntoConstraints="NO" id="AEy-x6-2mx">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CI_Main_Icon_PHOTOGRAPHY_V02" translatesAutoresizingMaskIntoConstraints="NO" id="AEy-x6-2mx">
+                                <rect key="frame" x="236" y="695" width="450" height="45"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Test" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Y1l-bu-7z4">
                                 <rect key="frame" x="201" y="625" width="623" height="103"/>
@@ -3254,7 +3254,7 @@ Cg
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Back" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s9c-SR-zmw">
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Back" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s9c-SR-zmw">
                                 <rect key="frame" x="751" y="735" width="50" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.99287670849999998" green="0.99700695279999996" blue="0.99637609719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3847,7 +3847,7 @@ Cg
         <image name="Bald_Eagle_Web_Cam_View" width="530" height="400"/>
         <image name="CI_LOGOS_FOR_DISSOLVE_LOOP" width="2048" height="1536"/>
         <image name="CI_Main_Icon_HOME_V02" width="900" height="90"/>
-        <image name="CI_Main_Icon_PHOTOGRAPHY" width="2048" height="1536"/>
+        <image name="CI_Main_Icon_PHOTOGRAPHY_V02" width="900" height="90"/>
         <image name="Channel_Island_Live_Presentation" width="530" height="400"/>
         <image name="HIGHLIGHT1_00010" width="90" height="90"/>
         <image name="HIGHLIGHT2_00010" width="90" height="90"/>
@@ -3901,8 +3901,8 @@ Cg
         <image name="upper_campsite" width="530" height="268"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nva-S2-vam"/>
-        <segue reference="Xfw-Zj-LSi"/>
+        <segue reference="jew-Ho-UNx"/>
+        <segue reference="zOU-1R-PoP"/>
         <segue reference="OjJ-ZP-iCm"/>
         <segue reference="m87-3c-LIG"/>
         <segue reference="cXW-Yx-Jng"/>

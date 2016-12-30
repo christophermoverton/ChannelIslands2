@@ -72,6 +72,14 @@ class MyCustomView: UIView {
         self.addSubview(imageView)
     }
     
+    func addImageV5(imageName: String){
+        let image = UIImage(named: imageName)
+        imageView = UIImageView(image: image!)
+        imageView.frame = CGRect(x: 236, y: 695, width: 450, height: 45)
+        imageView.contentMode = UIViewContentMode.ScaleAspectFit;
+        self.addSubview(imageView)
+    }
+    
     func addImageAnimV(imageName: String){
         //let image = UIImage(named: imageName)
         var imageArr : [UIImage] = []
