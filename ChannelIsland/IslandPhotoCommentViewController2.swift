@@ -200,6 +200,16 @@ class IslandPhotoCommentViewController2: UIViewController {
             self.presentViewController(vc, animated: true, completion: nil)
             
         }
+        else if islandID == 2{
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sanm") as! SanMiguelViewController
+            vc.transitioningDelegate = self
+            vc.loadView()
+            vc.viewDidLoad()
+            vc.enableMapwA()
+            self.crossDissolveState = true
+            self.presentViewController(vc, animated: true, completion: nil)
+            
+        }
     
     }
     
@@ -224,6 +234,16 @@ class IslandPhotoCommentViewController2: UIViewController {
             self.presentViewController(vc, animated: true, completion: nil)
             
         }
+        else if islandID == 2{
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sanm") as! SanMiguelViewController
+            vc.transitioningDelegate = self
+            vc.loadView()
+            vc.viewDidLoad()
+            vc.enableInfowA()
+            self.crossDissolveState = true
+            self.presentViewController(vc, animated: true, completion: nil)
+            
+        }
     }
     
     @IBAction func AnchoragesClicked(sender: AnyObject) {
@@ -239,6 +259,16 @@ class IslandPhotoCommentViewController2: UIViewController {
         }
         else if islandID == 1{
             let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("ac") as! AnacapaViewController
+            vc.transitioningDelegate = self
+            vc.loadView()
+            vc.viewDidLoad()
+            vc.enableAnchorageswA()
+            self.crossDissolveState = true
+            self.presentViewController(vc, animated: true, completion: nil)
+            
+        }
+        else if islandID == 2{
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sanm") as! SanMiguelViewController
             vc.transitioningDelegate = self
             vc.loadView()
             vc.viewDidLoad()
@@ -271,6 +301,16 @@ class IslandPhotoCommentViewController2: UIViewController {
             self.presentViewController(vc, animated: true, completion: nil)
             
         }
+        else if islandID == 2{
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("sanm") as! SanMiguelViewController
+            vc.transitioningDelegate = self
+            vc.loadView()
+            vc.viewDidLoad()
+            vc.enableActivitieswA()
+            self.crossDissolveState = true
+            self.presentViewController(vc, animated: true, completion: nil)
+            
+        }
     }
     
     @IBAction func HomeClicked(sender: AnyObject) {
@@ -294,6 +334,7 @@ class IslandPhotoCommentViewController2: UIViewController {
             self.presentViewController(vc, animated: true, completion: nil)
             
         }
+ 
     }
     
 }
