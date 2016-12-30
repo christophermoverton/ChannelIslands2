@@ -578,7 +578,7 @@ class AnacapaViewController: UIViewController, UITextViewDelegate, UITableViewDe
         }
         
         //add map image view
-        ui = UIImage(imageLiteral: "ANACAPA_MAP")
+        ui = UIImage(imageLiteral: "ANACAPA_MAP2")
         let imageView = UIImageView(image: ui)
         imageView.contentMode = .ScaleAspectFit
         imageView.frame = CGRectMake(0, 0, 1024, 768)
